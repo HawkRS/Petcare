@@ -21,19 +21,17 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::prefix('administrar')->group(function () {
-  Route::prefix('landing')->group(function () {
-    Route::get('/', 'HomeController@index')->name( 'admin.landing' );
-    Route::get('/titan', 'ProveedoresController@show')->name( 'admin.show' );
-    Route::get('/rocko', 'ProveedoresController@show')->name( 'admin.show' );
-  });
+Route::prefix('landing')->group(function () {
+  Route::get('/', 'LandingController@index')->name( 'landing.page' );
+  Route::get('/editar', 'LandingController@edit')->name( 'landing.edit' );
+  Route::post('/guardar', 'LandingController@store')->name( 'landing.store' );
+});
 
 
-  Route::get('/contacto', 'ProveedoresController@show')->name( 'admin.show' );
-  Route::get('/encuentranos', 'ProveedoresController@show')->name( 'admin.show' );
-  Route::prefix('productos')->group(function () {
-    Route::get('/smart-bites', 'ProveedoresController@index')->name( 'admin.list' );
-    Route::get('/titan', 'ProveedoresController@show')->name( 'admin.show' );
-    Route::get('/rocko', 'ProveedoresController@show')->name( 'admin.show' );
-  });
+Route::get('/contacto', 'HomeController@show')->name( 'admin.show' );
+Route::get('/encuentranos', 'HomeController@show')->name( 'admin.show' );
+Route::prefix('productos')->group(function () {
+  Route::get('/smart-bites', 'HomeController@index')->name( 'admin.list' );
+  Route::get('/titan', 'HomeController@show')->name( 'admin.show' );
+  Route::get('/rocko', 'HomeController@show')->name( 'admin.show' );
 });
