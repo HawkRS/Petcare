@@ -80,7 +80,8 @@
         <h1 class="modal-title fs-5" id="Slider1ModalLabel">Editar Banner 1</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form class="needs-validation" action="index.html" method="post"  novalidate>
+      <form class="needs-validation" action="{{ route('landing.storeslider') }}" method="post" enctype="multipart/form-data"  novalidate>
+        @csrf
         <div class="modal-body">
           <div class="mb-3">
               <label class="form-label" for="validationCustom01">Titulo</label>

@@ -27,4 +27,15 @@ class LandingController extends Controller
   {
       return view($this->f.'index');
   }
+
+  /**
+   * Show the application dashboard.
+   *
+   * @return \Illuminate\Contracts\Support\Renderable
+   */
+  public function storeSlider(Request $request)
+  {
+    dd($request->all());
+      return view($this->f.'index');
+  }
 }
