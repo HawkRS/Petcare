@@ -27,9 +27,9 @@ Route::prefix('landing')->group(function () {
   Route::post('/guardar', 'LandingController@storeSlider')->name( 'landing.storeslider' );
 });
 
+Route::get('/encuentranos', 'MapController@show')->name( 'map.index' );
 
 //Route::get('/contacto', 'HomeController@show')->name( 'admin.show' );
-//Route::get('/encuentranos', 'HomeController@show')->name( 'admin.show' );
 //Route::prefix('productos')->group(function () {
 //  Route::get('/smart-bites', 'HomeController@index')->name( 'admin.list' );
 //  Route::get('/titan', 'HomeController@show')->name( 'admin.show' );

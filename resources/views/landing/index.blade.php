@@ -24,7 +24,7 @@
                 <div class="card-body">
                   <h4>Banner 1</h4>
                     <h6 class="card-title mb-4">Imagen</h6>
-                    <img src="{{ asset('images/sliders/banner-home-1-576.jpg') }}" class="img-thumbnail" alt="">
+                    <img src="{{ asset('img/landing/thumbs/banner-home-1-desktop.jpg') }}" class="img-thumbnail mx-auto d-block" alt="">
                     <hr>
                     <h4>Titulo</h4>
                     <h6>lorem ipsum</h6>
@@ -82,10 +82,11 @@
       </div>
       <form class="needs-validation" action="{{ route('landing.storeslider') }}" method="post" enctype="multipart/form-data"  novalidate>
         @csrf
+        <input type="hidden" name="bannertype" value="1">
         <div class="modal-body">
           <div class="mb-3">
               <label class="form-label" for="validationCustom01">Titulo</label>
-              <input type="text" class="form-control" id="titulo" placeholder="Titulo" required>
+              <input type="text" name="titulo" class="form-control" id="titulo" placeholder="Titulo" required>
               <div class="valid-feedback">
                   ¡Todo parece en orden!
               </div>
@@ -95,7 +96,7 @@
           </div>
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
-            <textarea class="form-control" id="descripcion" rows="3" required></textarea>
+            <textarea class="form-control" name="leyenda" id="descripcion" rows="3" required></textarea>
             <div class="valid-feedback">
                 ¡Todo parece en orden!
             </div>
@@ -104,12 +105,24 @@
             </div>
           </div>
           <div class="mb-3">
-            <label for="formFile" class="form-label">Imagen para pantallas grandes</label>
-            <input class="form-control" type="file" id="formFile">
+            <label for="formFile" class="form-label">Banner para pantallas escritorio</label>
+            <input name="banner1_desk" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="formFile" class="form-label">Imagen para dispositivos mobiles</label>
-            <input class="form-control" type="file" id="formFile">
+            <label for="formFile" class="form-label">Banner para resolución 1200</label>
+            <input name="banner1_1200" class="form-control" type="file" id="formFile">
+          </div>
+          <div class="mb-3">
+            <label for="formFile" class="form-label">Banner para resolución 992</label>
+            <input name="banner1_992" class="form-control" type="file" id="formFile">
+          </div>
+          <div class="mb-3">
+            <label for="formFile" class="form-label">Banner para resolución 768</label>
+            <input name="banner1_768" class="form-control" type="file" id="formFile">
+          </div>
+          <div class="mb-3">
+            <label for="formFile" class="form-label">Banner para resolución 576</label>
+            <input name="banner1_576" class="form-control" type="file" id="formFile">
           </div>
         </div>
         <div class="modal-footer">
