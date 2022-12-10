@@ -33,5 +33,23 @@ class MapController extends Controller
     ]);
   }
 
+  public function edit($id)
+  {
+    $MapMarker = Marcadores::findorfail($id);
+    //dd($MapMarker);
+    return view($this->f.'edit', [
+      'MarcadorEdit' => $MapMarker,
+    ]);
+  }
+
+  public function store(Request $request, $id)
+  {
+    dd($request->all());
+    $MapMarker = Marcadores::findorfail($id);
+    return view($this->f.'index', [
+      'marcadore' => $MapMarkersList,
+    ]);
+  }
+
 
 }

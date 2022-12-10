@@ -27,7 +27,12 @@ Route::prefix('landing')->group(function () {
   Route::post('/guardar', 'LandingController@storeSlider')->name( 'landing.storeslider' );
 });
 
-Route::get('/encuentranos', 'MapController@index')->name( 'map.index' );
+Route::prefix('encuentranos')->group(function () {
+  Route::get('/', 'MapController@index')->name( 'map.index' );
+  Route::get('/editar/{id}', 'MapController@edit')->name( 'findus.edit' );
+  Route::post('/guardar/{id}', 'MapController@store')->name( 'findus.store' );
+});
+
 
 //Route::get('/contacto', 'HomeController@show')->name( 'admin.show' );
 //Route::prefix('productos')->group(function () {
