@@ -48,7 +48,7 @@
       <!-- App Css-->
       <link href="css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
     </head>
-<body data-topbar="colored">
+<body data-topbar="colored" id="@yield('section')">
   {{-- PAGE WRAPPER --}}
   <div id="layout-wrapper">
 

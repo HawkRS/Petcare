@@ -27,7 +27,7 @@ class MapController extends Controller
   public function index()
   {
     $MapMarkersList = Marcadores::all();
-    dd($MapMarkersList);
+    //dd($MapMarkersList);
     return view($this->f.'index', [
       'marcadores' => $MapMarkersList,
     ]);

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('pagina', 'Encuentranos')
+@section('section', 'Encuentranos')
 
 @section('content')
 
@@ -18,23 +18,52 @@
             </div>
         </div>
         <div class="row">
-          <div class="container">
-              <div class="row justify-content-center">
-                  <div class="col-md-8">
-                      <div class="card">
-                          <div class="card-header">{{ __('Dashboard') }}</div>
+          <div class="col-12">
+            <div class="card table-responsive p-3">
+              <div class="">
 
-                          <div class="card-body">
-                              @if (session('status'))
-                                  <div class="alert alert-success" role="alert">
-                                      {{ session('status') }}
-                                  </div>
-                              @endif
-
-                              {{ __('You are logged in!') }}
-                          </div>
-                      </div>
-                  </div>
+              </div>
+              <table id='MarkersTable'  class="table table-bordered table-striped dt-responsive nowrap dataTable no-footer dtr-inline" style="border-collapse: collapse; border-spacing: 0px; width: 100%;" role="grid" aria-describedby="datatable_info">
+                <thead class="">
+                  <tr class="fnt18 fnt_blue">
+                    <th class="fntB">NOMBRE</th>
+                    <th class="fntB">CATEGORIA</th>
+                    <th class="fntB">ESTADO</th>
+                    <th class="fntB">CIUDAD</th>
+                    <th class="fntB">DIRECCION</th>
+                    <th class="fntB">CODIGO POSTAL</th>
+                    <th class="fntB">TELEFONO</th>
+                    <th class="fntB">TELEFONO 2</th>
+                    <th class="fntB">LATITUD</th>
+                    <th class="fntB">LONGITUD</th>
+                    <th class="fntB">ACCIONES</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @foreach($marcadores as $marcador)
+                  <?php
+                  //use Carbon\Carbon;
+                  //$cliente =  $ingreso->cliente();
+                  //dd($ingreso->fecha);
+                  ?>
+                      <td>{{ $marcador->name }}</td>
+                      <td>{{ $marcador->category }}</td>
+                      <td>{{ $marcador->state }}</td>
+                      <td>{{ $marcador->city }}</td>
+                      <td>{{ $marcador->address }}</td>
+                      <td>{{ $marcador->postal }}</td>
+                      <td>{{ $marcador->phone }}</td>
+                      <td>{{ $marcador->phone2 }}</td>
+                      <td>{{ $marcador->lat }}</td>
+                      <td>{{ $marcador->lng }}</td>
+                      <td>
+                        <a href="#" class="btn btn-sm btn-warning fntB"><i class="fas fnt18 fa-pencil-alt"></i></a>
+                        <a href="#" class="btn btn-sm btn-danger fntB"><i class="fas fnt18 fa-trash-alt"></i></a>
+                      </td>
+                    </tr>
+                  @endforeach
+                  </tbody>
+                </table>
               </div>
           </div>
         </div>

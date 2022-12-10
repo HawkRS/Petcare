@@ -5,32 +5,44 @@
  */
 
 require('./bootstrap');
+//import Chart from 'chart.js';
+import DataTables from 'datatables.net';
 
-//window.Vue = require('vue');
 
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
+//require('./agroxa/app.js');
+//require('./agroxa/jquery.peity.js');
+//require('./agroxa/morris.min.js');
+//require('raphael-min.js');
+//require('themeapp.js');
 
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+window.onload = function() {MainFunction()};
 
-//Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+function MainFunction(){
+  //console.log("prueba1");
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
 
-//const app = new Vue({
-//    el: '#app',
-//});
-// Example starter JavaScript for disabling form submissions if there are invalid fields
+
+  var bodyId = document.body.id;
+  //console.log(bodyId);
+
+  switch (bodyId) {
+    case "Dashboard":{
+      var dashboard = require('./landing.js');
+      dashboard();
+      break;
+    }
+    case "Encuentranos":{
+      //console.log('marcadores');
+      var finduspage = require('./markers.js');
+      finduspage();
+      break;
+    }
+    default:
+  }
+  //*/
+}
+
+
 (() => {
   'use strict'
 
