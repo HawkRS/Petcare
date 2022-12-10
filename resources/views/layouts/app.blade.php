@@ -173,7 +173,7 @@
                     </li>
 
                     <li>
-                        <a href="calendar.html" class=" waves-effect">
+                        <a href="{{ route('map.index') }}" class=" waves-effect">
                             <i class="mdi mdi-calendar-outline"></i>
                             <span>Encuentranos</span>
                         </a>
