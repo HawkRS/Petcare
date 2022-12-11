@@ -52,10 +52,31 @@ class MapController extends Controller
     ]);
   }
 
+  static public function isCodigoPostal($codigo) {
+  	return preg_match('/^[0-9]{5,5}$/', $codigo);
+  }
+
   public function update(Request $request, $id)
   {
-    dd($request->all());
+    $messages = [
+      'required' => 'El campo :attribute es obligatorio.',
+      'date' => 'El campo :attribute tiene un formato de fecha dd/mm/aaaa.',
+      'regex' => 'El campo :attribute tiene un formato invalido'
+    ];
+    $this->validate(request(), [
+      'name' => 'required',
+      'category' => 'required',
+      'state' => 'required',
+      'city' => 'required',
+      'address' => 'required',
+      'postal' => 'required|regex:/^[0-9]{5,5}$/',
+      'phone' => 'required',
+      'lat' => 'required|numeric',
+      'lng' => 'required|numeric',
+      'date' => 'required|date',
+    ], $messages);
     $MapMarker = Marcadores::findorfail($id);
+    dd($MapMarker);
     return view($this->f.'index', [
       'marcadore' => $MapMarkersList,
     ]);
