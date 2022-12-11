@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Carbon\Carbon;
 
 class MarkersSeeder extends Seeder
 {
@@ -31,7 +32,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '2',
@@ -53,7 +54,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '3',
@@ -75,7 +76,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '4',
@@ -97,7 +98,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '5',
@@ -119,7 +120,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '6',
@@ -141,7 +142,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '7',
@@ -163,7 +164,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '8',
@@ -185,7 +186,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '9',
@@ -207,7 +208,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '10',
@@ -229,7 +230,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '11',
@@ -251,7 +252,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '12',
@@ -273,7 +274,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '13',
@@ -295,7 +296,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '14',
@@ -317,7 +318,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '15',
@@ -339,7 +340,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '16',
@@ -361,7 +362,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '17',
@@ -383,7 +384,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '18',
@@ -405,7 +406,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '19',
@@ -427,7 +428,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '20',
@@ -449,7 +450,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '21',
@@ -471,7 +472,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '22',
@@ -493,7 +494,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '23',
@@ -515,7 +516,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '24',
@@ -537,7 +538,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '25',
@@ -559,7 +560,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '26',
@@ -581,7 +582,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '27',
@@ -603,7 +604,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '28',
@@ -625,7 +626,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '29',
@@ -647,7 +648,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '30',
@@ -669,7 +670,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '31',
@@ -691,7 +692,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '32',
@@ -713,7 +714,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '33',
@@ -735,7 +736,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '34',
@@ -757,7 +758,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '35',
@@ -779,7 +780,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '36',
@@ -801,7 +802,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '37',
@@ -823,7 +824,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '38',
@@ -845,7 +846,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '39',
@@ -867,7 +868,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '40',
@@ -889,7 +890,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '41',
@@ -911,7 +912,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '42',
@@ -933,7 +934,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '43',
@@ -955,7 +956,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '44',
@@ -977,7 +978,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '45',
@@ -999,7 +1000,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '46',
@@ -1021,7 +1022,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '47',
@@ -1043,7 +1044,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '48',
@@ -1065,7 +1066,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '49',
@@ -1087,7 +1088,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '50',
@@ -1109,7 +1110,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '51',
@@ -1131,7 +1132,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '52',
@@ -1153,7 +1154,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '53',
@@ -1175,7 +1176,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '54',
@@ -1197,7 +1198,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '55',
@@ -1219,7 +1220,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '56',
@@ -1241,7 +1242,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '57',
@@ -1263,7 +1264,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => 'Servicio de Entrega a Domicilio*',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '58',
@@ -1285,7 +1286,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '59',
@@ -1307,7 +1308,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '60',
@@ -1329,7 +1330,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '61',
@@ -1351,7 +1352,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => 'Servicio Entrega a Domicilio*',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '62',
@@ -1373,7 +1374,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '63',
@@ -1395,7 +1396,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '64',
@@ -1417,7 +1418,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '65',
@@ -1439,7 +1440,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '66',
@@ -1461,7 +1462,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '67',
@@ -1483,7 +1484,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '68',
@@ -1505,7 +1506,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '69',
@@ -1527,7 +1528,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '70',
@@ -1549,7 +1550,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '71',
@@ -1571,7 +1572,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '72',
@@ -1593,7 +1594,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '73',
@@ -1615,7 +1616,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '74',
@@ -1637,7 +1638,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '75',
@@ -1659,7 +1660,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '76',
@@ -1681,7 +1682,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '77',
@@ -1703,7 +1704,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '78',
@@ -1725,7 +1726,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '79',
@@ -1747,7 +1748,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '80',
@@ -1769,7 +1770,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '81',
@@ -1791,7 +1792,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '82',
@@ -1813,7 +1814,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '83',
@@ -1835,7 +1836,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '84',
@@ -1857,7 +1858,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '85',
@@ -1879,7 +1880,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '86',
@@ -1901,7 +1902,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '87',
@@ -1923,7 +1924,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '88',
@@ -1945,7 +1946,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '89',
@@ -1967,7 +1968,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '90',
@@ -1989,7 +1990,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '91',
@@ -2011,7 +2012,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '92',
@@ -2033,7 +2034,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
             DB::table('marcadores')->insert([
           'id' => '93',
@@ -2055,7 +2056,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '94',
@@ -2077,7 +2078,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '95',
@@ -2099,7 +2100,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '96',
@@ -2121,7 +2122,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '97',
@@ -2143,7 +2144,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '98',
@@ -2165,7 +2166,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '99',
@@ -2187,7 +2188,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '100',
@@ -2209,7 +2210,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '101',
@@ -2231,7 +2232,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '102',
@@ -2253,7 +2254,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '103',
@@ -2275,7 +2276,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '104',
@@ -2297,7 +2298,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '105',
@@ -2319,7 +2320,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '106',
@@ -2341,7 +2342,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '107',
@@ -2363,7 +2364,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '108',
@@ -2385,7 +2386,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '109',
@@ -2407,7 +2408,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '110',
@@ -2429,7 +2430,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '111',
@@ -2451,7 +2452,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '112',
@@ -2473,7 +2474,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '113',
@@ -2495,7 +2496,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '114',
@@ -2517,7 +2518,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '115',
@@ -2539,7 +2540,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '116',
@@ -2561,7 +2562,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '117',
@@ -2583,7 +2584,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '118',
@@ -2605,7 +2606,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '119',
@@ -2627,7 +2628,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '120',
@@ -2649,7 +2650,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '121',
@@ -2671,7 +2672,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
       ]);
       DB::table('marcadores')->insert([
           'id' => '122',
@@ -2693,7 +2694,7 @@ class MarkersSeeder extends Seeder
           'hours3' => '',
           'featured' => '',
           'features' => '',
-          'date' => '22/06/2022'
+          'date' => Carbon::parse('22-06-2022')
         ]);
     }
 }

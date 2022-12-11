@@ -21,9 +21,15 @@
           <div class="col-12">
             <div class="card table-responsive p-3">
               <div class="card-body">
-                <h4 class="card-title">Registros de tiendas</h4>
-                <p class="card-title-desc">Agregar editar o eliminar registros de cadenas o tiendas de nuestros distribuidores.
-                </p>
+                <div class="float-md-start">
+                  <h4 class="card-title float-left">Registros de tiendas</h4>
+                  <p class="card-title-desc">Agregar editar o eliminar registros de cadenas o tiendas de nuestros distribuidores.</p>
+                </div>
+                <div class="float-md-end">
+                  <button type="button" name="button"  data-bs-toggle="modal" data-bs-target="#Marker1Modal" class="float-right btn btn-primary">Agregar marcador</button>
+                </div>
+                <div class="clearfix">
+                </div>
 
                 <table id='MarkersTable'  class="table table-sm table-bordered table-striped dt-responsive nowrap dataTable no-footer dtr-inline" style="border-collapse: collapse; border-spacing: 0px; width: 100%;" role="grid" aria-describedby="datatable_info">
                   <thead class="">
@@ -66,6 +72,28 @@
           </div>
         </div>
 
+    </div>
+  </div>
+
+  {{-- MODAL ADD MARKER --}}
+  <div class="modal fade" id="Marker1Modal" tabindex="-1" aria-labelledby="Marker1ModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="Marker1ModalLabel">Crear nueva ubicacion</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form class="needs-validation" action="{{ route('findus.store') }}" method="post" novalidate>
+          @csrf
+          <div class="modal-body">
+            @include('findus.partials.markerfields')
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+        </form>
+      </div>
     </div>
   </div>
   <!-- end page title -->

@@ -33,7 +33,7 @@ class CreateMarcadoresTable extends Migration
             $table->text('hours3')->nullable();
             $table->text('featured')->nullable();
             $table->text('features')->nullable();
-            $table->text('date');
+            $table->date('date');
             $table->timestamps();
         });
     }

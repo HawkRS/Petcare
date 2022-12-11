@@ -203,3 +203,121 @@
     </div>
   </div>
 </div>
+<div class="row">
+  <div class="col-12 col-md-6">
+    <div class="mb-3">
+      <label class="form-label" for="web">Sitio web</label>
+      @if(isset($MarcadorEdit))
+      <input type="text" name="web" class="form-control" id="web" placeholder="Sitio web" value="{{$MarcadorEdit->web}}">
+      @else
+      <input type="text" name="web" class="form-control" id="web" placeholder="Sitio web">
+      @endif
+      <div class="valid-feedback">
+        ¡Todo parece en orden!
+      </div>
+      <div class="invalid-feedback">
+        Por favor agrega una Sitio web valida
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-6">
+    <div class="mb-3">
+      <label class="form-label" for="linkmap">Link map</label>
+      @if(isset($MarcadorEdit))
+      <input type="text" name="linkmap" class="form-control" id="linkmap" placeholder="Link map" value="{{$MarcadorEdit->linkmap}}" required>
+      @else
+      <input type="text" name="linkmap" class="form-control" id="linkmap" placeholder="Link map" required>
+      @endif
+      <div class="valid-feedback">
+        ¡Todo parece en orden!
+      </div>
+      <div class="invalid-feedback">
+        Por favor agrega una Link map valida
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 col-md-6">
+    <div class="mb-3">
+      <label class="form-label" for="featured">Featured</label>
+      @if(isset($MarcadorEdit))
+      <input type="text" name="featured" class="form-control" id="featured" placeholder="Featured" value="{{$MarcadorEdit->featured}}" >
+      @else
+      <input type="text" name="featured" class="form-control" id="featured" placeholder="Featured" >
+      @endif
+      <div class="valid-feedback">
+        ¡Todo parece en orden!
+      </div>
+      <div class="invalid-feedback">
+        Por favor agrega una Featured valida
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-6">
+    <div class="mb-3">
+      <label class="form-label" for="features">Features</label>
+      @if(isset($MarcadorEdit))
+      <input type="text" name="features" class="form-control" id="features" placeholder="Features" value="{{$MarcadorEdit->features}}" >
+      @else
+      <input type="text" name="features" class="form-control" id="features" placeholder="Features" >
+      @endif
+      <div class="valid-feedback">
+        ¡Todo parece en orden!
+      </div>
+      <div class="invalid-feedback">
+        Por favor agrega una Features valida
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 col-md-4">
+    <div class="mb-3">
+      <label class="form-label" for="hours1">Horarios 1</label>
+      @if(isset($MarcadorEdit))
+      <input type="text" name="hours1" class="form-control" id="hours1" placeholder="Horarios 1" value="{{$MarcadorEdit->hours1}}" >
+      @else
+      <input type="text" name="hours1" class="form-control" id="hours1" placeholder="Horarios 1" >
+      @endif
+      <div class="valid-feedback">
+        ¡Todo parece en orden!
+      </div>
+      <div class="invalid-feedback">
+        Por favor agrega una Horarios 1 valida
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-4">
+    <div class="mb-3">
+      <label class="form-label" for="hours2">Horarios 2</label>
+      @if(isset($MarcadorEdit))
+      <input type="text" name="hours2" class="form-control" id="hours2" placeholder="Horarios 2" value="{{$MarcadorEdit->hours2}}" >
+      @else
+      <input type="text" name="hours2" class="form-control" id="hours2" placeholder="Horarios 2" >
+      @endif
+      <div class="valid-feedback">
+        ¡Todo parece en orden!
+      </div>
+      <div class="invalid-feedback">
+        Por favor agrega una Horarios 2 valida
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-4">
+    <div class="mb-3">
+      <label class="form-label" for="hours2">Horarios 3</label>
+      @if(isset($MarcadorEdit))
+      <input type="text" name="hours3" class="form-control" id="hours3" placeholder="Horarios 3" value="{{$MarcadorEdit->hours3}}" >
+      @else
+      <input type="text" name="hours3" class="form-control" id="hours3" placeholder="Horarios 3" >
+      @endif
+      <div class="valid-feedback">
+        ¡Todo parece en orden!
+      </div>
+      <div class="invalid-feedback">
+        Por favor agrega una Horarios 3 valida
+      </div>
+    </div>
+  </div>
+</div>

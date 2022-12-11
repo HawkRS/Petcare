@@ -37,12 +37,22 @@ class MapController extends Controller
   {
     $MapMarker = Marcadores::findorfail($id);
     //dd($MapMarker);
+    //dd($MapMarker->date);
     return view($this->f.'edit', [
       'MarcadorEdit' => $MapMarker,
     ]);
   }
 
-  public function store(Request $request, $id)
+  public function store(Request $request)
+  {
+    dd($request->all());
+    //$MapMarker = Marcadores::findorfail($id);
+    return view($this->f.'index', [
+      'marcadore' => $MapMarkersList,
+    ]);
+  }
+
+  public function update(Request $request, $id)
   {
     dd($request->all());
     $MapMarker = Marcadores::findorfail($id);

@@ -22,7 +22,7 @@
             <div class="card">
               <div class="card-body">
                 <h6 class="">Editar marcador</h6>
-                <form class="needs-validation" action="{{ route('findus.store', ['id' => $MarcadorEdit->id]) }}" method="post" enctype="multipart/form-data"  novalidate>
+                <form class="needs-validation" action="{{ route('findus.update', ['id' => $MarcadorEdit->id]) }}" method="post" enctype="multipart/form-data"  novalidate>
                   @csrf
                   <input type="hidden" name="bannertype" value="1">
                   <div class="row justify-content-center">
