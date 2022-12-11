@@ -45,11 +45,48 @@ class MapController extends Controller
 
   public function store(Request $request)
   {
-    dd($request->all());
+    $messages = [
+      'required' => 'El campo :attribute es obligatorio.',
+      'date' => 'El campo :attribute tiene un formato de fecha dd/mm/aaaa.',
+      'regex' => 'El campo :attribute tiene un formato invalido'
+    ];
+    $this->validate(request(), [
+      'name' => 'required',
+      'category' => 'required',
+      'state' => 'required',
+      'city' => 'required',
+      'address' => 'required',
+      'postal' => 'required|regex:/^[0-9]{5,5}$/',
+      'phone' => 'required',
+      'lat' => 'required|numeric',
+      'lng' => 'required|numeric',
+      'date' => 'required|date',
+    ], $messages);
+    //dd($request->all());
+    $NewMapMarker = new Marcadores;
+    $NewMapMarker->name = $request->name;
+    $NewMapMarker->lat = $request->lat;
+    $NewMapMarker->lng = $request->lng;
+    $NewMapMarker->category = $request->category;
+    $NewMapMarker->address = $request->address;
+    $NewMapMarker->address2 = $request->address2;
+    $NewMapMarker->city = $request->city;
+    $NewMapMarker->state = $request->state;
+    $NewMapMarker->postal = $request->postal;
+    $NewMapMarker->phone = $request->phone;
+    $NewMapMarker->phone2 = $request->phone2;
+    $NewMapMarker->linkmap = $request->linkmap;
+    $NewMapMarker->web = $request->web;
+    $NewMapMarker->hours1 = $request->hours1;
+    $NewMapMarker->hours2 = $request->hours2;
+    $NewMapMarker->hours3 = $request->hours3;
+    $NewMapMarker->featured = $request->featured;
+    $NewMapMarker->features = $request->features;
+    $NewMapMarker->date = $request->date;
+    $NewMapMarker->save();
+    return redirect()->route('map.index');
     //$MapMarker = Marcadores::findorfail($id);
-    return view($this->f.'index', [
-      'marcadore' => $MapMarkersList,
-    ]);
+
   }
 
   static public function isCodigoPostal($codigo) {
