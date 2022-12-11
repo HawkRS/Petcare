@@ -76,10 +76,28 @@ class MapController extends Controller
       'date' => 'required|date',
     ], $messages);
     $MapMarker = Marcadores::findorfail($id);
-    dd($MapMarker);
-    return view($this->f.'index', [
-      'marcadore' => $MapMarkersList,
-    ]);
+    //dd($MapMarker);
+    $MapMarker->name = $request->name;
+    $MapMarker->lat = $request->lat;
+    $MapMarker->lng = $request->lng;
+    $MapMarker->category = $request->category;
+    $MapMarker->address = $request->address;
+    $MapMarker->address2 = $request->address2;
+    $MapMarker->city = $request->city;
+    $MapMarker->state = $request->state;
+    $MapMarker->postal = $request->postal;
+    $MapMarker->phone = $request->phone;
+    $MapMarker->phone2 = $request->phone2;
+    $MapMarker->linkmap = $request->linkmap;
+    $MapMarker->web = $request->web;
+    $MapMarker->hours1 = $request->hours1;
+    $MapMarker->hours2 = $request->hours2;
+    $MapMarker->hours3 = $request->hours3;
+    $MapMarker->featured = $request->featured;
+    $MapMarker->features = $request->features;
+    $MapMarker->date = $request->date;
+    $MapMarker->save();
+    return redirect()->route('map.index');
   }
 
 
