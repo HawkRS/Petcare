@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Http\Request;
 use App\Marcadores;
 
 class MapController extends Controller
 {
+  use SoftDeletes;
+
+
   /**
    * Create a new controller instance.
    *
@@ -134,6 +138,15 @@ class MapController extends Controller
     $MapMarker->features = $request->features;
     $MapMarker->date = $request->date;
     $MapMarker->save();
+    return redirect()->route('map.index');
+  }
+
+  public function delete($id)
+  {
+    // code...$table->softDeletes();
+    $MapMarker = Marcadores::findorfail($id);
+    //dd($MapMarker);
+    $MapMarker->delete();
     return redirect()->route('map.index');
   }
 

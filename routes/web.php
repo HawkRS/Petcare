@@ -31,6 +31,7 @@ Route::prefix('encuentranos')->group(function () {
   Route::get('/', 'MapController@index')->name( 'map.index' );
   Route::get('/editar/{id}', 'MapController@edit')->name( 'findus.edit' );
   Route::post('/guardar/{id}', 'MapController@update')->name( 'findus.update' );
+  Route::post('/eliminar/{id}', 'MapController@delete')->name( 'findus.delete' );
   Route::post('/crear', 'MapController@store')->name( 'findus.store' );
 });
 

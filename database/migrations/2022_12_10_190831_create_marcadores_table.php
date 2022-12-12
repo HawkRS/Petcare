@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class CreateMarcadoresTable extends Migration
 {
@@ -34,6 +35,7 @@ class CreateMarcadoresTable extends Migration
             $table->text('featured')->nullable();
             $table->text('features')->nullable();
             $table->date('date');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -61,8 +61,35 @@
                     <td>{{ $marcador->lng }}</td>
                     <td>
                       <a href="{{ route('findus.edit', ['id' => $marcador->id]) }}" class="btn btn-sm btn-warning fntB"><i class="fas fnt18 fa-pencil-alt"></i></a>
-                      <a href="#" class="btn btn-sm btn-danger fntB"><i class="fas fnt18 fa-trash-alt"></i></a>
+                      <button type="button" name="button"  data-bs-toggle="modal" data-bs-target="#Marcador{{$marcador->id}}Modal" class="btn btn-sm btn-danger fntB"><i class="fas fnt18 fa-trash-alt"></i></button>
+
                     </td>
+                    <!-- Logout Modal-->
+                  <div class="modal fade" id="Marcador{{$marcador->id}}Modal" tabindex="-1" role="dialog" aria-labelledby="Marcador{{$marcador->id}}ModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="Marcador{{$marcador->id}}ModalLabel">¿Seguro que deseas eliminar este marcador?</h5>
+                          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <p>{{$marcador->name}}</p>
+                          <p>Una vez eliminado no hay forma de recuperarlo.</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                          <form class="" method="POST" action="{{ route('findus.delete', ['id' => $marcador->id]) }}">
+                            @csrf
+                                <button type="submit" class="btn btn-danger">
+                                  Borrar
+                                </button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>{{-- END MODAL --}}
                   </tr>
                   @endforeach
                 </tbody>
