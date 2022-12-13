@@ -19,7 +19,7 @@ mix.js('resources/js/app.js', 'public/js/app.js')
 //mix.copy('resources/upzet/js/app.js', 'public/js/upzet.js');
 
 mix.js([
-  //'resources/js/app.js',
+  'resources/upzet/js/app.js',
   'resources/upzet/libs/jquery/jquery.min.js',
   'resources/upzet/libs/metismenu/metisMenu.min.js',
   'resources/upzet/libs/simplebar/simplebar.min.js',
