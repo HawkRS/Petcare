@@ -27,7 +27,7 @@
                     <img src="{{ asset('img/landing/thumbs/banner-home-1-desktop.jpg') }}" class="img-thumbnail mx-auto d-block" alt="">
                     <hr>
                     <h4>Titulo</h4>
-                    <h6>lorem ipsum</h6>
+                    <h6>{{ $Contenidos[0]->value }}</h6>
                     <h6>lorem ipsum</h6>
                     <hr>
                     <h4>Descripción</h4>
@@ -80,13 +80,17 @@
         <h1 class="modal-title fs-5" id="Slider1ModalLabel">Editar Banner 1</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form class="needs-validation" action="{{ route('landing.storeslider') }}" method="post" enctype="multipart/form-data"  novalidate>
+      <form class="needs-validation" action="{{ route('landing.edit', ['id' => $Contenidos[0]->id]) }}" method="post" enctype="multipart/form-data"  novalidate>
         @csrf
-        <input type="hidden" name="bannertype" value="1">
+        <input type="hidden" name="position" value="slider1">
         <div class="modal-body">
           <div class="mb-3">
               <label class="form-label" for="validationCustom01">Titulo</label>
-              <input type="text" name="titulo" class="form-control" id="titulo" placeholder="Titulo" required>
+              @if(isset($Contenidos[0]->value))
+              <input type="text" name="titulo" class="form-control {{ $errors->has('titulo') ? ' is-invalid' : '' }}" id="titulo" placeholder="Titulo" value="{{$Contenidos[0]->value}}" required>
+              @else
+              <input type="text" name="titulo" class="form-control {{ $errors->has('titulo') ? ' is-invalid' : '' }}" id="titulo" placeholder="Titulo" required>
+              @endif
               <div class="valid-feedback">
                   ¡Todo parece en orden!
               </div>
@@ -96,7 +100,11 @@
           </div>
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
-            <textarea class="form-control" name="leyenda" id="descripcion" rows="3" required></textarea>
+            @if(isset($Contenidos[1]->value))
+            <textarea class="form-control  {{ $errors->has('titulo') ? ' is-invalid' : '' }}" name="leyenda" id="descripcion" rows="3" required>{{$Contenidos[1]->value}}</textarea>
+            @else
+            <textarea class="form-control  {{ $errors->has('titulo') ? ' is-invalid' : '' }}" name="leyenda" id="descripcion" rows="3" required></textarea>
+            @endif
             <div class="valid-feedback">
                 ¡Todo parece en orden!
             </div>
@@ -106,23 +114,23 @@
           </div>
           <div class="mb-3">
             <label for="formFile" class="form-label">Banner para pantallas escritorio</label>
-            <input name="banner1_desk" class="form-control" type="file" id="formFile">
+            <input name="banner_desk" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
             <label for="formFile" class="form-label">Banner para resolución 1200</label>
-            <input name="banner1_1200" class="form-control" type="file" id="formFile">
+            <input name="banner_1200" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
             <label for="formFile" class="form-label">Banner para resolución 992</label>
-            <input name="banner1_992" class="form-control" type="file" id="formFile">
+            <input name="banner_992" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
             <label for="formFile" class="form-label">Banner para resolución 768</label>
-            <input name="banner1_768" class="form-control" type="file" id="formFile">
+            <input name="banner_768" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
             <label for="formFile" class="form-label">Banner para resolución 576</label>
-            <input name="banner1_576" class="form-control" type="file" id="formFile">
+            <input name="banner_576" class="form-control" type="file" id="formFile">
           </div>
         </div>
         <div class="modal-footer">
@@ -133,6 +141,7 @@
     </div>
   </div>
 </div>
+{{-- MODAL SLIDER 1 END --}}
 
 {{-- PRODUCTOS SMART BITE --}}
 <div class="modal fade" id="ProdSmartModal" tabindex="-1" aria-labelledby="ProdSmartModalLabel" aria-hidden="true">

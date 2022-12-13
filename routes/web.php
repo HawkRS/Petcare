@@ -23,8 +23,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::prefix('landing')->group(function () {
   Route::get('/', 'LandingController@index')->name( 'landing.page' );
-  Route::get('/editar', 'LandingController@edit')->name( 'landing.edit' );
-  Route::post('/guardar', 'LandingController@storeSlider')->name( 'landing.storeslider' );
+  Route::post('/editar/{id}', 'LandingController@EditSlider')->name( 'landing.edit' );
+  //Route::post('/guardar', 'LandingController@storeSlider')->name( 'landing.storeslider' );
 });
 
 Route::prefix('encuentranos')->group(function () {

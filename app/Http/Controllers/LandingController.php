@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Intervention\Image\ImageManager;
+use App\Content;
+use Illuminate\Support\Facades\DB;
 
 class LandingController extends Controller
 {
@@ -26,7 +28,14 @@ class LandingController extends Controller
    */
   public function index()
   {
-      return view($this->f.'index');
+      //$ContentList = Content::where('page', 'landing')->get();
+      $ContentList = DB::table('content')
+                ->whereDate('page', 'landing')
+                ->get();
+      //dd($ContentList[0]);
+      return view($this->f.'index', [
+        'Contenidos' => $ContentList,
+      ]);
   }
 
   /**
@@ -34,27 +43,40 @@ class LandingController extends Controller
    *
    * @return \Illuminate\Contracts\Support\Renderable
    */
-  public function storeSlider(Request $request)
+  public function EditSlider(Request $request, $id)
   {
+    //dd($request->all());
     $messages = [
     'required' => 'El campo :attribute es obligatorio.',
     ];
     $this->validate(request(), [
-      'bannertype' => 'required',
+      'position' => 'required',
       'titulo' => 'required',
       'leyenda' => 'required',
-      'banner1_desk' => 'nullable|image',
-      'banner1_1200' => 'nullable|image',
-      'banner1_992' => 'nullable|image',
-      'banner1_768' => 'nullable|image',
-      'banner1_576' => 'nullable|image',
+      'banner_desk' => 'nullable|image',
+      'banner_1200' => 'nullable|image',
+      'banner_992' => 'nullable|image',
+      'banner_768' => 'nullable|image',
+      'banner_576' => 'nullable|image',
      ], $messages);
+     if($request->position == 'slider1'){
+       $EditedTitulo = Content::findorfail(1);
+       $EditedTitulo->value = $request->titulo;
+       $EditedTitulo->save();
+       $EditedLeyenda = Content::findorfail(2);
+       $EditedLeyenda->value = $request->leyenda;
+       $EditedLeyenda->save();
+     }
+     //dd($EditedTitulo);
 
 
-     //dd($_FILES['banner1_desk']);
-     $Img = $_FILES['banner1_desk'];
+
      //dd($Img);
-     if ($_FILES['banner1_desk']['size'] != 0 && $_FILES['banner1_desk']['error'] == 0){   $this->BannerChanger('banner1_desk',$Img );}
+     if ($_FILES['banner_desk']['size'] != 0 && $_FILES['banner_desk']['error'] == 0){$ImgDesk = $_FILES['banner_desk'];   $this->BannerChanger('banner_desk',$ImgDesk );}
+     if ($_FILES['banner_1200']['size'] != 0 && $_FILES['banner_1200']['error'] == 0){$Img_1200 = $_FILES['banner_1200'];   $this->BannerChanger('banner_1200',$Img_1200 );}
+     if ($_FILES['banner_992']['size'] != 0 && $_FILES['banner_992']['error'] == 0){$Img_992 = $_FILES['banner_992'];   $this->BannerChanger('banner_992',$Img_992 );}
+     if ($_FILES['banner_768']['size'] != 0 && $_FILES['banner_768']['error'] == 0){$Img_768 = $_FILES['banner_768'];   $this->BannerChanger('banner_768',$Img_768 );}
+     if ($_FILES['banner_576']['size'] != 0 && $_FILES['banner_576']['error'] == 0){$Img_576 = $_FILES['banner_576'];   $this->BannerChanger('banner_576',$Img_576 );}
 
       return redirect()->route('landing.page');
   }
