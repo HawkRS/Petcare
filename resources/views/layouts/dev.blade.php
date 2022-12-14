@@ -36,9 +36,9 @@
       <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
       <!-- Styles -->
-      <link href="libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
-      <link href="libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
-      <link href="libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+      <link href="{{asset('libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css') }}" rel="stylesheet" type="text/css">
+      <link href="{{asset('libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css') }}" rel="stylesheet" type="text/css">
+      <link href="{{asset('libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css') }}" rel="stylesheet" type="text/css">
       <link href="{{ asset('css/app.css') }}" rel="stylesheet">
       <link href="{{ asset('css/upzet.css') }}" rel="stylesheet">
 
@@ -77,7 +77,7 @@
 
                   <a href="{{ url('/') }}" class="logo logo-light">
                     <span class="logo-sm">
-                      <img src="{{ asset('img/logo-vimifos-petcare-blanco.png') }}" alt="logo-sm-light" height="52">
+                      <img src="{{ asset('img/nutricion-animal.png') }}" alt="logo-sm-light" height="52">
                     </span>
                     <span class="logo-lg">
                       <img src="{{ asset('img/logo-vimifos-petcare-blanco.png') }}" alt="logo-light" height="54">
@@ -238,16 +238,16 @@
 
 
         <!-- apexcharts js -->
-        <script src="{{ asset('libs/apexcharts/apexcharts.min.js') }}"></script>
+        <!--script src="{{ asset('libs/apexcharts/apexcharts.min.js') }}"></script-->
 
         <!-- jquery.vectormap map -->
-        <script src="{{ asset('libs/jqvmap/jquery.vmap.min.js') }}"></script>
-        <script src="{{ asset('libs/jqvmap/maps/jquery.vmap.usa.js') }}"></script>
+        <!--script src="{{ asset('libs/jqvmap/jquery.vmap.min.js') }}"></script-->
+        <!--script src="{{ asset('libs/jqvmap/maps/jquery.vmap.usa.js') }}"></script-->
 
-        <script src="{{ asset('js/pages/dashboard.init.js') }}"></script>
+        <!--script src="{{ asset('js/pages/dashboard.init.js') }}"></script-->
 
 
-        {{-- <script src="{{ asset('js/app.js') }}"></script>--}}
+        <script src="{{ asset('js/app.js') }}"></script>
         <script src="{{ asset('js/upzet.js') }}"></script>
 
     </body>

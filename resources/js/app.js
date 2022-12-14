@@ -4,26 +4,20 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+//require('./bootstrap');
 //import Chart from 'chart.js';
 import DataTables from 'datatables.net';
 
 
-//require('./agroxa/app.js');
-//require('./agroxa/jquery.peity.js');
-//require('./agroxa/morris.min.js');
-//require('raphael-min.js');
-//require('themeapp.js');
-
 window.onload = function() {MainFunction()};
 
 function MainFunction(){
-  //console.log("prueba1");
+  console.log("prueba1");
 
 
 
   var bodyId = document.body.id;
-  //console.log(bodyId);
+  console.log(bodyId);
 
   switch (bodyId) {
     case "Dashboard":{
@@ -32,7 +26,7 @@ function MainFunction(){
       break;
     }
     case "Encuentranos":{
-      //console.log('marcadores');
+      console.log('marcadores');
       var finduspage = require('./markers.js');
       finduspage();
       break;

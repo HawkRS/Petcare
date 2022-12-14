@@ -73,7 +73,7 @@
 
             <a href="{{ url('/') }}" class="logo logo-light">
               <span class="logo-sm">
-                <img src="{{ asset('img/logo-vimifos-petcare-blanco.png') }}" alt="logo-sm-light" height="52">
+                <img src="{{ asset('img/nutricion-animal.png.png') }}" alt="logo-sm-light" height="52">
               </span>
               <span class="logo-lg">
                 <img src="{{ asset('img/logo-vimifos-petcare-blanco.png') }}" alt="logo-light" height="54">
