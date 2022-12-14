@@ -60,15 +60,34 @@ class LandingController extends Controller
       'banner_768' => 'nullable|image',
       'banner_576' => 'nullable|image',
      ], $messages);
-     if($request->position == 'slider1'){
-       $EditedTitulo = Content::findorfail(1);
+     switch ($request->position) {
+       case 'slider1':
+         $idtitulo=1;
+         $idleyenda=2;
+         $slidernum = 1;
+         break;
+       case 'slider2':
+        $idtitulo=3;
+        $idleyenda=4;
+        $slidernum = 2;
+         break;
+       case 'slider3':
+        $idtitulo=5;
+        $idleyenda=6;
+        $slidernum = 3;
+         break;
+
+       default:
+         // code...
+         break;
+     }
+       $EditedTitulo = Content::findorfail($idtitulo);
        $EditedTitulo->value = $request->titulo;
        $EditedTitulo->save();
-       $EditedLeyenda = Content::findorfail(2);
+       $EditedLeyenda = Content::findorfail($idleyenda);
        $EditedLeyenda->value = $request->leyenda;
        $EditedLeyenda->save();
-       $slidernum = 1;
-     }
+
      $Sliders= array(
        "sliderdesk" => "banner".$slidernum."_desk",
        "slider1200" => "banner".$slidernum."_1200",
