@@ -46,6 +46,7 @@ class LandingController extends Controller
   public function EditSlider(Request $request, $id)
   {
     //dd($request->all());
+    $slidernum = 0;
     $messages = [
     'required' => 'El campo :attribute es obligatorio.',
     ];
@@ -66,17 +67,25 @@ class LandingController extends Controller
        $EditedLeyenda = Content::findorfail(2);
        $EditedLeyenda->value = $request->leyenda;
        $EditedLeyenda->save();
+       $slidernum = 1;
      }
+     $Sliders= array(
+       "sliderdesk" => "banner".$slidernum."_desk",
+       "slider1200" => "banner".$slidernum."_1200",
+       "slider992" => "banner".$slidernum."_992",
+       "slider768" => "banner".$slidernum."_768",
+       "slider576" => "banner".$slidernum."_576",
+     );
      //dd($EditedTitulo);
 
 
 
      //dd($Img);
-     if ($_FILES['banner_desk']['size'] != 0 && $_FILES['banner_desk']['error'] == 0){$ImgDesk = $_FILES['banner_desk'];   $this->BannerChanger('banner_desk',$ImgDesk );}
-     if ($_FILES['banner_1200']['size'] != 0 && $_FILES['banner_1200']['error'] == 0){$Img_1200 = $_FILES['banner_1200'];   $this->BannerChanger('banner_1200',$Img_1200 );}
-     if ($_FILES['banner_992']['size'] != 0 && $_FILES['banner_992']['error'] == 0){$Img_992 = $_FILES['banner_992'];   $this->BannerChanger('banner_992',$Img_992 );}
-     if ($_FILES['banner_768']['size'] != 0 && $_FILES['banner_768']['error'] == 0){$Img_768 = $_FILES['banner_768'];   $this->BannerChanger('banner_768',$Img_768 );}
-     if ($_FILES['banner_576']['size'] != 0 && $_FILES['banner_576']['error'] == 0){$Img_576 = $_FILES['banner_576'];   $this->BannerChanger('banner_576',$Img_576 );}
+     if ($_FILES['banner_desk']['size'] != 0 && $_FILES['banner_desk']['error'] == 0){$ImgDesk = $_FILES['banner_desk'];   $this->BannerChanger($Sliders['sliderdesk'],$ImgDesk );}
+     if ($_FILES['banner_1200']['size'] != 0 && $_FILES['banner_1200']['error'] == 0){$Img_1200 = $_FILES['banner_1200'];   $this->BannerChanger($Sliders['slider1200'],$Img_1200 );}
+     if ($_FILES['banner_992']['size'] != 0 && $_FILES['banner_992']['error'] == 0){$Img_992 = $_FILES['banner_992'];   $this->BannerChanger($Sliders['slider992'],$Img_992 );}
+     if ($_FILES['banner_768']['size'] != 0 && $_FILES['banner_768']['error'] == 0){$Img_768 = $_FILES['banner_768'];   $this->BannerChanger($Sliders['slider768'],$Img_768 );}
+     if ($_FILES['banner_576']['size'] != 0 && $_FILES['banner_576']['error'] == 0){$Img_576 = $_FILES['banner_576'];   $this->BannerChanger($Sliders['slider576'],$Img_576 );}
 
       return redirect()->route('landing.page');
   }

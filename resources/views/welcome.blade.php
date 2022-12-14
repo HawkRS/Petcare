@@ -28,89 +28,116 @@
       <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/favicon/favicon-16x16.png') }}" />
       <link rel="manifest" href="{{ asset('img/favicon/manifest.json') }}" />
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
+      <!-- CSRF Token -->
+      <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <!-- Styles -->
-        <!-- Custom styles for this template-->
-        <link href="css/app.css" rel="stylesheet">
+      <title>{{ config('app.name', 'Laravel') }}</title>
+
+      <!-- Fonts -->
+      <link rel="dns-prefetch" href="//fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+      <!-- Styles -->
+      <link href="libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+      <link href="libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
+      <link href="libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+      <link href="{{ asset('css/upzet.css') }}" rel="stylesheet">
+      <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+      <!-- Bootstrap Css -->
+      <link href="css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+      <!-- Icons Css -->
+      <link href="css/icons.min.css" rel="stylesheet" type="text/css" />
+      <!-- App Css-->
     </head>
-    <body class="container-fluid">
-      <main class="row">
-        <div class="container pt-5" style="/*border: 2px solid blue;*/">
-          <div class="row justify-content-center">
-            <div class="col-xs-12 col-md-6 col-xl-4">
-              <div class="row justify-content-center card card-login mr-2 ml-2" style="/*border: 2px solid red;*/">
-                <div class="col-12">
-                  <img src="{{ asset('img/logo-vimifos-petcare-rojo.png') }}" class="mx-auto d-block mt-5 img-fluid" alt="Vimifos Petcare">
-                </div>
-                <div class="col-12 pt-5 text-center">
-                  <h1 class="fnt_blue text-uppercase fntB">Bienvenidos</h1>
-                  <span class="pt-5">Administrador Petcare</span>
-                </div>
-                <div class="col-12">
-                  <form method="POST" action="{{ route('login') }}" class=" pt-5 pb-5">
-                    @csrf
 
-                    <div class="form-group row justify-content-center pt-2 pl-1 pr-1">
-                      <label for="email" class="col-md-4 col-form-label text-md-right">Correo electrónico</label>
+  <body class="bg-pattern">
+    <div class="bg-overlay"></div>
+    <div class="account-pages my-5 pt-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-4 col-lg-6 col-md-8">
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <div class="">
+                                <div class="text-center">
+                                    <a href="index.html" class="">
+                                        <img src="{{ asset('img/logo-vimifos-petcare-rojo.png') }}" alt="" height="65" class="auth-logo logo-dark mx-auto">
+                                        <img src="{{ asset('img/logo-vimifos-petcare-rojo.png') }}" alt="" height="65" class="auth-logo logo-light mx-auto">
+                                    </a>
+                                </div>
+                                <!-- end row -->
+                                <h4 class="font-size-18 text-muted mt-2 text-center">¡ Bienvenidos !</h4>
+                                <p class="mb-5 text-center">Administrador Petcare.</p>
+                                <form class="form-horizontal" method="POST" action="{{ route('login') }}">
+                                  @csrf
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="mb-4">
+                                                <label class="form-label" for="email">Correo electrónico</label>
+                                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
-                      <div class="col-md-6">
-                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                                @error('email')
+                                                <span class="invalid-feedback" role="alert">
+                                                  <strong>{{ $message }}</strong>
+                                                </span>
+                                                @enderror
+                                            </div>
+                                            <div class="mb-4">
+                                                <label class="form-label" for="userpassword">Password</label>
+                                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
-                        @error('email')
-                        <span class="invalid-feedback" role="alert">
-                          <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                      </div>
-                    </div>
+                                                @error('password')
+                                                <span class="invalid-feedback" role="alert">
+                                                  <strong>{{ $message }}</strong>
+                                                </span>
+                                                @enderror
+                                            </div>
 
-                    <div class="form-group row justify-content-center pt-2 pl-1 pr-1">
-                      <label for="password" class="col-md-4 col-form-label text-md-right">Contraseña</label>
-
-                      <div class="col-md-6">
-                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                        @error('password')
-                        <span class="invalid-feedback" role="alert">
-                          <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                      </div>
-                    </div>
-
-                {{--
-                    <div class="form-group row justify-content-center pl-1 pr-1">
-                      <div class="col-md-6 offset-md-4">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                          <label class="form-check-label" for="remember">
-                            {{ __('Remember Me') }}
-                          </label>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="form-check">
+                                                        <input type="checkbox" class="form-check-input" id="customControlInline">
+                                                        <label class="form-label" class="form-check-label" for="customControlInline">Recuerdame</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-7">
+                                                    <div class="text-md-end mt-3 mt-md-0">
+                                                        <a href="auth-recoverpw.html" class="text-muted"><i class="mdi mdi-lock"></i>¿Olvidaste tu contaseña?</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-grid mt-4">
+                                                <button class="btn btn-danger waves-effect waves-light" type="submit">Entrar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                      </div>
                     </div>
-                --}}
-                    <div class="form-group row justify-content-center pt-5 mb-5">
-                      <div class="col-8">
-                        <div class="d-grid gap-2 col-6 mx-auto">
-                          <button type="submit" class="btn btn-danger fnt_white text-uppercase fntB">
-                            entrar
-                          </button>
-                        </div>
-
-
-                      </div>
+                    <div class="mt-5 text-center">
+                        {{--<p class="text-white-50">Don't have an account ? <a href="auth-register.html" class="fw-medium text-primary"> Register </a> </p>--}}
+                        <p class="text-white-50">© <script>document.write(new Date().getFullYear())</script> Petcare. Hecho con <i class="mdi mdi-heart text-danger"></i> por Vimifos</p>
                     </div>
-                  </form>
                 </div>
-              </div>
             </div>
-          </div>
+            <!-- end row -->
         </div>
-      </main>
-      <script src="{{ asset('/js/app.js') }}"></script>
+    </div>
+    <!-- end Account pages -->
+    <!-- JAVASCRIPT -->
+    <script src="{{ asset('libs/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('libs/metismenu/metisMenu.min.js') }}"></script>
+    <script src="{{ asset('libs/simplebar/simplebar.min.js') }}"></script>
+    <script src="{{ asset('libs/node-waves/waves.min.js') }}"></script>
+
+    <script src="{{ asset('js/pages/dashboard.init.js') }}"></script>
+
+
+    {{-- <script src="{{ asset('js/app.js') }}"></script>--}}
+    <script src="{{ asset('js/upzet.js') }}"></script>
+    <script src="{{ asset('/js/app.js') }}"></script>
     </body>
 </html>
