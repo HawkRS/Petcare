@@ -62,19 +62,13 @@ class LandingController extends Controller
      ], $messages);
      switch ($request->position) {
        case 'slider1':
-         $idtitulo=1;
-         $idleyenda=2;
-         $slidernum = 1;
+         $idtitulo=1; $idleyenda=2;  $slidernum = 1;
          break;
        case 'slider2':
-        $idtitulo=3;
-        $idleyenda=4;
-        $slidernum = 2;
+        $idtitulo=3;$idleyenda=4; $slidernum = 2;
          break;
        case 'slider3':
-        $idtitulo=5;
-        $idleyenda=6;
-        $slidernum = 3;
+        $idtitulo=5;$idleyenda=6; $slidernum = 3;
          break;
 
        default:
@@ -205,4 +199,10 @@ class LandingController extends Controller
 
 
   }
+
+  public function UpdateContent(Request $request)
+  {
+    dd($request->all());
+  }
+
 }

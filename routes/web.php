@@ -24,7 +24,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::prefix('landing')->group(function () {
   Route::get('/', 'LandingController@index')->name( 'landing.page' );
   Route::post('/editar/{id}', 'LandingController@EditSlider')->name( 'landing.edit' );
-  //Route::post('/guardar', 'LandingController@storeSlider')->name( 'landing.storeslider' );
+  Route::post('/editar-contenido', 'LandingController@UpdateContent')->name( 'landing.updatecontent' );
 });
 
 Route::prefix('encuentranos')->group(function () {
