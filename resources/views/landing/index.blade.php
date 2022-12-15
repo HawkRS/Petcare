@@ -105,6 +105,32 @@
               </div>
             </div>
           </div>
+          <div class="col-12 col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h4>Productos (Titan)</h4>
+                  <h6 class="card-title mb-4">Contenido</h6>
+                  <p>{{ $Contenidos[7]->value }}</p>
+                  <hr>
+                  <h4>Imagen perro Izq</h4>
+                  <img src="{{ asset('/img/home/productos/thumbs/titan-perro.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
+                  <hr>
+                  <h4>Imagen perro Der</h4>
+                  <img src="{{ asset('img/home/productos/thumbs/perro-titan.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
+                  <hr>
+                  <h4>Imagen gato Izq</h4>
+                  <img src="{{ asset('img/home/productos/thumbs/gato-titan.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
+                  <hr>
+                  <h4>Imagen gato Der</h4>
+                  <img src="{{ asset('img/home/productos/thumbs/titan-gato.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
+              </div>
+              <div class="card-footer d-grid gap-2">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ProdTitanModal">
+                  Editar
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
 
     </div>
@@ -351,15 +377,67 @@
           </div>
           <div class="mb-3">
             <label for="formFile" class="form-label">Imagen para escritorio Izq</label>
-            <input class="form-control" name="imgizq" type="file" id="formFile">
+            <input class="form-control" name="imgtitanperroizq" type="file" id="formFile">
           </div>
           <div class="mb-3">
             <label for="formFile" class="form-label">Imagen para escritorio Der</label>
-            <input class="form-control" name="imgder" type="file" id="formFile">
+            <input class="form-control" name="imgtitanperroder" type="file" id="formFile">
           </div>
           <div class="mb-3">
             <label for="formFile" class="form-label">Imagen para dispositivos mobiles</label>
+            <input class="form-control" name="imgtitangatoizq" type="file" id="formFile">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+{{-- PRODUCTOS TITAN BITE --}}
+<div class="modal fade" id="ProdTitanModal" tabindex="-1" aria-labelledby="ProdTitanModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="ProdTitanModalLabel">Editar Productos titan</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form class="needs-validation" action="{{ route('landing.updatecontent') }}" method="post" enctype="multipart/form-data"  novalidate>
+        @csrf
+        <input type="hidden" name="page" value="landing">
+        <input type="hidden" name="position" value="titan">
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+            @if(isset($Contenidos[7]->value))
+            <textarea class="form-control  {{ $errors->has('titulo') ? ' is-invalid' : '' }}" name="descripcion" id="descripcion" rows="3" required>{{$Contenidos[7]->value}}</textarea>
+            @else
+            <textarea class="form-control  {{ $errors->has('titulo') ? ' is-invalid' : '' }}" name="descripcion" id="descripcion" rows="3" required></textarea>
+            @endif
+            <div class="valid-feedback">
+                ¡Todo parece en orden!
+            </div>
+            <div class="invalid-feedback">
+                Por favor agrega una descripción
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="formFile" class="form-label">Imagen titan perro Izq</label>
+            <input class="form-control" name="imgizq" type="file" id="formFile">
+          </div>
+          <div class="mb-3">
+            <label for="formFile" class="form-label">Imagen titan perro Der</label>
+            <input class="form-control" name="imgder" type="file" id="formFile">
+          </div>
+          <div class="mb-3">
+            <label for="formFile" class="form-label">Imagen titan gato Izq </label>
             <input class="form-control" name="imgmobil" type="file" id="formFile">
+          </div>
+          <div class="mb-3">
+            <label for="formFile" class="form-label">Imagen titan gato Der </label>
+            <input class="form-control" name="imgtitangatoder" type="file" id="formFile">
           </div>
         </div>
         <div class="modal-footer">

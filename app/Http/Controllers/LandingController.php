@@ -214,6 +214,10 @@ class LandingController extends Controller
       'imgizq' => 'nullable|image',
       'imgder' => 'nullable|image',
       'imgmobil' => 'nullable|image',
+      'imgtitanperroizq' => 'nullable|image',
+      'imgtitanperroder' => 'nullable|image',
+      'imgtitangatoizq' => 'nullable|image',
+      'imgtitangatoder' => 'nullable|image',
      ], $messages);
      $Helper = new Helper();
      $ContentId = $Helper->PageSorter($request->page, $request->position);
@@ -223,6 +227,10 @@ class LandingController extends Controller
      if ($_FILES['imgizq']['size'] != 0 && $_FILES['imgizq']['error'] == 0){$ImgIzq = $_FILES['imgizq'];   $this->ImageContent($request->position, 'imgizq',$ImgIzq );}
      if ($_FILES['imgder']['size'] != 0 && $_FILES['imgder']['error'] == 0){$ImgDer = $_FILES['imgder'];   $this->ImageContent($request->position, 'imgder',$ImgDer );}
      if ($_FILES['imgmobil']['size'] != 0 && $_FILES['imgmobil']['error'] == 0){$ImgMobil = $_FILES['imgmobil'];   $this->ImageContent($request->position, 'imgmobil',$ImgMobil );}
+     if ($_FILES['imgtitanperroizq']['size'] != 0 && $_FILES['imgtitanperroizq']['error'] == 0){$ImgTitanPerroIzq = $_FILES['imgtitanperroizq'];   $this->ImageContent($request->position, 'imgtitanperroizq',$ImgTitanPerroIzq );}
+     if ($_FILES['imgtitanperroder']['size'] != 0 && $_FILES['imgtitanperroder']['error'] == 0){$ImgTitanPerroDer = $_FILES['imgtitanperroder'];   $this->ImageContent($request->position, 'imgtitanperroder',$ImgTitanPerroDer );}
+     if ($_FILES['imgtitangatoizq']['size'] != 0 && $_FILES['imgtitangatoizq']['error'] == 0){$ImgTitanGatoIzq = $_FILES['imgtitangatoizq'];   $this->ImageContent($request->position, 'imgtitangatoizq',$ImgTitanGatoIzq );}
+     if ($_FILES['imgtitangatoder']['size'] != 0 && $_FILES['imgtitangatoder']['error'] == 0){$ImgTitanGatoDer = $_FILES['imgtitangatoder'];   $this->ImageContent($request->position, 'imgtitangatoder',$ImgTitanGatoDer );}
 
      //dd($request->all());
 
@@ -238,6 +246,12 @@ class LandingController extends Controller
         if($area == 'imgizq'){$path = "img/home/productos/smart_bites_neuro_active_adulto.png"; $thumbpath ="img/home/productos/thumbs/smart_bites_neuro_active_adulto.png"; }
         if($area == 'imgder'){$path = "img/home/productos/perro-smart-bites.png"; $thumbpath ="img/home/productos/thumbs/perro-smart-bites.png"; }
         if($area == 'imgmobil'){$path = "img/home/productos/composite_smartbites.jpg"; $thumbpath ="img/home/productos/thumbs/composite_smartbites.jpg"; }
+        break;
+      case 'titan':
+        if($area == 'imgtitanperroizq'){$path = "img/home/productos/smart_bites_neuro_active_adulto.png"; $thumbpath ="img/home/productos/thumbs/smart_bites_neuro_active_adulto.png"; }
+        if($area == 'imgtitanperroder'){$path = "img/home/productos/perro-smart-bites.png"; $thumbpath ="img/home/productos/thumbs/perro-smart-bites.png"; }
+        if($area == 'imgtitangatoizq'){$path = "img/home/productos/composite_smartbites.jpg"; $thumbpath ="img/home/productos/thumbs/composite_smartbites.jpg"; }
+        if($area == 'imgtitangatoder'){$path = "img/home/productos/composite_smartbites.jpg"; $thumbpath ="img/home/productos/thumbs/composite_smartbites.jpg"; }
         break;
 
       default:
