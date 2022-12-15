@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Intervention\Image\ImageManager;
 use App\Content;
+use App\Helper;
 use Illuminate\Support\Facades\DB;
 
 class LandingController extends Controller
@@ -202,7 +203,54 @@ class LandingController extends Controller
 
   public function UpdateContent(Request $request)
   {
-    dd($request->all());
+    //dd($request->all());
+    $messages = [
+    'required' => 'El campo :attribute es obligatorio.',
+    ];
+    $this->validate(request(), [
+      'page' => 'required',
+      'position' => 'required',
+      'descripcion' => 'required',
+      'imgizq' => 'nullable|image',
+      'imgder' => 'nullable|image',
+      'imgmobil' => 'nullable|image',
+     ], $messages);
+     $Helper = new Helper();
+     $ContentId = $Helper->PageSorter($request->page, $request->position);
+     $EditedContent = Content::findorfail($ContentId);
+     $EditedContent->value = $request->descripcion;
+     $EditedContent->save();
+     if ($_FILES['imgizq']['size'] != 0 && $_FILES['imgizq']['error'] == 0){$ImgIzq = $_FILES['imgizq'];   $this->ImageContent($request->position, 'imgizq',$ImgIzq );}
+     if ($_FILES['imgder']['size'] != 0 && $_FILES['imgder']['error'] == 0){$ImgDer = $_FILES['imgder'];   $this->ImageContent($request->position, 'imgder',$ImgDer );}
+     if ($_FILES['imgmobil']['size'] != 0 && $_FILES['imgmobil']['error'] == 0){$ImgMobil = $_FILES['imgmobil'];   $this->ImageContent($request->position, 'imgmobil',$ImgMobil );}
+
+     //dd($request->all());
+
+
+     return redirect()->route('landing.page');
+  }
+
+  public function ImageContent($position, $area, $ImageCont)
+  {
+
+    switch ($position) {
+      case 'smartbites':
+        if($area == 'imgizq'){$path = "img/home/productos/smart_bites_neuro_active_adulto.png"; $thumbpath ="img/home/productos/thumbs/smart_bites_neuro_active_adulto.png"; }
+        if($area == 'imgder'){$path = "img/home/productos/perro-smart-bites.png"; $thumbpath ="img/home/productos/thumbs/perro-smart-bites.png"; }
+        if($area == 'imgmobil'){$path = "img/home/productos/composite_smartbites.jpg"; $thumbpath ="img/home/productos/thumbs/composite_smartbites.jpg"; }
+        break;
+
+      default:
+        // code...
+        break;
+    }
+
+    $intervention = new ImageManager(array('driver' => 'gd'));
+    $img = $intervention->make($ImageCont['tmp_name']);
+    $thumbnail = $intervention->make($ImageCont['tmp_name']);
+    $thumbnail->fit(300, 300);
+    $img->save($path);
+    $thumbnail->save($thumbpath);
   }
 
 }

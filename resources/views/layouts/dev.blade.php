@@ -210,11 +210,11 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-sm-6">
-                                <script>document.write(new Date().getFullYear())</script> © Vimifos.
+                                <script>document.write(new Date().getFullYear())</script> © Petcare.
                             </div>
                             <div class="col-sm-6">
                                 <div class="text-sm-end d-none d-sm-block">
-                                    Powered by HawkMedia
+                                     Hecho con <i class="mdi mdi-heart text-danger"></i> por Vimifos
                                 </div>
                             </div>
                         </div>

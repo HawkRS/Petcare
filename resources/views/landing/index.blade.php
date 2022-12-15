@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.dev')
 @section('pagina', 'Dashboard')
 
 @section('content')
@@ -87,16 +87,16 @@
               <div class="card-body">
                 <h4>Productos (Smart Bites)</h4>
                   <h6 class="card-title mb-4">Contenido</h6>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>{{ $Contenidos[6]->value }}</p>
                   <hr>
                   <h4>Imagen Izq</h4>
-                  <img src="{{ asset('images/sliders/banner-home-1-576.jpg') }}" class="img-thumbnail" alt="">
+                  <img src="{{ asset('img/home/productos/thumbs/smart_bites_neuro_active_adulto.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
                   <hr>
                   <h4>Imagen Der</h4>
-                  <img src="{{ asset('images/sliders/banner-home-1-576.jpg') }}" class="img-thumbnail" alt="">
+                  <img src="{{ asset('img/home/productos/thumbs/perro-smart-bites.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
                   <hr>
                   <h4>Imagen Mobile</h4>
-                  <img src="{{ asset('images/sliders/banner-home-1-576.jpg') }}" class="img-thumbnail" alt="">
+                  <img src="{{ asset('img/home/productos/thumbs/composite_smartbites.jpg') }}" class="img-thumbnail  mx-auto d-block" alt="">
               </div>
               <div class="card-footer d-grid gap-2">
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ProdSmartModal">
@@ -330,11 +330,18 @@
         <h1 class="modal-title fs-5" id="ProdSmartModalLabel">Editar Productos Smart Bites</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form class="needs-validation" action="index.html" method="post"  novalidate>
+      <form class="needs-validation" action="{{ route('landing.updatecontent') }}" method="post" enctype="multipart/form-data"  novalidate>
+        @csrf
+        <input type="hidden" name="page" value="landing">
+        <input type="hidden" name="position" value="smartbites">
         <div class="modal-body">
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
-            <textarea class="form-control" id="descripcion" rows="3" required></textarea>
+            @if(isset($Contenidos[6]->value))
+            <textarea class="form-control  {{ $errors->has('titulo') ? ' is-invalid' : '' }}" name="descripcion" id="descripcion" rows="3" required>{{$Contenidos[6]->value}}</textarea>
+            @else
+            <textarea class="form-control  {{ $errors->has('titulo') ? ' is-invalid' : '' }}" name="descripcion" id="descripcion" rows="3" required></textarea>
+            @endif
             <div class="valid-feedback">
                 ¡Todo parece en orden!
             </div>
@@ -344,15 +351,15 @@
           </div>
           <div class="mb-3">
             <label for="formFile" class="form-label">Imagen para escritorio Izq</label>
-            <input class="form-control" type="file" id="formFile">
+            <input class="form-control" name="imgizq" type="file" id="formFile">
           </div>
           <div class="mb-3">
             <label for="formFile" class="form-label">Imagen para escritorio Der</label>
-            <input class="form-control" type="file" id="formFile">
+            <input class="form-control" name="imgder" type="file" id="formFile">
           </div>
           <div class="mb-3">
             <label for="formFile" class="form-label">Imagen para dispositivos mobiles</label>
-            <input class="form-control" type="file" id="formFile">
+            <input class="form-control" name="imgmobil" type="file" id="formFile">
           </div>
         </div>
         <div class="modal-footer">
