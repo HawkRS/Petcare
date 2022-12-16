@@ -131,6 +131,32 @@
               </div>
             </div>
           </div>
+          <div class="col-12 col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h4>Productos (Rocko)</h4>
+                  <h6 class="card-title mb-4">Contenido</h6>
+                  <p>{{ $Contenidos[8]->value }}</p>
+                  <hr>
+                  <h4>Imagen perro Izq</h4>
+                  <img src="{{ asset('/img/home/productos/thumbs/perro-rocko.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
+                  <hr>
+                  <h4>Imagen perro Der</h4>
+                  <img src="{{ asset('img/home/productos/thumbs/rocko-plus-complete.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
+                  <hr>
+                  <h4>Imagen gato Izq</h4>
+                  <img src="{{ asset('img/home/productos/thumbs/rocko-perro.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
+                  <hr>
+                  <h4>Imagen gato Der</h4>
+                  <img src="{{ asset('img/home/productos/thumbs/perro-rocko-cafe.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
+              </div>
+              <div class="card-footer d-grid gap-2">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ProdRockoModal">
+                  Editar
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
 
     </div>
@@ -438,6 +464,58 @@
           <div class="mb-3">
             <label for="formFile" class="form-label">Imagen titan gato Der </label>
             <input class="form-control" name="imgtitangatoder" type="file" id="formFile">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+{{-- PRODUCTOS ROCKO BITE --}}
+<div class="modal fade" id="ProdRockoModal" tabindex="-1" aria-labelledby="ProdRockoModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="ProdRockoModalLabel">Editar Productos titan</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form class="needs-validation" action="{{ route('landing.updatecontent') }}" method="post" enctype="multipart/form-data"  novalidate>
+        @csrf
+        <input type="hidden" name="page" value="landing">
+        <input type="hidden" name="position" value="rocko">
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+            @if(isset($Contenidos[8]->value))
+            <textarea class="form-control  {{ $errors->has('titulo') ? ' is-invalid' : '' }}" name="descripcion" id="descripcion" rows="3" required>{{$Contenidos[8]->value}}</textarea>
+            @else
+            <textarea class="form-control  {{ $errors->has('titulo') ? ' is-invalid' : '' }}" name="descripcion" id="descripcion" rows="3" required></textarea>
+            @endif
+            <div class="valid-feedback">
+                ¡Todo parece en orden!
+            </div>
+            <div class="invalid-feedback">
+                Por favor agrega una descripción
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="formFile" class="form-label">Imagen rocko izq externa</label>
+            <input class="form-control" name="imgizqext" type="file" id="formFile">
+          </div>
+          <div class="mb-3">
+            <label for="formFile" class="form-label">Imagen rocko izq interna</label>
+            <input class="form-control" name="imgizqint" type="file" id="formFile">
+          </div>
+          <div class="mb-3">
+            <label for="formFile" class="form-label">Imagen rocko der interna</label>
+            <input class="form-control" name="imgderint" type="file" id="formFile">
+          </div>
+          <div class="mb-3">
+            <label for="formFile" class="form-label">Imagen rocko der externa</label>
+            <input class="form-control" name="imgderext" type="file" id="formFile">
           </div>
         </div>
         <div class="modal-footer">
