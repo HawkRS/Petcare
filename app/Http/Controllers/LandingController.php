@@ -248,10 +248,10 @@ class LandingController extends Controller
         if($area == 'imgmobil'){$path = "img/home/productos/composite_smartbites.jpg"; $thumbpath ="img/home/productos/thumbs/composite_smartbites.jpg"; }
         break;
       case 'titan':
-        if($area == 'imgtitanperroizq'){$path = "img/home/productos/smart_bites_neuro_active_adulto.png"; $thumbpath ="img/home/productos/thumbs/smart_bites_neuro_active_adulto.png"; }
-        if($area == 'imgtitanperroder'){$path = "img/home/productos/perro-smart-bites.png"; $thumbpath ="img/home/productos/thumbs/perro-smart-bites.png"; }
-        if($area == 'imgtitangatoizq'){$path = "img/home/productos/composite_smartbites.jpg"; $thumbpath ="img/home/productos/thumbs/composite_smartbites.jpg"; }
-        if($area == 'imgtitangatoder'){$path = "img/home/productos/composite_smartbites.jpg"; $thumbpath ="img/home/productos/thumbs/composite_smartbites.jpg"; }
+        if($area == 'imgtitanperroizq'){$path = "img/home/productos/titan-perro.png"; $thumbpath ="img/home/productos/thumbs/titan-perro.png"; }
+        if($area == 'imgtitanperroder'){$path = "img/home/productos/perro-titan.png"; $thumbpath ="img/home/productos/thumbs/perro-titan.png"; }
+        if($area == 'imgtitangatoizq'){$path = "img/home/productos/gato-titan.png"; $thumbpath ="img/home/productos/thumbs/gato-titan.png"; }
+        if($area == 'imgtitangatoder'){$path = "img/home/productos/titan-gato.png"; $thumbpath ="img/home/productos/thumbs/titan-gato.png"; }
         break;
 
       default:
