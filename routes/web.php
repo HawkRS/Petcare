@@ -27,6 +27,11 @@ Route::prefix('landing')->group(function () {
   Route::post('/editar-contenido', 'LandingController@UpdateContent')->name( 'landing.updatecontent' );
 });
 
+Route::prefix('smartbites-perro')->group(function () {
+  Route::get('/', 'ProductosController@index')->name( 'productos.page' );
+  Route::post('/editar-contenido', 'ProductosController@UpdateContent')->name( 'productos.updatecontent' );
+});
+
 Route::prefix('encuentranos')->group(function () {
   Route::get('/', 'MapController@index')->name( 'map.index' );
   Route::get('/editar/{id}', 'MapController@edit')->name( 'findus.edit' );
