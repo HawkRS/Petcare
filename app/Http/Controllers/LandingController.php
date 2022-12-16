@@ -23,7 +23,7 @@ class LandingController extends Controller
   private $f = 'landing.';
 
   /**
-   * Show the application dashboard.
+   * Show the application landing page settings.
    *
    * @return \Illuminate\Contracts\Support\Renderable
    */

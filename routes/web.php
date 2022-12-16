@@ -28,8 +28,8 @@ Route::prefix('landing')->group(function () {
 });
 
 Route::prefix('smartbites-perro')->group(function () {
-  Route::get('/', 'ProductosController@index')->name( 'productos.page' );
-  Route::post('/editar-contenido', 'ProductosController@UpdateContent')->name( 'productos.updatecontent' );
+  Route::get('/', 'ProductosController@index')->name( 'smartbites.page' );
+  Route::post('/editar-contenido', 'ProductosController@UpdateContent')->name( 'smartbites.updatecontent' );
 });
 
 Route::prefix('encuentranos')->group(function () {

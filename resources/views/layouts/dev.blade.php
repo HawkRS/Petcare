@@ -179,7 +179,7 @@
                                     <span>Productos</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="email-inbox.html">Smart Bites</a></li>
+                                    <li><a href="{{ route('smartbites.page') }}">Smart Bites</a></li>
                                     <li><a href="email-read.html">Titan</a></li>
                                     <li><a href="email-compose.html">Rock</a></li>
                                 </ul>
