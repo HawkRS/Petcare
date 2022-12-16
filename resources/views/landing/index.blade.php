@@ -87,16 +87,34 @@
               <div class="card-body">
                 <h4>Productos (Smart Bites)</h4>
                   <h6 class="card-title mb-4">Contenido</h6>
-                  <p>{{ $Contenidos[6]->value }}</p>
+                  <?php $p = "![\r\n]+!";
+                  $textSmartbites = preg_split($p, $Contenidos[6]->value, 4);
+                  $textSmartbites = array_slice($textSmartbites, 0, 2);
+                  $textSmartbites = join("\r\n", $textSmartbites);?>
+                  <p>{{ $textSmartbites }}</p>
                   <hr>
-                  <h4>Imagen Izq</h4>
-                  <img src="{{ asset('img/home/productos/thumbs/smart_bites_neuro_active_adulto.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
-                  <hr>
-                  <h4>Imagen Der</h4>
-                  <img src="{{ asset('img/home/productos/thumbs/perro-smart-bites.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
-                  <hr>
-                  <h4>Imagen Mobile</h4>
-                  <img src="{{ asset('img/home/productos/thumbs/composite_smartbites.jpg') }}" class="img-thumbnail  mx-auto d-block" alt="">
+                  <div class="accordion", id="accordionsmartbitesExample">
+                    <div class="accordion-item">
+                      <h4 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Imagenes
+                        </button>
+                      </h4>
+                      <div  id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionsmartbitesExample">
+                        <div class="accordion-body">
+                          <h4>Imagen Izq</h4>
+                          <img src="{{ asset('img/home/productos/thumbs/smart_bites_neuro_active_adulto.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
+                          <hr>
+                          <h4>Imagen Der</h4>
+                          <img src="{{ asset('img/home/productos/thumbs/perro-smart-bites.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
+                          <hr>
+                          <h4>Imagen Mobile</h4>
+                          <img src="{{ asset('img/home/productos/thumbs/composite_smartbites.jpg') }}" class="img-thumbnail  mx-auto d-block" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
               </div>
               <div class="card-footer d-grid gap-2">
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ProdSmartModal">
@@ -110,19 +128,36 @@
               <div class="card-body">
                 <h4>Productos (Titan)</h4>
                   <h6 class="card-title mb-4">Contenido</h6>
-                  <p>{{ $Contenidos[7]->value }}</p>
+                  <?php $p = "![\r\n]+!";
+                  $textTitan = preg_split($p, $Contenidos[7]->value, 4);
+                  $textTitan = array_slice($textTitan, 0, 2);
+                  $textTitan = join("\r\n", $textTitan);?>
+                  <p>{{ $textTitan }}</p>
                   <hr>
-                  <h4>Imagen perro Izq</h4>
-                  <img src="{{ asset('/img/home/productos/thumbs/titan-perro.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
-                  <hr>
-                  <h4>Imagen perro Der</h4>
-                  <img src="{{ asset('img/home/productos/thumbs/perro-titan.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
-                  <hr>
-                  <h4>Imagen gato Izq</h4>
-                  <img src="{{ asset('img/home/productos/thumbs/gato-titan.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
-                  <hr>
-                  <h4>Imagen gato Der</h4>
-                  <img src="{{ asset('img/home/productos/thumbs/titan-gato.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
+                  <div class="accordion", id="accordionTitanExample">
+                    <div class="accordion-item">
+                      <h4 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                          Imagenes
+                        </button>
+                      </h4>
+                      <div  id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionTitanExample">
+                        <div class="accordion-body">
+                          <h4>Imagen perro Izq</h4>
+                          <img src="{{ asset('/img/home/productos/thumbs/titan-perro.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
+                          <hr>
+                          <h4>Imagen perro Der</h4>
+                          <img src="{{ asset('img/home/productos/thumbs/perro-titan.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
+                          <hr>
+                          <h4>Imagen gato Izq</h4>
+                          <img src="{{ asset('img/home/productos/thumbs/gato-titan.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
+                          <hr>
+                          <h4>Imagen gato Der</h4>
+                          <img src="{{ asset('img/home/productos/thumbs/titan-gato.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
               </div>
               <div class="card-footer d-grid gap-2">
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ProdTitanModal">
@@ -136,19 +171,36 @@
               <div class="card-body">
                 <h4>Productos (Rocko)</h4>
                   <h6 class="card-title mb-4">Contenido</h6>
-                  <p>{{ $Contenidos[8]->value }}</p>
+                  <?php $p = "![\r\n]+!";
+                  $textRocko = preg_split($p, $Contenidos[8]->value, 4);
+                  $textRocko = array_slice($textRocko, 0, 2);
+                  $textRocko = join("\r\n", $textRocko);?>
+                  <p>{{ $textRocko }}</p>
                   <hr>
-                  <h4>Imagen perro Izq</h4>
-                  <img src="{{ asset('/img/home/productos/thumbs/perro-rocko.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
-                  <hr>
-                  <h4>Imagen perro Der</h4>
-                  <img src="{{ asset('img/home/productos/thumbs/rocko-plus-complete.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
-                  <hr>
-                  <h4>Imagen gato Izq</h4>
-                  <img src="{{ asset('img/home/productos/thumbs/rocko-perro.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
-                  <hr>
-                  <h4>Imagen gato Der</h4>
-                  <img src="{{ asset('img/home/productos/thumbs/perro-rocko-cafe.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
+                  <div class="accordion", id="accordionRockoExample">
+                    <div class="accordion-item">
+                      <h4 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                          Imagenes
+                        </button>
+                      </h4>
+                      <div  id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionRockoExample">
+                        <div class="accordion-body">
+                          <h4>Imagen perro Izq</h4>
+                          <img src="{{ asset('/img/home/productos/thumbs/perro-rocko.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
+                          <hr>
+                          <h4>Imagen perro Der</h4>
+                          <img src="{{ asset('img/home/productos/thumbs/rocko-plus-complete.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
+                          <hr>
+                          <h4>Imagen gato Izq</h4>
+                          <img src="{{ asset('img/home/productos/thumbs/rocko-perro.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
+                          <hr>
+                          <h4>Imagen gato Der</h4>
+                          <img src="{{ asset('img/home/productos/thumbs/perro-rocko-cafe.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
               </div>
               <div class="card-footer d-grid gap-2">
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ProdRockoModal">
