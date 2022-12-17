@@ -36,9 +36,9 @@ class ProductosController extends Controller
     //dd('index smartbites');
       //$ContentList = Content::where('page', 'landing')->get();
       $ContentList = DB::table('content')
-                ->whereDate('page', 'smartbites')
+                ->where('page', 'smartbites')
                 ->get();
-      dd($ContentList);
+      //dd($ContentList);
       return view($this->f.'index', [
         'Contenidos' => $ContentList,
       ]);
