@@ -43,4 +43,23 @@ class ProductosController extends Controller
         'Contenidos' => $ContentList,
       ]);
   }
+
+  public function UpdateContent(Request $request)
+  {
+    $messages = [
+    'required' => 'El campo :attribute es obligatorio.',
+    ];
+    $this->validate(request(), [
+      'page' => 'required',
+      'type' => 'required',
+      'position' => 'required',
+      'descripcion' => 'required',
+      'imagefile' => 'nullable|image',
+     ], $messages);
+     $Helper = new Helper();
+     if($request->type == 'image'){
+       $Helper->UpdateImage($request);
+     }
+     dd($request->all());
+   }
 }
