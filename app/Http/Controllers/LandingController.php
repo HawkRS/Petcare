@@ -218,19 +218,29 @@ class LandingController extends Controller
       'imgtitanperroder' => 'nullable|image',
       'imgtitangatoizq' => 'nullable|image',
       'imgtitangatoder' => 'nullable|image',
+      'imgrockoIzqExt' => 'nullable|image',
+      'imgrockoIzqInt' => 'nullable|image',
+      'imgrockoDerInt' => 'nullable|image',
+      'imgrockoDerExt' => 'nullable|image',
      ], $messages);
      $Helper = new Helper();
      $ContentId = $Helper->PageSorter($request->page, $request->position);
      $EditedContent = Content::findorfail($ContentId);
      $EditedContent->value = $request->descripcion;
      $EditedContent->save();
-     if ($_FILES['imgizq']['size'] != 0 && $_FILES['imgizq']['error'] == 0){$ImgIzq = $_FILES['imgizq'];   $this->ImageContent($request->position, 'imgizq',$ImgIzq );}
-     if ($_FILES['imgder']['size'] != 0 && $_FILES['imgder']['error'] == 0){$ImgDer = $_FILES['imgder'];   $this->ImageContent($request->position, 'imgder',$ImgDer );}
-     if ($_FILES['imgmobil']['size'] != 0 && $_FILES['imgmobil']['error'] == 0){$ImgMobil = $_FILES['imgmobil'];   $this->ImageContent($request->position, 'imgmobil',$ImgMobil );}
-     if ($_FILES['imgtitanperroizq']['size'] != 0 && $_FILES['imgtitanperroizq']['error'] == 0){$ImgTitanPerroIzq = $_FILES['imgtitanperroizq'];   $this->ImageContent($request->position, 'imgtitanperroizq',$ImgTitanPerroIzq );}
-     if ($_FILES['imgtitanperroder']['size'] != 0 && $_FILES['imgtitanperroder']['error'] == 0){$ImgTitanPerroDer = $_FILES['imgtitanperroder'];   $this->ImageContent($request->position, 'imgtitanperroder',$ImgTitanPerroDer );}
-     if ($_FILES['imgtitangatoizq']['size'] != 0 && $_FILES['imgtitangatoizq']['error'] == 0){$ImgTitanGatoIzq = $_FILES['imgtitangatoizq'];   $this->ImageContent($request->position, 'imgtitangatoizq',$ImgTitanGatoIzq );}
-     if ($_FILES['imgtitangatoder']['size'] != 0 && $_FILES['imgtitangatoder']['error'] == 0){$ImgTitanGatoDer = $_FILES['imgtitangatoder'];   $this->ImageContent($request->position, 'imgtitangatoder',$ImgTitanGatoDer );}
+     if(isset($_FILES['imgizq'])){if ($_FILES['imgizq']['size'] != 0 && $_FILES['imgizq']['error'] == 0){$ImgIzq = $_FILES['imgizq'];   $this->ImageContent($request->position, 'imgizq',$ImgIzq );}}
+     if(isset($_FILES['imgder'])){if ($_FILES['imgder']['size'] != 0 && $_FILES['imgder']['error'] == 0){$ImgDer = $_FILES['imgder'];   $this->ImageContent($request->position, 'imgizq',$ImgDer );}}
+     if(isset($_FILES['imgmobil'])){if ($_FILES['imgmobil']['size'] != 0 && $_FILES['imgmobil']['error'] == 0){$ImgMobil = $_FILES['imgmobil'];   $this->ImageContent($request->position, 'imgizq',$ImgMobil );}}
+
+     if(isset($_FILES['imgtitanperroizq'])){if ($_FILES['imgtitanperroizq']['size'] != 0 && $_FILES['imgtitanperroizq']['error'] == 0){$ImgTitanPerroIzq = $_FILES['imgtitanperroizq'];   $this->ImageContent($request->position, 'imgtitanperroizq',$ImgTitanPerroIzq );}}
+     if(isset($_FILES['imgtitanperroder'])){if ($_FILES['imgtitanperroder']['size'] != 0 && $_FILES['imgtitanperroder']['error'] == 0){$ImgTitanPerroDer = $_FILES['imgtitanperroder'];   $this->ImageContent($request->position, 'imgtitanperroder',$ImgTitanPerroDer );}}
+     if(isset($_FILES['imgtitangatoizq'])){if ($_FILES['imgtitangatoizq']['size'] != 0 && $_FILES['imgtitangatoizq']['error'] == 0){$ImgTitanGatoIzq = $_FILES['imgtitangatoizq'];   $this->ImageContent($request->position, 'imgtitangatoizq',$ImgTitanGatoIzq );}}
+     if(isset($_FILES['imgtitangatoder'])){if ($_FILES['imgtitangatoder']['size'] != 0 && $_FILES['imgtitangatoder']['error'] == 0){$ImgTitanGatoDer = $_FILES['imgtitangatoder'];   $this->ImageContent($request->position, 'imgtitangatoder',$ImgTitanGatoDer );}}
+
+     if(isset($_FILES['imgrockoIzqExt'])){if ($_FILES['imgrockoIzqExt']['size'] != 0 && $_FILES['imgrockoIzqExt']['error'] == 0){$ImgRockoIzqExt = $_FILES['imgrockoIzqExt'];   $this->ImageContent($request->position, 'imgrockoIzqExt',$ImgRockoIzqExt );}}
+     if(isset($_FILES['imgrockoIzqInt'])){if ($_FILES['imgrockoIzqInt']['size'] != 0 && $_FILES['imgrockoIzqInt']['error'] == 0){$ImgRockoIzqInt = $_FILES['imgrockoIzqInt'];   $this->ImageContent($request->position, 'imgrockoIzqInt',$ImgRockoIzqInt );}}
+     if(isset($_FILES['imgrockoDerInt'])){if ($_FILES['imgrockoDerInt']['size'] != 0 && $_FILES['imgrockoDerInt']['error'] == 0){$ImgRockoDerInt = $_FILES['imgrockoDerInt'];   $this->ImageContent($request->position, 'imgrockoDerInt',$ImgRockoDerInt );}}
+     if(isset($_FILES['imgrockoDerExt'])){if ($_FILES['imgrockoDerExt']['size'] != 0 && $_FILES['imgrockoDerExt']['error'] == 0){$ImgRockoDerExt = $_FILES['imgrockoDerExt'];   $this->ImageContent($request->position, 'imgrockoDerExt',$ImgRockoDerExt );}}
 
      //dd($request->all());
 
@@ -252,6 +262,12 @@ class LandingController extends Controller
         if($area == 'imgtitanperroder'){$path = "img/home/productos/perro-titan.png"; $thumbpath ="img/home/productos/thumbs/perro-titan.png"; }
         if($area == 'imgtitangatoizq'){$path = "img/home/productos/gato-titan.png"; $thumbpath ="img/home/productos/thumbs/gato-titan.png"; }
         if($area == 'imgtitangatoder'){$path = "img/home/productos/titan-gato.png"; $thumbpath ="img/home/productos/thumbs/titan-gato.png"; }
+        break;
+      case 'rocko':
+        if($area == 'imgrockoIzqExt'){$path = "img/home/productos/perro-rocko.png"; $thumbpath ="img/home/productos/thumbs/perro-rocko.png"; }
+        if($area == 'imgrockoIzqInt'){$path = "img/home/productos/rocko-plus-complete.png"; $thumbpath ="img/home/productos/thumbs/rocko-plus-complete.png"; }
+        if($area == 'imgrockoDerInt'){$path = "img/home/productos/rocko-perro.png"; $thumbpath ="img/home/productos/thumbs/rocko-perro.png"; }
+        if($area == 'imgrockoDerExt'){$path = "img/home/productos/perro-rocko-cafe.png"; $thumbpath ="img/home/productos/thumbs/perro-rocko-cafe.png"; }
         break;
 
       default:

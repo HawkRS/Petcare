@@ -59,4 +59,11 @@ class Helper extends Model
           break;
       }
     }
+
+
+    public function UpdateImage($request)
+    {
+      dd($request->all());
+    }
+
 }

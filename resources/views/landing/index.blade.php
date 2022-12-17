@@ -186,16 +186,16 @@
                       </h4>
                       <div  id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionRockoExample">
                         <div class="accordion-body">
-                          <h4>Imagen perro Izq</h4>
+                          <h4>Imagen Rocko Izq Externa</h4>
                           <img src="{{ asset('/img/home/productos/thumbs/perro-rocko.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
                           <hr>
-                          <h4>Imagen perro Der</h4>
+                          <h4>Imagen Rocko Izq Interna</h4>
                           <img src="{{ asset('img/home/productos/thumbs/rocko-plus-complete.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
                           <hr>
-                          <h4>Imagen gato Izq</h4>
+                          <h4>Imagen Rocko Der Interna</h4>
                           <img src="{{ asset('img/home/productos/thumbs/rocko-perro.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
                           <hr>
-                          <h4>Imagen gato Der</h4>
+                          <h4>Imagen Rocko Der Externa</h4>
                           <img src="{{ asset('img/home/productos/thumbs/perro-rocko-cafe.png') }}" class="img-thumbnail  mx-auto d-block" alt="">
                         </div>
                       </div>
@@ -555,19 +555,19 @@
           </div>
           <div class="mb-3">
             <label for="formFile" class="form-label">Imagen rocko izq externa</label>
-            <input class="form-control" name="imgizqext" type="file" id="formFile">
+            <input class="form-control" name="imgrockoIzqExt" type="file" id="formFile">
           </div>
           <div class="mb-3">
             <label for="formFile" class="form-label">Imagen rocko izq interna</label>
-            <input class="form-control" name="imgizqint" type="file" id="formFile">
+            <input class="form-control" name="imgrockoIzqInt" type="file" id="formFile">
           </div>
           <div class="mb-3">
             <label for="formFile" class="form-label">Imagen rocko der interna</label>
-            <input class="form-control" name="imgderint" type="file" id="formFile">
+            <input class="form-control" name="imgrockoDerInt" type="file" id="formFile">
           </div>
           <div class="mb-3">
             <label for="formFile" class="form-label">Imagen rocko der externa</label>
-            <input class="form-control" name="imgderext" type="file" id="formFile">
+            <input class="form-control" name="imgrockoDerExt" type="file" id="formFile">
           </div>
         </div>
         <div class="modal-footer">
