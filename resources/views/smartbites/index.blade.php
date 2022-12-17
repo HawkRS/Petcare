@@ -111,7 +111,7 @@
                 <div class="modal-body">
                   <div class="mb-3">
                     <label for="formFile" class="form-label">Carga tu imagen (archivos tipo png con transparencia)</label>
-                    <input name="imagefile" class="form-control" type="file" id="formFile"
+                    <input name="imagefile" class="form-control" type="file" id="formFile">
                   </div>
                 </div>
                 <div class="modal-footer">
@@ -123,7 +123,7 @@
           </div>
         </div>
         {{-- Imagen IZQ Externa END --}}
-        {{-- Imagen IZQ Externa --}}
+        {{-- Imagen IZQ Interna --}}
         <div class="modal fade" id="ImgIzqIntModal" tabindex="-1" aria-labelledby="ImgIzqIntModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -133,11 +133,15 @@
               </div>
               <form class="needs-validation" action="{{ route('smartbites.updatecontent') }}" method="post" enctype="multipart/form-data"  novalidate>
                 @csrf
-                <input type="hidden" name="position" value="slider1">
+                <input type="hidden" name="page" value="smartbites">
+                <input type="hidden" name="type" value="image">
+                <input type="hidden" name="section" value="banner">
+                <input type="hidden" name="imgname" value="izqint">
+                <input type="hidden" name="descripcion" value="image">
                 <div class="modal-body">
                   <div class="mb-3">
-                    <label for="formFile" class="form-label">Carga tu imagen (archivos tipo png con transparencia</label>
-                    <input name="banner_576" class="form-control" type="file" id="formFile">
+                    <label for="formFile" class="form-label">Carga tu imagen (archivos tipo png con transparencia)</label>
+                    <input name="imagefile" class="form-control" type="file" id="formFile">
                   </div>
                 </div>
                 <div class="modal-footer">
@@ -148,7 +152,67 @@
             </div>
           </div>
         </div>
-        {{-- Imagen IZQ Externa END --}}
+        {{-- Imagen IZQ Interna END --}}
+        {{-- Imagen DER Interna --}}
+        <div class="modal fade" id="ImgDerIntModal" tabindex="-1" aria-labelledby="ImgDerIntModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="ImgDerIntModalLabel">Imagen Derecha interna</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form class="needs-validation" action="{{ route('smartbites.updatecontent') }}" method="post" enctype="multipart/form-data"  novalidate>
+                @csrf
+                <input type="hidden" name="page" value="smartbites">
+                <input type="hidden" name="type" value="image">
+                <input type="hidden" name="section" value="banner">
+                <input type="hidden" name="imgname" value="derint">
+                <input type="hidden" name="descripcion" value="image">
+                <div class="modal-body">
+                  <div class="mb-3">
+                    <label for="formFile" class="form-label">Carga tu imagen (archivos tipo png con transparencia)</label>
+                    <input name="imagefile" class="form-control" type="file" id="formFile">
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="submit" class="btn btn-primary">Enviar</button>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        {{-- Imagen DER Interna END --}}
+        {{-- Imagen DER Externa --}}
+        <div class="modal fade" id="ImgDerExtModal" tabindex="-1" aria-labelledby="ImgDerExtModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="ImgDerExtModalLabel">Imagen Derecha interna</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form class="needs-validation" action="{{ route('smartbites.updatecontent') }}" method="post" enctype="multipart/form-data"  novalidate>
+                @csrf
+                <input type="hidden" name="page" value="smartbites">
+                <input type="hidden" name="type" value="image">
+                <input type="hidden" name="section" value="banner">
+                <input type="hidden" name="imgname" value="derext">
+                <input type="hidden" name="descripcion" value="image">
+                <div class="modal-body">
+                  <div class="mb-3">
+                    <label for="formFile" class="form-label">Carga tu imagen (archivos tipo png con transparencia)</label>
+                    <input name="imagefile" class="form-control" type="file" id="formFile">
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="submit" class="btn btn-primary">Enviar</button>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        {{-- Imagen DER Externa END --}}
 
   </div>
 </div>
