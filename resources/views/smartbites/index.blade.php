@@ -105,7 +105,8 @@
                 @csrf
                 <input type="hidden" name="page" value="smartbites">
                 <input type="hidden" name="type" value="image">
-                <input type="hidden" name="position" value="banner">
+                <input type="hidden" name="section" value="banner">
+                <input type="hidden" name="imgname" value="izqext">
                 <input type="hidden" name="descripcion" value="image">
                 <div class="modal-body">
                   <div class="mb-3">

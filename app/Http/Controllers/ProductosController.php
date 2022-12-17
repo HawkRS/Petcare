@@ -52,14 +52,29 @@ class ProductosController extends Controller
     $this->validate(request(), [
       'page' => 'required',
       'type' => 'required',
-      'position' => 'required',
+      'section' => 'required',
       'descripcion' => 'required',
+      'imgname' => 'nullable',
       'imagefile' => 'nullable|image',
      ], $messages);
      $Helper = new Helper();
+    //dd($request->imgname);
      if($request->type == 'image'){
-       $Helper->UpdateImage($request);
+       $Helper->UpdateImage($request->page,$request->section,$_FILES['imagefile'],$request->imgname);
      }
-     dd($request->all());
+     elseif($request->type == 'text') {
+       // code...
+     }
+
+     switch ($request->page) {
+       case 'smartbites':
+         return redirect()->route('smartbites.page');
+         break;
+
+       default:
+         // code...
+         break;
+     }
+
    }
 }
