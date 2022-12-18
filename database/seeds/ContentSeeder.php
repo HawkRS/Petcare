@@ -355,7 +355,7 @@ class ContentSeeder extends Seeder
             'type' => 'txt',
             'value' => '2, 4, 15 y 25 kg',
           ]);
-      // TITAN PERRO
+      // TITAN GATO
           DB::table('content')->insert([
             'page' => 'titan',
             'section' => 'gato',
@@ -428,6 +428,110 @@ class ContentSeeder extends Seeder
             'field' => 'gatobottomder',
             'type' => 'txt',
             'value' => 'La vitamina E protege su corazón para asegurar el cuidado de todo su organismo.',
+          ]);
+    // ROCKO
+          DB::table('content')->insert([
+            'page' => 'rocko',
+            'section' => 'banner',
+            'field' => 'leyend1',
+            'type' => 'txt',
+            'value' => '<strong>Rocko Plus®</strong> es la línea de alimentos que contiene los nutrientes esenciales y de calidad que cuidan a las mascotas y la economía de sus dueños.',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'rocko',
+            'section' => 'banner',
+            'field' => 'leyend2',
+            'type' => 'txt',
+            'value' => '<strong>Rocko Plus®</strong> es… Calidad Plus para ver a tu can ¡Radiante y feliz!®',
+          ]);
+      // ROCKO COMPLETE
+          DB::table('content')->insert([
+            'page' => 'rocko',
+            'section' => 'complete',
+            'field' => 'edad',
+            'type' => 'txt',
+            'value' => 'Adulto',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'rocko',
+            'section' => 'complete',
+            'field' => 'presentaciones',
+            'type' => 'txt',
+            'value' => '22 kg',
+          ]);
+      // ROCKO PODER
+          DB::table('content')->insert([
+            'page' => 'rocko',
+            'section' => 'plus',
+            'field' => 'edad',
+            'type' => 'txt',
+            'value' => 'Adulto',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'rocko',
+            'section' => 'plus',
+            'field' => 'presentaciones',
+            'type' => 'txt',
+            'value' => '25 kg',
+          ]);
+      // BENEFICIOS
+        // ROCKO COMPLETE
+          DB::table('content')->insert([
+            'page' => 'rocko',
+            'section' => 'beneficios',
+            'field' => 'completetopizq',
+            'type' => 'txt',
+            'value' => 'Fuente principal de aminoácidos.',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'rocko',
+            'section' => 'beneficios',
+            'field' => 'completetopder',
+            'type' => 'txt',
+            'value' => 'Placeholder.',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'rocko',
+            'section' => 'beneficios',
+            'field' => 'completebottomizq',
+            'type' => 'txt',
+            'value' => 'Para una nutrición completa y balanceada.',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'rocko',
+            'section' => 'beneficios',
+            'field' => 'completebottomder',
+            'type' => 'txt',
+            'value' => 'Placeholder.',
+          ]);
+        // ROCKO PODER
+          DB::table('content')->insert([
+            'page' => 'rocko',
+            'section' => 'beneficios',
+            'field' => 'podertopizq',
+            'type' => 'txt',
+            'value' => 'Fuente principal de aminoácidos.',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'rocko',
+            'section' => 'beneficios',
+            'field' => 'podertopder',
+            'type' => 'txt',
+            'value' => 'Para una nutrición completa y balanceada.',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'rocko',
+            'section' => 'beneficios',
+            'field' => 'poderbottomizq',
+            'type' => 'txt',
+            'value' => 'Para una salud intestinal y heces firmes.',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'rocko',
+            'section' => 'beneficios',
+            'field' => 'poderbottomder',
+            'type' => 'txt',
+            'value' => 'Placeholder.',
           ]);
     }
 }
