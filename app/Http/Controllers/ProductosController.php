@@ -95,13 +95,42 @@ class ProductosController extends Controller
           $Parrafo1 = Content::where('page', 'smartbitesperro')->where('section', 'banner')->where('field', 'leyend1')->first();
           $Parrafo2 = Content::where('page', 'smartbitesperro')->where('section', 'banner')->where('field', 'leyend2')->first();
           $Parrafo1->value = $request->parrafo1;
-          //dd($Parrafo1);
           $Parrafo1->save();
           $Parrafo2->value = $request->parrafo2;
           $Parrafo2->save();
           return redirect()->route('smartbites.page');
-        }
           break;
+        }
+        case 'smartbitesgatos':{
+          $Parrafo1 = Content::where('page', 'smartbitesgato')->where('section', 'banner')->where('field', 'leyend1')->first();
+          $Parrafo2 = Content::where('page', 'smartbitesgato')->where('section', 'banner')->where('field', 'leyend2')->first();
+          $Parrafo1->value = $request->parrafo1;
+          $Parrafo1->save();
+          $Parrafo2->value = $request->parrafo2;
+          $Parrafo2->save();
+          return redirect()->route('smartbites.page');
+          break;
+        }
+        case 'titan':{
+          $Parrafo1 = Content::where('page', 'titan')->where('section', 'banner')->where('field', 'leyend1')->first();
+          $Parrafo2 = Content::where('page', 'titan')->where('section', 'banner')->where('field', 'leyend2')->first();
+          $Parrafo1->value = $request->parrafo1;
+          $Parrafo1->save();
+          $Parrafo2->value = $request->parrafo2;
+          $Parrafo2->save();
+          return redirect()->route('smartbites.page');
+          break;
+        }
+        case 'rocko':{
+          $Parrafo1 = Content::where('page', 'rocko')->where('section', 'banner')->where('field', 'leyend1')->first();
+          $Parrafo2 = Content::where('page', 'rocko')->where('section', 'banner')->where('field', 'leyend2')->first();
+          $Parrafo1->value = $request->parrafo1;
+          $Parrafo1->save();
+          $Parrafo2->value = $request->parrafo2;
+          $Parrafo2->save();
+          return redirect()->route('smartbites.page');
+          break;
+        }
 
         default:
           // code...
