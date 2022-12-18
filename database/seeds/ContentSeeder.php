@@ -325,6 +325,110 @@ class ContentSeeder extends Seeder
             'type' => 'txt',
             'value' => 'Los prebióticos fortalecen su sistema digestivo, facilitando la absorción de nutrientes.',
           ]);
+    // TITAN
+          DB::table('content')->insert([
+            'page' => 'titan',
+            'section' => 'banner',
+            'field' => 'leyend1',
+            'type' => 'txt',
+            'value' => '<strong>Titán®</strong> es el alimento para tu súper mascota que lo mantendrá sano de adentro hacia afuera. Ahora con <strong>NutriPOW®</strong> compuesto por prebióticos, probióticos y sus ingredientes en conjunto que le dan la nutrición que necesita para ser tu súper héroe favorito y estar fuerte en todo momento.',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'titan',
+            'section' => 'banner',
+            'field' => 'leyend2',
+            'type' => 'txt',
+            'value' => 'Una mascota <strong>Titán®</strong> es una mascota sana.',
+          ]);
+      // TITAN PERRO
+          DB::table('content')->insert([
+            'page' => 'titan',
+            'section' => 'perro',
+            'field' => 'edad',
+            'type' => 'txt',
+            'value' => 'Adulto',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'titan',
+            'section' => 'perro',
+            'field' => 'presentaciones',
+            'type' => 'txt',
+            'value' => '2, 4, 15 y 25 kg',
+          ]);
+      // TITAN PERRO
+          DB::table('content')->insert([
+            'page' => 'titan',
+            'section' => 'gato',
+            'field' => 'edad',
+            'type' => 'txt',
+            'value' => 'Adulto',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'titan',
+            'section' => 'gato',
+            'field' => 'presentaciones',
+            'type' => 'txt',
+            'value' => '15 kg',
+          ]);
+        // BENEFICIOS
+          // PERRO
+          DB::table('content')->insert([
+            'page' => 'titan',
+            'section' => 'beneficios',
+            'field' => 'perrotopizq',
+            'type' => 'txt',
+            'value' => 'La fuente de proteínas de calidad asegura los nutrientes adecuados para estar sano y fuerte en cada momento.',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'titan',
+            'section' => 'beneficios',
+            'field' => 'perrotopder',
+            'type' => 'txt',
+            'value' => 'El conjunto de los ácidos grasos y zinc son la fórmula precisa para tener una piel sana y un pelaje con menos caída.',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'titan',
+            'section' => 'beneficios',
+            'field' => 'perrobottomizq',
+            'type' => 'txt',
+            'value' => 'Por su contenido de probióticos y prebióticos ayudan a tener una mejor digestión y heces firmes que facilitan su limpieza.',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'titan',
+            'section' => 'beneficios',
+            'field' => 'perrobottomder',
+            'type' => 'txt',
+            'value' => 'La mezcla de yucca y fibras naturales favorecen en la reducción de gasesy mal olor en las heces.',
+          ]);
+          // GATO
+          DB::table('content')->insert([
+            'page' => 'titan',
+            'section' => 'beneficios',
+            'field' => 'gatotopizq',
+            'type' => 'txt',
+            'value' => 'La fuente de proteínas de calidad asegura los nutrientes adecuados para estar sano y fuerte en cada momento.',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'titan',
+            'section' => 'beneficios',
+            'field' => 'gatotopder',
+            'type' => 'txt',
+            'value' => 'La vitamina A y taurina favorecen su habilidad para realizar sus actividades en ambientes oscuros.',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'titan',
+            'section' => 'beneficios',
+            'field' => 'gatobottomizq',
+            'type' => 'txt',
+            'value' => 'Por su contenido de probióticos y probióticos ayudan a tener una salud intestinal, preparando a su organismo para asimilar todos los nutrientes.',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'titan',
+            'section' => 'beneficios',
+            'field' => 'gatobottomder',
+            'type' => 'txt',
+            'value' => 'La vitamina E protege su corazón para asegurar el cuidado de todo su organismo.',
+          ]);
     }
 }
 
