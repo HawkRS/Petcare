@@ -31,12 +31,12 @@ class ProductosController extends Controller
    *
    * @return \Illuminate\Contracts\Support\Renderable
    */
-  public function index()
+  public function smartbitesperro()
   {
     //dd('index smartbites');
       //$ContentList = Content::where('page', 'landing')->get();
       $ContentList = DB::table('content')
-                ->where('page', 'smartbites')
+                ->where('page', 'smartbitesperro')
                 ->get();
       //dd($ContentList);
       return view($this->f.'index', [
@@ -77,4 +77,38 @@ class ProductosController extends Controller
      }
 
    }
+
+   public function UpdateProdBannerTxt(Request $request)
+   {
+     $messages = [
+     'required' => 'El campo :attribute es obligatorio.',
+     ];
+     $this->validate(request(), [
+       'page' => 'required',
+       'type' => 'required',
+       'section' => 'required',
+       'parrafo1' => 'required',
+       'parrafo2' => 'required',
+      ], $messages);
+      switch ($request->page) {
+        case 'smartbites':{
+          $Parrafo1 = Content::where('page', 'smartbitesperro')->where('section', 'banner')->where('field', 'leyend1')->first();
+          $Parrafo2 = Content::where('page', 'smartbitesperro')->where('section', 'banner')->where('field', 'leyend2')->first();
+          $Parrafo1->value = $request->parrafo1;
+          //dd($Parrafo1);
+          $Parrafo1->save();
+          $Parrafo2->value = $request->parrafo2;
+          $Parrafo2->save();
+          return redirect()->route('smartbites.page');
+        }
+          break;
+
+        default:
+          // code...
+          break;
+      }
+      dd($request->all());
+   }
+
+
 }

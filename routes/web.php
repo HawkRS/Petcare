@@ -28,8 +28,9 @@ Route::prefix('landing')->group(function () {
 });
 
 Route::prefix('smartbites-perro')->group(function () {
-  Route::get('/', 'ProductosController@index')->name( 'smartbites.page' );
-  Route::post('/editar-contenido', 'ProductosController@UpdateContent')->name( 'smartbites.updatecontent' );
+  Route::get('/', 'ProductosController@smartbitesperro')->name( 'smartbites.page' );
+  Route::post('/editar-imagenes', 'ProductosController@UpdateContent')->name( 'smartbites.updatecontent' );
+  Route::post('/editar-titulos', 'ProductosController@UpdateProdBannerTxt')->name( 'smartbites.updatebannertitle' );
 });
 
 Route::prefix('encuentranos')->group(function () {

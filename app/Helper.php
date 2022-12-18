@@ -17,22 +17,22 @@ class Helper extends Model
           dd('landing');
           break;
         case 'smartbitesdogs':
-          $res = $this->LandingSortingSection($section);
+          $res = $this->SmartBitesPerroSortingSection($section);
           return $res;
           dd('smartbitesdogs');
           break;
         case 'smartbitescat':
-          $res = $this->LandingSortingSection($section);
+          $res = $this->ProductosSortingSection($section);
           return $res;
           dd('smartbitescat');
           break;
         case 'titan':
-          $res = $this->LandingSortingSection($section);
+          $res = $this->ProductosSortingSection($section);
           return $res;
           dd('titan');
           break;
         case 'rocko':
-          $res = $this->LandingSortingSection($section);
+          $res = $this->ProductosSortingSection($section);
           return $res;
           dd('rocko');
           break;
@@ -47,6 +47,24 @@ class Helper extends Model
     {
       switch ($section) {
         case 'smartbites':
+          return 7;
+          break;
+        case 'titan':
+          return 8;
+          break;
+        case 'rocko':
+          return 9;
+          break;
+
+        default:
+          // code...
+          break;
+      }
+    }
+    public function SmartBitesPerroSortingSection($section)
+    {
+      switch ($section) {
+        case 'banner':
           return 7;
           break;
         case 'titan':

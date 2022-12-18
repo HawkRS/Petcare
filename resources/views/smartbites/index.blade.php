@@ -18,8 +18,7 @@
         <div class="row">
 
           <div class="col-12 ">
-            <div class="card">
-              <div class="card-body">
+
                 <h4>Banner Smartbites Perro</h4>
                 <div class="row">
 
@@ -64,6 +63,7 @@
                       </div>
                     </div>
                   </div>
+
                   <div class="col-12 col-md-3">
                     <div class="card">
                       <div class="card-body">
@@ -80,14 +80,26 @@
 
                 </div>{{-- END IMAGES ROW --}}
 
-                  <hr>
-                  <h4>Titulo</h4>
-                  <h6>{{ $Contenidos[0]->value }}</h6>
-                  <hr>
-                  <h4>Descripción</h4>
-                  <p class="text-truncate">{{ $Contenidos[1]->value }}</p>
-              </div>
-              </div>
+                <hr>
+                <div class="row justify-content-center">
+                  <div class="col-12 col-md-6 col-xl-5">
+                    <div class="card">
+                      <div class="card-body">
+                        <h4>Parrafo 1</h4>
+                        <h6>{{ $Contenidos[0]->value }}</h6>
+                        <hr>
+                        <h4>Parrafo 2</h4>
+                        <p class="text-truncate">{{ $Contenidos[1]->value }}</p>
+                      </div>
+                      <div class="card-footer  d-grid gap-2">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#BannerTxtModal">
+                          Editar
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
             </div>
           </div>
 
@@ -213,6 +225,60 @@
           </div>
         </div>
         {{-- Imagen DER Externa END --}}
+        {{-- Texto Banner --}}
+        <div class="modal fade" id="BannerTxtModal" tabindex="-1" aria-labelledby="BannerTxtModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="BannerTxtModalLabel">Texto Banner</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form class="needs-validation" action="{{ route('smartbites.updatebannertitle') }}" method="post" enctype="multipart/form-data"  novalidate>
+                @csrf
+                <input type="hidden" name="page" value="smartbites">
+                <input type="hidden" name="type" value="txt">
+                <input type="hidden" name="section" value="banner">
+                <div class="modal-body">
+                  <div class="mb-3">
+                    <label for="parrafo1" class="form-label">Parrafo 1</label>
+                    @if(isset($Contenidos[0]->value))
+                    <textarea class="form-control  {{ $errors->has('parrafo1') ? ' is-invalid' : '' }}" name="parrafo1" id="parrafo1" rows="3" required>{{$Contenidos[0]->value}}</textarea>
+                    @else
+                    <textarea class="form-control  {{ $errors->has('parrafo1') ? ' is-invalid' : '' }}" name="parrafo1" id="parrafo1" rows="3" required></textarea>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega una descripción
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-body">
+                  <div class="mb-3">
+                    <label for="parrafo2" class="form-label">Parrafo 2</label>
+                    @if(isset($Contenidos[1]->value))
+                    <textarea class="form-control  {{ $errors->has('parrafo2') ? ' is-invalid' : '' }}" name="parrafo2" id="parrafo2" rows="3" required>{{$Contenidos[1]->value}}</textarea>
+                    @else
+                    <textarea class="form-control  {{ $errors->has('parrafo2') ? ' is-invalid' : '' }}" name="parrafo2" id="parrafo2" rows="3" required></textarea>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega una descripción
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="submit" class="btn btn-primary">Enviar</button>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        {{-- Texto Banner END --}}
 
   </div>
 </div>
