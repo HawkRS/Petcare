@@ -165,5 +165,71 @@ class ProductosController extends Controller
 
    }
 
+   public function EditBenefitsContent(Request $request)
+   {
+     $messages = [
+     'required' => 'El campo :attribute es obligatorio.',
+     ];
+     $this->validate(request(), [
+       'page' => 'required',
+       'section' => 'required',
+       'area' => 'required',
+       'beneficios1' => 'required',
+       'beneficios2' => 'required',
+       'beneficios3' => 'required',
+       'beneficios4' => 'required',
+     ], $messages);
+     switch ($request->area) {
+       case 'cachorro':
+         $area = array(
+           'cachorrotopizq',
+           'cachorrotopder',
+           'cachorrobottomizq',
+           'cachorrobottomder',
+         );
+         break;
+       case 'razapequeña':
+         $area = array(
+           'pequeñostopizq',
+           'pequeñostopder',
+           'pequeñosbottomizq',
+           'pequeñosbottomder',
+         );
+         break;
+       case 'adulto':
+         $area = array(
+           'adultotopizq',
+           'adultotopder',
+           'adultobottomizq',
+           'adultobottomder',
+         );
+         break;
+       case 'senior':
+         $area = array(
+           'seniortopizq',
+           'seniortopder',
+           'seniorbottomizq',
+           'seniorbottomder',
+         );
+         break;
+
+       default:
+         // code...
+         break;
+     }
+     $Beneficios1 = Content::where([['page', '=', $request->page],['section', '=', $request->section],['field', '=', $area[0]]])->first();
+     //dd($Beneficios1);
+     $Beneficios2 = Content::where([['page', '=', $request->page],['section', '=', $request->section],['field', '=', $area[1]]])->first();
+     $Beneficios3 = Content::where([['page', '=', $request->page],['section', '=', $request->section],['field', '=', $area[2]]])->first();
+     $Beneficios4 = Content::where([['page', '=', $request->page],['section', '=', $request->section],['field', '=', $area[3]]])->first();
+
+     $Beneficios1->value = $request->beneficios1; $Beneficios1->save();
+     $Beneficios2->value = $request->beneficios2; $Beneficios2->save();
+     $Beneficios3->value = $request->beneficios3; $Beneficios3->save();
+     $Beneficios4->value = $request->beneficios4; $Beneficios4->save();
+
+      return redirect()->route('smartbites.page');
+   }
+
 
 }

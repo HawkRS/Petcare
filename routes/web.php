@@ -32,6 +32,7 @@ Route::prefix('smartbites-perro')->group(function () {
   Route::post('/editar-imagenes', 'ProductosController@UpdateContent')->name( 'smartbites.updatecontent' );
   Route::post('/editar-titulos', 'ProductosController@UpdateProdBannerTxt')->name( 'smartbites.updatebannertitle' );
   Route::post('/editar-presentaciones', 'ProductosController@EditPresentationContent')->name( 'smartbites.updatepresentacion' );
+  Route::post('/editar-beneficios', 'ProductosController@EditBenefitsContent')->name( 'smartbites.updatebeneficios' );
 });
 
 Route::prefix('encuentranos')->group(function () {

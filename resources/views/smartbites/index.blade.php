@@ -691,6 +691,342 @@
           </div>
         </div>
         {{-- Texto Presentacion Senior END --}}
+        {{-- Texto Beneficios Cachorro --}}
+        <div class="modal fade" id="BeneficiosCachorroModal" tabindex="-1" aria-labelledby="BeneficiosCachorroModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="BeneficiosCachorroModalLabel">Presentacion Adulto</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form class="needs-validation" action="{{ route('smartbites.updatebeneficios') }}" method="post" enctype="multipart/form-data"  novalidate>
+                @csrf
+                <input type="hidden" name="page" value="smartbitesperro">
+                <input type="hidden" name="section" value="beneficios">
+                <input type="hidden" name="area" value="cachorro">
+                <div class="modal-body">
+                  {{--<div class="mb-3">
+                    <label for="formFile" class="form-label">Carga tu imagen (archivos tipo png con transparencia)</label>
+                    <input name="imagefile" class="form-control" type="file" id="formFile">
+                  </div>--}}
+                  <div class="mb-3">
+                    <label for="beneficios1" class="form-label">Beneficio 1</label>
+                    @if(isset($Contenidos[10]->value))
+                    <textarea class="form-control  {{ $errors->has('beneficios1') ? ' is-invalid' : '' }}" name="beneficios1" id="beneficios1" rows="2" required>{{$Contenidos[10]->value}}</textarea>
+                    @else
+                    <textarea class="form-control  {{ $errors->has('beneficios1') ? ' is-invalid' : '' }}" name="beneficios1" id="beneficios1" rows="2" required></textarea>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega una descripción
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="beneficios2" class="form-label">Beneficio 2</label>
+                    @if(isset($Contenidos[11]->value))
+                    <textarea class="form-control  {{ $errors->has('beneficios2') ? ' is-invalid' : '' }}" name="beneficios2" id="beneficios2" rows="2" required>{{$Contenidos[11]->value}}</textarea>
+                    @else
+                    <textarea class="form-control  {{ $errors->has('beneficios2') ? ' is-invalid' : '' }}" name="beneficios2" id="beneficios2" rows="2" required></textarea>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega una descripción
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="beneficios3" class="form-label">Beneficio 3</label>
+                    @if(isset($Contenidos[12]->value))
+                    <textarea class="form-control  {{ $errors->has('beneficios3') ? ' is-invalid' : '' }}" name="beneficios3" id="beneficios3" rows="2" required>{{$Contenidos[12]->value}}</textarea>
+                    @else
+                    <textarea class="form-control  {{ $errors->has('beneficios3') ? ' is-invalid' : '' }}" name="beneficios3" id="beneficios3" rows="2" required></textarea>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega una descripción
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="beneficios4" class="form-label">Beneficio 4</label>
+                    @if(isset($Contenidos[13]->value))
+                    <textarea class="form-control  {{ $errors->has('beneficios4') ? ' is-invalid' : '' }}" name="beneficios4" id="beneficios4" rows="2" required>{{$Contenidos[13]->value}}</textarea>
+                    @else
+                    <textarea class="form-control  {{ $errors->has('beneficios4') ? ' is-invalid' : '' }}" name="beneficios4" id="beneficios4" rows="2" required></textarea>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega una descripción
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="submit" class="btn btn-primary">Enviar</button>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        {{-- Texto Beneficios Cachorro END --}}
+        {{-- Texto Beneficios Razas Pequeñas --}}
+        <div class="modal fade" id="BeneficiosRazasModal" tabindex="-1" aria-labelledby="BeneficiosRazasModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="BeneficiosRazasModalLabel">Presentacion Adulto</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form class="needs-validation" action="{{ route('smartbites.updatebeneficios') }}" method="post" enctype="multipart/form-data"  novalidate>
+                @csrf
+                <input type="hidden" name="page" value="smartbitesperro">
+                <input type="hidden" name="section" value="beneficios">
+                <input type="hidden" name="area" value="razapequeña">
+                <div class="modal-body">
+                  {{--<div class="mb-3">
+                    <label for="formFile" class="form-label">Carga tu imagen (archivos tipo png con transparencia)</label>
+                    <input name="imagefile" class="form-control" type="file" id="formFile">
+                  </div>--}}
+                  <div class="mb-3">
+                    <label for="beneficios1" class="form-label">Beneficio 1</label>
+                    @if(isset($Contenidos[14]->value))
+                    <textarea class="form-control  {{ $errors->has('beneficios1') ? ' is-invalid' : '' }}" name="beneficios1" id="beneficios1" rows="2" required>{{$Contenidos[14]->value}}</textarea>
+                    @else
+                    <textarea class="form-control  {{ $errors->has('beneficios1') ? ' is-invalid' : '' }}" name="beneficios1" id="beneficios1" rows="2" required></textarea>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega una descripción
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="beneficios2" class="form-label">Beneficio 2</label>
+                    @if(isset($Contenidos[15]->value))
+                    <textarea class="form-control  {{ $errors->has('beneficios2') ? ' is-invalid' : '' }}" name="beneficios2" id="beneficios2" rows="2" required>{{$Contenidos[15]->value}}</textarea>
+                    @else
+                    <textarea class="form-control  {{ $errors->has('beneficios2') ? ' is-invalid' : '' }}" name="beneficios2" id="beneficios2" rows="2" required></textarea>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega una descripción
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="beneficios3" class="form-label">Beneficio 3</label>
+                    @if(isset($Contenidos[16]->value))
+                    <textarea class="form-control  {{ $errors->has('beneficios3') ? ' is-invalid' : '' }}" name="beneficios3" id="beneficios3" rows="2" required>{{$Contenidos[16]->value}}</textarea>
+                    @else
+                    <textarea class="form-control  {{ $errors->has('beneficios3') ? ' is-invalid' : '' }}" name="beneficios3" id="beneficios3" rows="2" required></textarea>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega una descripción
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="beneficios4" class="form-label">Beneficio 4</label>
+                    @if(isset($Contenidos[17]->value))
+                    <textarea class="form-control  {{ $errors->has('beneficios4') ? ' is-invalid' : '' }}" name="beneficios4" id="beneficios4" rows="2" required>{{$Contenidos[17]->value}}</textarea>
+                    @else
+                    <textarea class="form-control  {{ $errors->has('beneficios4') ? ' is-invalid' : '' }}" name="beneficios4" id="beneficios4" rows="2" required></textarea>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega una descripción
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="submit" class="btn btn-primary">Enviar</button>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        {{-- Texto Beneficios Razas Pequeñas END --}}
+        {{-- Texto Beneficios Adultos --}}
+        <div class="modal fade" id="BeneficiosAdultoModal" tabindex="-1" aria-labelledby="BeneficiosAdultoModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="BeneficiosAdultoModalLabel">Presentacion Adulto</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form class="needs-validation" action="{{ route('smartbites.updatebeneficios') }}" method="post" enctype="multipart/form-data"  novalidate>
+                @csrf
+                <input type="hidden" name="page" value="smartbitesperro">
+                <input type="hidden" name="section" value="beneficios">
+                <input type="hidden" name="area" value="adulto">
+                <div class="modal-body">
+                  {{--<div class="mb-3">
+                    <label for="formFile" class="form-label">Carga tu imagen (archivos tipo png con transparencia)</label>
+                    <input name="imagefile" class="form-control" type="file" id="formFile">
+                  </div>--}}
+                  <div class="mb-3">
+                    <label for="beneficios1" class="form-label">Beneficio 1</label>
+                    @if(isset($Contenidos[18]->value))
+                    <textarea class="form-control  {{ $errors->has('beneficios1') ? ' is-invalid' : '' }}" name="beneficios1" id="beneficios1" rows="2" required>{{$Contenidos[18]->value}}</textarea>
+                    @else
+                    <textarea class="form-control  {{ $errors->has('beneficios1') ? ' is-invalid' : '' }}" name="beneficios1" id="beneficios1" rows="2" required></textarea>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega una descripción
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="beneficios2" class="form-label">Beneficio 2</label>
+                    @if(isset($Contenidos[19]->value))
+                    <textarea class="form-control  {{ $errors->has('beneficios2') ? ' is-invalid' : '' }}" name="beneficios2" id="beneficios2" rows="2" required>{{$Contenidos[19]->value}}</textarea>
+                    @else
+                    <textarea class="form-control  {{ $errors->has('beneficios2') ? ' is-invalid' : '' }}" name="beneficios2" id="beneficios2" rows="2" required></textarea>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega una descripción
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="beneficios3" class="form-label">Beneficio 3</label>
+                    @if(isset($Contenidos[20]->value))
+                    <textarea class="form-control  {{ $errors->has('beneficios3') ? ' is-invalid' : '' }}" name="beneficios3" id="beneficios3" rows="2" required>{{$Contenidos[20]->value}}</textarea>
+                    @else
+                    <textarea class="form-control  {{ $errors->has('beneficios3') ? ' is-invalid' : '' }}" name="beneficios3" id="beneficios3" rows="2" required></textarea>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega una descripción
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="beneficios4" class="form-label">Beneficio 4</label>
+                    @if(isset($Contenidos[21]->value))
+                    <textarea class="form-control  {{ $errors->has('beneficios4') ? ' is-invalid' : '' }}" name="beneficios4" id="beneficios4" rows="2" required>{{$Contenidos[21]->value}}</textarea>
+                    @else
+                    <textarea class="form-control  {{ $errors->has('beneficios4') ? ' is-invalid' : '' }}" name="beneficios4" id="beneficios4" rows="2" required></textarea>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega una descripción
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="submit" class="btn btn-primary">Enviar</button>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        {{-- Texto Beneficios Adultos END --}}
+        {{-- Texto Beneficios Senior --}}
+        <div class="modal fade" id="BeneficiosSeniorModal" tabindex="-1" aria-labelledby="BeneficiosSeniorModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="BeneficiosSeniorModalLabel">Presentacion Adulto</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form class="needs-validation" action="{{ route('smartbites.updatebeneficios') }}" method="post" enctype="multipart/form-data"  novalidate>
+                @csrf
+                <input type="hidden" name="page" value="smartbitesperro">
+                <input type="hidden" name="section" value="beneficios">
+                <input type="hidden" name="area" value="senior">
+                <div class="modal-body">
+                  {{--<div class="mb-3">
+                    <label for="formFile" class="form-label">Carga tu imagen (archivos tipo png con transparencia)</label>
+                    <input name="imagefile" class="form-control" type="file" id="formFile">
+                  </div>--}}
+                  <div class="mb-3">
+                    <label for="beneficios1" class="form-label">Beneficio 1</label>
+                    @if(isset($Contenidos[22]->value))
+                    <textarea class="form-control  {{ $errors->has('beneficios1') ? ' is-invalid' : '' }}" name="beneficios1" id="beneficios1" rows="2" required>{{$Contenidos[22]->value}}</textarea>
+                    @else
+                    <textarea class="form-control  {{ $errors->has('beneficios1') ? ' is-invalid' : '' }}" name="beneficios1" id="beneficios1" rows="2" required></textarea>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega una descripción
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="beneficios2" class="form-label">Beneficio 2</label>
+                    @if(isset($Contenidos[23]->value))
+                    <textarea class="form-control  {{ $errors->has('beneficios2') ? ' is-invalid' : '' }}" name="beneficios2" id="beneficios2" rows="2" required>{{$Contenidos[23]->value}}</textarea>
+                    @else
+                    <textarea class="form-control  {{ $errors->has('beneficios2') ? ' is-invalid' : '' }}" name="beneficios2" id="beneficios2" rows="2" required></textarea>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega una descripción
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="beneficios3" class="form-label">Beneficio 3</label>
+                    @if(isset($Contenidos[24]->value))
+                    <textarea class="form-control  {{ $errors->has('beneficios3') ? ' is-invalid' : '' }}" name="beneficios3" id="beneficios3" rows="2" required>{{$Contenidos[24]->value}}</textarea>
+                    @else
+                    <textarea class="form-control  {{ $errors->has('beneficios3') ? ' is-invalid' : '' }}" name="beneficios3" id="beneficios3" rows="2" required></textarea>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega una descripción
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="beneficios4" class="form-label">Beneficio 4</label>
+                    @if(isset($Contenidos[25]->value))
+                    <textarea class="form-control  {{ $errors->has('beneficios4') ? ' is-invalid' : '' }}" name="beneficios4" id="beneficios4" rows="2" required>{{$Contenidos[25]->value}}</textarea>
+                    @else
+                    <textarea class="form-control  {{ $errors->has('beneficios4') ? ' is-invalid' : '' }}" name="beneficios4" id="beneficios4" rows="2" required></textarea>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega una descripción
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="submit" class="btn btn-primary">Enviar</button>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        {{-- Texto Beneficios Senior END --}}
 
   </div>
 </div>
