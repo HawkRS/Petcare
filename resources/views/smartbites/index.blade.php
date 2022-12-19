@@ -514,6 +514,65 @@
           </div>
         </div>
         {{-- Texto Presentacion Cachorro END --}}
+        {{-- Texto Presentacion Raza Pequeña --}}
+        <div class="modal fade" id="PresentacionRazaModal" tabindex="-1" aria-labelledby="PresentacionRazaModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="PresentacionRazaModalLabel">Cachorro Banner</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form class="needs-validation" action="{{ route('smartbites.updatepresentacion') }}" method="post" enctype="multipart/form-data"  novalidate>
+                @csrf
+                <input type="hidden" name="page" value="smartbitesperro">
+                <input type="hidden" name="section" value="razapequeña">
+                <input type="hidden" name="area1" value="edad">
+                <input type="hidden" name="area2" value="presentaciones">
+                <div class="modal-body">
+                  {{--<div class="mb-3">
+                    <label for="formFile" class="form-label">Carga tu imagen (archivos tipo png con transparencia)</label>
+                    <input name="imagefile" class="form-control" type="file" id="formFile">
+                  </div>--}}
+                  <div class="mb-3">
+                    <label for="edades" class="form-label">Edades</label>
+                    @if(isset($Contenidos[4]->value))
+                    <textarea class="form-control  {{ $errors->has('edades') ? ' is-invalid' : '' }}" name="edades" id="edades" rows="2" required>{{$Contenidos[4]->value}}</textarea>
+                    @else
+                    <textarea class="form-control  {{ $errors->has('edades') ? ' is-invalid' : '' }}" name="edades" id="edades" rows="2" required></textarea>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega una descripción
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-body">
+                  <div class="mb-3">
+                    <label for="presentaciones" class="form-label">Presentaciones</label>
+                    @if(isset($Contenidos[5]->value))
+                    <textarea class="form-control  {{ $errors->has('presentaciones') ? ' is-invalid' : '' }}" name="presentaciones" id="presentaciones" rows="2" required>{{$Contenidos[5]->value}}</textarea>
+                    @else
+                    <textarea class="form-control  {{ $errors->has('presentaciones') ? ' is-invalid' : '' }}" name="presentaciones" id="presentaciones" rows="2" required></textarea>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega una descripción
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="submit" class="btn btn-primary">Enviar</button>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        {{-- Texto Presentacion Raza Pequeña END --}}
 
   </div>
 </div>
