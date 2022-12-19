@@ -66,6 +66,7 @@ class MapController extends Controller
       'lng' => 'required|numeric',
       'date' => 'required|date',
     ], $messages);
+
     //dd($request->all());
     $NewMapMarker = new Marcadores;
     $NewMapMarker->name = $request->name;
@@ -88,7 +89,10 @@ class MapController extends Controller
     $NewMapMarker->features = $request->features;
     $NewMapMarker->date = $request->date;
     $NewMapMarker->save();
+    $AllMarkers = Marcadores::all();
+    $this->ActualizarJson($AllMarkers);
     return redirect()->route('map.index');
+
     //$MapMarker = Marcadores::findorfail($id);
 
   }
@@ -138,6 +142,9 @@ class MapController extends Controller
     $MapMarker->features = $request->features;
     $MapMarker->date = $request->date;
     $MapMarker->save();
+    $AllMarkers = Marcadores::all();
+    $this->ActualizarJson($AllMarkers);
+
     return redirect()->route('map.index');
   }
 
@@ -147,7 +154,43 @@ class MapController extends Controller
     $MapMarker = Marcadores::findorfail($id);
     //dd($MapMarker);
     $MapMarker->delete();
+    $AllMarkers = Marcadores::all();
+    $this->ActualizarJson($AllMarkers);
     return redirect()->route('map.index');
+  }
+
+  public function ActualizarJson($Markers)
+  {
+    $locations_arr = array();
+    foreach ($Markers as $key => $Marker) {
+        //dd($key);
+        $locations_arr[$key]['id'] = $Marker->id;
+        $locations_arr[$key]['name'] = $Marker->name;
+        $locations_arr[$key]['lat'] = $Marker->lat;
+        $locations_arr[$key]['lng'] = $Marker->lng;
+        $locations_arr[$key]['category'] = $Marker->category;
+        $locations_arr[$key]['address'] = $Marker->address;
+        $locations_arr[$key]['address2'] = $Marker->address2;
+        $locations_arr[$key]['city'] = $Marker->city;
+        $locations_arr[$key]['state'] = $Marker->state;
+        $locations_arr[$key]['postal'] = $Marker->postal;
+        $locations_arr[$key]['phone'] = $Marker->phone;
+        $locations_arr[$key]['phone2'] = $Marker->phone2;
+        $locations_arr[$key]['linkmap'] = $Marker->linkmap;
+        $locations_arr[$key]['web'] = $Marker->web;
+        $locations_arr[$key]['hours1'] = $Marker->hours1;
+        $locations_arr[$key]['hours2'] = $Marker->hours2;
+        $locations_arr[$key]['hours3'] = $Marker->hours3;
+        $locations_arr[$key]['featured'] = $Marker->featured;
+        $locations_arr[$key]['features'] = $Marker->features;
+        $locations_arr[$key]['date'] = $Marker->date;
+
+          // code...
+        //echo  $json_arr[$key] . " - " .  $json_arr[$value] . "<br/>";
+    }
+    //dd($locations_arr);//json_encode($response, JSON_UNESCAPED_UNICODE);
+    // encode array to json and save to file
+    file_put_contents(public_path('data\locations.json'), json_encode($locations_arr, JSON_UNESCAPED_UNICODE));
   }
 
 
