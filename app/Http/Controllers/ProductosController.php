@@ -139,5 +139,31 @@ class ProductosController extends Controller
       dd($request->all());
    }
 
+   public function EditPresentationContent(Request $request)
+   {
+     $messages = [
+     'required' => 'El campo :attribute es obligatorio.',
+     ];
+     $this->validate(request(), [
+       'page' => 'required',
+       'section' => 'required',
+       'area1' => 'required',
+       'area2' => 'required',
+       'edades' => 'required',
+       'presentaciones' => 'required',
+      ], $messages);
+     //dd($request->all());
+     $Edades = Content::where([['page', '=', $request->page],['section', '=', $request->section],['field', '=', $request->area1]])->first();
+     $Presentaciones = Content::where([['page', '=', $request->page],['section', '=', $request->section],['field', '=', $request->area2]])->first();
+     //dd($Edades);
+     $Edades->value = $request->edades;
+     $Edades->save();
+     $Presentaciones->value = $request->presentaciones;
+     $Presentaciones->save();
+
+     return redirect()->route('smartbites.page');
+
+   }
+
 
 }

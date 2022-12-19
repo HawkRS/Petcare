@@ -80,7 +80,6 @@
 
                 </div>{{-- END IMAGES ROW --}}
 
-                <hr>
                 <div class="row justify-content-center">
                   <div class="col-12 col-md-6 col-xl-5">
                     <div class="card">
@@ -101,6 +100,183 @@
                 </div>
 
             </div>
+          </div>
+
+          <hr>
+
+          <div class="row">
+            <h4>Presentaciones Smartbites Perro</h4>
+
+            <div class="col-12 col-md-3">
+              <div class="card">
+                <h5 class="p-2">Cachorro</h5>
+                <div class="card-body">
+                  <h6 class="card-title mb-4">Imagen</h6>
+                  <img src="{{ asset('img/productos/smart-bites/thumbs/render_bolsa_cachorro_SB.png') }}" class="img-thumbnail mx-auto d-block" alt="">
+                  <h4>Rango de edades</h4>
+                  <h6>{{ $Contenidos[2]->value }}</h6>
+                  <hr>
+                  <h4>Presentaciones</h4>
+                  <p class="text-truncate">{{ $Contenidos[3]->value }}</p>
+                </div>
+                <div class="card-footer  d-grid gap-2">
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#PresentacionCachorroModal">
+                    Editar
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-3">
+              <div class="card">
+                <h5 class="p-2">Adulto raza pequeña</h5>
+                <div class="card-body">
+                  <h6 class="card-title mb-4">Imagen</h6>
+                  <img src="{{ asset('img/productos/smart-bites/thumbs/smart-bites-neuro-active-adulto-raza-pequena.png') }}" class="img-thumbnail mx-auto d-block" alt="">
+                  <h4>Rango de edades</h4>
+                  <h6>{{ $Contenidos[4]->value }}</h6>
+                  <hr>
+                  <h4>Presentaciones</h4>
+                  <p class="text-truncate">{{ $Contenidos[5]->value }}</p>
+                </div>
+                <div class="card-footer  d-grid gap-2">
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#PresentacionRazaModal">
+                    Editar
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-3">
+              <div class="card">
+                <h5 class="p-2">Adulto</h5>
+                <div class="card-body">
+                  <h6 class="card-title mb-4">Imagen</h6>
+                  <img src="{{ asset('img/productos/smart-bites/thumbs/render_bolsa_adulto_SB.png') }}" class="img-thumbnail mx-auto d-block" alt="">
+                  <h4>Rango de edades</h4>
+                  <h6>{{ $Contenidos[6]->value }}</h6>
+                  <hr>
+                  <h4>Presentaciones</h4>
+                  <p class="text-truncate">{{ $Contenidos[7]->value }}</p>
+                </div>
+                <div class="card-footer  d-grid gap-2">
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#PresentacionAdultoModal">
+                    Editar
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-3">
+              <div class="card">
+                <h5 class="p-2">Senior</h5>
+                <div class="card-body">
+                  <h6 class="card-title mb-4">Imagen</h6>
+                  <img src="{{ asset('img/productos/smart-bites/thumbs/render_bolsa_senior_SB.png') }}" class="img-thumbnail mx-auto d-block" alt="">
+                  <h4>Rango de edades</h4>
+                  <h6>{{ $Contenidos[8]->value }}</h6>
+                  <hr>
+                  <h4>Presentaciones</h4>
+                  <p class="text-truncate">{{ $Contenidos[9]->value }}</p>
+                </div>
+                <div class="card-footer  d-grid gap-2">
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#PresentacionSeniorModal">
+                    Editar
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="row">
+            <h4>Beneficios Smartbites Perro</h4>
+
+            <div class="col-12 col-md-3">
+              <div class="card">
+                <h5 class="p-2">Cachorro</h5>
+                <div class="card-body">
+                  <h5>SISTEMA INMUNE FUERTE</h5>
+                  <p>{{ $Contenidos[10]->value }}</p>
+                  <h5>CORAZÓN SANO</h5>
+                  <p>{{ $Contenidos[11]->value }}</p>
+                  <h5>DESARROLLO SALUDABLE</h5>
+                  <p>{{ $Contenidos[12]->value }}</p>
+                  <h5>SISTEMA DIGESTIVO MÁS SANO</h5>
+                  <p>{{ $Contenidos[13]->value }}</p>
+                </div>
+                <div class="card-footer  d-grid gap-2">
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#BeneficiosCachorroModal">
+                    Editar
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-3">
+              <div class="card">
+                <h5 class="p-2">Razas pequeñas</h5>
+                <div class="card-body">
+                  <h5>SISTEMA INMUNE FUERTE</h5>
+                  <p>{{ $Contenidos[14]->value }}</p>
+                  <h5>CORAZÓN SANO</h5>
+                  <p>{{ $Contenidos[15]->value }}</p>
+                  <h5>METABOLISMO BALANCEADO</h5>
+                  <p>{{ $Contenidos[16]->value }}</p>
+                  <h5>SISTEMA DIGESTIVO MÁS SANO</h5>
+                  <p>{{ $Contenidos[17]->value }}</p>
+                </div>
+                <div class="card-footer  d-grid gap-2">
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#BeneficiosRazasModal">
+                    Editar
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-3">
+              <div class="card">
+                <h5 class="p-2">Adulto</h5>
+                <div class="card-body">
+                  <h5>SALUD SANO INTEGRAL</h5>
+                  <p>{{ $Contenidos[18]->value }}</p>
+                  <h5>CORAZÓN SALUD SANO</h5>
+                  <p>{{ $Contenidos[19]->value }}</p>
+                  <h5>PELAJE BRILLANTE</h5>
+                  <p>{{ $Contenidos[20]->value }}</p>
+                  <h5>SISTEMA DIGESTIVO MÁS SANO</h5>
+                  <p>{{ $Contenidos[21]->value }}</p>
+                </div>
+                <div class="card-footer  d-grid gap-2">
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#BeneficiosAdultoModal">
+                    Editar
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-3">
+              <div class="card">
+                <h5 class="p-2">SENIOR</h5>
+                <div class="card-body">
+                  <h5>ARTICULACIONES FUERTES Y FLEXIBLES</h5>
+                  <p>{{ $Contenidos[22]->value }}</p>
+                  <h5>CÉLULAS PROTEGIDAS</h5>
+                  <p>{{ $Contenidos[23]->value }}</p>
+                  <h5>SISTEMA INMUNE SALUDABLE</h5>
+                  <p>{{ $Contenidos[24]->value }}</p>
+                  <h5>APARATO DIGESTIVO MÁS SANO</h5>
+                  <p>{{ $Contenidos[25]->value }}</p>
+                </div>
+                <div class="card-footer  d-grid gap-2">
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#BeneficiosSeniorModal">
+                    Editar
+                  </button>
+                </div>
+              </div>
+            </div>
+
           </div>
 
         </div>
@@ -279,6 +455,65 @@
           </div>
         </div>
         {{-- Texto Banner END --}}
+        {{-- Texto Presentacion Cachorro --}}
+        <div class="modal fade" id="PresentacionCachorroModal" tabindex="-1" aria-labelledby="PresentacionCachorroModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="PresentacionCachorroModalLabel">Cachorro Banner</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form class="needs-validation" action="{{ route('smartbites.updatepresentacion') }}" method="post" enctype="multipart/form-data"  novalidate>
+                @csrf
+                <input type="hidden" name="page" value="smartbitesperro">
+                <input type="hidden" name="section" value="cachorro">
+                <input type="hidden" name="area1" value="edad">
+                <input type="hidden" name="area2" value="presentaciones">
+                <div class="modal-body">
+                  {{--<div class="mb-3">
+                    <label for="formFile" class="form-label">Carga tu imagen (archivos tipo png con transparencia)</label>
+                    <input name="imagefile" class="form-control" type="file" id="formFile">
+                  </div>--}}
+                  <div class="mb-3">
+                    <label for="edades" class="form-label">Edades</label>
+                    @if(isset($Contenidos[2]->value))
+                    <textarea class="form-control  {{ $errors->has('edades') ? ' is-invalid' : '' }}" name="edades" id="edades" rows="2" required>{{$Contenidos[2]->value}}</textarea>
+                    @else
+                    <textarea class="form-control  {{ $errors->has('edades') ? ' is-invalid' : '' }}" name="edades" id="edades" rows="2" required></textarea>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega una descripción
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-body">
+                  <div class="mb-3">
+                    <label for="presentaciones" class="form-label">Presentaciones</label>
+                    @if(isset($Contenidos[3]->value))
+                    <textarea class="form-control  {{ $errors->has('presentaciones') ? ' is-invalid' : '' }}" name="presentaciones" id="presentaciones" rows="2" required>{{$Contenidos[3]->value}}</textarea>
+                    @else
+                    <textarea class="form-control  {{ $errors->has('presentaciones') ? ' is-invalid' : '' }}" name="presentaciones" id="presentaciones" rows="2" required></textarea>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega una descripción
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="submit" class="btn btn-primary">Enviar</button>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        {{-- Texto Presentacion Cachorro END --}}
 
   </div>
 </div>
