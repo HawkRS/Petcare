@@ -197,13 +197,13 @@
               <div class="card">
                 <h5 class="p-2">Cachorro</h5>
                 <div class="card-body">
-                  <h5>SISTEMA INMUNE FUERTE</h5>
+                  <h5>{{ $Contenidos[10]->value }}</h5>10
                   <p>{{ $Contenidos[10]->value }}</p>
-                  <h5>CORAZÓN SANO</h5>
+                  <h5>{{ $Contenidos[10]->value }}</h5>
                   <p>{{ $Contenidos[11]->value }}</p>
-                  <h5>DESARROLLO SALUDABLE</h5>
+                  <h5>{{ $Contenidos[10]->value }}</h5>
                   <p>{{ $Contenidos[12]->value }}</p>
-                  <h5>SISTEMA DIGESTIVO MÁS SANO</h5>
+                  <h5>{{ $Contenidos[10]->value }}</h5>
                   <p>{{ $Contenidos[13]->value }}</p>
                 </div>
                 <div class="card-footer  d-grid gap-2">
@@ -218,13 +218,13 @@
               <div class="card">
                 <h5 class="p-2">Razas pequeñas</h5>
                 <div class="card-body">
-                  <h5>SISTEMA INMUNE FUERTE</h5>
+                  <h5>{{ $Contenidos[10]->value }}</h5>
                   <p>{{ $Contenidos[14]->value }}</p>
-                  <h5>CORAZÓN SANO</h5>
+                  <h5>{{ $Contenidos[10]->value }}</h5>
                   <p>{{ $Contenidos[15]->value }}</p>
-                  <h5>METABOLISMO BALANCEADO</h5>
+                  <h5>{{ $Contenidos[10]->value }}</h5>
                   <p>{{ $Contenidos[16]->value }}</p>
-                  <h5>SISTEMA DIGESTIVO MÁS SANO</h5>
+                  <h5>{{ $Contenidos[10]->value }}</h5>
                   <p>{{ $Contenidos[17]->value }}</p>
                 </div>
                 <div class="card-footer  d-grid gap-2">
@@ -239,13 +239,13 @@
               <div class="card">
                 <h5 class="p-2">Adulto</h5>
                 <div class="card-body">
-                  <h5>SALUD SANO INTEGRAL</h5>
+                  <h5>{{ $Contenidos[10]->value }}</h5>
                   <p>{{ $Contenidos[18]->value }}</p>
-                  <h5>CORAZÓN SALUD SANO</h5>
+                  <h5>{{ $Contenidos[10]->value }}</h5>
                   <p>{{ $Contenidos[19]->value }}</p>
-                  <h5>PELAJE BRILLANTE</h5>
+                  <h5>{{ $Contenidos[10]->value }}</h5>
                   <p>{{ $Contenidos[20]->value }}</p>
-                  <h5>SISTEMA DIGESTIVO MÁS SANO</h5>
+                  <h5>{{ $Contenidos[10]->value }}</h5>
                   <p>{{ $Contenidos[21]->value }}</p>
                 </div>
                 <div class="card-footer  d-grid gap-2">
@@ -260,13 +260,13 @@
               <div class="card">
                 <h5 class="p-2">SENIOR</h5>
                 <div class="card-body">
-                  <h5>ARTICULACIONES FUERTES Y FLEXIBLES</h5>
+                  <h5>{{ $Contenidos[10]->value }}</h5>
                   <p>{{ $Contenidos[22]->value }}</p>
-                  <h5>CÉLULAS PROTEGIDAS</h5>
+                  <h5>{{ $Contenidos[10]->value }}</h5>
                   <p>{{ $Contenidos[23]->value }}</p>
-                  <h5>SISTEMA INMUNE SALUDABLE</h5>
+                  <h5>{{ $Contenidos[10]->value }}</h5>
                   <p>{{ $Contenidos[24]->value }}</p>
-                  <h5>APARATO DIGESTIVO MÁS SANO</h5>
+                  <h5>{{ $Contenidos[10]->value }}</h5>
                   <p>{{ $Contenidos[25]->value }}</p>
                 </div>
                 <div class="card-footer  d-grid gap-2">
