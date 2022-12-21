@@ -156,9 +156,23 @@ class ContentSeeder extends Seeder
           DB::table('content')->insert([
             'page' => 'smartbitesperro',
             'section' => 'beneficios',
+            'field' => 'cachorrotopizqtitulo',
+            'type' => 'txt',
+            'value' => 'SISTEMA INMUNE FUERTE',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'smartbitesperro',
+            'section' => 'beneficios',
             'field' => 'cachorrotopizq',
             'type' => 'txt',
             'value' => 'Balance de vitaminas y minerales que elevan sus defensas.',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'smartbitesperro',
+            'section' => 'beneficios',
+            'field' => 'cachorrotopdertitulo',
+            'type' => 'txt',
+            'value' => 'CORAZÓN SANO',
           ]);
           DB::table('content')->insert([
             'page' => 'smartbitesperro',
@@ -170,9 +184,23 @@ class ContentSeeder extends Seeder
           DB::table('content')->insert([
             'page' => 'smartbitesperro',
             'section' => 'beneficios',
+            'field' => 'cachorrobottomizqtitulo',
+            'type' => 'txt',
+            'value' => 'DESARROLLO SALUDABLE',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'smartbitesperro',
+            'section' => 'beneficios',
             'field' => 'cachorrobottomizq',
             'type' => 'txt',
             'value' => 'Con nutrientes ideales para el sano crecimiento de huesos y dientes.',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'smartbitesperro',
+            'section' => 'beneficios',
+            'field' => 'cachorrobottomdertitulo',
+            'type' => 'txt',
+            'value' => 'SISTEMA DIGESTIVO MÁS SANO',
           ]);
           DB::table('content')->insert([
             'page' => 'smartbitesperro',
@@ -182,12 +210,26 @@ class ContentSeeder extends Seeder
             'value' => 'Los prebióticos fomentan su digestión equilibrada.',
           ]);
             // RAZAS PEQUEÑAS
+            DB::table('content')->insert([
+              'page' => 'smartbitesperro',
+              'section' => 'beneficios',
+              'field' => 'pequeñostopizqtitulo',
+              'type' => 'txt',
+              'value' => 'SISTEMA INMUNE FUERTE.',
+            ]);
           DB::table('content')->insert([
             'page' => 'smartbitesperro',
             'section' => 'beneficios',
             'field' => 'pequeñostopizq',
             'type' => 'txt',
             'value' => 'Balance de vitaminas y minerales que elevan sus defensas.',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'smartbitesperro',
+            'section' => 'beneficios',
+            'field' => 'pequeñostopdertitulo',
+            'type' => 'txt',
+            'value' => 'CORAZÓN SANO',
           ]);
           DB::table('content')->insert([
             'page' => 'smartbitesperro',
@@ -199,9 +241,23 @@ class ContentSeeder extends Seeder
           DB::table('content')->insert([
             'page' => 'smartbitesperro',
             'section' => 'beneficios',
+            'field' => 'pequeñosbottomizqtitulo',
+            'type' => 'txt',
+            'value' => 'METABOLISMO BALANCEADO',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'smartbitesperro',
+            'section' => 'beneficios',
             'field' => 'pequeñosbottomizq',
             'type' => 'txt',
             'value' => 'El equilibrio de nutrientes le proporciona la energía óptima.',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'smartbitesperro',
+            'section' => 'beneficios',
+            'field' => 'pequeñosbottomdertitulo',
+            'type' => 'txt',
+            'value' => 'SISTEMA DIGESTIVO MÁS SANO',
           ]);
           DB::table('content')->insert([
             'page' => 'smartbitesperro',
@@ -211,6 +267,13 @@ class ContentSeeder extends Seeder
             'value' => 'Los prebióticos fomentan su digestión equilibrada.',
           ]);
             // ADULTO
+            DB::table('content')->insert([
+            'page' => 'smartbitesperro',
+            'section' => 'beneficios',
+            'field' => 'adultotopizqtitulo',
+            'type' => 'txt',
+            'value' => 'SALUD SANO INTEGRAL',
+          ]);
           DB::table('content')->insert([
             'page' => 'smartbitesperro',
             'section' => 'beneficios',
@@ -219,19 +282,40 @@ class ContentSeeder extends Seeder
             'value' => 'Balance de vitaminas y minerales que elevan sus defensas para un organismo sano.',
           ]);
           DB::table('content')->insert([
+          'page' => 'smartbitesperro',
+          'section' => 'beneficios',
+          'field' => 'adultotopdertitulo',
+          'type' => 'txt',
+          'value' => 'CORAZÓN SALUD SANO',
+        ]);
+          DB::table('content')->insert([
             'page' => 'smartbitesperro',
             'section' => 'beneficios',
             'field' => 'adultotopder',
             'type' => 'txt',
-            'value' => 'La vitamina E natural protege las células del corazón.',
+            'value' => 'Litamincorazón.',
           ]);
+          DB::table('content')->insert([
+          'page' => 'smartbitesperro',
+          'section' => 'beneficios',
+          'field' => 'adultobottomizqtitulo',
+          'type' => 'txt',
+          'value' => 'PELAJE BRILLANTE',
+        ]);
           DB::table('content')->insert([
             'page' => 'smartbitesperro',
             'section' => 'beneficios',
             'field' => 'adultobottomizq',
             'type' => 'txt',
-            'value' => 'El omega 3 ayuda a mantener su piel saludable y pelaje brillante.',
+            'value' => 'Elomegaillante.',
           ]);
+          DB::table('content')->insert([
+          'page' => 'smartbitesperro',
+          'section' => 'beneficios',
+          'field' => 'adultobottomdertitulo',
+          'type' => 'txt',
+          'value' => 'SISTEMA DIGESTIVO MÁS SANO',
+        ]);
           DB::table('content')->insert([
             'page' => 'smartbitesperro',
             'section' => 'beneficios',
@@ -243,9 +327,23 @@ class ContentSeeder extends Seeder
           DB::table('content')->insert([
             'page' => 'smartbitesperro',
             'section' => 'beneficios',
+            'field' => 'seniortopizqtitulo',
+            'type' => 'txt',
+            'value' => 'ARTICULACIONES FUERTES Y FLEXIBLES',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'smartbitesperro',
+            'section' => 'beneficios',
             'field' => 'seniortopizq',
             'type' => 'txt',
             'value' => 'Con glucosamina que mejora su movilidad.',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'smartbitesperro',
+            'section' => 'beneficios',
+            'field' => 'seniortopdertitulo',
+            'type' => 'txt',
+            'value' => 'CÉLULAS PROTEGIDAS',
           ]);
           DB::table('content')->insert([
             'page' => 'smartbitesperro',
@@ -257,9 +355,23 @@ class ContentSeeder extends Seeder
           DB::table('content')->insert([
             'page' => 'smartbitesperro',
             'section' => 'beneficios',
+            'field' => 'seniorbottomizqtitulo',
+            'type' => 'txt',
+            'value' => 'SISTEMA INMUNE SALUDABLE',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'smartbitesperro',
+            'section' => 'beneficios',
             'field' => 'seniorbottomizq',
             'type' => 'txt',
             'value' => 'Balance de vitaminas y minerales que elevan sus defensas.',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'smartbitesperro',
+            'section' => 'beneficios',
+            'field' => 'seniorbottomdertitulo',
+            'type' => 'txt',
+            'value' => 'APARATO DIGESTIVO MÁS SANO',
           ]);
           DB::table('content')->insert([
             'page' => 'smartbitesperro',
@@ -300,9 +412,23 @@ class ContentSeeder extends Seeder
           DB::table('content')->insert([
             'page' => 'smartbitesgato',
             'section' => 'beneficios',
+            'field' => 'adultotopizqtitulo',
+            'type' => 'txt',
+            'value' => 'SISTEMA INMUNE Y URINARIO SANOS',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'smartbitesgato',
+            'section' => 'beneficios',
             'field' => 'adultotopizq',
             'type' => 'txt',
             'value' => 'La vitamina E natural promueve células fuertes y protegidas.',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'smartbitesgato',
+            'section' => 'beneficios',
+            'field' => 'adultotopdertitulo',
+            'type' => 'txt',
+            'value' => 'ÓPTIMA SALUD VISUAL',
           ]);
           DB::table('content')->insert([
             'page' => 'smartbitesgato',
@@ -314,9 +440,23 @@ class ContentSeeder extends Seeder
           DB::table('content')->insert([
             'page' => 'smartbitesgato',
             'section' => 'beneficios',
+            'field' => 'adultobottomtituloizq',
+            'type' => 'txt',
+            'value' => 'CONTROL DE BOLAS DE PELO',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'smartbitesgato',
+            'section' => 'beneficios',
             'field' => 'adultobottomizq',
             'type' => 'txt',
             'value' => 'Las fibras naturales ayudan a minimizar la formación de bolas de pelo.',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'smartbitesgato',
+            'section' => 'beneficios',
+            'field' => 'adultobottomtituloder',
+            'type' => 'txt',
+            'value' => 'SALUD INTESTINAL',
           ]);
           DB::table('content')->insert([
             'page' => 'smartbitesgato',
@@ -375,9 +515,23 @@ class ContentSeeder extends Seeder
           DB::table('content')->insert([
             'page' => 'titan',
             'section' => 'beneficios',
+            'field' => 'perrotopizqtitulo',
+            'type' => 'txt',
+            'value' => 'MÚSCULOS FUERTES',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'titan',
+            'section' => 'beneficios',
             'field' => 'perrotopizq',
             'type' => 'txt',
             'value' => 'La fuente de proteínas de calidad asegura los nutrientes adecuados para estar sano y fuerte en cada momento.',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'titan',
+            'section' => 'beneficios',
+            'field' => 'perrotopdertitulo',
+            'type' => 'txt',
+            'value' => 'PIEL SANA Y PELO BRILLANTE',
           ]);
           DB::table('content')->insert([
             'page' => 'titan',
@@ -389,9 +543,23 @@ class ContentSeeder extends Seeder
           DB::table('content')->insert([
             'page' => 'titan',
             'section' => 'beneficios',
+            'field' => 'perrobottomizqtitulo',
+            'type' => 'txt',
+            'value' => 'SISTEMA DIGESTIVO SANO',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'titan',
+            'section' => 'beneficios',
             'field' => 'perrobottomizq',
             'type' => 'txt',
             'value' => 'Por su contenido de probióticos y prebióticos ayudan a tener una mejor digestión y heces firmes que facilitan su limpieza.',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'titan',
+            'section' => 'beneficios',
+            'field' => 'perrobottomdertitulo',
+            'type' => 'txt',
+            'value' => 'REDUCE GASES Y MAL OLOR',
           ]);
           DB::table('content')->insert([
             'page' => 'titan',
@@ -406,7 +574,21 @@ class ContentSeeder extends Seeder
             'section' => 'beneficios',
             'field' => 'gatotopizq',
             'type' => 'txt',
+            'value' => 'MÚSCULOS FUERTES',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'titan',
+            'section' => 'beneficios',
+            'field' => 'gatotopizq',
+            'type' => 'txt',
             'value' => 'La fuente de proteínas de calidad asegura los nutrientes adecuados para estar sano y fuerte en cada momento.',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'titan',
+            'section' => 'beneficios',
+            'field' => 'gatotopder',
+            'type' => 'txt',
+            'value' => 'VISIÓN NOCTURNA',
           ]);
           DB::table('content')->insert([
             'page' => 'titan',
@@ -420,7 +602,21 @@ class ContentSeeder extends Seeder
             'section' => 'beneficios',
             'field' => 'gatobottomizq',
             'type' => 'txt',
+            'value' => 'SANA DIGESTIÓN',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'titan',
+            'section' => 'beneficios',
+            'field' => 'gatobottomizq',
+            'type' => 'txt',
             'value' => 'Por su contenido de probióticos y probióticos ayudan a tener una salud intestinal, preparando a su organismo para asimilar todos los nutrientes.',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'titan',
+            'section' => 'beneficios',
+            'field' => 'gatobottomder',
+            'type' => 'txt',
+            'value' => 'CORAZÓN FUERTE',
           ]);
           DB::table('content')->insert([
             'page' => 'titan',
@@ -479,9 +675,23 @@ class ContentSeeder extends Seeder
           DB::table('content')->insert([
             'page' => 'rocko',
             'section' => 'beneficios',
+            'field' => 'completetopizqtitulo',
+            'type' => 'txt',
+            'value' => 'Con proteína de pollo',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'rocko',
+            'section' => 'beneficios',
             'field' => 'completetopizq',
             'type' => 'txt',
             'value' => 'Fuente principal de aminoácidos.',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'rocko',
+            'section' => 'beneficios',
+            'field' => 'completetopdertitulo',
+            'type' => 'txt',
+            'value' => 'Placeholder',
           ]);
           DB::table('content')->insert([
             'page' => 'rocko',
@@ -493,9 +703,23 @@ class ContentSeeder extends Seeder
           DB::table('content')->insert([
             'page' => 'rocko',
             'section' => 'beneficios',
+            'field' => 'completebottomizqtitulo',
+            'type' => 'txt',
+            'value' => 'Vitaminas y minerales esenciales',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'rocko',
+            'section' => 'beneficios',
             'field' => 'completebottomizq',
             'type' => 'txt',
             'value' => 'Para una nutrición completa y balanceada.',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'rocko',
+            'section' => 'beneficios',
+            'field' => 'completebottomdertitulo',
+            'type' => 'txt',
+            'value' => 'Placeholder',
           ]);
           DB::table('content')->insert([
             'page' => 'rocko',
@@ -508,9 +732,23 @@ class ContentSeeder extends Seeder
           DB::table('content')->insert([
             'page' => 'rocko',
             'section' => 'beneficios',
+            'field' => 'podertopizqtitulo',
+            'type' => 'txt',
+            'value' => 'Con proteína de pollo',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'rocko',
+            'section' => 'beneficios',
             'field' => 'podertopizq',
             'type' => 'txt',
             'value' => 'Fuente principal de aminoácidos.',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'rocko',
+            'section' => 'beneficios',
+            'field' => 'podertopdertitulo',
+            'type' => 'txt',
+            'value' => 'Con prebióticos',
           ]);
           DB::table('content')->insert([
             'page' => 'rocko',
@@ -522,9 +760,23 @@ class ContentSeeder extends Seeder
           DB::table('content')->insert([
             'page' => 'rocko',
             'section' => 'beneficios',
+            'field' => 'poderbottomtituloizq',
+            'type' => 'txt',
+            'value' => 'Vitaminas y minerales esenciales',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'rocko',
+            'section' => 'beneficios',
             'field' => 'poderbottomizq',
             'type' => 'txt',
             'value' => 'Para una salud intestinal y heces firmes.',
+          ]);
+          DB::table('content')->insert([
+            'page' => 'rocko',
+            'section' => 'beneficios',
+            'field' => 'poderbottomtituloder',
+            'type' => 'txt',
+            'value' => 'Placeholder',
           ]);
           DB::table('content')->insert([
             'page' => 'rocko',
