@@ -162,24 +162,25 @@
                             <li>
                                 <a href="{{ route('landing.page') }}" class="waves-effect">
                                     <i class="mdi mdi-home-variant-outline"></i>
-                                    <span>Landing</span>
+                                    <span>Home</span>
                                 </a>
                             </li>
 
                             <li>
                                 <a href="{{ route('map.index') }}" class=" waves-effect">
-                                    <i class="mdi mdi-calendar-outline"></i>
+                                    <i class="mdi mdi-map-marker"></i>
                                     <span>Encuentranos</span>
                                 </a>
                             </li>
 
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                    <i class="mdi mdi-email-outline"></i>
+                                    <i class="fas fa-boxes"></i>
                                     <span>Productos</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="{{ route('smartbites.page') }}">Smart Bites</a></li>
+                                    <li><a href="{{ route('smartbites.page') }}">Smart Bites Perro</a></li>
+                                    <li><a href="email-read.html">Smart Bites Gato</a></li>
                                     <li><a href="email-read.html">Titan</a></li>
                                     <li><a href="email-compose.html">Rock</a></li>
                                 </ul>
@@ -235,7 +236,7 @@
         <script src="{{ asset('libs/metismenu/metisMenu.min.js') }}"></script>
         <script src="{{ asset('libs/simplebar/simplebar.min.js') }}"></script>
         <script src="{{ asset('libs/node-waves/waves.min.js') }}"></script>
-
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
 
         <!-- apexcharts js -->
         <!--script src="{{ asset('libs/apexcharts/apexcharts.min.js') }}"></script-->

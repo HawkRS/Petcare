@@ -44,6 +44,7 @@
                       <th class="fntB">TELEFONO 2</th>
                       <th class="fntB">LATITUD</th>
                       <th class="fntB">LONGITUD</th>
+                      <th class="fntB">FECHA DE ALTA</th>
                       <th class="fntB">ACCIONES</th>
                     </tr>
                   </thead>
@@ -59,9 +60,10 @@
                     <td>{{ $marcador->phone2 }}</td>
                     <td>{{ $marcador->lat }}</td>
                     <td>{{ $marcador->lng }}</td>
+                    <td>{{ $marcador->date }}</td>
                     <td>
-                      <a href="{{ route('findus.edit', ['id' => $marcador->id]) }}" class="btn btn-sm btn-warning fntB"><i class="fas fnt18 fa-pencil-alt"></i></a>
-                      <button type="button" name="button"  data-bs-toggle="modal" data-bs-target="#Marcador{{$marcador->id}}Modal" class="btn btn-sm btn-danger fntB"><i class="fas fnt18 fa-trash-alt"></i></button>
+                      <a href="{{ route('findus.edit', ['id' => $marcador->id]) }}" class="btn btn-sm btn-outline-warning fntB"><i class="fas fnt18 fa-pencil-alt"></i></a>
+                      <button type="button" name="button"  data-bs-toggle="modal" data-bs-target="#Marcador{{$marcador->id}}Modal" class="btn btn-sm btn-outline-danger fntB"><i class="fas fnt18 fa-trash-alt"></i></button>
 
                     </td>
                     <!-- Logout Modal-->
@@ -117,7 +119,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
         </div>
         </form>
       </div>

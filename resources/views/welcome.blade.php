@@ -67,8 +67,7 @@
                                     </a>
                                 </div>
                                 <!-- end row -->
-                                <h4 class="font-size-18 text-muted mt-2 text-center">¡ Bienvenidos !</h4>
-                                <p class="mb-5 text-center">Administrador Petcare.</p>
+                                <h4 class="font-size-20 fnt_terciary mt-2 text-center mb-5">¡ Bienvenidos al Administrador Petcare !</h4>
                                 <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                                   @csrf
                                     <div class="row">
@@ -101,11 +100,11 @@
                                                         <label class="form-label" class="form-check-label" for="customControlInline">Recuerdame</label>
                                                     </div>
                                                 </div>
-                                                <div class="col-7">
+                                                {{--<div class="col-7">
                                                     <div class="text-md-end mt-3 mt-md-0">
                                                         <a href="auth-recoverpw.html" class="text-muted"><i class="mdi mdi-lock"></i>¿Olvidaste tu contaseña?</a>
                                                     </div>
-                                                </div>
+                                                </div>--}}
                                             </div>
                                             <div class="d-grid mt-4">
                                                 <button class="btn btn-danger waves-effect waves-light" type="submit">Entrar</button>
