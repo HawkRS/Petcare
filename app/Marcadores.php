@@ -27,6 +27,7 @@ class Marcadores extends Model
     'phone',
     'phone2',
     'linkmap',
+    'published',
     'web',
     'hours1',
     'hours2',

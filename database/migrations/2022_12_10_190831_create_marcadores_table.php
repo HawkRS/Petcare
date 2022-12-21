@@ -28,6 +28,7 @@ class CreateMarcadoresTable extends Migration
             $table->text('phone');
             $table->text('phone2')->nullable();
             $table->text('linkmap');
+            $table->integer('published')->default(0);/* 0 - NO PUBLICADO/ 1 - PUBLICADO*/
             $table->text('web')->nullable();
             $table->text('hours1')->nullable();
             $table->text('hours2')->nullable();

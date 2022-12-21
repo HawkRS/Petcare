@@ -127,7 +127,7 @@
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
                   <!-- item-->
-                  <a class="dropdown-item" href="#"><i class="ri-user-line align-middle me-1"></i> Profile</a>
+                  <a class="dropdown-item" href="#"><i class="ri-user-line align-middle me-1"></i> Usuarios</a>
                   {{--<a class="dropdown-item" href="#"><i class="ri-wallet-2-line align-middle me-1"></i> My Wallet</a>--}}
                   {{--<a class="dropdown-item d-block" href="#"><span class="badge bg-success float-end mt-1">11</span><i class="ri-settings-2-line align-middle me-1"></i> Settings</a>--}}
                   {{--<a class="dropdown-item" href="#"><i class="ri-lock-unlock-line align-middle me-1"></i> Lock screen</a>--}}
@@ -184,6 +184,13 @@
                                     <li><a href="email-read.html">Titan</a></li>
                                     <li><a href="email-compose.html">Rock</a></li>
                                 </ul>
+                            </li>
+
+                            <li>
+                                <a href="{{ route('map.index') }}" class=" waves-effect">
+                                    <i class="fas fa-users"></i>
+                                    <span>Usuarios</span>
+                                </a>
                             </li>
 
                         </ul>
