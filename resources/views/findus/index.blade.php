@@ -48,19 +48,21 @@
                       <th class="fntB">ACCIONES</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody>mdi-bookmark-remove
                     @foreach($marcadores as $marcador)
-                    <td>{{ $marcador->name }}</td>
-                    <td>{{ $marcador->category }}</td>
-                    <td>{{ $marcador->state }}</td>
-                    <td>{{ $marcador->city }}</td>
-                    <td>{{ $marcador->address }}</td>
-                    <td>{{ $marcador->postal }}</td>
-                    <td>{{ $marcador->phone }}</td>
-                    <td>{{ $marcador->phone2 }}</td>
-                    <td>{{ $marcador->lat }}</td>
-                    <td>{{ $marcador->lng }}</td>
-                    <td>{{ $marcador->date }}</td>
+                    <td class="{{ $marcador->published == 0 ? 'text-danger' : '' }}" >
+                      {{ $marcador->name }} @if($marcador->published == 0) <i class="mdi mdi-bookmark-remove"></i> @endif
+                    </td>
+                    <td class="{{ $marcador->published == 0 ? 'text-danger' : '' }}" >{{ $marcador->category }}</td>
+                    <td class="{{ $marcador->published == 0 ? 'text-danger' : '' }}" >{{ $marcador->state }}</td>
+                    <td class="{{ $marcador->published == 0 ? 'text-danger' : '' }}" >{{ $marcador->city }}</td>
+                    <td class="{{ $marcador->published == 0 ? 'text-danger' : '' }}" >{{ $marcador->address }}</td>
+                    <td class="{{ $marcador->published == 0 ? 'text-danger' : '' }}" >{{ $marcador->postal }}</td>
+                    <td class="{{ $marcador->published == 0 ? 'text-danger' : '' }}" >{{ $marcador->phone }}</td>
+                    <td class="{{ $marcador->published == 0 ? 'text-danger' : '' }}" >{{ $marcador->phone2 }}</td>
+                    <td class="{{ $marcador->published == 0 ? 'text-danger' : '' }}" >{{ $marcador->lat }}</td>
+                    <td class="{{ $marcador->published == 0 ? 'text-danger' : '' }}" >{{ $marcador->lng }}</td>
+                    <td class="{{ $marcador->published == 0 ? 'text-danger' : '' }}" >{{ $marcador->date }}</td>
                     <td>
                       <a href="{{ route('findus.edit', ['id' => $marcador->id]) }}" class="btn btn-sm btn-outline-warning fntB"><i class="fas fnt18 fa-pencil-alt"></i></a>
                       <button type="button" name="button"  data-bs-toggle="modal" data-bs-target="#Marcador{{$marcador->id}}Modal" class="btn btn-sm btn-outline-danger fntB"><i class="fas fnt18 fa-trash-alt"></i></button>

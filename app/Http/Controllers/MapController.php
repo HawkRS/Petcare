@@ -63,7 +63,8 @@ class MapController extends Controller
       'postal' => 'required|regex:/^[0-9]{5,5}$/',
       'phone' => 'required',
       'lat' => 'required|numeric',
-      'lng' => 'required|numeric',
+      'lat' => 'required|numeric',
+      'type' => 'required|numeric',
       'date' => 'required|date',
     ], $messages);
 
@@ -83,10 +84,11 @@ class MapController extends Controller
     $NewMapMarker->linkmap = $request->linkmap;
     $NewMapMarker->web = $request->web;
     $NewMapMarker->hours1 = $request->hours1;
-    $NewMapMarker->hours2 = $request->hours2;
-    $NewMapMarker->hours3 = $request->hours3;
-    $NewMapMarker->featured = $request->featured;
-    $NewMapMarker->features = $request->features;
+    //$NewMapMarker->hours2 = $request->hours2;
+    //$NewMapMarker->hours3 = $request->hours3;
+    $NewMapMarker->published = $request->type;
+    //$NewMapMarker->featured = $request->featured;
+    //$NewMapMarker->features = $request->features;
     $NewMapMarker->date = $request->date;
     $NewMapMarker->save();
     $AllMarkers = Marcadores::all();
@@ -117,7 +119,8 @@ class MapController extends Controller
       'postal' => 'required|regex:/^[0-9]{5,5}$/',
       'phone' => 'required',
       'lat' => 'required|numeric',
-      'lng' => 'required|numeric',
+      'lat' => 'required|numeric',
+      'type' => 'required|numeric',
       'date' => 'required|date',
     ], $messages);
     $MapMarker = Marcadores::findorfail($id);
@@ -136,10 +139,11 @@ class MapController extends Controller
     $MapMarker->linkmap = $request->linkmap;
     $MapMarker->web = $request->web;
     $MapMarker->hours1 = $request->hours1;
-    $MapMarker->hours2 = $request->hours2;
-    $MapMarker->hours3 = $request->hours3;
-    $MapMarker->featured = $request->featured;
-    $MapMarker->features = $request->features;
+    $MapMarker->published = $request->type;
+    //$MapMarker->hours2 = $request->hours2;
+    //$MapMarker->hours3 = $request->hours3;
+    //$MapMarker->featured = $request->featured;
+    //$MapMarker->features = $request->features;
     $MapMarker->date = $request->date;
     $MapMarker->save();
     $AllMarkers = Marcadores::all();
@@ -164,6 +168,7 @@ class MapController extends Controller
     $locations_arr = array();
     foreach ($Markers as $key => $Marker) {
         //dd($key);
+      if ($Marker->published == 1) {
         $locations_arr[$key]['id'] = $Marker->id;
         $locations_arr[$key]['name'] = $Marker->name;
         $locations_arr[$key]['lat'] = $Marker->lat;
@@ -184,6 +189,7 @@ class MapController extends Controller
         $locations_arr[$key]['featured'] = $Marker->featured;
         $locations_arr[$key]['features'] = $Marker->features;
         $locations_arr[$key]['date'] = $Marker->date;
+      }
 
           // code...
         //echo  $json_arr[$key] . " - " .  $json_arr[$value] . "<br/>";
