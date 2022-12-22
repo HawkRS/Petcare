@@ -174,41 +174,61 @@ class ProductosController extends Controller
        'page' => 'required',
        'section' => 'required',
        'area' => 'required',
+       'beneficiostitulo1' => 'required',
        'beneficios1' => 'required',
+       'beneficiostitulo2' => 'required',
        'beneficios2' => 'required',
+       'beneficiostitulo3' => 'required',
        'beneficios3' => 'required',
+       'beneficiostitulo4' => 'required',
        'beneficios4' => 'required',
      ], $messages);
      switch ($request->area) {
        case 'cachorro':
          $area = array(
+           'cachorrotopizqtitulo',
            'cachorrotopizq',
+           'cachorrotopdertitulo',
            'cachorrotopder',
+           'cachorrobottomizqtitulo',
            'cachorrobottomizq',
+           'cachorrobottomdertitulo',
            'cachorrobottomder',
          );
          break;
        case 'razapequeña':
          $area = array(
+           'pequeñostopizqtitulo',
            'pequeñostopizq',
+           'pequeñostopdertitulo',
            'pequeñostopder',
+           'pequeñosbottomizqtitulo',
            'pequeñosbottomizq',
+           'pequeñosbottomdertitulo',
            'pequeñosbottomder',
          );
          break;
        case 'adulto':
          $area = array(
+           'adultotopizqtitulo',
            'adultotopizq',
+           'adultotopdertitulo',
            'adultotopder',
+           'adultobottomizqtitulo',
            'adultobottomizq',
+           'adultobottomdertitulo',
            'adultobottomder',
          );
          break;
        case 'senior':
          $area = array(
+           'seniortopizqtitulo',
            'seniortopizq',
+           'seniortopdertitulo',
            'seniortopder',
+           'seniorbottomizqtitulo',
            'seniorbottomizq',
+           'seniorbottomdertitulo',
            'seniorbottomder',
          );
          break;
@@ -217,15 +237,23 @@ class ProductosController extends Controller
          // code...
          break;
      }
-     $Beneficios1 = Content::where([['page', '=', $request->page],['section', '=', $request->section],['field', '=', $area[0]]])->first();
      //dd($Beneficios1);
-     $Beneficios2 = Content::where([['page', '=', $request->page],['section', '=', $request->section],['field', '=', $area[1]]])->first();
-     $Beneficios3 = Content::where([['page', '=', $request->page],['section', '=', $request->section],['field', '=', $area[2]]])->first();
-     $Beneficios4 = Content::where([['page', '=', $request->page],['section', '=', $request->section],['field', '=', $area[3]]])->first();
+     $Beneficios1ttl = Content::where([['page', '=', $request->page],['section', '=', $request->section],['field', '=', $area[0]]])->first();
+     $Beneficios1 = Content::where([['page', '=', $request->page],['section', '=', $request->section],['field', '=', $area[1]]])->first();
+     $Beneficios2ttl = Content::where([['page', '=', $request->page],['section', '=', $request->section],['field', '=', $area[2]]])->first();
+     $Beneficios2 = Content::where([['page', '=', $request->page],['section', '=', $request->section],['field', '=', $area[3]]])->first();
+     $Beneficios3ttl = Content::where([['page', '=', $request->page],['section', '=', $request->section],['field', '=', $area[4]]])->first();
+     $Beneficios3 = Content::where([['page', '=', $request->page],['section', '=', $request->section],['field', '=', $area[5]]])->first();
+     $Beneficios4ttl = Content::where([['page', '=', $request->page],['section', '=', $request->section],['field', '=', $area[6]]])->first();
+     $Beneficios4 = Content::where([['page', '=', $request->page],['section', '=', $request->section],['field', '=', $area[7]]])->first();
 
+     $Beneficios1ttl->value = $request->beneficiostitulo1; $Beneficios1ttl->save();
      $Beneficios1->value = $request->beneficios1; $Beneficios1->save();
+     $Beneficios2ttl->value = $request->beneficiostitulo2; $Beneficios2ttl->save();
      $Beneficios2->value = $request->beneficios2; $Beneficios2->save();
+     $Beneficios3ttl->value = $request->beneficiostitulo3; $Beneficios3ttl->save();
      $Beneficios3->value = $request->beneficios3; $Beneficios3->save();
+     $Beneficios4ttl->value = $request->beneficiostitulo4; $Beneficios4ttl->save();
      $Beneficios4->value = $request->beneficios4; $Beneficios4->save();
 
       return redirect()->route('smartbites.page');
