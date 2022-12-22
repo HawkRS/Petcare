@@ -198,13 +198,13 @@
                 <h5 class="p-2">Cachorro</h5>
                 <div class="card-body">
                   <h5>{{ $Contenidos[10]->value }}</h5>10
-                  <p>{{ $Contenidos[10]->value }}</p>
-                  <h5>{{ $Contenidos[10]->value }}</h5>
                   <p>{{ $Contenidos[11]->value }}</p>
-                  <h5>{{ $Contenidos[10]->value }}</h5>
-                  <p>{{ $Contenidos[12]->value }}</p>
-                  <h5>{{ $Contenidos[10]->value }}</h5>
+                  <h5>{{ $Contenidos[12]->value }}</h5>
                   <p>{{ $Contenidos[13]->value }}</p>
+                  <h5>{{ $Contenidos[14]->value }}</h5>
+                  <p>{{ $Contenidos[15]->value }}</p>
+                  <h5>{{ $Contenidos[16]->value }}</h5>
+                  <p>{{ $Contenidos[17]->value }}</p>
                 </div>
                 <div class="card-footer  d-grid gap-2">
                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#BeneficiosCachorroModal">
@@ -218,14 +218,14 @@
               <div class="card">
                 <h5 class="p-2">Razas pequeñas</h5>
                 <div class="card-body">
-                  <h5>{{ $Contenidos[10]->value }}</h5>
-                  <p>{{ $Contenidos[14]->value }}</p>
-                  <h5>{{ $Contenidos[10]->value }}</h5>
-                  <p>{{ $Contenidos[15]->value }}</p>
-                  <h5>{{ $Contenidos[10]->value }}</h5>
-                  <p>{{ $Contenidos[16]->value }}</p>
-                  <h5>{{ $Contenidos[10]->value }}</h5>
-                  <p>{{ $Contenidos[17]->value }}</p>
+                  <h5>{{ $Contenidos[18]->value }}</h5>
+                  <p>{{ $Contenidos[19]->value }}</p>
+                  <h5>{{ $Contenidos[20]->value }}</h5>
+                  <p>{{ $Contenidos[21]->value }}</p>
+                  <h5>{{ $Contenidos[22]->value }}</h5>
+                  <p>{{ $Contenidos[23]->value }}</p>
+                  <h5>{{ $Contenidos[24]->value }}</h5>
+                  <p>{{ $Contenidos[25]->value }}</p>
                 </div>
                 <div class="card-footer  d-grid gap-2">
                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#BeneficiosRazasModal">
@@ -239,14 +239,14 @@
               <div class="card">
                 <h5 class="p-2">Adulto</h5>
                 <div class="card-body">
-                  <h5>{{ $Contenidos[10]->value }}</h5>
-                  <p>{{ $Contenidos[18]->value }}</p>
-                  <h5>{{ $Contenidos[10]->value }}</h5>
-                  <p>{{ $Contenidos[19]->value }}</p>
-                  <h5>{{ $Contenidos[10]->value }}</h5>
-                  <p>{{ $Contenidos[20]->value }}</p>
-                  <h5>{{ $Contenidos[10]->value }}</h5>
-                  <p>{{ $Contenidos[21]->value }}</p>
+                  <h5>{{ $Contenidos[26]->value }}</h5>
+                  <p>{{ $Contenidos[27]->value }}</p>
+                  <h5>{{ $Contenidos[28]->value }}</h5>
+                  <p>{{ $Contenidos[29]->value }}</p>
+                  <h5>{{ $Contenidos[30]->value }}</h5>
+                  <p>{{ $Contenidos[31]->value }}</p>
+                  <h5>{{ $Contenidos[32]->value }}</h5>
+                  <p>{{ $Contenidos[33]->value }}</p>
                 </div>
                 <div class="card-footer  d-grid gap-2">
                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#BeneficiosAdultoModal">
@@ -260,14 +260,14 @@
               <div class="card">
                 <h5 class="p-2">SENIOR</h5>
                 <div class="card-body">
-                  <h5>{{ $Contenidos[10]->value }}</h5>
-                  <p>{{ $Contenidos[22]->value }}</p>
-                  <h5>{{ $Contenidos[10]->value }}</h5>
-                  <p>{{ $Contenidos[23]->value }}</p>
-                  <h5>{{ $Contenidos[10]->value }}</h5>
-                  <p>{{ $Contenidos[24]->value }}</p>
-                  <h5>{{ $Contenidos[10]->value }}</h5>
-                  <p>{{ $Contenidos[25]->value }}</p>
+                  <h5>{{ $Contenidos[34]->value }}</h5>
+                  <p>{{ $Contenidos[35]->value }}</p>
+                  <h5>{{ $Contenidos[36]->value }}</h5>
+                  <p>{{ $Contenidos[37]->value }}</p>
+                  <h5>{{ $Contenidos[38]->value }}</h5>
+                  <p>{{ $Contenidos[39]->value }}</p>
+                  <h5>{{ $Contenidos[40]->value }}</h5>
+                  <p>{{ $Contenidos[41]->value }}</p>
                 </div>
                 <div class="card-footer  d-grid gap-2">
                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#BeneficiosSeniorModal">
@@ -710,9 +710,23 @@
                     <input name="imagefile" class="form-control" type="file" id="formFile">
                   </div>--}}
                   <div class="mb-3">
-                    <label for="beneficios1" class="form-label">Beneficio 1</label>
+                    <label for="beneficiostitulo1" class="form-label">Beneficio 1 titulo</label>
                     @if(isset($Contenidos[10]->value))
-                    <textarea class="form-control  {{ $errors->has('beneficios1') ? ' is-invalid' : '' }}" name="beneficios1" id="beneficios1" rows="2" required>{{$Contenidos[10]->value}}</textarea>
+                    <input type="text" name="beneficiostitulo1" class="form-control {{ $errors->has('beneficiostitulo1') ? ' is-invalid' : '' }}" id="beneficiostitulo1" placeholder="Titulo" value="{{$Contenidos[10]->value}}" required>
+                    @else
+                    <input type="text" name="beneficiostitulo1" class="form-control {{ $errors->has('beneficiostitulo1') ? ' is-invalid' : '' }}" id="beneficiostitulo1" placeholder="Titulo" required>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega un titulo válido
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="beneficios1" class="form-label">Beneficio 1</label>
+                    @if(isset($Contenidos[11]->value))
+                    <textarea class="form-control  {{ $errors->has('beneficios1') ? ' is-invalid' : '' }}" name="beneficios1" id="beneficios1" rows="2" required>{{$Contenidos[11]->value}}</textarea>
                     @else
                     <textarea class="form-control  {{ $errors->has('beneficios1') ? ' is-invalid' : '' }}" name="beneficios1" id="beneficios1" rows="2" required></textarea>
                     @endif
@@ -724,9 +738,23 @@
                     </div>
                   </div>
                   <div class="mb-3">
+                    <label for="beneficiostitulo2" class="form-label">Beneficio 2 titulo</label>
+                    @if(isset($Contenidos[12]->value))
+                    <input type="text" name="beneficiostitulo2" class="form-control {{ $errors->has('beneficiostitulo2') ? ' is-invalid' : '' }}" id="beneficiostitulo2" placeholder="Titulo" value="{{$Contenidos[12]->value}}" required>
+                    @else
+                    <input type="text" name="beneficiostitulo2" class="form-control {{ $errors->has('beneficiostitulo2') ? ' is-invalid' : '' }}" id="beneficiostitulo2" placeholder="Titulo" required>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega un titulo válido
+                    </div>
+                  </div>
+                  <div class="mb-3">
                     <label for="beneficios2" class="form-label">Beneficio 2</label>
-                    @if(isset($Contenidos[11]->value))
-                    <textarea class="form-control  {{ $errors->has('beneficios2') ? ' is-invalid' : '' }}" name="beneficios2" id="beneficios2" rows="2" required>{{$Contenidos[11]->value}}</textarea>
+                    @if(isset($Contenidos[13]->value))
+                    <textarea class="form-control  {{ $errors->has('beneficios2') ? ' is-invalid' : '' }}" name="beneficios2" id="beneficios2" rows="2" required>{{$Contenidos[13]->value}}</textarea>
                     @else
                     <textarea class="form-control  {{ $errors->has('beneficios2') ? ' is-invalid' : '' }}" name="beneficios2" id="beneficios2" rows="2" required></textarea>
                     @endif
@@ -738,9 +766,23 @@
                     </div>
                   </div>
                   <div class="mb-3">
+                    <label for="beneficiostitulo3" class="form-label">Beneficio 3 titulo</label>
+                    @if(isset($Contenidos[14]->value))
+                    <input type="text" name="beneficiostitulo3" class="form-control {{ $errors->has('beneficiostitulo3') ? ' is-invalid' : '' }}" id="beneficiostitulo3" placeholder="Titulo" value="{{$Contenidos[14]->value}}" required>
+                    @else
+                    <input type="text" name="beneficiostitulo3" class="form-control {{ $errors->has('beneficiostitulo3') ? ' is-invalid' : '' }}" id="beneficiostitulo3" placeholder="Titulo" required>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega un titulo válido
+                    </div>
+                  </div>
+                  <div class="mb-3">
                     <label for="beneficios3" class="form-label">Beneficio 3</label>
-                    @if(isset($Contenidos[12]->value))
-                    <textarea class="form-control  {{ $errors->has('beneficios3') ? ' is-invalid' : '' }}" name="beneficios3" id="beneficios3" rows="2" required>{{$Contenidos[12]->value}}</textarea>
+                    @if(isset($Contenidos[15]->value))
+                    <textarea class="form-control  {{ $errors->has('beneficios3') ? ' is-invalid' : '' }}" name="beneficios3" id="beneficios3" rows="2" required>{{$Contenidos[15]->value}}</textarea>
                     @else
                     <textarea class="form-control  {{ $errors->has('beneficios3') ? ' is-invalid' : '' }}" name="beneficios3" id="beneficios3" rows="2" required></textarea>
                     @endif
@@ -752,9 +794,23 @@
                     </div>
                   </div>
                   <div class="mb-3">
+                    <label for="beneficiostitulo4" class="form-label">Beneficio 4 titulo</label>
+                    @if(isset($Contenidos[16]->value))
+                    <input type="text" name="beneficiostitulo4" class="form-control {{ $errors->has('beneficiostitulo4') ? ' is-invalid' : '' }}" id="beneficiostitulo4" placeholder="Titulo" value="{{$Contenidos[16]->value}}" required>
+                    @else
+                    <input type="text" name="beneficiostitulo4" class="form-control {{ $errors->has('beneficiostitulo4') ? ' is-invalid' : '' }}" id="beneficiostitulo4" placeholder="Titulo" required>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega un titulo válido
+                    </div>
+                  </div>
+                  <div class="mb-3">
                     <label for="beneficios4" class="form-label">Beneficio 4</label>
-                    @if(isset($Contenidos[13]->value))
-                    <textarea class="form-control  {{ $errors->has('beneficios4') ? ' is-invalid' : '' }}" name="beneficios4" id="beneficios4" rows="2" required>{{$Contenidos[13]->value}}</textarea>
+                    @if(isset($Contenidos[17]->value))
+                    <textarea class="form-control  {{ $errors->has('beneficios4') ? ' is-invalid' : '' }}" name="beneficios4" id="beneficios4" rows="2" required>{{$Contenidos[17]->value}}</textarea>
                     @else
                     <textarea class="form-control  {{ $errors->has('beneficios4') ? ' is-invalid' : '' }}" name="beneficios4" id="beneficios4" rows="2" required></textarea>
                     @endif
@@ -794,9 +850,23 @@
                     <input name="imagefile" class="form-control" type="file" id="formFile">
                   </div>--}}
                   <div class="mb-3">
+                    <label for="beneficiostitulo1" class="form-label">Beneficio 1 titulo</label>
+                    @if(isset($Contenidos[18]->value))
+                    <input type="text" name="beneficiostitulo1" class="form-control {{ $errors->has('beneficiostitulo1') ? ' is-invalid' : '' }}" id="beneficiostitulo1" placeholder="Titulo" value="{{$Contenidos[18]->value}}" required>
+                    @else
+                    <input type="text" name="beneficiostitulo1" class="form-control {{ $errors->has('beneficiostitulo1') ? ' is-invalid' : '' }}" id="beneficiostitulo1" placeholder="Titulo" required>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega un titulo válido
+                    </div>
+                  </div>
+                  <div class="mb-3">
                     <label for="beneficios1" class="form-label">Beneficio 1</label>
-                    @if(isset($Contenidos[14]->value))
-                    <textarea class="form-control  {{ $errors->has('beneficios1') ? ' is-invalid' : '' }}" name="beneficios1" id="beneficios1" rows="2" required>{{$Contenidos[14]->value}}</textarea>
+                    @if(isset($Contenidos[19]->value))
+                    <textarea class="form-control  {{ $errors->has('beneficios1') ? ' is-invalid' : '' }}" name="beneficios1" id="beneficios1" rows="2" required>{{$Contenidos[19]->value}}</textarea>
                     @else
                     <textarea class="form-control  {{ $errors->has('beneficios1') ? ' is-invalid' : '' }}" name="beneficios1" id="beneficios1" rows="2" required></textarea>
                     @endif
@@ -808,9 +878,23 @@
                     </div>
                   </div>
                   <div class="mb-3">
+                    <label for="beneficiostitulo2" class="form-label">Beneficio 2 titulo</label>
+                    @if(isset($Contenidos[20]->value))
+                    <input type="text" name="beneficiostitulo2" class="form-control {{ $errors->has('beneficiostitulo2') ? ' is-invalid' : '' }}" id="beneficiostitulo2" placeholder="Titulo" value="{{$Contenidos[20]->value}}" required>
+                    @else
+                    <input type="text" name="beneficiostitulo2" class="form-control {{ $errors->has('beneficiostitulo2') ? ' is-invalid' : '' }}" id="beneficiostitulo2" placeholder="Titulo" required>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega un titulo válido
+                    </div>
+                  </div>
+                  <div class="mb-3">
                     <label for="beneficios2" class="form-label">Beneficio 2</label>
-                    @if(isset($Contenidos[15]->value))
-                    <textarea class="form-control  {{ $errors->has('beneficios2') ? ' is-invalid' : '' }}" name="beneficios2" id="beneficios2" rows="2" required>{{$Contenidos[15]->value}}</textarea>
+                    @if(isset($Contenidos[21]->value))
+                    <textarea class="form-control  {{ $errors->has('beneficios2') ? ' is-invalid' : '' }}" name="beneficios2" id="beneficios2" rows="2" required>{{$Contenidos[21]->value}}</textarea>
                     @else
                     <textarea class="form-control  {{ $errors->has('beneficios2') ? ' is-invalid' : '' }}" name="beneficios2" id="beneficios2" rows="2" required></textarea>
                     @endif
@@ -822,9 +906,23 @@
                     </div>
                   </div>
                   <div class="mb-3">
+                    <label for="beneficiostitulo3" class="form-label">Beneficio 3 titulo</label>
+                    @if(isset($Contenidos[22]->value))
+                    <input type="text" name="beneficiostitulo3" class="form-control {{ $errors->has('beneficiostitulo3') ? ' is-invalid' : '' }}" id="beneficiostitulo3" placeholder="Titulo" value="{{$Contenidos[22]->value}}" required>
+                    @else
+                    <input type="text" name="beneficiostitulo3" class="form-control {{ $errors->has('beneficiostitulo3') ? ' is-invalid' : '' }}" id="beneficiostitulo3" placeholder="Titulo" required>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega un titulo válido
+                    </div>
+                  </div>
+                  <div class="mb-3">
                     <label for="beneficios3" class="form-label">Beneficio 3</label>
-                    @if(isset($Contenidos[16]->value))
-                    <textarea class="form-control  {{ $errors->has('beneficios3') ? ' is-invalid' : '' }}" name="beneficios3" id="beneficios3" rows="2" required>{{$Contenidos[16]->value}}</textarea>
+                    @if(isset($Contenidos[23]->value))
+                    <textarea class="form-control  {{ $errors->has('beneficios3') ? ' is-invalid' : '' }}" name="beneficios3" id="beneficios3" rows="2" required>{{$Contenidos[23]->value}}</textarea>
                     @else
                     <textarea class="form-control  {{ $errors->has('beneficios3') ? ' is-invalid' : '' }}" name="beneficios3" id="beneficios3" rows="2" required></textarea>
                     @endif
@@ -836,9 +934,23 @@
                     </div>
                   </div>
                   <div class="mb-3">
+                    <label for="beneficiostitulo4" class="form-label">Beneficio 4 titulo</label>
+                    @if(isset($Contenidos[24]->value))
+                    <input type="text" name="beneficiostitulo4" class="form-control {{ $errors->has('beneficiostitulo4') ? ' is-invalid' : '' }}" id="beneficiostitulo4" placeholder="Titulo" value="{{$Contenidos[24]->value}}" required>
+                    @else
+                    <input type="text" name="beneficiostitulo4" class="form-control {{ $errors->has('beneficiostitulo4') ? ' is-invalid' : '' }}" id="beneficiostitulo4" placeholder="Titulo" required>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega un titulo válido
+                    </div>
+                  </div>
+                  <div class="mb-3">
                     <label for="beneficios4" class="form-label">Beneficio 4</label>
-                    @if(isset($Contenidos[17]->value))
-                    <textarea class="form-control  {{ $errors->has('beneficios4') ? ' is-invalid' : '' }}" name="beneficios4" id="beneficios4" rows="2" required>{{$Contenidos[17]->value}}</textarea>
+                    @if(isset($Contenidos[25]->value))
+                    <textarea class="form-control  {{ $errors->has('beneficios4') ? ' is-invalid' : '' }}" name="beneficios4" id="beneficios4" rows="2" required>{{$Contenidos[25]->value}}</textarea>
                     @else
                     <textarea class="form-control  {{ $errors->has('beneficios4') ? ' is-invalid' : '' }}" name="beneficios4" id="beneficios4" rows="2" required></textarea>
                     @endif
@@ -878,9 +990,23 @@
                     <input name="imagefile" class="form-control" type="file" id="formFile">
                   </div>--}}
                   <div class="mb-3">
+                    <label for="beneficiostitulo1" class="form-label">Beneficio 1 titulo</label>
+                    @if(isset($Contenidos[26]->value))
+                    <input type="text" name="beneficiostitulo1" class="form-control {{ $errors->has('beneficiostitulo1') ? ' is-invalid' : '' }}" id="beneficiostitulo1" placeholder="Titulo" value="{{$Contenidos[26]->value}}" required>
+                    @else
+                    <input type="text" name="beneficiostitulo1" class="form-control {{ $errors->has('beneficiostitulo1') ? ' is-invalid' : '' }}" id="beneficiostitulo1" placeholder="Titulo" required>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega un titulo válido
+                    </div>
+                  </div>
+                  <div class="mb-3">
                     <label for="beneficios1" class="form-label">Beneficio 1</label>
-                    @if(isset($Contenidos[18]->value))
-                    <textarea class="form-control  {{ $errors->has('beneficios1') ? ' is-invalid' : '' }}" name="beneficios1" id="beneficios1" rows="2" required>{{$Contenidos[18]->value}}</textarea>
+                    @if(isset($Contenidos[27]->value))
+                    <textarea class="form-control  {{ $errors->has('beneficios1') ? ' is-invalid' : '' }}" name="beneficios1" id="beneficios1" rows="2" required>{{$Contenidos[27]->value}}</textarea>
                     @else
                     <textarea class="form-control  {{ $errors->has('beneficios1') ? ' is-invalid' : '' }}" name="beneficios1" id="beneficios1" rows="2" required></textarea>
                     @endif
@@ -892,9 +1018,23 @@
                     </div>
                   </div>
                   <div class="mb-3">
+                    <label for="beneficiostitulo2" class="form-label">Beneficio 2 titulo</label>
+                    @if(isset($Contenidos[28]->value))
+                    <input type="text" name="beneficiostitulo2" class="form-control {{ $errors->has('beneficiostitulo2') ? ' is-invalid' : '' }}" id="beneficiostitulo2" placeholder="Titulo" value="{{$Contenidos[28]->value}}" required>
+                    @else
+                    <input type="text" name="beneficiostitulo2" class="form-control {{ $errors->has('beneficiostitulo2') ? ' is-invalid' : '' }}" id="beneficiostitulo2" placeholder="Titulo" required>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega un titulo válido
+                    </div>
+                  </div>
+                  <div class="mb-3">
                     <label for="beneficios2" class="form-label">Beneficio 2</label>
-                    @if(isset($Contenidos[19]->value))
-                    <textarea class="form-control  {{ $errors->has('beneficios2') ? ' is-invalid' : '' }}" name="beneficios2" id="beneficios2" rows="2" required>{{$Contenidos[19]->value}}</textarea>
+                    @if(isset($Contenidos[29]->value))
+                    <textarea class="form-control  {{ $errors->has('beneficios2') ? ' is-invalid' : '' }}" name="beneficios2" id="beneficios2" rows="2" required>{{$Contenidos[29]->value}}</textarea>
                     @else
                     <textarea class="form-control  {{ $errors->has('beneficios2') ? ' is-invalid' : '' }}" name="beneficios2" id="beneficios2" rows="2" required></textarea>
                     @endif
@@ -906,9 +1046,23 @@
                     </div>
                   </div>
                   <div class="mb-3">
+                    <label for="beneficiostitulo3" class="form-label">Beneficio 3 titulo</label>
+                    @if(isset($Contenidos[30]->value))
+                    <input type="text" name="beneficiostitulo3" class="form-control {{ $errors->has('beneficiostitulo3') ? ' is-invalid' : '' }}" id="beneficiostitulo3" placeholder="Titulo" value="{{$Contenidos[30]->value}}" required>
+                    @else
+                    <input type="text" name="beneficiostitulo3" class="form-control {{ $errors->has('beneficiostitulo3') ? ' is-invalid' : '' }}" id="beneficiostitulo3" placeholder="Titulo" required>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega un titulo válido
+                    </div>
+                  </div>
+                  <div class="mb-3">
                     <label for="beneficios3" class="form-label">Beneficio 3</label>
-                    @if(isset($Contenidos[20]->value))
-                    <textarea class="form-control  {{ $errors->has('beneficios3') ? ' is-invalid' : '' }}" name="beneficios3" id="beneficios3" rows="2" required>{{$Contenidos[20]->value}}</textarea>
+                    @if(isset($Contenidos[31]->value))
+                    <textarea class="form-control  {{ $errors->has('beneficios3') ? ' is-invalid' : '' }}" name="beneficios3" id="beneficios3" rows="2" required>{{$Contenidos[31]->value}}</textarea>
                     @else
                     <textarea class="form-control  {{ $errors->has('beneficios3') ? ' is-invalid' : '' }}" name="beneficios3" id="beneficios3" rows="2" required></textarea>
                     @endif
@@ -920,9 +1074,23 @@
                     </div>
                   </div>
                   <div class="mb-3">
+                    <label for="beneficiostitulo4" class="form-label">Beneficio 4 titulo</label>
+                    @if(isset($Contenidos[32]->value))
+                    <input type="text" name="beneficiostitulo4" class="form-control {{ $errors->has('beneficiostitulo4') ? ' is-invalid' : '' }}" id="beneficiostitulo4" placeholder="Titulo" value="{{$Contenidos[32]->value}}" required>
+                    @else
+                    <input type="text" name="beneficiostitulo4" class="form-control {{ $errors->has('beneficiostitulo4') ? ' is-invalid' : '' }}" id="beneficiostitulo4" placeholder="Titulo" required>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega un titulo válido
+                    </div>
+                  </div>
+                  <div class="mb-3">
                     <label for="beneficios4" class="form-label">Beneficio 4</label>
-                    @if(isset($Contenidos[21]->value))
-                    <textarea class="form-control  {{ $errors->has('beneficios4') ? ' is-invalid' : '' }}" name="beneficios4" id="beneficios4" rows="2" required>{{$Contenidos[21]->value}}</textarea>
+                    @if(isset($Contenidos[33]->value))
+                    <textarea class="form-control  {{ $errors->has('beneficios4') ? ' is-invalid' : '' }}" name="beneficios4" id="beneficios4" rows="2" required>{{$Contenidos[33]->value}}</textarea>
                     @else
                     <textarea class="form-control  {{ $errors->has('beneficios4') ? ' is-invalid' : '' }}" name="beneficios4" id="beneficios4" rows="2" required></textarea>
                     @endif
@@ -962,9 +1130,23 @@
                     <input name="imagefile" class="form-control" type="file" id="formFile">
                   </div>--}}
                   <div class="mb-3">
+                    <label for="beneficiostitulo1" class="form-label">Beneficio 1 titulo</label>
+                    @if(isset($Contenidos[34]->value))
+                    <input type="text" name="beneficiostitulo1" class="form-control {{ $errors->has('beneficiostitulo1') ? ' is-invalid' : '' }}" id="beneficiostitulo1" placeholder="Titulo" value="{{$Contenidos[34]->value}}" required>
+                    @else
+                    <input type="text" name="beneficiostitulo1" class="form-control {{ $errors->has('beneficiostitulo1') ? ' is-invalid' : '' }}" id="beneficiostitulo1" placeholder="Titulo" required>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega un titulo válido
+                    </div>
+                  </div>
+                  <div class="mb-3">
                     <label for="beneficios1" class="form-label">Beneficio 1</label>
-                    @if(isset($Contenidos[22]->value))
-                    <textarea class="form-control  {{ $errors->has('beneficios1') ? ' is-invalid' : '' }}" name="beneficios1" id="beneficios1" rows="2" required>{{$Contenidos[22]->value}}</textarea>
+                    @if(isset($Contenidos[35]->value))
+                    <textarea class="form-control  {{ $errors->has('beneficios1') ? ' is-invalid' : '' }}" name="beneficios1" id="beneficios1" rows="2" required>{{$Contenidos[35]->value}}</textarea>
                     @else
                     <textarea class="form-control  {{ $errors->has('beneficios1') ? ' is-invalid' : '' }}" name="beneficios1" id="beneficios1" rows="2" required></textarea>
                     @endif
@@ -976,9 +1158,23 @@
                     </div>
                   </div>
                   <div class="mb-3">
+                    <label for="beneficiostitulo2" class="form-label">Beneficio 2 titulo</label>
+                    @if(isset($Contenidos[36]->value))
+                    <input type="text" name="beneficiostitulo2" class="form-control {{ $errors->has('beneficiostitulo2') ? ' is-invalid' : '' }}" id="beneficiostitulo2" placeholder="Titulo" value="{{$Contenidos[36]->value}}" required>
+                    @else
+                    <input type="text" name="beneficiostitulo2" class="form-control {{ $errors->has('beneficiostitulo2') ? ' is-invalid' : '' }}" id="beneficiostitulo2" placeholder="Titulo" required>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega un titulo válido
+                    </div>
+                  </div>
+                  <div class="mb-3">
                     <label for="beneficios2" class="form-label">Beneficio 2</label>
-                    @if(isset($Contenidos[23]->value))
-                    <textarea class="form-control  {{ $errors->has('beneficios2') ? ' is-invalid' : '' }}" name="beneficios2" id="beneficios2" rows="2" required>{{$Contenidos[23]->value}}</textarea>
+                    @if(isset($Contenidos[37]->value))
+                    <textarea class="form-control  {{ $errors->has('beneficios2') ? ' is-invalid' : '' }}" name="beneficios2" id="beneficios2" rows="2" required>{{$Contenidos[37]->value}}</textarea>
                     @else
                     <textarea class="form-control  {{ $errors->has('beneficios2') ? ' is-invalid' : '' }}" name="beneficios2" id="beneficios2" rows="2" required></textarea>
                     @endif
@@ -990,9 +1186,23 @@
                     </div>
                   </div>
                   <div class="mb-3">
+                    <label for="beneficiostitulo3" class="form-label">Beneficio 3 titulo</label>
+                    @if(isset($Contenidos[38]->value))
+                    <input type="text" name="beneficiostitulo3" class="form-control {{ $errors->has('beneficiostitulo3') ? ' is-invalid' : '' }}" id="beneficiostitulo3" placeholder="Titulo" value="{{$Contenidos[38]->value}}" required>
+                    @else
+                    <input type="text" name="beneficiostitulo3" class="form-control {{ $errors->has('beneficiostitulo3') ? ' is-invalid' : '' }}" id="beneficiostitulo3" placeholder="Titulo" required>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega un titulo válido
+                    </div>
+                  </div>
+                  <div class="mb-3">
                     <label for="beneficios3" class="form-label">Beneficio 3</label>
-                    @if(isset($Contenidos[24]->value))
-                    <textarea class="form-control  {{ $errors->has('beneficios3') ? ' is-invalid' : '' }}" name="beneficios3" id="beneficios3" rows="2" required>{{$Contenidos[24]->value}}</textarea>
+                    @if(isset($Contenidos[39]->value))
+                    <textarea class="form-control  {{ $errors->has('beneficios3') ? ' is-invalid' : '' }}" name="beneficios3" id="beneficios3" rows="2" required>{{$Contenidos[39]->value}}</textarea>
                     @else
                     <textarea class="form-control  {{ $errors->has('beneficios3') ? ' is-invalid' : '' }}" name="beneficios3" id="beneficios3" rows="2" required></textarea>
                     @endif
@@ -1004,9 +1214,23 @@
                     </div>
                   </div>
                   <div class="mb-3">
+                    <label for="beneficiostitulo4" class="form-label">Beneficio 4 titulo</label>
+                    @if(isset($Contenidos[40]->value))
+                    <input type="text" name="beneficiostitulo4" class="form-control {{ $errors->has('beneficiostitulo4') ? ' is-invalid' : '' }}" id="beneficiostitulo4" placeholder="Titulo" value="{{$Contenidos[40]->value}}" required>
+                    @else
+                    <input type="text" name="beneficiostitulo4" class="form-control {{ $errors->has('beneficiostitulo4') ? ' is-invalid' : '' }}" id="beneficiostitulo4" placeholder="Titulo" required>
+                    @endif
+                    <div class="valid-feedback">
+                        ¡Todo parece en orden!
+                    </div>
+                    <div class="invalid-feedback">
+                        Por favor agrega un titulo válido
+                    </div>
+                  </div>
+                  <div class="mb-3">
                     <label for="beneficios4" class="form-label">Beneficio 4</label>
-                    @if(isset($Contenidos[25]->value))
-                    <textarea class="form-control  {{ $errors->has('beneficios4') ? ' is-invalid' : '' }}" name="beneficios4" id="beneficios4" rows="2" required>{{$Contenidos[25]->value}}</textarea>
+                    @if(isset($Contenidos[41]->value))
+                    <textarea class="form-control  {{ $errors->has('beneficios4') ? ' is-invalid' : '' }}" name="beneficios4" id="beneficios4" rows="2" required>{{$Contenidos[41]->value}}</textarea>
                     @else
                     <textarea class="form-control  {{ $errors->has('beneficios4') ? ' is-invalid' : '' }}" name="beneficios4" id="beneficios4" rows="2" required></textarea>
                     @endif
