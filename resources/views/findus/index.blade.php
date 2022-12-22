@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0">Encuentranos</h4>
+                    <h4 class="mb-sm-0">Encuéntranos</h4>
 
 
 
@@ -48,7 +48,7 @@
                       <th class="fntB">ACCIONES</th>
                     </tr>
                   </thead>
-                  <tbody>mdi-bookmark-remove
+                  <tbody>
                     @foreach($marcadores as $marcador)
                     <td class="{{ $marcador->published == 0 ? 'text-danger' : '' }}" >
                       {{ $marcador->name }} @if($marcador->published == 0) <i class="mdi mdi-bookmark-remove"></i> @endif
