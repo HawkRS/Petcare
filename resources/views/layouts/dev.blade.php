@@ -185,14 +185,14 @@
                                     <li><a href="{{ route('rocko.page') }}">Rocko</a></li>
                                 </ul>
                             </li>
-
+                            @if( Auth::user()->type == 0 || Auth::user()->type == 1)
                             <li>
                                 <a href="{{ route('map.index') }}" class=" waves-effect">
                                     <i class="fas fa-users"></i>
                                     <span>Usuarios</span>
                                 </a>
                             </li>
-
+                            @endif
                         </ul>
                     </div>
                     <!-- Sidebar -->
