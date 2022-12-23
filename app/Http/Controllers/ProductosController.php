@@ -161,6 +161,9 @@ class ProductosController extends Controller
      $Edades->save();
      $Presentaciones->value = $request->presentaciones;
      $Presentaciones->save();
+     $Helper = new Helper();
+     $Helper->UpdatePresentacionImage($request->page,$request->section,$_FILES['imagefile'],$request->imgname);
+
 
      return redirect()->route('smartbites.page');
 
