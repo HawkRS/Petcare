@@ -67,11 +67,12 @@ Route::prefix('encuentranos')->group(function () {
   Route::post('/eliminar/{id}', 'MapController@delete')->name( 'findus.delete' );
   Route::post('/crear', 'MapController@store')->name( 'findus.store' );
 });
+ 
 
-
-//Route::get('/contacto', 'HomeController@show')->name( 'admin.show' );
-//Route::prefix('productos')->group(function () {
-//  Route::get('/smart-bites', 'HomeController@index')->name( 'admin.list' );
-//  Route::get('/titan', 'HomeController@show')->name( 'admin.show' );
-//  Route::get('/rocko', 'HomeController@show')->name( 'admin.show' );
-//});
+Route::prefix('usuarios')->group(function () {
+  Route::get('/', 'UsersController@index')->name( 'users.index' );
+  Route::get('/crear', 'UsersController@store')->name( 'users.add' );
+  Route::get('/editar/{id}', 'UsersController@edit')->name( 'users.edit' );
+  Route::get('/editar/{id}/guardar', 'UsersController@update')->name( 'users.update' );
+  Route::get('/eliminar/{id}', 'UsersController@delete')->name( 'users.delete' );
+});

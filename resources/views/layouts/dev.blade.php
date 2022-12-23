@@ -169,7 +169,7 @@
                             <li>
                                 <a href="{{ route('map.index') }}" class=" waves-effect">
                                     <i class="mdi mdi-map-marker"></i>
-                                    <span>Encuentranos</span>
+                                    <span>Encuéntranos</span>
                                 </a>
                             </li>
 
@@ -187,7 +187,7 @@
                             </li>
                             @if( Auth::user()->type == 0 || Auth::user()->type == 1)
                             <li>
-                                <a href="{{ route('map.index') }}" class=" waves-effect">
+                                <a href="{{ route('users.index') }}" class=" waves-effect">
                                     <i class="fas fa-users"></i>
                                     <span>Usuarios</span>
                                 </a>
