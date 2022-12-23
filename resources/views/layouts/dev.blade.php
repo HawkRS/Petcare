@@ -180,19 +180,19 @@
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="{{ route('smartbites.page') }}">Smart Bites Perro</a></li>
-                                    <li><a href="email-read.html">Smart Bites Gato</a></li>
-                                    <li><a href="email-read.html">Titan</a></li>
-                                    <li><a href="email-compose.html">Rock</a></li>
+                                    <li><a href="{{ route('smartbitesgato.page') }}">Smart Bites Gato</a></li>
+                                    <li><a href="{{ route('titan.page') }}">Titan</a></li>
+                                    <li><a href="{{ route('rocko.page') }}">Rocko</a></li>
                                 </ul>
                             </li>
-
+                            @if( Auth::user()->type == 0 || Auth::user()->type == 1)
                             <li>
                                 <a href="{{ route('map.index') }}" class=" waves-effect">
                                     <i class="fas fa-users"></i>
                                     <span>Usuarios</span>
                                 </a>
                             </li>
-
+                            @endif
                         </ul>
                     </div>
                     <!-- Sidebar -->
