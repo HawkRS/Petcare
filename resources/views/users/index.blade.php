@@ -25,7 +25,7 @@
                   <p class="card-title-desc">Agregar editar o eliminar editores para la plaforma.</p>
                 </div>
                 <div class="float-md-end">
-                  <button type="button" name="button"  data-bs-toggle="modal" data-bs-target="#Marker1Modal" class="float-right btn btn-primary">Agregar editor</button>
+                  <button type="button" name="button"  data-bs-toggle="modal" data-bs-target="#AddUserModal" class="float-right btn btn-primary">Agregar editor</button>
                 </div>
                 <div class="clearfix"></div>
 
@@ -64,8 +64,29 @@
 
         	</div>
         </div>
-		
+
 	</div>
+</div>
+{{-- MODAL ADD MARKER --}}
+<div class="modal fade" id="AddUserModal" tabindex="-1" aria-labelledby="AddUserModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="AddUserModalLabel">Crear nuevo usuario</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form class="needs-validation" action="{{ route('users.add') }}" method="post" novalidate>
+        @csrf
+        <div class="modal-body">
+          @include('users.partials.fields')
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="submit" class="btn btn-primary">Guardar</button>
+      </div>
+      </form>
+    </div>
+  </div>
 </div>
 
 @endsection

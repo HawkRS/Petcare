@@ -67,12 +67,12 @@ Route::prefix('encuentranos')->group(function () {
   Route::post('/eliminar/{id}', 'MapController@delete')->name( 'findus.delete' );
   Route::post('/crear', 'MapController@store')->name( 'findus.store' );
 });
- 
+
 
 Route::prefix('usuarios')->group(function () {
   Route::get('/', 'UsersController@index')->name( 'users.index' );
-  Route::get('/crear', 'UsersController@store')->name( 'users.add' );
+  Route::post('/crear', 'UsersController@store')->name( 'users.add' );
   Route::get('/editar/{id}', 'UsersController@edit')->name( 'users.edit' );
-  Route::get('/editar/{id}/guardar', 'UsersController@update')->name( 'users.update' );
-  Route::get('/eliminar/{id}', 'UsersController@delete')->name( 'users.delete' );
+  Route::post('/editar/{id}/guardar', 'UsersController@update')->name( 'users.update' );
+  Route::post('/eliminar/{id}', 'UsersController@delete')->name( 'users.delete' );
 });
