@@ -11,11 +11,11 @@
         ¡Todo parece en orden!
       </div>
       <div class="invalid-feedback">
-        Por favor agrega un titulo válido
+        Por favor agrega un nombre
       </div>
       @error('name')
         <div class="invalid-feedback d-block">
-          {{ $errors->first('name') }}
+          {{ $message }}
         </div>
       @enderror
     </div>
@@ -34,9 +34,9 @@
       <div class="invalid-feedback">
         Por favor agrega un correo valido
       </div>
-      @error('name')
+      @error('email')
         <div class="invalid-feedback d-block">
-          {{ $errors->first('email') }}
+          {{ $message }}
         </div>
       @enderror
     </div>
@@ -45,9 +45,31 @@
     <div class="mb-3">
       <label class="form-label" for="password">Contraseña</label>
       @if(isset($Usuario))
-      <input type="text" name="password" class="form-control {{ $errors->has('password') ? ' is-invalid' : '' }}" id="password" placeholder="Escibe una contraseña" value="{{$Usuario->password}}" required>
+      <input type="text" name="password" class="form-control {{ $errors->has('password') ? ' is-invalid' : '' }}" id="password" placeholder="Escribir una contraseña nueva, deja en blanco para mantenerla" >
       @else
       <input type="text" name="password" class="form-control {{ $errors->has('password') ? ' is-invalid' : '' }}" id="password" placeholder="Escibe una contraseña" required>
+      @endif
+
+      <div class="valid-feedback">
+        ¡Todo parece en orden!
+      </div>
+      <div class="invalid-feedback">
+        Por favor agrega una contraseña valida, minimo 8 caracteres.
+      </div>
+      @error('password')
+        <div class="invalid-feedback d-block">
+          {{ $message }}
+        </div>
+      @enderror
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="mb-3">
+      <label class="form-label" for="password_confirmation">Confirmar Contraseña</label>
+      @if(isset($Usuario))
+      <input type="text" name="password_confirmation" class="form-control {{ $errors->has('password') ? ' is-invalid' : '' }}" id="password_confirmation" placeholder="Escribir una contraseña nueva, deja en blanco para mantenerla" >
+      @else
+      <input type="text" name="password_confirmation" class="form-control {{ $errors->has('password') ? ' is-invalid' : '' }}" id="password_confirmation" placeholder="Escibe una contraseña" required>
       @endif
       <div class="valid-feedback">
         ¡Todo parece en orden!
@@ -55,9 +77,9 @@
       <div class="invalid-feedback">
         Por favor agrega una contraseña valida
       </div>
-      @error('name')
+      @error('password')
         <div class="invalid-feedback d-block">
-          {{ $errors->first('password') }}
+          {{ $message }}
         </div>
       @enderror
     </div>

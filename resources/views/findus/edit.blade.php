@@ -33,7 +33,7 @@
 
                     <div class="col-12 col-md-5">
                       <div class="d-grid gap-2">
-                        <button type="submit" name="button" class="btn btn-primary fnt_white">Editar</button>
+                        <button type="submit" name="button" class="btn btn-primary fnt_white">Guardar</button>
                       </div>
                     </div>
                   </div>
