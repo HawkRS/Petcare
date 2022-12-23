@@ -35,6 +35,31 @@ Route::prefix('smartbites-perro')->group(function () {
   Route::post('/editar-beneficios', 'ProductosController@EditBenefitsContent')->name( 'smartbites.updatebeneficios' );
 });
 
+Route::prefix('smartbites-gato')->group(function () {
+  Route::get('/', 'SmartbitesController@index')->name( 'smartbitesgato.page' );
+  Route::post('/editar-imagenes', 'SmartbitesController@UpdateContent')->name( 'smartbitesgato.updatecontent' );
+  Route::post('/editar-titulos', 'SmartbitesController@UpdateProdBannerTxt')->name( 'smartbitesgato.updatebannertitle' );
+  Route::post('/editar-presentaciones', 'SmartbitesController@EditPresentationContent')->name( 'smartbitesgato.updatepresentacion' );
+  Route::post('/editar-beneficios', 'SmartbitesController@EditBenefitsContent')->name( 'smartbitesgato.updatebeneficios' );
+});
+
+Route::prefix('titan')->group(function () {
+  Route::get('/', 'TitanController@index')->name( 'titan.page' );
+  Route::post('/editar-imagenes', 'TitanController@UpdateContent')->name( 'titan.updatecontent' );
+  Route::post('/editar-titulos', 'TitanController@UpdateProdBannerTxt')->name( 'titan.updatebannertitle' );
+  Route::post('/editar-presentaciones', 'TitanController@EditPresentationContent')->name( 'titan.updatepresentacion' );
+  Route::post('/editar-beneficios', 'TitanController@EditBenefitsContent')->name( 'titan.updatebeneficios' );
+});
+
+Route::prefix('rocko')->group(function () {
+  Route::get('/', 'RockoController@index')->name( 'rocko.page' );
+  Route::post('/editar-imagenes', 'RockoController@UpdateContent')->name( 'rocko.updatecontent' );
+  Route::post('/editar-titulos', 'RockoController@UpdateProdBannerTxt')->name( 'rocko.updatebannertitle' );
+  Route::post('/editar-presentaciones', 'RockoController@EditPresentationContent')->name( 'rocko.updatepresentacion' );
+  Route::post('/editar-beneficios', 'RockoController@EditBenefitsContent')->name( 'rocko.updatebeneficios' );
+});
+
+
 Route::prefix('encuentranos')->group(function () {
   Route::get('/', 'MapController@index')->name( 'map.index' );
   Route::get('/editar/{id}', 'MapController@edit')->name( 'findus.edit' );
@@ -42,11 +67,12 @@ Route::prefix('encuentranos')->group(function () {
   Route::post('/eliminar/{id}', 'MapController@delete')->name( 'findus.delete' );
   Route::post('/crear', 'MapController@store')->name( 'findus.store' );
 });
+ 
 
-
-//Route::get('/contacto', 'HomeController@show')->name( 'admin.show' );
-//Route::prefix('productos')->group(function () {
-//  Route::get('/smart-bites', 'HomeController@index')->name( 'admin.list' );
-//  Route::get('/titan', 'HomeController@show')->name( 'admin.show' );
-//  Route::get('/rocko', 'HomeController@show')->name( 'admin.show' );
-//});
+Route::prefix('usuarios')->group(function () {
+  Route::get('/', 'UsersController@index')->name( 'users.index' );
+  Route::get('/crear', 'UsersController@store')->name( 'users.add' );
+  Route::get('/editar/{id}', 'UsersController@edit')->name( 'users.edit' );
+  Route::get('/editar/{id}/guardar', 'UsersController@update')->name( 'users.update' );
+  Route::get('/eliminar/{id}', 'UsersController@delete')->name( 'users.delete' );
+});

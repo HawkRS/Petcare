@@ -306,7 +306,7 @@
     </div>
   </div>
 </div>
-<div class="row">
+{{--<div class="row">
   <div class="col-12 col-md-6">
     <div class="mb-3">
       <label class="form-label" for="featured">Featured</label>
@@ -339,15 +339,15 @@
       </div>
     </div>
   </div>
-</div>
+</div>--}}
 <div class="row">
-  <div class="col-12 col-md-4">
+  <div class="col-12 col-md-6">
     <div class="mb-3">
-      <label class="form-label" for="hours1">Horarios 1</label>
+      <label class="form-label" for="hours1">Horarios</label>
       @if(isset($MarcadorEdit))
-      <input type="text" name="hours1" class="form-control" id="hours1" placeholder="Horarios 1" value="{{$MarcadorEdit->hours1}}" >
+      <input type="text" name="hours1" class="form-control" id="hours1" placeholder="Horarios" value="{{$MarcadorEdit->hours1}}" >
       @else
-      <input type="text" name="hours1" class="form-control" id="hours1" placeholder="Horarios 1" >
+      <input type="text" name="hours1" class="form-control" id="hours1" placeholder="Horarios" >
       @endif
       <div class="valid-feedback">
         ¡Todo parece en orden!
@@ -357,6 +357,7 @@
       </div>
     </div>
   </div>
+  {{-- 
   <div class="col-12 col-md-4">
     <div class="mb-3">
       <label class="form-label" for="hours2">Horarios 2</label>
@@ -381,6 +382,35 @@
       @else
       <input type="text" name="hours3" class="form-control" id="hours3" placeholder="Horarios 3" >
       @endif
+      <div class="valid-feedback">
+        ¡Todo parece en orden!
+      </div>
+      <div class="invalid-feedback">
+        Por favor agrega una Horarios 3 valida
+      </div>
+    </div>
+  </div>--}}
+  <div class="col-12 col-md-6">
+    <div class="mb-3">
+      <label class="form-label" for="hours2">Estatus de publicación</label>
+        <select class="form-select" name="type" id="type">
+      @if (isset($MarcadorEdit) )
+        @if($MarcadorEdit->published == 0)
+          <option value=-1 >Elige una de las opciones de publicación...</option>
+          <option value=0 selected >No publicado</option>
+          <option value=1 >Publicado</option>
+
+        @else
+          <option value=-1 >Elige una de las opciones de publicación...</option>
+          <option value=0 >No publicado</option>
+          <option value=1 selected>Publicado</option>
+        @endif
+      @else
+          <option value=-1 selected>Elige una de las opciones de publicación...</option>
+          <option value=0 >No publicado</option>
+          <option value=1 >Publicado</option>
+      @endif
+    </select>
       <div class="valid-feedback">
         ¡Todo parece en orden!
       </div>
