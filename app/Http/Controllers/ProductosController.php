@@ -151,8 +151,9 @@ class ProductosController extends Controller
        'area2' => 'required',
        'edades' => 'required',
        'presentaciones' => 'required',
+       'imagefile' => 'nullable|image',
       ], $messages);
-     //dd($request->all());
+     dd($request->all());
      $Edades = Content::where([['page', '=', $request->page],['section', '=', $request->section],['field', '=', $request->area1]])->first();
      $Presentaciones = Content::where([['page', '=', $request->page],['section', '=', $request->section],['field', '=', $request->area2]])->first();
      //dd($Edades);
