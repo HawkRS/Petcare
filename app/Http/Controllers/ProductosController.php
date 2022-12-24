@@ -202,61 +202,77 @@ class ProductosController extends Controller
        'beneficiostitulo4' => 'required',
        'beneficios4' => 'required',
      ], $messages);
-     switch ($request->area) {
-       case 'cachorro':
-         $area = array(
-           'cachorrotopizqtitulo',
-           'cachorrotopizq',
-           'cachorrotopdertitulo',
-           'cachorrotopder',
-           'cachorrobottomizqtitulo',
-           'cachorrobottomizq',
-           'cachorrobottomdertitulo',
-           'cachorrobottomder',
-         );
-         break;
-       case 'razapequeña':
-         $area = array(
-           'pequeñostopizqtitulo',
-           'pequeñostopizq',
-           'pequeñostopdertitulo',
-           'pequeñostopder',
-           'pequeñosbottomizqtitulo',
-           'pequeñosbottomizq',
-           'pequeñosbottomdertitulo',
-           'pequeñosbottomder',
-         );
-         break;
-       case 'adulto':
-         $area = array(
-           'adultotopizqtitulo',
-           'adultotopizq',
-           'adultotopdertitulo',
-           'adultotopder',
-           'adultobottomizqtitulo',
-           'adultobottomizq',
-           'adultobottomdertitulo',
-           'adultobottomder',
-         );
-         break;
-       case 'senior':
-         $area = array(
-           'seniortopizqtitulo',
-           'seniortopizq',
-           'seniortopdertitulo',
-           'seniortopder',
-           'seniorbottomizqtitulo',
-           'seniorbottomizq',
-           'seniorbottomdertitulo',
-           'seniorbottomder',
-         );
-         break;
+     if($request->page == 'smartbitesperro'){
+       switch ($request->area) {
+         case 'cachorro':
+           $area = array(
+             'cachorrotopizqtitulo',
+             'cachorrotopizq',
+             'cachorrotopdertitulo',
+             'cachorrotopder',
+             'cachorrobottomizqtitulo',
+             'cachorrobottomizq',
+             'cachorrobottomdertitulo',
+             'cachorrobottomder',
+           );
+           break;
+         case 'razapequeña':
+           $area = array(
+             'pequeñostopizqtitulo',
+             'pequeñostopizq',
+             'pequeñostopdertitulo',
+             'pequeñostopder',
+             'pequeñosbottomizqtitulo',
+             'pequeñosbottomizq',
+             'pequeñosbottomdertitulo',
+             'pequeñosbottomder',
+           );
+           break;
+         case 'adulto':
+           $area = array(
+             'adultotopizqtitulo',
+             'adultotopizq',
+             'adultotopdertitulo',
+             'adultotopder',
+             'adultobottomizqtitulo',
+             'adultobottomizq',
+             'adultobottomdertitulo',
+             'adultobottomder',
+           );
+           break;
+         case 'senior':
+           $area = array(
+             'seniortopizqtitulo',
+             'seniortopizq',
+             'seniortopdertitulo',
+             'seniortopder',
+             'seniorbottomizqtitulo',
+             'seniorbottomizq',
+             'seniorbottomdertitulo',
+             'seniorbottomder',
+           );
+           break;
 
-       default:
-         // code...
-         break;
+         default:
+           // code...
+           break;
+       }
      }
-     //dd($Beneficios1);
+     elseif ($request->page == 'smartbitesgato') {
+       $area = array(
+         'adultotopizqtitulo',
+         'adultotopizq',
+         'adultotopdertitulo',
+         'adultotopder',
+         'adultobottomizqtitulo',
+         'adultobottomizq',
+         'adultobottomdertitulo',
+         'adultobottomder',
+       );
+     }
+
+
+     //dd($request->all());
      $Beneficios1ttl = Content::where([['page', '=', $request->page],['section', '=', $request->section],['field', '=', $area[0]]])->first();
      $Beneficios1 = Content::where([['page', '=', $request->page],['section', '=', $request->section],['field', '=', $area[1]]])->first();
      $Beneficios2ttl = Content::where([['page', '=', $request->page],['section', '=', $request->section],['field', '=', $area[2]]])->first();
@@ -275,6 +291,7 @@ class ProductosController extends Controller
      $Beneficios4ttl->value = $request->beneficiostitulo4; $Beneficios4ttl->save();
      $Beneficios4->value = $request->beneficios4; $Beneficios4->save();
 
+     //dd($request->all());
      switch ($request->page) {
        case 'smartbitesperro':
          return redirect()->route('smartbites.page');
