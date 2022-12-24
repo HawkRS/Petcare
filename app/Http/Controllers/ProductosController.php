@@ -58,17 +58,18 @@ class ProductosController extends Controller
       'imagefile' => 'nullable|image',
      ], $messages);
      $Helper = new Helper();
-    //dd($request->imgname);
+    //dd($request->all());
      if($request->type == 'image'){
        $Helper->UpdateImage($request->page,$request->section,$_FILES['imagefile'],$request->imgname);
      }
-     elseif($request->type == 'text') {
-       // code...
-     }
+
 
      switch ($request->page) {
-       case 'smartbites':
+       case 'smartbitesperro':
          return redirect()->route('smartbites.page');
+         break;
+       case 'smartbitesgato':
+         return redirect()->route('smartbitesgato.page');
          break;
 
        default:
@@ -90,6 +91,7 @@ class ProductosController extends Controller
        'parrafo1' => 'required',
        'parrafo2' => 'required',
       ], $messages);
+      //dd($request->all());
       switch ($request->page) {
         case 'smartbites':{
           $Parrafo1 = Content::where('page', 'smartbitesperro')->where('section', 'banner')->where('field', 'leyend1')->first();
@@ -101,14 +103,14 @@ class ProductosController extends Controller
           return redirect()->route('smartbites.page');
           break;
         }
-        case 'smartbitesgatos':{
+        case 'smartbitesgato':{
           $Parrafo1 = Content::where('page', 'smartbitesgato')->where('section', 'banner')->where('field', 'leyend1')->first();
           $Parrafo2 = Content::where('page', 'smartbitesgato')->where('section', 'banner')->where('field', 'leyend2')->first();
           $Parrafo1->value = $request->parrafo1;
           $Parrafo1->save();
           $Parrafo2->value = $request->parrafo2;
           $Parrafo2->save();
-          return redirect()->route('smartbites.page');
+          return redirect()->route('smartbitesgato.page');
           break;
         }
         case 'titan':{
@@ -118,7 +120,7 @@ class ProductosController extends Controller
           $Parrafo1->save();
           $Parrafo2->value = $request->parrafo2;
           $Parrafo2->save();
-          return redirect()->route('smartbites.page');
+          return redirect()->route('titan.page');
           break;
         }
         case 'rocko':{
@@ -128,7 +130,7 @@ class ProductosController extends Controller
           $Parrafo1->save();
           $Parrafo2->value = $request->parrafo2;
           $Parrafo2->save();
-          return redirect()->route('smartbites.page');
+          return redirect()->route('rocko.page');
           break;
         }
 
@@ -153,7 +155,7 @@ class ProductosController extends Controller
        'presentaciones' => 'required',
        'imagefile' => 'nullable|image',
       ], $messages);
-     dd($request->all());
+     //dd($request->all());
      $Edades = Content::where([['page', '=', $request->page],['section', '=', $request->section],['field', '=', $request->area1]])->first();
      $Presentaciones = Content::where([['page', '=', $request->page],['section', '=', $request->section],['field', '=', $request->area2]])->first();
      //dd($Edades);
@@ -161,11 +163,24 @@ class ProductosController extends Controller
      $Edades->save();
      $Presentaciones->value = $request->presentaciones;
      $Presentaciones->save();
-     $Helper = new Helper();
-     $Helper->UpdatePresentacionImage($request->page,$request->section,$_FILES['imagefile'],$request->imgname);
+     if(isset($request->imagefile)){
+       $Helper = new Helper();
+       $Helper->UpdatePresentacionImage($request->page,$request->section,$_FILES['imagefile'],$request->imgname);
+     }
 
 
-     return redirect()->route('smartbites.page');
+     switch ($request->page) {
+       case 'smartbitesperro':
+         return redirect()->route('smartbites.page');
+         break;
+       case 'smartbitesgato':
+         return redirect()->route('smartbitesgato.page');
+         break;
+
+       default:
+         // code...
+         break;
+     }
 
    }
 
@@ -260,7 +275,18 @@ class ProductosController extends Controller
      $Beneficios4ttl->value = $request->beneficiostitulo4; $Beneficios4ttl->save();
      $Beneficios4->value = $request->beneficios4; $Beneficios4->save();
 
-      return redirect()->route('smartbites.page');
+     switch ($request->page) {
+       case 'smartbitesperro':
+         return redirect()->route('smartbites.page');
+         break;
+       case 'smartbitesgato':
+         return redirect()->route('smartbitesgato.page');
+         break;
+
+       default:
+         // code...
+         break;
+     }
    }
 
 

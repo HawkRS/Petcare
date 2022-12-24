@@ -96,6 +96,13 @@ class Helper extends Model
             }
           }
             break;
+          case 'smartbitesgato':{
+            if ($section == 'banner') {
+              if($imgarea == 'izqext'){$path = "img/productos/smart-bites/gato/smart-bites-neuro-active-gato-adulto.png"; $thumbpath ="img/productos/smart-bites/gato/thumbs/smart-bites-neuro-active-gato-adulto.png"; }
+              if($imgarea == 'derext'){$path = "img/productos/smart-bites/gato/gato_beneficios.png"; $thumbpath ="img/productos/smart-bites/gato/thumbs/gato_beneficios.png"; }
+            }
+          }
+            break;
 
           default:
             // code...

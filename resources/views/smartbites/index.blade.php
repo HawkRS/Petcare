@@ -197,7 +197,7 @@
               <div class="card">
                 <h5 class="p-2">Cachorro</h5>
                 <div class="card-body">
-                  <h5>{{ $Contenidos[10]->value }}</h5>10
+                  <h5>{{ $Contenidos[10]->value }}</h5>
                   <p>{{ $Contenidos[11]->value }}</p>
                   <h5>{{ $Contenidos[12]->value }}</h5>
                   <p>{{ $Contenidos[13]->value }}</p>

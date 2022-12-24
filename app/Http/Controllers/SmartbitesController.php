@@ -32,11 +32,7 @@ class SmartbitesController extends Controller
    */
   public function index()
   {
-    //dd('index smartbites');
-      //$ContentList = Content::where('page', 'rocko')->get();
-      $ContentList = DB::table('content')
-                ->where('page', 'smartbitesgato')
-                ->get();
+      $ContentList = Content::where('page', 'smartbitesgato')->get();
       //dd($ContentList);
       return view($this->f.'index', [
         'Contenidos' => $ContentList,

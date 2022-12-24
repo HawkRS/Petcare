@@ -293,7 +293,7 @@ class ContentSeeder extends Seeder
             'section' => 'beneficios',
             'field' => 'adultotopder',
             'type' => 'txt',
-            'value' => 'Litamincorazón.',
+            'value' => 'La vitamina E natural protege las células del corazón.',
           ]);
           DB::table('content')->insert([
           'page' => 'smartbitesperro',
@@ -307,7 +307,7 @@ class ContentSeeder extends Seeder
             'section' => 'beneficios',
             'field' => 'adultobottomizq',
             'type' => 'txt',
-            'value' => 'Elomegaillante.',
+            'value' => 'El omega 3 ayuda a mantener su piel saludable y pelaje brillante.',
           ]);
           DB::table('content')->insert([
           'page' => 'smartbitesperro',
