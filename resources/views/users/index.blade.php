@@ -55,6 +55,32 @@
                       		<button type="button" name="button"  data-bs-toggle="modal" data-bs-target="#DeleteUser{{$User->id}}Modal" class="btn btn-sm btn-outline-danger fntB"><i class="fas fnt18 fa-trash-alt"></i></button>
                 			</td>
                 		</tr>
+                    {{-- DELETE MODAL  --}}
+                                      <div class="modal fade" id="DeleteUser{{$User->id}}Modal" tabindex="-1" role="dialog" aria-labelledby="DeleteUser{{$User->id}}ModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <h5 class="modal-title" id="DeleteUser{{$User->id}}ModalLabel">¿Seguro que deseas eliminar este usuario?</h5>
+                                              <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                              </button>
+                                            </div>
+                                            <div class="modal-body">
+                                              <p>{{$User->name}}</p>
+                                              <p>Una vez eliminado no hay forma de recuperarlo.</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                              <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                                              <form class="" method="POST" action="{{ route('users.delete', ['id' => $User->id]) }}">
+                                                @csrf
+                                                    <button type="submit" class="btn btn-danger">
+                                                      Borrar
+                                                    </button>
+                                              </form>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>{{-- END MODAL --}}
                 		@endforeach
                 	</tbody>
                 </table>
@@ -68,11 +94,11 @@
 	</div>
 </div>
 {{-- MODAL ADD MARKER --}}
-<div class="modal fade" id="AddUser{{$User->id}}Modal" tabindex="-1" aria-labelledby="AddUser{{$User->id}}ModalLabel" aria-hidden="true">
+<div class="modal fade" id="AddUserModal" tabindex="-1" aria-labelledby="AddUserModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="AddUser{{$User->id}}ModalLabel">Crear nuevo usuario</h1>
+        <h1 class="modal-title fs-5" id="AddUserModalLabel">Crear nuevo usuario</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form class="needs-validation" action="{{ route('users.add') }}" method="post" novalidate>
@@ -88,32 +114,5 @@
     </div>
   </div>
 </div>
-@foreach($Users as $User)
-{{-- DELETE MODAL  --}}
-                  <div class="modal fade" id="DeleteUser{{$User->id}}Modal" tabindex="-1" role="dialog" aria-labelledby="DeleteUser{{$User->id}}ModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="DeleteUser{{$User->id}}ModalLabel">¿Seguro que deseas eliminar este usuario?</h5>
-                          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-                          <p>{{$User->name}}</p>
-                          <p>Una vez eliminado no hay forma de recuperarlo.</p>
-                        </div>
-                        <div class="modal-footer">
-                          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                          <form class="" method="POST" action="{{ route('users.delete', ['id' => $User->id]) }}">
-                            @csrf
-                                <button type="submit" class="btn btn-danger">
-                                  Borrar
-                                </button>
-                          </form>
-                        </div>
-                      </div>
-                    </div>
-                  </div>{{-- END MODAL --}}
-@endforeach
+
 @endsection
