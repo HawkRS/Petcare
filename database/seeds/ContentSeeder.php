@@ -440,7 +440,7 @@ class ContentSeeder extends Seeder
           DB::table('content')->insert([
             'page' => 'smartbitesgato',
             'section' => 'beneficios',
-            'field' => 'adultobottomtituloizq',
+            'field' => 'adultobottomizqtitulo',
             'type' => 'txt',
             'value' => 'CONTROL DE BOLAS DE PELO',
           ]);
@@ -454,7 +454,7 @@ class ContentSeeder extends Seeder
           DB::table('content')->insert([
             'page' => 'smartbitesgato',
             'section' => 'beneficios',
-            'field' => 'adultobottomtituloder',
+            'field' => 'adultobottomdertitulo',
             'type' => 'txt',
             'value' => 'SALUD INTESTINAL',
           ]);
