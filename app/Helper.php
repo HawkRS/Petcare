@@ -157,10 +157,10 @@ class Helper extends Model
     {
       switch ($position) {
         case 'smartbitesperro':
-          if($section == 'cachorro'){$path = "img/home/productos/smart_bites_neuro_active_adulto.png"; $thumbpath ="img/home/productos/smart-bites/thumbs/smart_bites_neuro_active_adulto.png"; }
-          if($section == 'razapequeña'){$path = "img/productos/smart-bites/smart-bites-neuro-active-adulto-raza-pequena.png"; $thumbpath ="img/home/productos/smart-bites/thumbs/smart-bites-neuro-active-adulto-raza-pequena.png"; }
-          if($section == 'adulto'){$path = "img/productos/smart-bites/render_bolsa_adulto_SB.png"; $thumbpath ="img/home/productos/smart-bites/thumbs/render_bolsa_adulto_SB.png"; }
-          if($section == 'senior'){$path = "img/productos/smart-bites/render_bolsa_senior_SB.png"; $thumbpath ="img/home/productos/smart-bites/thumbs/render_bolsa_senior_SB.png"; }
+          if($section == 'cachorro'){$path = "img/productos/smart_bites_neuro_active_adulto.png"; $thumbpath ="img/productos/smart-bites/thumbs/smart_bites_neuro_active_adulto.png"; }
+          if($section == 'razapequeña'){$path = "img/productos/smart-bites/smart-bites-neuro-active-adulto-raza-pequena.png"; $thumbpath ="img/productos/smart-bites/thumbs/smart-bites-neuro-active-adulto-raza-pequena.png"; }
+          if($section == 'adulto'){$path = "img/productos/smart-bites/render_bolsa_adulto_SB.png"; $thumbpath ="img/productos/smart-bites/thumbs/render_bolsa_adulto_SB.png"; }
+          if($section == 'senior'){$path = "img/productos/smart-bites/render_bolsa_senior_SB.png"; $thumbpath ="img/productos/smart-bites/thumbs/render_bolsa_senior_SB.png"; }
           break;
 
 

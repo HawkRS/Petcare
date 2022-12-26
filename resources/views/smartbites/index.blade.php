@@ -529,10 +529,10 @@
                 <input type="hidden" name="area1" value="edad">
                 <input type="hidden" name="area2" value="presentaciones">
                 <div class="modal-body">
-                  {{--<div class="mb-3">
+                  <div class="mb-3">
                     <label for="formFile" class="form-label">Carga tu imagen (archivos tipo png con transparencia)</label>
                     <input name="imagefile" class="form-control" type="file" id="formFile">
-                  </div>--}}
+                  </div>
                   <div class="mb-3">
                     <label for="edades" class="form-label">Edades</label>
                     @if(isset($Contenidos[4]->value))
@@ -588,10 +588,10 @@
                 <input type="hidden" name="area1" value="edad">
                 <input type="hidden" name="area2" value="presentaciones">
                 <div class="modal-body">
-                  {{--<div class="mb-3">
+                  <div class="mb-3">
                     <label for="formFile" class="form-label">Carga tu imagen (archivos tipo png con transparencia)</label>
                     <input name="imagefile" class="form-control" type="file" id="formFile">
-                  </div>--}}
+                  </div>
                   <div class="mb-3">
                     <label for="edades" class="form-label">Edades</label>
                     @if(isset($Contenidos[6]->value))
@@ -647,10 +647,10 @@
                 <input type="hidden" name="area1" value="edad">
                 <input type="hidden" name="area2" value="presentaciones">
                 <div class="modal-body">
-                  {{--<div class="mb-3">
+                  <div class="mb-3">
                     <label for="formFile" class="form-label">Carga tu imagen (archivos tipo png con transparencia)</label>
                     <input name="imagefile" class="form-control" type="file" id="formFile">
-                  </div>--}}
+                  </div>
                   <div class="mb-3">
                     <label for="edades" class="form-label">Edades</label>
                     @if(isset($Contenidos[8]->value))
