@@ -1,4 +1,4 @@
-@extends('layouts.dev')
+@extends('layouts.app')
 @section('pagina', 'Dashboard')
 
 @section('content')
@@ -200,8 +200,8 @@
                   <h6 class="card-title m-3">Beneficio 1</h6>
                 <div class="card-body">
                   <img src="{{ asset('img/productos/smart-bites/iconos/cachorro/cachorro_sistemainmune.svg') }}" class="img-thumbnail mx-auto d-block" alt="">
-                  <h5>{{ $Contenidos[10]->value }}</h5>
-                  <p>{{ $Contenidos[11]->value }}</p>
+                  <h5>{{ $Contenidos[0]->value }}</h5>
+                  <p>{{ $Contenidos[1]->value }}</p>
                 </div>
               </div>
             </div>
@@ -210,8 +210,8 @@
                   <h6 class="card-title m-3">Beneficio 2</h6>
                 <div class="card-body">
                   <img src="{{ asset('img/productos/smart-bites/iconos/cachorro/cachorro_corazon_sano.svg') }}" class="img-thumbnail mx-auto d-block" alt="">
-                  <h5>{{ $Contenidos[12]->value }}</h5>
-                  <p>{{ $Contenidos[13]->value }}</p>
+                  <h5>{{ $Contenidos[2]->value }}</h5>
+                  <p>{{ $Contenidos[3]->value }}</p>
                 </div>
               </div>
             </div>
@@ -220,8 +220,8 @@
                   <h6 class="card-title m-3">Beneficio 3</h6>
                 <div class="card-body">
                   <img src="{{ asset('img/productos/smart-bites/iconos/cachorro/cachorro_desarrollo_saludable.svg') }}" class="img-thumbnail mx-auto d-block" alt="">
-                  <h5>{{ $Contenidos[14]->value }}</h5>
-                  <p>{{ $Contenidos[15]->value }}</p>
+                  <h5>{{ $Contenidos[4]->value }}</h5>
+                  <p>{{ $Contenidos[5]->value }}</p>
                 </div>
               </div>
             </div>
@@ -230,8 +230,8 @@
                   <h6 class="card-title m-3">Beneficio 4</h6>
                 <div class="card-body">
                   <img src="{{ asset('img/productos/smart-bites/iconos/cachorro/cachorro_sistema_digestivo.svg') }}" class="img-thumbnail mx-auto d-block" alt="">
-                  <h5>{{ $Contenidos[16]->value }}</h5>
-                  <p>{{ $Contenidos[17]->value }}</p>
+                  <h5>{{ $Contenidos[6]->value }}</h5>
+                  <p>{{ $Contenidos[7]->value }}</p>
                 </div>
               </div>
             </div>
