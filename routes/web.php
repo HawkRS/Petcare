@@ -29,8 +29,12 @@ Route::prefix('landing')->group(function () {
 });
 
 Route::prefix('smartbites-perro')->group(function () {
+  Route::get('/banner', 'EditorController@sbperro_banner')->name( 'smartbites.banners' );
+  Route::get('/presentaciones', 'ProductosController@smartbitesperro')->name( 'smartbites.presentaciones' );
+  Route::get('/beneficios', 'ProductosController@smartbitesperro')->name( 'smartbites.beneficios' );
+
   Route::get('/', 'ProductosController@smartbitesperro')->name( 'smartbites.page' );
-  Route::post('/editar-imagenes', 'ProductosController@UpdateContent')->name( 'smartbites.updatecontent' );
+  Route::post('/editar-banner', 'ProductosController@UpdateContent')->name( 'smartbites.updatecontent' );
   Route::post('/editar-titulos', 'ProductosController@UpdateProdBannerTxt')->name( 'smartbites.updatebannertitle' );
   Route::post('/editar-presentaciones', 'ProductosController@EditPresentationContent')->name( 'smartbites.updatepresentacion' );
   Route::post('/editar-beneficios', 'ProductosController@EditBenefitsContent')->name( 'smartbites.updatebeneficios' );
