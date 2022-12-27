@@ -87,7 +87,7 @@ class Helper extends Model
       //if ($_FILES['imgtitanperroizq']['size'] != 0 && $_FILES['imgtitanperroizq']['error'] == 0){$ImgTitanPerroIzq = $_FILES['imgtitanperroizq'];   $this->ImageContent($request->position, 'imgtitanperroizq',$ImgTitanPerroIzq );}
       if ($ImageCont['size'] != 0 && $ImageCont['error'] == 0){
         switch ($page) {
-          case 'smartbites':{
+          case 'smartbitesperro':{
             if ($section == 'banner') {
               if($imgarea == 'izqext'){$path = "img/productos/smart-bites/smart-bites-neuro-active-senior.png"; $thumbpath ="img/productos/smart-bites/thumbs/smart-bites-neuro-active-senior.png"; }
               if($imgarea == 'izqint'){$path = "img/productos/smart-bites/inicio_smart_perro.png"; $thumbpath ="img/productos/smart-bites/thumbs/inicio_smart_perro.png"; }
@@ -157,7 +157,7 @@ class Helper extends Model
     {
       switch ($position) {
         case 'smartbitesperro':
-          if($section == 'cachorro'){$path = "img/productos/smart_bites_neuro_active_adulto.png"; $thumbpath ="img/productos/smart-bites/thumbs/smart_bites_neuro_active_adulto.png"; }
+          if($section == 'cachorro'){$path = "img/productos/smart-bites/render_bolsa_cachorro_SB.png"; $thumbpath ="img/productos/smart-bites/thumbs/render_bolsa_cachorro_SB.png"; }
           if($section == 'razapequeña'){$path = "img/productos/smart-bites/smart-bites-neuro-active-adulto-raza-pequena.png"; $thumbpath ="img/productos/smart-bites/thumbs/smart-bites-neuro-active-adulto-raza-pequena.png"; }
           if($section == 'adulto'){$path = "img/productos/smart-bites/render_bolsa_adulto_SB.png"; $thumbpath ="img/productos/smart-bites/thumbs/render_bolsa_adulto_SB.png"; }
           if($section == 'senior'){$path = "img/productos/smart-bites/render_bolsa_senior_SB.png"; $thumbpath ="img/productos/smart-bites/thumbs/render_bolsa_senior_SB.png"; }

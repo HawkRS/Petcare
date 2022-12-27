@@ -24,24 +24,48 @@ class ProductosController extends Controller
       $this->middleware('auth');
   }
 
-  private $f = 'smartbites.';
+  private $p = 'smartbites.';
+  private $g = 'smartbitesgato.';
+  private $t = 'titan.';
+  private $r = 'rocko.';
 
   /**
    * Show the smartbites page content settings.
    *
    * @return \Illuminate\Contracts\Support\Renderable
    */
-  public function smartbitesperro()
+  public function VistaSBPerro()
   {
     //dd('index smartbites');
-      //$ContentList = Content::where('page', 'landing')->get();
-      $ContentList = DB::table('content')
-                ->where('page', 'smartbitesperro')
-                ->get();
+      $ContentList = Content::where('page', 'smartbitesperro')->where('section', 'banner')->get();
+      //$ContentList = DB::table('content')
+      //          ->where('page', 'smartbitesperro')
+      //          ->get();
       //dd($ContentList);
-      return view($this->f.'index', [
+      return view($this->p.'banners', [
         'Contenidos' => $ContentList,
       ]);
+  }
+
+  public function VistaSBPerroPresentaciones()
+  {
+    $matchThese = ['cachorro','adulto','razapequeña','senior'];
+    $ContentList = Content::where('page', 'smartbitesperro')
+    ->whereIn('section',  $matchThese)
+    ->get();
+    //dd($ContentList);
+    return view($this->p.'presentaciones', [
+      'Contenidos' => $ContentList,
+    ]);
+  }
+
+  public function VistaSBPerroBeneficios()
+  {
+    $ContentList = Content::where('page', 'smartbitesperro')->where('section', 'beneficios')->get();
+    //dd($ContentList);
+    return view($this->p.'beneficios', [
+      'Contenidos' => $ContentList,
+    ]);
   }
 
   public function UpdateContent(Request $request)
@@ -79,67 +103,7 @@ class ProductosController extends Controller
 
    }
 
-   public function UpdateProdBannerTxt(Request $request)
-   {
-     $messages = [
-     'required' => 'El campo :attribute es obligatorio.',
-     ];
-     $this->validate(request(), [
-       'page' => 'required',
-       'type' => 'required',
-       'section' => 'required',
-       'parrafo1' => 'required',
-       'parrafo2' => 'required',
-      ], $messages);
-      //dd($request->all());
-      switch ($request->page) {
-        case 'smartbites':{
-          $Parrafo1 = Content::where('page', 'smartbitesperro')->where('section', 'banner')->where('field', 'leyend1')->first();
-          $Parrafo2 = Content::where('page', 'smartbitesperro')->where('section', 'banner')->where('field', 'leyend2')->first();
-          $Parrafo1->value = $request->parrafo1;
-          $Parrafo1->save();
-          $Parrafo2->value = $request->parrafo2;
-          $Parrafo2->save();
-          return redirect()->route('smartbites.page');
-          break;
-        }
-        case 'smartbitesgato':{
-          $Parrafo1 = Content::where('page', 'smartbitesgato')->where('section', 'banner')->where('field', 'leyend1')->first();
-          $Parrafo2 = Content::where('page', 'smartbitesgato')->where('section', 'banner')->where('field', 'leyend2')->first();
-          $Parrafo1->value = $request->parrafo1;
-          $Parrafo1->save();
-          $Parrafo2->value = $request->parrafo2;
-          $Parrafo2->save();
-          return redirect()->route('smartbitesgato.page');
-          break;
-        }
-        case 'titan':{
-          $Parrafo1 = Content::where('page', 'titan')->where('section', 'banner')->where('field', 'leyend1')->first();
-          $Parrafo2 = Content::where('page', 'titan')->where('section', 'banner')->where('field', 'leyend2')->first();
-          $Parrafo1->value = $request->parrafo1;
-          $Parrafo1->save();
-          $Parrafo2->value = $request->parrafo2;
-          $Parrafo2->save();
-          return redirect()->route('titan.page');
-          break;
-        }
-        case 'rocko':{
-          $Parrafo1 = Content::where('page', 'rocko')->where('section', 'banner')->where('field', 'leyend1')->first();
-          $Parrafo2 = Content::where('page', 'rocko')->where('section', 'banner')->where('field', 'leyend2')->first();
-          $Parrafo1->value = $request->parrafo1;
-          $Parrafo1->save();
-          $Parrafo2->value = $request->parrafo2;
-          $Parrafo2->save();
-          return redirect()->route('rocko.page');
-          break;
-        }
 
-        default:
-          // code...
-          break;
-      }
-      dd($request->all());
-   }
 
    public function EditPresentationContent(Request $request)
    {
