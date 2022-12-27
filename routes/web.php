@@ -35,10 +35,10 @@ Route::prefix('smartbites-perro')->group(function () {
   Route::get('/presentaciones', 'ProductosController@VistaSBPerroPresentaciones')->name( 'smartbites.presentaciones' );
   Route::post('/presentaciones-editar', 'EditorController@EditPresentationContent')->name( 'smartbites.updatepresentacion' );
   Route::get('/beneficios', 'ProductosController@VistaSBPerroBeneficios')->name( 'smartbites.beneficios' );
+  Route::post('/beneficios-editar/{section}', 'EditorController@EditBenefitsContent')->name( 'smartbites.updatebeneficios' );
 
 
   Route::get('/', 'ProductosController@smartbitesperro')->name( 'smartbites.page' );
-  Route::post('/editar-beneficios', 'ProductosController@EditBenefitsContent')->name( 'smartbites.updatebeneficios' );
 });
 
 Route::prefix('smartbites-gato')->group(function () {

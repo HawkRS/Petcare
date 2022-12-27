@@ -176,4 +176,35 @@ class Helper extends Model
       $thumbnail->save($thumbpath);
     }
 
+    public function BeneficiosImageName($benefit, $ImageCont)
+    {
+      //dd($benefit);
+      switch ($benefit) {
+        case 'cachorrotopizq': { $ImagePath = 'img/productos/smart-bites/iconos/cachorro/cachorro_sistemainmune.svg'; break; }
+        case 'cachorrotopder': { $ImagePath = 'img/productos/smart-bites/iconos/cachorro/cachorro_corazon_sano.svg'; break; }
+        case 'cachorrobottomizq': { $ImagePath = 'img/productos/smart-bites/iconos/cachorro/cachorro_desarrollo_saludable.svg'; break; }
+        case 'cachorrobottomder': { $ImagePath = 'img/productos/smart-bites/iconos/cachorro/cachorro_sistema_digestivo.svg'; break; }
+        case 'pequeñostopizq': { $ImagePath = 'img/productos/smart-bites/iconos/adulto-raza-pequena/sistema_inmune_fuerte.svg'; break; }
+        case 'pequeñostopder': { $ImagePath = 'img/productos/smart-bites/iconos/adulto-raza-pequena/corazon_sano.svg'; break; }
+        case 'pequeñosbottomizq': { $ImagePath = 'img/productos/smart-bites/iconos/adulto-raza-pequena/metabolismo_balanceado.svg'; break; }
+        case 'pequeñosbottomder': { $ImagePath = 'img/productos/smart-bites/iconos/adulto-raza-pequena/aparato_digestivo_sano.svg'; break; }
+        case 'adultotopizq': { $ImagePath = 'img/productos/smart-bites/iconos/adulto/adulto_salud_integral.svg'; break; }
+        case 'adultotopder': { $ImagePath = 'img/productos/smart-bites/iconos/adulto/adulto_corazon_sano.svg'; break; }
+        case 'adultobottomizq': { $ImagePath = 'img/productos/smart-bites/iconos/adulto/adulto_pelaje_brillante.svg'; break; }
+        case 'adultobottomder': { $ImagePath = 'img/productos/smart-bites/iconos/adulto/adulto_sistema_digestivo.svg'; break; }
+        case 'seniortopizq': { $ImagePath = 'img/productos/smart-bites/iconos/senior/senior_articulaciones.svg'; break; }
+        case 'seniortopder': { $ImagePath = 'img/productos/smart-bites/iconos/senior/senior_celulas.svg'; break; }
+        case 'seniorbottomizq': { $ImagePath = 'img/productos/smart-bites/iconos/senior/senior_sistema_inmune.svg'; break; }
+        case 'seniorbottomder': { $ImagePath = 'img/productos/smart-bites/iconos/senior/senior_aparato_digestivo.svg'; break; }
+
+        default:
+          // code...
+          break;
+      }
+
+      $file_temp = $ImageCont['tmp_name'];
+      $svg = file_get_contents($file_temp);
+      file_put_contents(public_path($ImagePath),$svg);
+    }
+
 }
