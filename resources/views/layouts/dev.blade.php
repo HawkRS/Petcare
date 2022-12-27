@@ -43,11 +43,11 @@
       <link href="{{ asset('css/upzet.css') }}" rel="stylesheet">
 
       <!-- Bootstrap Css -->
-      <link href="css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+      <link href="{{ asset('css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css" />
       <!-- Icons Css -->
-      <link href="css/icons.min.css" rel="stylesheet" type="text/css" />
+      <link href="{{ asset('css/icons.min.css') }}" rel="stylesheet" type="text/css" />
       <!-- App Css-->
-      <link href="css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+      <link href="{{ asset('css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css" />
 
     </head>
 
@@ -179,7 +179,14 @@
                                     <span>Productos</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="{{ route('smartbites.page') }}">Smart Bites Perro</a></li>
+
+                                    <li><a href="javascript: void(0);" class="has-arrow">Smart Bites Perro</a>
+                                        <ul class="sub-menu" aria-expanded="false">
+                                            <li><a href="{{ route('smartbites.banners') }}">Banner</a></li>
+                                            <li><a href="{{ route('smartbites.presentaciones') }}">Presentaciones</a></li>
+                                            <li><a href="{{ route('smartbites.beneficios') }}">Beneficios</a></li>
+                                        </ul>
+                                    </li>
                                     <li><a href="{{ route('smartbitesgato.page') }}">Smart Bites Gato</a></li>
                                     <li><a href="{{ route('titan.page') }}">Titan</a></li>
                                     <li><a href="{{ route('rocko.page') }}">Rocko</a></li>
