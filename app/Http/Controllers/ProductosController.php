@@ -109,7 +109,7 @@ class ProductosController extends Controller
   }
 
   /**
-   * Show the SMARTBITES GATO page content settings.
+   * Show the TITÁN page content settings.
    *
    * @return \Illuminate\Contracts\Support\Renderable
    */
@@ -148,7 +148,44 @@ class ProductosController extends Controller
   }
 
 
+  /**
+   * Show the ROCKO page content settings.
+   *
+   * @return \Illuminate\Contracts\Support\Renderable
+   */
+  public function VistaSBRocko()
+  {
+    //dd('index smartbites');
+      $ContentList = Content::where('page', 'rocko')->where('section', 'banner')->get();
+      //$ContentList = DB::table('content')
+      //          ->where('page', 'smartbitesperro')
+      //          ->get();
+      //dd($ContentList);
+      return view($this->r.'banners', [
+        'Contenidos' => $ContentList,
+      ]);
+  }
 
+  public function VistaSBRockoPresentaciones()
+  {
+    $matchThese = ['complete','plus'];
+    $ContentList = Content::where('page', 'rocko')
+    ->whereIn('section',  $matchThese)
+    ->get();
+    //dd($ContentList);
+    return view($this->r.'presentaciones', [
+      'Contenidos' => $ContentList,
+    ]);
+  }
+
+  public function VistaSBRockoBeneficios()
+  {
+    $ContentList = Content::where('page', 'rocko')->where('section', 'beneficios')->get();
+    //dd($ContentList);
+    return view($this->r.'beneficios', [
+      'Contenidos' => $ContentList,
+    ]);
+  }
 
 
 

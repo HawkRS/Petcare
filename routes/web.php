@@ -58,15 +58,15 @@ Route::prefix('titan')->group(function () {
   Route::post('/beneficios-editar/{section}', 'EditorController@EditBenefitsContent')->name( 'titan.updatebeneficios' );
 });
 
-
 Route::prefix('rocko')->group(function () {
-  Route::get('/', 'RockoController@index')->name( 'rocko.page' );
-  Route::post('/editar-imagenes', 'RockoController@UpdateContent')->name( 'rocko.updatecontent' );
-  Route::post('/editar-titulos', 'RockoController@UpdateProdBannerTxt')->name( 'rocko.updatebannertitle' );
-  Route::post('/editar-presentaciones', 'RockoController@EditPresentationContent')->name( 'rocko.updatepresentacion' );
-  Route::post('/editar-beneficios', 'RockoController@EditBenefitsContent')->name( 'rocko.updatebeneficios' );
+  Route::get('/banner', 'ProductosController@VistaSBRocko')->name( 'rocko.banners' );
+  Route::post('/banner-editar-imagenes', 'EditorController@UpdateContent')->name( 'rocko.updatecontent' );
+  Route::post('/banner-editar-titulos', 'EditorController@UpdateProdBannerTxt')->name( 'rocko.updatebannertitle' );
+  Route::get('/presentaciones', 'ProductosController@VistaSBRockoPresentaciones')->name( 'rocko.presentaciones' );
+  Route::post('/presentaciones-editar', 'EditorController@EditPresentationContent')->name( 'rocko.updatepresentacion' );
+  Route::get('/beneficios', 'ProductosController@VistaSBRockoBeneficios')->name( 'rocko.beneficios' );
+  Route::post('/beneficios-editar/{section}', 'EditorController@EditBenefitsContent')->name( 'rocko.updatebeneficios' );
 });
-
 
 Route::prefix('encuentranos')->group(function () {
   Route::get('/', 'MapController@index')->name( 'map.index' );
@@ -75,7 +75,6 @@ Route::prefix('encuentranos')->group(function () {
   Route::post('/eliminar/{id}', 'MapController@delete')->name( 'findus.delete' );
   Route::post('/crear', 'MapController@store')->name( 'findus.store' );
 });
-
 
 Route::prefix('usuarios')->group(function () {
   Route::get('/', 'UsersController@index')->name( 'users.index' );
