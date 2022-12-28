@@ -108,40 +108,44 @@ class ProductosController extends Controller
     ]);
   }
 
-  public function UpdateContent(Request $request)
+  /**
+   * Show the SMARTBITES GATO page content settings.
+   *
+   * @return \Illuminate\Contracts\Support\Renderable
+   */
+  public function VistaSBTitan()
   {
-    $messages = [
-    'required' => 'El campo :attribute es obligatorio.',
-    ];
-    $this->validate(request(), [
-      'page' => 'required',
-      'type' => 'required',
-      'section' => 'required',
-      'descripcion' => 'required',
-      'imgname' => 'nullable',
-      'imagefile' => 'nullable|image',
-     ], $messages);
-     $Helper = new Helper();
-    //dd($request->all());
-     if($request->type == 'image'){
-       $Helper->UpdateImage($request->page,$request->section,$_FILES['imagefile'],$request->imgname);
-     }
+    //dd('index smartbites');
+      $ContentList = Content::where('page', 'titan')->where('section', 'banner')->get();
+      //$ContentList = DB::table('content')
+      //          ->where('page', 'smartbitesperro')
+      //          ->get();
+      //dd($ContentList);
+      return view($this->t.'banners', [
+        'Contenidos' => $ContentList,
+      ]);
+  }
 
+  public function VistaSBTitanPresentaciones()
+  {
+    $matchThese = ['adulto'];
+    $ContentList = Content::where('page', 'titan')
+    ->whereIn('section',  $matchThese)
+    ->get();
+    //dd($ContentList);
+    return view($this->t.'presentaciones', [
+      'Contenidos' => $ContentList,
+    ]);
+  }
 
-     switch ($request->page) {
-       case 'smartbitesperro':
-         return redirect()->route('smartbites.page');
-         break;
-       case 'smartbitesgato':
-         return redirect()->route('smartbitesgato.page');
-         break;
-
-       default:
-         // code...
-         break;
-     }
-
-   }
+  public function VistaSBTitanBeneficios()
+  {
+    $ContentList = Content::where('page', 'titan')->where('section', 'beneficios')->get();
+    //dd($ContentList);
+    return view($this->t.'beneficios', [
+      'Contenidos' => $ContentList,
+    ]);
+  }
 
 
 

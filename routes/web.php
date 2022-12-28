@@ -48,15 +48,16 @@ Route::prefix('smartbites-gato')->group(function () {
   Route::post('/beneficios-editar/{section}', 'EditorController@EditBenefitsContent')->name( 'smartbitesgato.updatebeneficios' );
 });
 
-
-
 Route::prefix('titan')->group(function () {
-  Route::get('/', 'TitanController@index')->name( 'titan.page' );
-  Route::post('/editar-imagenes', 'TitanController@UpdateContent')->name( 'titan.updatecontent' );
-  Route::post('/editar-titulos', 'TitanController@UpdateProdBannerTxt')->name( 'titan.updatebannertitle' );
-  Route::post('/editar-presentaciones', 'TitanController@EditPresentationContent')->name( 'titan.updatepresentacion' );
-  Route::post('/editar-beneficios', 'TitanController@EditBenefitsContent')->name( 'titan.updatebeneficios' );
+  Route::get('/banner', 'ProductosController@VistaSBTitan')->name( 'titan.banners' );
+  Route::post('/banner-editar-imagenes', 'EditorController@UpdateContent')->name( 'titan.updatecontent' );
+  Route::post('/banner-editar-titulos', 'EditorController@UpdateProdBannerTxt')->name( 'titan.updatebannertitle' );
+  Route::get('/presentaciones', 'ProductosController@VistaSBTitanPresentaciones')->name( 'titan.presentaciones' );
+  Route::post('/presentaciones-editar', 'EditorController@EditPresentationContent')->name( 'titan.updatepresentacion' );
+  Route::get('/beneficios', 'ProductosController@VistaSBTitanBeneficios')->name( 'titan.beneficios' );
+  Route::post('/beneficios-editar/{section}', 'EditorController@EditBenefitsContent')->name( 'titan.updatebeneficios' );
 });
+
 
 Route::prefix('rocko')->group(function () {
   Route::get('/', 'RockoController@index')->name( 'rocko.page' );

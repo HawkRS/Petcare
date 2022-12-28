@@ -56,6 +56,9 @@ class EditorController extends Controller
        case 'smartbitesgato':
          return redirect()->route('smartbitesgato.banners');
          break;
+       case 'titan':
+         return redirect()->route('titan.banners');
+         break;
 
        default:
          // code...
@@ -123,7 +126,7 @@ class EditorController extends Controller
          // code...
          break;
      }
-     dd($request->all());
+     //dd($request->all());
   }
 
   public function EditPresentationContent(Request $request)
