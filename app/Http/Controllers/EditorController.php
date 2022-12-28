@@ -206,7 +206,7 @@ class EditorController extends Controller
     $Beneficiosttl = Content::where([['page', '=', $request->page],['section', '=', $request->section],['field', '=', $fieldtitle]])->first();
     $Beneficios = Content::where([['page', '=', $request->page],['section', '=', $request->section],['field', '=', $field]])->first();
 
-    //dd($Beneficiosttl);
+    //dd($Beneficios);
     $Beneficiosttl->value = $request->beneficiostitulo; $Beneficiosttl->save();
     $Beneficios->value = $request->beneficios; $Beneficios->save();
     if(isset($request->imagefile)){
@@ -221,6 +221,9 @@ class EditorController extends Controller
         break;
       case 'smartbitesgato':
         return redirect()->route('smartbitesgato.beneficios');
+        break;
+      case 'titan':
+        return redirect()->route('titan.beneficios');
         break;
 
       default:
