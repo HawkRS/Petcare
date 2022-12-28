@@ -10,7 +10,7 @@
     <div class="row">
       <div class="col-12">
         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-          <h2 class="mb-sm-0">Titan - Banner</h2>
+          <h2 class="mb-sm-0">Titán - Banner</h2>
         </div>
       </div>
     </div>

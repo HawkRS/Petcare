@@ -194,14 +194,20 @@
                                             <li><a href="{{ route('smartbitesgato.beneficios') }}">Beneficios</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="javascript: void(0);" class="has-arrow">Titan</a>
+                                    <li><a href="javascript: void(0);" class="has-arrow">Titán</a>
                                         <ul class="sub-menu" aria-expanded="false">
                                             <li><a href="{{ route('titan.banners') }}">Banner</a></li>
                                             <li><a href="{{ route('titan.presentaciones') }}">Presentaciones</a></li>
                                             <li><a href="{{ route('titan.beneficios') }}">Beneficios</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="{{ route('rocko.page') }}">Rocko</a></li>
+                                    <li><a href="javascript: void(0);" class="has-arrow">Rocko</a>
+                                        <ul class="sub-menu" aria-expanded="false">
+                                            <li><a href="{{ route('rocko.banners') }}">Banner</a></li>
+                                            <li><a href="{{ route('rocko.presentaciones') }}">Presentaciones</a></li>
+                                            <li><a href="{{ route('rocko.beneficios') }}">Beneficios</a></li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </li>
                             @if( Auth::user()->type == 0 || Auth::user()->type == 1)
