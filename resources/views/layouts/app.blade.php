@@ -135,7 +135,7 @@
                   <a class="dropdown-item text-danger" href="{{ route('logout') }}"
                   onclick="event.preventDefault();
                   document.getElementById('logout-form').submit();">
-                  <i class="ri-shut-down-line align-middle me-1 text-danger"></i> Logout
+                  <i class="ri-shut-down-line align-middle me-1 text-danger"></i> Cerrar sesión
                 </a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                   @csrf
@@ -187,7 +187,14 @@
                                             <li><a href="{{ route('smartbites.beneficios') }}">Beneficios</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="{{ route('smartbitesgato.page') }}">Smart Bites Gato</a></li>
+                                    {{--<li><a href="{{ route('smartbitesgato.page') }}">Smart Bites Gato</a></li>--}}
+                                    <li><a href="javascript: void(0);" class="has-arrow">Smart Bites Gato</a>
+                                        <ul class="sub-menu" aria-expanded="false">
+                                            <li><a href="{{ route('smartbitesgato.banners') }}">Banner</a></li>
+                                            <li><a href="{{ route('smartbitesgato.presentaciones') }}">Presentaciones</a></li>
+                                            <li><a href="{{ route('smartbitesgato.beneficios') }}">Beneficios</a></li>
+                                        </ul>
+                                    </li>
                                     <li><a href="{{ route('titan.page') }}">Titan</a></li>
                                     <li><a href="{{ route('rocko.page') }}">Rocko</a></li>
                                 </ul>
