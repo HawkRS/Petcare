@@ -168,7 +168,7 @@ class ProductosController extends Controller
 
   public function VistaSBRockoPresentaciones()
   {
-    $matchThese = ['complete','plus'];
+    $matchThese = ['complete','poder'];
     $ContentList = Content::where('page', 'rocko')
     ->whereIn('section',  $matchThese)
     ->get();
