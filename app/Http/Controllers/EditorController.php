@@ -59,6 +59,9 @@ class EditorController extends Controller
        case 'titan':
          return redirect()->route('titan.banners');
          break;
+       case 'rocko':
+         return redirect()->route('rocko.banners');
+         break;
 
        default:
          // code...

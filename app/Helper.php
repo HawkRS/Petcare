@@ -83,8 +83,8 @@ class Helper extends Model
 
     public function UpdateImage($page, $section, $ImageCont, $imgarea)
     {
-      //dd($imgarea);
       //if ($_FILES['imgtitanperroizq']['size'] != 0 && $_FILES['imgtitanperroizq']['error'] == 0){$ImgTitanPerroIzq = $_FILES['imgtitanperroizq'];   $this->ImageContent($request->position, 'imgtitanperroizq',$ImgTitanPerroIzq );}
+      //dd($imgarea);
       if ($ImageCont['size'] != 0 && $ImageCont['error'] == 0){
         switch ($page) {
           case 'smartbitesperro':{
@@ -103,6 +103,13 @@ class Helper extends Model
               if($imgarea == 'izq'){$path = "img/productos/titan/titan-perro.png"; $thumbpath ="img/productos/titan/thumbs/titan-perro.png"; }
               if($imgarea == 'centro'){$path = "img/productos/titan/perro_gato.png"; $thumbpath ="img/productos/titan/thumbs/perro_gato.png"; }
               if($imgarea == 'der'){$path = "img/productos/titan/titan-gato.png"; $thumbpath ="img/productos/titan/thumbs/titan-gato.png"; }
+          }
+            break;
+            case 'rocko':{
+              if($imgarea == 'izqext'){$path = "img/productos/rocko/perro_pinto_degra.png"; $thumbpath ="img/productos/rocko/thumbs/perro_pinto_degra.png"; }
+              if($imgarea == 'izqint'){$path = "img/productos/rocko/rocko-plus-complete.png"; $thumbpath ="img/productos/rocko/thumbs/rocko-plus-complete.png"; }
+              if($imgarea == 'derint'){$path = "img/productos/rocko/render_bolsa_adulto_RP.png"; $thumbpath ="img/productos/rocko/thumbs/render_bolsa_adulto_RP.png"; }
+              if($imgarea == 'derext'){$path = "img/productos/rocko/perro_cafe_degra.png"; $thumbpath ="img/productos/rocko/thumbs/perro_cafe_degra.png"; }
           }
             break;
 
@@ -135,10 +142,10 @@ class Helper extends Model
           if($area == 'imgtitander'){$path = "img/home/productos/titan-gato.png"; $thumbpath ="img/home/productos/thumbs/titan-gato.png"; }
           break;
         case 'rocko':
-          if($area == 'imgrockoIzqExt'){$path = "img/home/productos/perro-rocko.png"; $thumbpath ="img/home/productos/thumbs/perro-rocko.png"; }
-          if($area == 'imgrockoIzqInt'){$path = "img/home/productos/rocko-plus-complete.png"; $thumbpath ="img/home/productos/thumbs/rocko-plus-complete.png"; }
-          if($area == 'imgrockoDerInt'){$path = "img/home/productos/rocko-perro.png"; $thumbpath ="img/home/productos/thumbs/rocko-perro.png"; }
-          if($area == 'imgrockoDerExt'){$path = "img/home/productos/perro-rocko-cafe.png"; $thumbpath ="img/home/productos/thumbs/perro-rocko-cafe.png"; }
+          if($area == 'imgrockoIzqExt'){$path = "img/productos/perro-rocko.png"; $thumbpath ="img/productos/thumbs/perro-rocko.png"; }
+          if($area == 'imgrockoIzqInt'){$path = "img/productos/rocko-plus-complete.png"; $thumbpath ="img/productos/thumbs/rocko-plus-complete.png"; }
+          if($area == 'imgrockoDerInt'){$path = "img/productos/rocko-perro.png"; $thumbpath ="img/productos/thumbs/rocko-perro.png"; }
+          if($area == 'imgrockoDerExt'){$path = "img/productos/perro-rocko-cafe.png"; $thumbpath ="img/productos/thumbs/perro-rocko-cafe.png"; }
           break;
 
         default:
