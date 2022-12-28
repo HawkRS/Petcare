@@ -30,7 +30,7 @@ class ProductosController extends Controller
   private $r = 'rocko.';
 
   /**
-   * Show the smartbites page content settings.
+   * Show the SMARTBITES PERRO page content settings.
    *
    * @return \Illuminate\Contracts\Support\Renderable
    */
@@ -64,6 +64,46 @@ class ProductosController extends Controller
     $ContentList = Content::where('page', 'smartbitesperro')->where('section', 'beneficios')->get();
     //dd($ContentList);
     return view($this->p.'beneficios', [
+      'Contenidos' => $ContentList,
+    ]);
+  }
+
+
+  /**
+   * Show the SMARTBITES GATO page content settings.
+   *
+   * @return \Illuminate\Contracts\Support\Renderable
+   */
+  public function VistaSBGato()
+  {
+    //dd('index smartbites');
+      $ContentList = Content::where('page', 'smartbitesgato')->where('section', 'banner')->get();
+      //$ContentList = DB::table('content')
+      //          ->where('page', 'smartbitesperro')
+      //          ->get();
+      //dd($ContentList);
+      return view($this->g.'banners', [
+        'Contenidos' => $ContentList,
+      ]);
+  }
+
+  public function VistaSBGatoPresentaciones()
+  {
+    $matchThese = ['adulto'];
+    $ContentList = Content::where('page', 'smartbitesgato')
+    ->whereIn('section',  $matchThese)
+    ->get();
+    //dd($ContentList);
+    return view($this->g.'presentaciones', [
+      'Contenidos' => $ContentList,
+    ]);
+  }
+
+  public function VistaSBGatoBeneficios()
+  {
+    $ContentList = Content::where('page', 'smartbitesgato')->where('section', 'beneficios')->get();
+    //dd($ContentList);
+    return view($this->g.'beneficios', [
       'Contenidos' => $ContentList,
     ]);
   }

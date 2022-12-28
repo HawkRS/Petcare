@@ -36,9 +36,16 @@ Route::prefix('smartbites-perro')->group(function () {
   Route::post('/presentaciones-editar', 'EditorController@EditPresentationContent')->name( 'smartbites.updatepresentacion' );
   Route::get('/beneficios', 'ProductosController@VistaSBPerroBeneficios')->name( 'smartbites.beneficios' );
   Route::post('/beneficios-editar/{section}', 'EditorController@EditBenefitsContent')->name( 'smartbites.updatebeneficios' );
+});
 
-
-  Route::get('/', 'ProductosController@smartbitesperro')->name( 'smartbites.page' );
+Route::prefix('smartbites-gato')->group(function () {
+  Route::get('/banner', 'ProductosController@VistaSBPerro')->name( 'smartbitesgato.banners' );
+  Route::post('/banner-editar-imagenes', 'EditorController@UpdateContent')->name( 'smartbitesgato.updatecontent' );
+  Route::post('/banner-editar-titulos', 'EditorController@UpdateProdBannerTxt')->name( 'smartbitesgato.updatebannertitle' );
+  Route::get('/presentaciones', 'ProductosController@VistaSBPerroPresentaciones')->name( 'smartbitesgato.presentaciones' );
+  Route::post('/presentaciones-editar', 'EditorController@EditPresentationContent')->name( 'smartbitesgato.updatepresentacion' );
+  Route::get('/beneficios', 'ProductosController@VistaSBPerroBeneficios')->name( 'smartbitesgato.beneficios' );
+  Route::post('/beneficios-editar/{section}', 'EditorController@EditBenefitsContent')->name( 'smartbitesgato.updatebeneficios' );
 });
 
 Route::prefix('smartbites-gato')->group(function () {
