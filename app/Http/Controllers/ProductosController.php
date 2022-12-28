@@ -128,7 +128,7 @@ class ProductosController extends Controller
 
   public function VistaSBTitanPresentaciones()
   {
-    $matchThese = ['adulto'];
+    $matchThese = ['perro','gato'];
     $ContentList = Content::where('page', 'titan')
     ->whereIn('section',  $matchThese)
     ->get();

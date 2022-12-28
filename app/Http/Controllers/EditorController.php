@@ -142,6 +142,7 @@ class EditorController extends Controller
       'edades' => 'required',
       'presentaciones' => 'required',
       'imagefile' => 'nullable|image',
+      'imagefile2' => 'nullable|image',
      ], $messages);
     //dd($request->all());
     $Edades = Content::where([['page', '=', $request->page],['section', '=', $request->section],['field', '=', $request->area1]])->first();
@@ -153,7 +154,12 @@ class EditorController extends Controller
     $Presentaciones->save();
     if(isset($request->imagefile)){
       $Helper = new Helper();
-      $Helper->UpdatePresentacionImage($request->page,$request->section,$_FILES['imagefile'],$request->imgname);
+      if($request->page == 'titan'){$Helper->UpdatePresentacionImage($request->page,$request->section.'izq',$_FILES['imagefile'],$request->imgname);}
+      else{$Helper->UpdatePresentacionImage($request->page,$request->section,$_FILES['imagefile'],$request->imgname);}
+    }
+    if(isset($request->imagefile2)){
+      $Helper = new Helper();
+      $Helper->UpdatePresentacionImage($request->page,$request->section.'der',$_FILES['imagefile2'],$request->imgname);
     }
 
 
@@ -163,6 +169,12 @@ class EditorController extends Controller
         break;
       case 'smartbitesgato':
         return redirect()->route('smartbitesgato.presentaciones');
+        break;
+      case 'titan':
+        return redirect()->route('titan.presentaciones');
+        break;
+      case 'rocko':
+        return redirect()->route('rocko.presentaciones');
         break;
 
       default:

@@ -156,12 +156,23 @@ class Helper extends Model
 
     public function UpdatePresentacionImage($position, $section, $ImageCont)
     {
+      //dd($section);
       switch ($position) {
         case 'smartbitesperro':
           if($section == 'cachorro'){$path = "img/productos/smart-bites/render_bolsa_cachorro_SB.png"; $thumbpath ="img/productos/smart-bites/thumbs/render_bolsa_cachorro_SB.png"; }
           if($section == 'razapequeña'){$path = "img/productos/smart-bites/smart-bites-neuro-active-adulto-raza-pequena.png"; $thumbpath ="img/productos/smart-bites/thumbs/smart-bites-neuro-active-adulto-raza-pequena.png"; }
           if($section == 'adulto'){$path = "img/productos/smart-bites/render_bolsa_adulto_SB.png"; $thumbpath ="img/productos/smart-bites/thumbs/render_bolsa_adulto_SB.png"; }
           if($section == 'senior'){$path = "img/productos/smart-bites/render_bolsa_senior_SB.png"; $thumbpath ="img/productos/smart-bites/thumbs/render_bolsa_senior_SB.png"; }
+          break;
+        case 'titan':
+          if($section == 'perroizq'){$path = "img/productos/titan/perro/render_bolsa_adulto_TT_perro.png"; $thumbpath ="img/productos/titan/perro/thumbs/render_bolsa_adulto_TT_perro.png"; }
+          if($section == 'perroder'){$path = "img/productos/titan/perro/perro.png"; $thumbpath ="img/productos/titan/perro/thumbs/perro.png"; }
+          if($section == 'gatoizq'){$path = "img/productos/titan/gato/cat_prod.png"; $thumbpath ="img/productos/titan/gato/thumbs/cat_prod.png"; }
+          break;
+        case 'rocko':
+          if($section == 'perroizq'){$path = "img/productos/titan/perro/render_bolsa_adulto_TT_perro.png"; $thumbpath ="img/productos/titan/perro/thumbs/render_bolsa_adulto_TT_perro.png"; }
+          if($section == 'perroder'){$path = "img/productos/titan/perro/perro.png"; $thumbpath ="img/productos/titan/perro/thumbs/perro.png"; }
+          if($section == 'gatoizq'){$path = "img/productos/titan/gato/cat_prod.png"; $thumbpath ="img/productos/titan/gato/thumbs/cat_prod.png"; }
           break;
 
 
