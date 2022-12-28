@@ -21,37 +21,7 @@ class EditorController extends Controller
     $this->middleware('auth');
   }
 
-  private $f = 'smartbites.';
 
-  /**
-  *
-  * SMART BITES PERRO VIEW FUNCTIONS
-  *
-  */
-
-  public function sbperro_banner()
-  {
-    $ContentList = DB::table('content')
-    ->where('page', 'smartbitesperro')
-    ->where('section', 'banner')
-    ->get();
-    //dd($ContentList);
-    return view($this->f.'banners', [
-      'Contenidos' => $ContentList,
-    ]);
-  }
-
-  public function sbperro_presentaciones()
-  {
-    $matchThese = ['cachorro','adulto','razapequeña','senior'];
-    $ContentList = Content::where('page', 'smartbitesperro')
-    ->whereIn('section',  $matchThese)
-    ->get();
-    //dd($ContentList);
-    return view($this->f.'presentaciones', [
-      'Contenidos' => $ContentList,
-    ]);
-  }
 
   /**
   *
@@ -73,7 +43,7 @@ class EditorController extends Controller
       'imagefile' => 'nullable|image',
      ], $messages);
      $Helper = new Helper();
-    //dd($request->all());
+     //dd($request->all());
      if($request->type == 'image'){
        $Helper->UpdateImage($request->page,$request->section,$_FILES['imagefile'],$request->imgname);
      }
@@ -189,7 +159,7 @@ class EditorController extends Controller
         return redirect()->route('smartbites.presentaciones');
         break;
       case 'smartbitesgato':
-        return redirect()->route('smartbitesgato.page');
+        return redirect()->route('smartbitesgato.presentaciones');
         break;
 
       default:
