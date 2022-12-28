@@ -19,7 +19,9 @@
 
       <div class="col-12 col-md-4">
         <div class="card " >
-          <h5 class="p-2">Complete Plus</h5>
+          <div class="card-header card-primary">
+          <h5 class="text-light">Complete Plus</h5>
+          </div>
           <div class="card-body">
             <h4>Rango de edades</h4>
             <h6>{{ $Contenidos[0]->value }}</h6>
@@ -27,8 +29,8 @@
             <h4>Presentaciones</h4>
             <p class="text-truncate">{{ $Contenidos[1]->value }}</p>
           </div>
-          <div class="card-footer  d-grid gap-2">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#PresentacionCompleteModal">
+          <div class="card-footer card-primary d-grid gap-2">
+            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#PresentacionCompleteModal">
               Editar
             </button>
           </div>
@@ -37,7 +39,9 @@
 
       <div class="col-12 col-md-4">
         <div class="card " >
-          <h5 class="p-2">Más Poder</h5>
+          <div class="card-header card-primary">
+          <h5 class="text-light">Más Poder</h5>
+          </div>
           <div class="card-body">
             <h4>Rango de edades</h4>
             <h6>{{ $Contenidos[2]->value }}</h6>
@@ -45,8 +49,8 @@
             <h4>Presentaciones</h4>
             <p class="text-truncate">{{ $Contenidos[3]->value }}</p>
           </div>
-          <div class="card-footer  d-grid gap-2">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#PresentacionPoderModal">
+          <div class="card-footer card-primary d-grid gap-2">
+            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#PresentacionPoderModal">
               Editar
             </button>
           </div>
