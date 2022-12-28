@@ -48,13 +48,7 @@ Route::prefix('smartbites-gato')->group(function () {
   Route::post('/beneficios-editar/{section}', 'EditorController@EditBenefitsContent')->name( 'smartbitesgato.updatebeneficios' );
 });
 
-Route::prefix('smartbites-gato')->group(function () {
-  Route::get('/', 'SmartbitesController@index')->name( 'smartbitesgato.page' );
-  Route::post('/editar-imagenes', 'SmartbitesController@UpdateContent')->name( 'smartbitesgato.updatecontent' );
-  Route::post('/editar-titulos', 'SmartbitesController@UpdateProdBannerTxt')->name( 'smartbitesgato.updatebannertitle' );
-  Route::post('/editar-presentaciones', 'SmartbitesController@EditPresentationContent')->name( 'smartbitesgato.updatepresentacion' );
-  Route::post('/editar-beneficios', 'SmartbitesController@EditBenefitsContent')->name( 'smartbitesgato.updatebeneficios' );
-});
+
 
 Route::prefix('titan')->group(function () {
   Route::get('/', 'TitanController@index')->name( 'titan.page' );

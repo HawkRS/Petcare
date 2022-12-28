@@ -586,6 +586,7 @@
   </div>
 </div>
 {{-- Texto Beneficios 4 Cachorro END --}}
+
 {{-- Texto Beneficios 1 Razas Pequeñas --}}
 <div class="modal fade" id="Beneficios1RazasModal" tabindex="-1" aria-labelledby="Beneficios1RazasModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -810,6 +811,7 @@
   </div>
 </div>
 {{-- Texto Beneficios 4 Razas Pequeñas END --}}
+
 {{-- Texto Beneficios 1 Adulto --}}
 <div class="modal fade" id="Beneficios1AdultoModal" tabindex="-1" aria-labelledby="Beneficios1AdultoModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -1034,6 +1036,7 @@
   </div>
 </div>
 {{-- Texto Beneficios 4 Senior END --}}
+
 {{-- Texto Beneficios 1 Senior  --}}
 <div class="modal fade" id="Beneficios1SeniorModal" tabindex="-1" aria-labelledby="Beneficios1SeniorModalLabel" aria-hidden="true">
   <div class="modal-dialog">

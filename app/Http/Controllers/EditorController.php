@@ -187,6 +187,7 @@ class EditorController extends Controller
     $fieldtitle = $section.$request->area.'titulo';
     $field = $section.$request->area;
     //dd($field);
+
     $Beneficiosttl = Content::where([['page', '=', $request->page],['section', '=', $request->section],['field', '=', $fieldtitle]])->first();
     $Beneficios = Content::where([['page', '=', $request->page],['section', '=', $request->section],['field', '=', $field]])->first();
 
@@ -195,7 +196,7 @@ class EditorController extends Controller
     $Beneficios->value = $request->beneficios; $Beneficios->save();
     if(isset($request->imagefile)){
       $Helper = new Helper();
-      $path = $Helper->BeneficiosImageName($field, $_FILES['imagefile']);
+      $path = $Helper->BeneficiosImageName($field, $_FILES['imagefile'],$request->page);
     }
 
 
@@ -204,7 +205,7 @@ class EditorController extends Controller
         return redirect()->route('smartbites.beneficios');
         break;
       case 'smartbitesgato':
-        return redirect()->route('smartbitesgato.page');
+        return redirect()->route('smartbitesgato.beneficios');
         break;
 
       default:
