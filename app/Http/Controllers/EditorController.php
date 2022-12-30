@@ -204,12 +204,12 @@ class EditorController extends Controller
 
     $fieldtitle = $section.$request->area.'titulo';
     $field = $section.$request->area;
-    //dd($field);
+    //dd($fieldtitle);
 
     $Beneficiosttl = Content::where([['page', '=', $request->page],['section', '=', $request->section],['field', '=', $fieldtitle]])->first();
     $Beneficios = Content::where([['page', '=', $request->page],['section', '=', $request->section],['field', '=', $field]])->first();
 
-    //dd($Beneficios);
+    //dd($Beneficiosttl);
     $Beneficiosttl->value = $request->beneficiostitulo; $Beneficiosttl->save();
     $Beneficios->value = $request->beneficios; $Beneficios->save();
     if(isset($request->imagefile)){
@@ -227,6 +227,9 @@ class EditorController extends Controller
         break;
       case 'titan':
         return redirect()->route('titan.beneficios');
+        break;
+      case 'rocko':
+        return redirect()->route('rocko.beneficios');
         break;
 
       default:

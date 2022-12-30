@@ -88,28 +88,28 @@ class Helper extends Model
       if ($ImageCont['size'] != 0 && $ImageCont['error'] == 0){
         switch ($page) {
           case 'smartbitesperro':{
-              if($imgarea == 'izqext'){$path = "img/productos/smart-bites/smart-bites-neuro-active-senior.png"; $thumbpath ="img/productos/smart-bites/thumbs/smart-bites-neuro-active-senior.png"; }
-              if($imgarea == 'izqint'){$path = "img/productos/smart-bites/inicio_smart_perro.png"; $thumbpath ="img/productos/smart-bites/thumbs/inicio_smart_perro.png"; }
-              if($imgarea == 'derint'){$path = "img/productos/smart-bites/smart-bites-neuro-active-adulto.png"; $thumbpath ="img/productos/smart-bites/thumbs/smart-bites-neuro-active-adulto.png"; }
-              if($imgarea == 'derext'){$path = "img/productos/smart-bites/smart-bites-neuro-active-cachorro.png"; $thumbpath ="img/productos/smart-bites/thumbs/smart-bites-neuro-active-cachorro.png"; }
+              if($imgarea == 'izqext'){$path = "img/productos/smart-bites/smart-bites-neuro-active-senior.png";  $webppath = "img/productos/smart-bites/smart-bites-neuro-active-senior.webp";  $thumbpath ="img/productos/smart-bites/thumbs/smart-bites-neuro-active-senior.png"; }
+              if($imgarea == 'izqint'){$path = "img/productos/smart-bites/inicio_smart_perro.png";  $webppath = "img/productos/smart-bites/inicio_smart_perro.webp";  $thumbpath ="img/productos/smart-bites/thumbs/inicio_smart_perro.png"; }
+              if($imgarea == 'derint'){$path = "img/productos/smart-bites/smart-bites-neuro-active-adulto.png";  $webppath = "img/productos/smart-bites/smart-bites-neuro-active-adulto.webp";  $thumbpath ="img/productos/smart-bites/thumbs/smart-bites-neuro-active-adulto.png"; }
+              if($imgarea == 'derext'){$path = "img/productos/smart-bites/smart-bites-neuro-active-cachorro.png";  $webppath = "img/productos/smart-bites/smart-bites-neuro-active-cachorro.webp";  $thumbpath ="img/productos/smart-bites/thumbs/smart-bites-neuro-active-cachorro.png"; }
           }
             break;
           case 'smartbitesgato':{
-              if($imgarea == 'izqext'){$path = "img/productos/smart-bites/gato/smart-bites-neuro-active-gato-adulto.png"; $thumbpath ="img/productos/smart-bites/gato/thumbs/smart-bites-neuro-active-gato-adulto.png"; }
-              if($imgarea == 'derext'){$path = "img/productos/smart-bites/gato/gato_beneficios.png"; $thumbpath ="img/productos/smart-bites/gato/thumbs/gato_beneficios.png"; }
+              if($imgarea == 'izqext'){$path = "img/productos/smart-bites/gato/smart-bites-neuro-active-gato-adulto.png"; $webppath = "img/productos/smart-bites/gato/smart-bites-neuro-active-gato-adulto.webp"; $thumbpath ="img/productos/smart-bites/gato/thumbs/smart-bites-neuro-active-gato-adulto.png"; }
+              if($imgarea == 'derext'){$path = "img/productos/smart-bites/gato/gato_beneficios.png"; $webppath = "img/productos/smart-bites/gato/gato_beneficios.webp"; $thumbpath ="img/productos/smart-bites/gato/thumbs/gato_beneficios.png"; }
           }
             break;
           case 'titan':{
-              if($imgarea == 'izq'){$path = "img/productos/titan/titan-perro.png"; $thumbpath ="img/productos/titan/thumbs/titan-perro.png"; }
-              if($imgarea == 'centro'){$path = "img/productos/titan/perro_gato.png"; $thumbpath ="img/productos/titan/thumbs/perro_gato.png"; }
-              if($imgarea == 'der'){$path = "img/productos/titan/titan-gato.png"; $thumbpath ="img/productos/titan/thumbs/titan-gato.png"; }
+              if($imgarea == 'izq'){ $path = "img/productos/titan/titan-perro.png";$webppath = "img/productos/titan/titan-perro.webp"; $thumbpath ="img/productos/titan/thumbs/titan-perro.png"; }
+              if($imgarea == 'centro'){ $path = "img/productos/titan/perro_gato.png";$webppath = "img/productos/titan/perro_gato.webp"; $thumbpath ="img/productos/titan/thumbs/perro_gato.png"; }
+              if($imgarea == 'der'){ $path = "img/productos/titan/titan-gato.png";$webppath = "img/productos/titan/titan-gato.webp"; $thumbpath ="img/productos/titan/thumbs/titan-gato.png"; }
           }
             break;
             case 'rocko':{
-              if($imgarea == 'izqext'){$path = "img/productos/rocko/perro_pinto_degra.png"; $thumbpath ="img/productos/rocko/thumbs/perro_pinto_degra.png"; }
-              if($imgarea == 'izqint'){$path = "img/productos/rocko/rocko-plus-complete.png"; $thumbpath ="img/productos/rocko/thumbs/rocko-plus-complete.png"; }
-              if($imgarea == 'derint'){$path = "img/productos/rocko/render_bolsa_adulto_RP.png"; $thumbpath ="img/productos/rocko/thumbs/render_bolsa_adulto_RP.png"; }
-              if($imgarea == 'derext'){$path = "img/productos/rocko/perro_cafe_degra.png"; $thumbpath ="img/productos/rocko/thumbs/perro_cafe_degra.png"; }
+              if($imgarea == 'izqext'){ $path = "img/productos/rocko/perro_pinto_degra.png";  $webppath = "img/productos/rocko/perro_pinto_degra.webp"; $thumbpath ="img/productos/rocko/thumbs/perro_pinto_degra.png"; }
+              if($imgarea == 'izqint'){ $path = "img/productos/rocko/rocko-plus-complete.png";  $webppath = "img/productos/rocko/rocko-plus-complete.webp"; $thumbpath ="img/productos/rocko/thumbs/rocko-plus-complete.png"; }
+              if($imgarea == 'derint'){ $path = "img/productos/rocko/render_bolsa_adulto_RP.png";  $webppath = "img/productos/rocko/render_bolsa_adulto_RP.webp"; $thumbpath ="img/productos/rocko/thumbs/render_bolsa_adulto_RP.png"; }
+              if($imgarea == 'derext'){ $path = "img/productos/rocko/perro_cafe_degra.png";  $webppath = "img/productos/rocko/perro_cafe_degra.webp"; $thumbpath ="img/productos/rocko/thumbs/perro_cafe_degra.png"; }
           }
             break;
 
@@ -120,9 +120,11 @@ class Helper extends Model
 
         $intervention = new ImageManager(array('driver' => 'gd'));
         $img = $intervention->make($ImageCont['tmp_name']);
+        $imgwebp = $intervention->make($ImageCont['tmp_name'])->encode('webp', 90);
         $thumbnail = $intervention->make($ImageCont['tmp_name']);
         $thumbnail->fit(300, 300);
         $img->save($path);
+        $imgwebp->save($webppath);
         $thumbnail->save($thumbpath);
       }
     }
@@ -132,20 +134,20 @@ class Helper extends Model
 
       switch ($position) {
         case 'smartbites':
-          if($area == 'imgizq'){$path = "img/home/productos/smart_bites_neuro_active_adulto.png"; $thumbpath ="img/home/productos/thumbs/smart_bites_neuro_active_adulto.png"; }
-          if($area == 'imgder'){$path = "img/home/productos/perro-smart-bites.png"; $thumbpath ="img/home/productos/thumbs/perro-smart-bites.png"; }
-          if($area == 'imgmobil'){$path = "img/home/productos/composite_smartbites.jpg"; $thumbpath ="img/home/productos/thumbs/composite_smartbites.jpg"; }
+          if($area == 'imgizq'){ $path = "img/home/productos/smart_bites_neuro_active_adulto.png"; $webppath = "img/home/productos/smart_bites_neuro_active_adulto.webp"; $thumbpath ="img/home/productos/thumbs/smart_bites_neuro_active_adulto.png"; }
+          if($area == 'imgder'){ $path = "img/home/productos/perro-smart-bites.png"; $webppath = "img/home/productos/perro-smart-bites.webp"; $thumbpath ="img/home/productos/thumbs/perro-smart-bites.png"; }
+          if($area == 'imgmobil'){ $path = "img/home/productos/composite_smartbites.jpg"; $webppath = "img/home/productos/composite_smartbites.webp"; $thumbpath ="img/home/productos/thumbs/composite_smartbites.jpg"; }
           break;
         case 'titan':
-          if($area == 'imgtitanizq'){$path = "img/home/productos/titan-perro.png"; $thumbpath ="img/home/productos/thumbs/titan-perro.png"; }
-          if($area == 'imgtitancentro'){$path = "img/home/productos/perro-gato.png"; $thumbpath ="img/home/productos/thumbs/perro-gato.png"; }
-          if($area == 'imgtitander'){$path = "img/home/productos/titan-gato.png"; $thumbpath ="img/home/productos/thumbs/titan-gato.png"; }
+          if($area == 'imgtitanizq'){ $path = "img/home/productos/titan-perro.png"; $webppath = "img/home/productos/titan-perro.webp"; $thumbpath ="img/home/productos/thumbs/titan-perro.png"; }
+          if($area == 'imgtitancentro'){ $path = "img/home/productos/perro-gato.png"; $webppath = "img/home/productos/perro-gato.webp"; $thumbpath ="img/home/productos/thumbs/perro-gato.png"; }
+          if($area == 'imgtitander'){ $path = "img/home/productos/titan-gato.png"; $webppath = "img/home/productos/titan-gato.webp"; $thumbpath ="img/home/productos/thumbs/titan-gato.png"; }
           break;
         case 'rocko':
-          if($area == 'imgrockoIzqExt'){$path = "img/productos/perro-rocko.png"; $thumbpath ="img/productos/thumbs/perro-rocko.png"; }
-          if($area == 'imgrockoIzqInt'){$path = "img/productos/rocko-plus-complete.png"; $thumbpath ="img/productos/thumbs/rocko-plus-complete.png"; }
-          if($area == 'imgrockoDerInt'){$path = "img/productos/rocko-perro.png"; $thumbpath ="img/productos/thumbs/rocko-perro.png"; }
-          if($area == 'imgrockoDerExt'){$path = "img/productos/perro-rocko-cafe.png"; $thumbpath ="img/productos/thumbs/perro-rocko-cafe.png"; }
+          if($area == 'imgrockoIzqExt'){ $path = "img/productos/perro-rocko.png"; $webppath = "img/productos/perro-rocko.webp"; $thumbpath ="img/productos/thumbs/perro-rocko.png"; }
+          if($area == 'imgrockoIzqInt'){ $path = "img/productos/rocko-plus-complete.png"; $webppath = "img/productos/rocko-plus-complete.webp"; $thumbpath ="img/productos/thumbs/rocko-plus-complete.png"; }
+          if($area == 'imgrockoDerInt'){ $path = "img/productos/rocko-perro.png"; $webppath = "img/productos/rocko-perro.webp"; $thumbpath ="img/productos/thumbs/rocko-perro.png"; }
+          if($area == 'imgrockoDerExt'){ $path = "img/productos/perro-rocko-cafe.png"; $webppath = "img/productos/perro-rocko-cafe.webp"; $thumbpath ="img/productos/thumbs/perro-rocko-cafe.png"; }
           break;
 
         default:
@@ -155,9 +157,11 @@ class Helper extends Model
 
       $intervention = new ImageManager(array('driver' => 'gd'));
       $img = $intervention->make($ImageCont['tmp_name']);
+      $imgwebp = $intervention->make($ImageCont['tmp_name'])->encode('webp', 90);
       $thumbnail = $intervention->make($ImageCont['tmp_name']);
       $thumbnail->fit(300, 300);
       $img->save($path);
+      $imgwebp->save($webppath);
       $thumbnail->save($thumbpath);
     }
 
@@ -166,20 +170,20 @@ class Helper extends Model
       //dd($section);
       switch ($position) {
         case 'smartbitesperro':
-          if($section == 'cachorro'){$path = "img/productos/smart-bites/render_bolsa_cachorro_SB.png"; $thumbpath ="img/productos/smart-bites/thumbs/render_bolsa_cachorro_SB.png"; }
-          if($section == 'razapequeña'){$path = "img/productos/smart-bites/smart-bites-neuro-active-adulto-raza-pequena.png"; $thumbpath ="img/productos/smart-bites/thumbs/smart-bites-neuro-active-adulto-raza-pequena.png"; }
-          if($section == 'adulto'){$path = "img/productos/smart-bites/render_bolsa_adulto_SB.png"; $thumbpath ="img/productos/smart-bites/thumbs/render_bolsa_adulto_SB.png"; }
-          if($section == 'senior'){$path = "img/productos/smart-bites/render_bolsa_senior_SB.png"; $thumbpath ="img/productos/smart-bites/thumbs/render_bolsa_senior_SB.png"; }
+          if($section == 'cachorro'){$path = "img/productos/smart-bites/render_bolsa_cachorro_SB.png"; $webppath = "img/productos/smart-bites/render_bolsa_cachorro_SB.webp"; $thumbpath ="img/productos/smart-bites/thumbs/render_bolsa_cachorro_SB.png"; }
+          if($section == 'razapequeña'){$path = "img/productos/smart-bites/smart-bites-neuro-active-adulto-raza-pequena.png"; $webppath = "img/productos/smart-bites/smart-bites-neuro-active-adulto-raza-pequena.webp"; $thumbpath ="img/productos/smart-bites/thumbs/smart-bites-neuro-active-adulto-raza-pequena.png"; }
+          if($section == 'adulto'){$path = "img/productos/smart-bites/render_bolsa_adulto_SB.png"; $webppath = "img/productos/smart-bites/render_bolsa_adulto_SB.webp"; $thumbpath ="img/productos/smart-bites/thumbs/render_bolsa_adulto_SB.png"; }
+          if($section == 'senior'){$path = "img/productos/smart-bites/render_bolsa_senior_SB.png"; $webppath = "img/productos/smart-bites/render_bolsa_senior_SB.webp"; $thumbpath ="img/productos/smart-bites/thumbs/render_bolsa_senior_SB.png"; }
           break;
         case 'titan':
-          if($section == 'perroizq'){$path = "img/productos/titan/perro/render_bolsa_adulto_TT_perro.png"; $thumbpath ="img/productos/titan/perro/thumbs/render_bolsa_adulto_TT_perro.png"; }
-          if($section == 'perroder'){$path = "img/productos/titan/perro/perro.png"; $thumbpath ="img/productos/titan/perro/thumbs/perro.png"; }
-          if($section == 'gatoizq'){$path = "img/productos/titan/gato/cat_prod.png"; $thumbpath ="img/productos/titan/gato/thumbs/cat_prod.png"; }
+          if($section == 'perroizq'){$path = "img/productos/titan/perro/render_bolsa_adulto_TT_perro.png"; $webppath = "img/productos/titan/perro/render_bolsa_adulto_TT_perro.webp"; $thumbpath ="img/productos/titan/perro/thumbs/render_bolsa_adulto_TT_perro.png"; }
+          if($section == 'perroder'){$path = "img/productos/titan/perro/perro.png"; $webppath = "img/productos/titan/perro/perro.webp"; $thumbpath ="img/productos/titan/perro/thumbs/perro.png"; }
+          if($section == 'gatoizq'){$path = "img/productos/titan/gato/cat_prod.png"; $webppath = "img/productos/titan/gato/cat_prod.webp"; $thumbpath ="img/productos/titan/gato/thumbs/cat_prod.png"; }
           break;
         case 'rocko':
-          if($section == 'perroizq'){$path = "img/productos/titan/perro/render_bolsa_adulto_TT_perro.png"; $thumbpath ="img/productos/titan/perro/thumbs/render_bolsa_adulto_TT_perro.png"; }
-          if($section == 'perroder'){$path = "img/productos/titan/perro/perro.png"; $thumbpath ="img/productos/titan/perro/thumbs/perro.png"; }
-          if($section == 'gatoizq'){$path = "img/productos/titan/gato/cat_prod.png"; $thumbpath ="img/productos/titan/gato/thumbs/cat_prod.png"; }
+          if($section == 'perroizq'){$path = "img/productos/titan/perro/render_bolsa_adulto_TT_perro.png"; $webppath = "img/productos/titan/perro/render_bolsa_adulto_TT_perro.webp"; $thumbpath ="img/productos/titan/perro/thumbs/render_bolsa_adulto_TT_perro.png"; }
+          if($section == 'perroder'){$path = "img/productos/titan/perro/perro.png"; $webppath = "img/productos/titan/perro/perro.webp"; $thumbpath ="img/productos/titan/perro/thumbs/perro.png"; }
+          if($section == 'gatoizq'){$path = "img/productos/titan/gato/cat_prod.png"; $webppath = "img/productos/titan/gato/cat_prod.webp"; $thumbpath ="img/productos/titan/gato/thumbs/cat_prod.png"; }
           break;
 
 
@@ -189,15 +193,17 @@ class Helper extends Model
       }
       $intervention = new ImageManager(array('driver' => 'gd'));
       $img = $intervention->make($ImageCont['tmp_name']);
+      $imgwebp = $intervention->make($ImageCont['tmp_name'])->encode('webp', 90);
       $thumbnail = $intervention->make($ImageCont['tmp_name']);
       $thumbnail->fit(300, 300);
       $img->save($path);
+      $imgwebp->save($webppath);
       $thumbnail->save($thumbpath);
     }
 
     public function BeneficiosImageName($benefit, $ImageCont,$page)
     {
-      //dd($benefit);
+      //dd($page);
       if ($page== 'smartbitesperro') {        // code...
         switch ($benefit) {
           case 'cachorrotopizq': {    $ImagePath = 'img/productos/smart-bites/iconos/cachorro/cachorro_sistemainmune.svg'; break; }
@@ -250,10 +256,48 @@ class Helper extends Model
             break;
         }
       }
+      elseif ($page== 'rocko') {
+        switch ($benefit) {
+          case 'completetopizq': {     $ImagePath = 'img/productos/rocko/complete/iconos/icon_pollo.png'; $rockovar=1; break; }
+          case 'completetopder': {     $ImagePath = 'img/productos/rocko/complete/iconos/claim_perro_piel_sana.svg'; $rockovar=1; break; }
+          case 'completebottomizq': {  $ImagePath = 'img/productos/rocko/complete/iconos/icon_vitaminas.png'; $rockovar=1; break; }
+          case 'completebottomder': {  $ImagePath = 'img/productos/rocko/complete/iconos/delicioso_sabor_icon.svg'; $rockovar=0; break; }
+          case 'podertopizq': {        $ImagePath = 'img/productos/rocko/plus/iconos/icon_pollo.png'; $rockovar=1; break; }
+          case 'podertopder': {        $ImagePath = 'img/productos/rocko/plus/iconos/icon_prebioticos.png'; $rockovar=1; break; }
+          case 'poderbottomizq': {     $ImagePath = 'img/productos/rocko/plus/iconos/icon_vitaminas.png'; $rockovar=1; break; }
+          case 'poderbottomder': {     $ImagePath = 'img/productos/rocko/plus/iconos/delicioso_sabor_icon.svg'; $rockovar=0; break; }
+
+          default:
+            // code...
+            break;
+        }
+      }
       //dd($ImagePath);
-      $file_temp = $ImageCont['tmp_name'];
-      $svg = file_get_contents($file_temp);
-      file_put_contents(public_path($ImagePath),$svg);
+      if (isset($rockovar)) {
+        if ($rockovar == 1) {
+          $intervention = new ImageManager(array('driver' => 'gd'));
+          $img = $intervention->make($ImageCont['tmp_name'])->encode('png', 90);
+          //$imgwebp = $intervention->make($ImageCont['tmp_name'])->encode('webp', 90);
+          //$thumbnail = $intervention->make($ImageCont['tmp_name']);
+          //$thumbnail->fit(300, 300);
+          $img->save($ImagePath);
+          //$imgwebp->save($webppath);
+          //$thumbnail->save($thumbpath);
+        }
+        else {
+          //dd('svg');
+          $file_temp = $ImageCont['tmp_name'];
+          $svg = file_get_contents($file_temp);
+          file_put_contents(public_path($ImagePath),$svg);
+        }
+      }
+      else {
+        $file_temp = $ImageCont['tmp_name'];
+        $svg = file_get_contents($file_temp);
+        file_put_contents(public_path($ImagePath),$svg);
+      }
+
+
     }
 
 }
