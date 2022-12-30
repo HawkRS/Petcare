@@ -268,23 +268,23 @@
             </div>
           </div>
           <div class="mb-3">
-            <label for="formFile" class="form-label">Banner para pantallas escritorio</label>
+            <label for="formFile" class="form-label">Banner para pantallas escritorio (1920px x 1134px)</label>
             <input name="banner_desk" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="formFile" class="form-label">Banner para resolución 1200</label>
+            <label for="formFile" class="form-label">Banner para resolución 1200 (1571px x 900px)</label>
             <input name="banner_1200" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="formFile" class="form-label">Banner para resolución 992</label>
+            <label for="formFile" class="form-label">Banner para resolución 992 (1355px x 800px)</label>
             <input name="banner_992" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="formFile" class="form-label">Banner para resolución 768</label>
+            <label for="formFile" class="form-label">Banner para resolución 768 (1186px x 700px)</label>
             <input name="banner_768" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="formFile" class="form-label">Banner para resolución 576</label>
+            <label for="formFile" class="form-label">Banner para resolución 576 (847px x 500px)</label>
             <input name="banner_576" class="form-control" type="file" id="formFile">
           </div>
         </div>
@@ -338,23 +338,23 @@
             </div>
           </div>
           <div class="mb-3">
-            <label for="formFile" class="form-label">Banner para pantallas escritorio</label>
+            <label for="formFile" class="form-label">Banner para pantallas escritorio (1920px x 1134px)</label>
             <input name="banner_desk" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="formFile" class="form-label">Banner para resolución 1200</label>
+            <label for="formFile" class="form-label">Banner para resolución 1200 (1571px x 900px)</label>
             <input name="banner_1200" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="formFile" class="form-label">Banner para resolución 992</label>
+            <label for="formFile" class="form-label">Banner para resolución 992 (1355px x 800px)</label>
             <input name="banner_992" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="formFile" class="form-label">Banner para resolución 768</label>
+            <label for="formFile" class="form-label">Banner para resolución 768 (1186px x 700px)</label>
             <input name="banner_768" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="formFile" class="form-label">Banner para resolución 576</label>
+            <label for="formFile" class="form-label">Banner para resolución 576 (847px x 500px)</label>
             <input name="banner_576" class="form-control" type="file" id="formFile">
           </div>
         </div>
@@ -408,23 +408,23 @@
             </div>
           </div>
           <div class="mb-3">
-            <label for="formFile" class="form-label">Banner para pantallas escritorio</label>
+            <label for="formFile" class="form-label">Banner para pantallas escritorio (1920px x 1134px)</label>
             <input name="banner_desk" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="formFile" class="form-label">Banner para resolución 1200</label>
+            <label for="formFile" class="form-label">Banner para resolución 1200 (1571px x 900px)</label>
             <input name="banner_1200" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="formFile" class="form-label">Banner para resolución 992</label>
+            <label for="formFile" class="form-label">Banner para resolución 992 (1355px x 800px)</label>
             <input name="banner_992" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="formFile" class="form-label">Banner para resolución 768</label>
+            <label for="formFile" class="form-label">Banner para resolución 768 (1186px x 700px)</label>
             <input name="banner_768" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="formFile" class="form-label">Banner para resolución 576</label>
+            <label for="formFile" class="form-label">Banner para resolución 576 (847px x 500px)</label>
             <input name="banner_576" class="form-control" type="file" id="formFile">
           </div>
         </div>
@@ -466,15 +466,15 @@
             </div>
           </div>
           <div class="mb-3">
-            <label for="formFile" class="form-label">Imagen para escritorio Izq</label>
+            <label for="formFile" class="form-label">Imagen para escritorio Izq (999px x 999px)</label>
             <input class="form-control" name="imgizq" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="formFile" class="form-label">Imagen para escritorio Der</label>
+            <label for="formFile" class="form-label">Imagen para escritorio De (460px x 460px)r</label>
             <input class="form-control" name="imgder" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="formFile" class="form-label">Imagen para dispositivos mobiles</label>
+            <label for="formFile" class="form-label">Imagen para dispositivos mobiles (339px x 420px)</label>
             <input class="form-control" name="imgmobil" type="file" id="formFile">
           </div>
         </div>
@@ -514,19 +514,19 @@
             </div>
           </div>
           <div class="mb-3">
-            <label for="formFile" class="form-label">Imagen titan perro Izq</label>
+            <label for="formFile" class="form-label">Imagen titan perro Izq (258px x 450px)</label>
             <input class="form-control" name="imgtitanperroizq" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="formFile" class="form-label">Imagen titan perro Der</label>
+            <label for="formFile" class="form-label">Imagen titan perro Der (235px x 330px)</label>
             <input class="form-control" name="imgtitanperroder" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="formFile" class="form-label">Imagen titan gato Izq </label>
+            <label for="formFile" class="form-label">Imagen titan gato Izq (450px x 300px)</label>
             <input class="form-control" name="imgtitangatoizq" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="formFile" class="form-label">Imagen titan gato Der </label>
+            <label for="formFile" class="form-label">Imagen titan gato Der (252px x 450px)</label>
             <input class="form-control" name="imgtitangatoder" type="file" id="formFile">
           </div>
         </div>
@@ -566,19 +566,19 @@
             </div>
           </div>
           <div class="mb-3">
-            <label for="formFile" class="form-label">Imagen rocko izq externa</label>
+            <label for="formFile" class="form-label">Imagen rocko izq externa (208px x 300px)</label>
             <input class="form-control" name="imgrockoIzqExt" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="formFile" class="form-label">Imagen rocko izq interna</label>
+            <label for="formFile" class="form-label">Imagen rocko izq interna (277px x 480px)</label>
             <input class="form-control" name="imgrockoIzqInt" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="formFile" class="form-label">Imagen rocko der interna</label>
+            <label for="formFile" class="form-label">Imagen rocko der interna (348px x 485px)</label>
             <input class="form-control" name="imgrockoDerInt" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="formFile" class="form-label">Imagen rocko der externa</label>
+            <label for="formFile" class="form-label">Imagen rocko der externa (232px x 300px)</label>
             <input class="form-control" name="imgrockoDerExt" type="file" id="formFile">
           </div>
         </div>
