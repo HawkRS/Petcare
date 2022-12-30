@@ -84,7 +84,7 @@ class EditorController extends Controller
      ], $messages);
      //dd($request->all());
      switch ($request->page) {
-       case 'smartbites':{
+       case 'smartbitesperro':{
          $Parrafo1 = Content::where('page', 'smartbitesperro')->where('section', 'banner')->where('field', 'leyend1')->first();
          $Parrafo2 = Content::where('page', 'smartbitesperro')->where('section', 'banner')->where('field', 'leyend2')->first();
          $Parrafo1->value = $request->parrafo1;

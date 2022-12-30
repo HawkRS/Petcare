@@ -298,7 +298,7 @@ class LandingController extends Controller
     $thumbnail = $intervention->make($ImageCont['tmp_name']);
     $thumbnail->fit(300, 300);
     $img->save($path);
-    $imgwebp->save($path);
+    $imgwebp->save($webppath);
     $thumbnail->save($thumbpath);
   }
 

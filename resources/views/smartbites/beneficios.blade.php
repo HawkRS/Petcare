@@ -1045,7 +1045,7 @@
         <h1 class="modal-title fs-5" id="Beneficios1SeniorModalLabel">Beneficios Senior</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form class="needs-validation" action="{{ route('smartbites.updatebeneficios', ['section' => 'adulto']) }}" method="post" enctype="multipart/form-data"  novalidate>
+      <form class="needs-validation" action="{{ route('smartbites.updatebeneficios', ['section' => 'senior']) }}" method="post" enctype="multipart/form-data"  novalidate>
         @csrf
         <input type="hidden" name="page" value="smartbitesperro">
         <input type="hidden" name="section" value="beneficios">
