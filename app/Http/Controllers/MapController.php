@@ -196,7 +196,7 @@ class MapController extends Controller
     }
     //dd($locations_arr);//json_encode($response, JSON_UNESCAPED_UNICODE);
     // encode array to json and save to file
-    file_put_contents(public_path('data\locations.json'), json_encode($locations_arr, JSON_UNESCAPED_UNICODE));
+    file_put_contents(public_path('/data/locations.json'), json_encode($locations_arr, JSON_UNESCAPED_UNICODE));
   }
 
 
