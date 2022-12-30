@@ -15,11 +15,6 @@
       </div>
     </div>
 
-    <div class="m-2">
-      <hr>
-      <h5 class="text-uppercase fntB">Adulto</h5>
-    </div>
-
     {{-- ADULTO --}}
     <div class="m-2">
       <hr>

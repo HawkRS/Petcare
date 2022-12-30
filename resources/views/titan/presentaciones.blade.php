@@ -19,7 +19,9 @@
 
       <div class="col-12 col-md-4" height="100">
         <div class="card ">
-          <h5 class="p-2">Perro</h5>
+          <div class="card-header card-primary">
+            <h5 class="text-light">Perro</h5>
+          </div>
           <div class="card-body">
             <h6 class="card-title mb-4">Imagen</h6>
             <div class="row">
@@ -36,8 +38,8 @@
             <h4>Presentaciones</h4>
             <p class="text-truncate">{{ $Contenidos[1]->value }}</p>
           </div>
-          <div class="card-footer  d-grid gap-2">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#PresentacionPerroModal">
+          <div class="card-footer card-primary d-grid gap-2">
+            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#PresentacionPerroModal">
               Editar
             </button>
           </div>
@@ -46,7 +48,9 @@
 
       <div class="col-12 col-md-4" height="100">
         <div class="card ">
-          <h5 class="p-2">Gato</h5>
+          <div class="card-header card-primary">
+            <h5 class="text-light">Gato</h5>
+          </div>
           <div class="card-body">
             <h6 class="card-title mb-4">Imagen</h6>
             <img src="{{ asset('img/productos/titan/gato/thumbs/cat_prod.png') }}" class="img-thumbnail mx-auto d-block pres-img" alt="">
@@ -56,8 +60,8 @@
             <h4>Presentaciones</h4>
             <p class="text-truncate">{{ $Contenidos[3]->value }}</p>
           </div>
-          <div class="card-footer  d-grid gap-2">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#PresentacionGatoModal">
+          <div class="card-footer card-primary d-grid gap-2">
+            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#PresentacionGatoModal">
               Editar
             </button>
           </div>

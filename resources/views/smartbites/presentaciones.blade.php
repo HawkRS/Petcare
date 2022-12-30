@@ -19,7 +19,9 @@
 
       <div class="col-12 col-md-3" height="100">
         <div class="card ">
-          <h5 class="p-2">Cachorro</h5>
+          <div class="card-header card-primary">
+            <h5 class="text-light">Cachorro</h5>
+          </div>
           <div class="card-body">
             <h6 class="card-title mb-4">Imagen</h6>
             <img src="{{ asset('img/productos/smart-bites/thumbs/render_bolsa_cachorro_SB.png') }}" class="img-thumbnail mx-auto d-block pres-img" alt="">
@@ -29,8 +31,8 @@
             <h4>Presentaciones</h4>
             <p class="text-truncate">{{ $Contenidos[1]->value }}</p>
           </div>
-          <div class="card-footer  d-grid gap-2">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#PresentacionCachorroModal">
+          <div class="card-footer card-primary d-grid gap-2">
+            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#PresentacionCachorroModal">
               Editar
             </button>
           </div>
@@ -39,7 +41,9 @@
 
       <div class="col-12 col-md-3">
         <div class="card " >
-          <h5 class="p-2">Adulto raza pequeña</h5>
+          <div class="card-header card-primary">
+            <h5 class="text-light">Adulto raza pequeña</h5>
+          </div>
           <div class="card-body">
             <h6 class="card-title mb-4">Imagen</h6>
             <img src="{{ asset('img/productos/smart-bites/thumbs/smart-bites-neuro-active-adulto-raza-pequena.png') }}" class="img-thumbnail mx-auto d-block pres-img" alt="">
@@ -49,8 +53,8 @@
             <h4>Presentaciones</h4>
             <p class="text-truncate">{{ $Contenidos[3]->value }}</p>
           </div>
-          <div class="card-footer  d-grid gap-2">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#PresentacionRazaModal">
+          <div class="card-footer card-primary d-grid gap-2">
+            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#PresentacionRazaModal">
               Editar
             </button>
           </div>
@@ -59,7 +63,9 @@
 
       <div class="col-12 col-md-3">
         <div class="card " >
-          <h5 class="p-2">Adulto</h5>
+          <div class="card-header card-primary">
+            <h5 class="text-light">Adulto</h5>
+          </div>
           <div class="card-body">
             <h6 class="card-title mb-4">Imagen</h6>
             <img src="{{ asset('img/productos/smart-bites/thumbs/render_bolsa_adulto_SB.png') }}" class="img-thumbnail mx-auto d-block pres-img" alt="">
@@ -69,8 +75,8 @@
             <h4>Presentaciones</h4>
             <p class="text-truncate">{{ $Contenidos[5]->value }}</p>
           </div>
-          <div class="card-footer  d-grid gap-2">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#PresentacionAdultoModal">
+          <div class="card-footer card-primary d-grid gap-2">
+            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#PresentacionAdultoModal">
               Editar
             </button>
           </div>
@@ -79,7 +85,9 @@
 
       <div class="col-12 col-md-3">
         <div class="card " >
-          <h5 class="p-2">Senior</h5>
+          <div class="card-header card-primary">
+            <h5 class="text-light">Senior</h5>
+          </div>
           <div class="card-body">
             <h6 class="card-title mb-4">Imagen</h6>
             <img src="{{ asset('img/productos/smart-bites/thumbs/render_bolsa_senior_SB.png') }}" class="img-thumbnail mx-auto d-block pres-img" alt="">
@@ -89,8 +97,8 @@
             <h4>Presentaciones</h4>
             <p class="text-truncate">{{ $Contenidos[7]->value }}</p>
           </div>
-          <div class="card-footer  d-grid gap-2">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#PresentacionSeniorModal">
+          <div class="card-footer card-primary d-grid gap-2">
+            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#PresentacionSeniorModal">
               Editar
             </button>
           </div>

@@ -21,10 +21,12 @@
         <div class="row">
             <div class="col-12 col-md-4">
               <div class="card">
+                <div class="card-header card-primary">
+                  <h5 class="text-light">Banner 1</h5>
+                </div>
                 <div class="card-body">
-                  <h4>Banner 1</h4>
                     <h6 class="card-title mb-4">Imagen</h6>
-                    <img src="{{ asset('img/landing/thumbs/banner-home-1-desktop.jpg') }}" class="img-thumbnail mx-auto d-block" alt="">
+                    <img src="{{ asset('img/sliders/thumbs/banner-home-1-desktop.jpg') }}" class="img-thumbnail mx-auto d-block" alt="">
                     <hr>
                     <h4>Titulo</h4>
                     <h6>{{ $Contenidos[0]->value }}</h6>
@@ -32,8 +34,8 @@
                     <h4>Descripción</h4>
                     <p class="text-truncate">{{ $Contenidos[1]->value }}</p>
                 </div>
-                <div class="card-footer d-grid gap-2">
-                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Slider1Modal">
+                <div class="card-footer card-primary d-grid gap-2">
+                  <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#Slider1Modal">
                     Editar
                   </button>
                 </div>
@@ -41,10 +43,12 @@
           </div>
             <div class="col-12 col-md-4">
               <div class="card">
+                <div class="card-header card-primary">
+                  <h5 class="text-light">Banner 2</h5>
+                </div>
                 <div class="card-body">
-                  <h4>Banner 2</h4>
                     <h6 class="card-title mb-4">Imagen</h6>
-                    <img src="{{ asset('img/landing/thumbs/banner-home-2-desktop.jpg') }}" class="img-thumbnail mx-auto d-block" alt="">
+                    <img src="{{ asset('img/sliders/thumbs/banner-home-2-desktop.jpg') }}" class="img-thumbnail mx-auto d-block" alt="">
                     <hr>
                     <h4>Titulo</h4>
                     <h6>{{ $Contenidos[2]->value }}</h6>
@@ -52,8 +56,8 @@
                     <h4>Descripción</h4>
                     <p class="text-truncate">{{ $Contenidos[3]->value }}</p>
                 </div>
-                <div class="card-footer d-grid gap-2">
-                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Slider2Modal">
+                <div class="card-footer card-primary d-grid gap-2">
+                  <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#Slider2Modal">
                     Editar
                   </button>
                 </div>
@@ -61,10 +65,12 @@
           </div>
             <div class="col-12 col-md-4">
               <div class="card">
+                <div class="card-header card-primary">
+                  <h5 class="text-light">Banner 3</h5>
+                </div>
                 <div class="card-body">
-                  <h4>Banner 3</h4>
                     <h6 class="card-title mb-4">Imagen</h6>
-                    <img src="{{ asset('img/landing/thumbs/banner-home-3-desktop.jpg') }}" class="img-thumbnail mx-auto d-block" alt="">
+                    <img src="{{ asset('img/sliders/thumbs/banner-home-3-desktop.jpg') }}" class="img-thumbnail mx-auto d-block" alt="">
                     <hr>
                     <h4>Titulo</h4>
                     <h6>{{ $Contenidos[4]->value }}</h6>
@@ -72,8 +78,8 @@
                     <h4>Descripción</h4>
                     <p class="text-truncate">{{ $Contenidos[5]->value }}</p>
                 </div>
-                <div class="card-footer d-grid gap-2">
-                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Slider3Modal">
+                <div class="card-footer card-primary d-grid gap-2">
+                  <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#Slider3Modal">
                     Editar
                   </button>
                 </div>
@@ -84,8 +90,10 @@
         <div class="row">
           <div class="col-12 col-md-4">
             <div class="card">
+              <div class="card-header card-primary">
+                <h5 class="text-light">Productos (Smart Bites)</h5>
+              </div>
               <div class="card-body">
-                <h4>Productos (Smart Bites)</h4>
                   <h6 class="card-title mb-4">Contenido</h6>
                   <?php $p = "![\r\n]+!";
                   $textSmartbites = preg_split($p, $Contenidos[6]->value, 4);
@@ -116,8 +124,8 @@
                   </div>
 
               </div>
-              <div class="card-footer d-grid gap-2">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ProdSmartModal">
+              <div class="card-footer card-primary d-grid gap-2">
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#ProdSmartModal">
                   Editar
                 </button>
               </div>
@@ -125,8 +133,10 @@
           </div>
           <div class="col-12 col-md-4">
             <div class="card">
+              <div class="card-header card-primary">
+                <h5 class="text-light">Productos (Titan)</h5>
+              </div>
               <div class="card-body">
-                <h4>Productos (Titan)</h4>
                   <h6 class="card-title mb-4">Contenido</h6>
                   <?php $p = "![\r\n]+!";
                   $textTitan = preg_split($p, $Contenidos[7]->value, 4);
@@ -159,8 +169,8 @@
                     </div>
                   </div>
               </div>
-              <div class="card-footer d-grid gap-2">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ProdTitanModal">
+              <div class="card-footer card-primary d-grid gap-2">
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#ProdTitanModal">
                   Editar
                 </button>
               </div>
@@ -168,8 +178,10 @@
           </div>
           <div class="col-12 col-md-4">
             <div class="card">
+              <div class="card-header card-primary">
+                <h5 class="text-light">Productos (Rocko)</h5>
+              </div>
               <div class="card-body">
-                <h4>Productos (Rocko)</h4>
                   <h6 class="card-title mb-4">Contenido</h6>
                   <?php $p = "![\r\n]+!";
                   $textRocko = preg_split($p, $Contenidos[8]->value, 4);
@@ -202,8 +214,8 @@
                     </div>
                   </div>
               </div>
-              <div class="card-footer d-grid gap-2">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ProdRockoModal">
+              <div class="card-footer card-primary d-grid gap-2">
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#ProdRockoModal">
                   Editar
                 </button>
               </div>
