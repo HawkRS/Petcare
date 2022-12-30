@@ -110,6 +110,7 @@ class LandingController extends Controller
   {
     $intervention = new ImageManager(array('driver' => 'gd'));
     $img = $intervention->make($BannerImg['tmp_name']);
+    $webpimg = $intervention->make($BannerImg['tmp_name'])->encode('webp', 90);
     $thumbnail = $intervention->make($BannerImg['tmp_name']);
     $thumbnail->fit(300, 300);
     switch ($BannerName) {
@@ -117,14 +118,17 @@ class LandingController extends Controller
         {
           if($BannerName == 'banner1_desk'){
             $img->save('img/sliders/banner-home-1-desktop.jpg');
+            $webpimg->save('img/sliders/banner-home-1-desktop.webp');
             $thumbnail->save('img/sliders/thumbs/banner-home-1-desktop.jpg');
           }
           elseif ($BannerName == 'banner2_desk'){
             $img->save('img/sliders/banner-home-2-desktop.jpg');
+            $webpimg->save('img/sliders/banner-home-2-desktop.webp');
             $thumbnail->save('img/sliders/thumbs/banner-home-2-desktop.jpg');
           }
           elseif ($BannerName == 'banner3_desk'){
             $img->save('img/sliders/banner-home-3-desktop.jpg');
+            $webpimg->save('img/sliders/banner-home-3-desktop.webp');
             $thumbnail->save('img/sliders/thumbs/banner-home-3-desktop.jpg');
           }
         }
@@ -133,14 +137,17 @@ class LandingController extends Controller
         {
           if($BannerName == 'banner1_1200'){
             $img->save('img/sliders/banner-home-1-1200.jpg');
+            $webpimg->save('img/sliders/banner-home-1-1200.webp');
             $thumbnail->save('img/sliders/thumbs/banner-home-1-1200.jpg');
           }
           elseif ($BannerName == 'banner2_1200'){
             $img->save('img/sliders/banner-home-2-1200.jpg');
+            $webpimg->save('img/sliders/banner-home-2-1200.webp');
             $thumbnail->save('img/sliders/thumbs/banner-home-2-1200.jpg');
           }
           elseif ($BannerName == 'banner3_1200'){
             $img->save('img/sliders/banner-home-3-1200.jpg');
+            $webpimg->save('img/sliders/banner-home-3-1200.webp');
             $thumbnail->save('img/sliders/thumbs/banner-home-3-1200.jpg');
           }
         }
@@ -149,14 +156,17 @@ class LandingController extends Controller
         {
           if($BannerName == 'banner1_992'){
             $img->save('img/sliders/banner-home-1-992.jpg');
+            $webpimg->save('img/sliders/banner-home-1-992.webp');
             $thumbnail->save('img/sliders/thumbs/banner-home-1-992.jpg');
           }
           elseif ($BannerName == 'banner2_992'){
             $img->save('img/sliders/banner-home-2-992.jpg');
+            $webpimg->save('img/sliders/banner-home-2-992.webp');
             $thumbnail->save('img/sliders/thumbs/banner-home-2-992.jpg');
           }
           elseif ($BannerName == 'banner3_992'){
             $img->save('img/sliders/banner-home-3-992.jpg');
+            $webpimg->save('img/sliders/banner-home-3-992.webp');
             $thumbnail->save('img/sliders/thumbs/banner-home-3-992.jpg');
           }
         }
@@ -165,14 +175,17 @@ class LandingController extends Controller
         {
           if($BannerName == 'banner1_768'){
             $img->save('img/sliders/banner-home-1-768.jpg');
+            $webpimg->save('img/sliders/banner-home-1-768.webp');
             $thumbnail->save('img/sliders/thumbs/banner-home-1-768.jpg');
           }
           elseif ($BannerName == 'banner2_768'){
             $img->save('img/sliders/banner-home-2-768.jpg');
+            $webpimg->save('img/sliders/banner-home-2-768.webp');
             $thumbnail->save('img/sliders/thumbs/banner-home-2-768.jpg');
           }
           elseif ($BannerName == 'banner3_768'){
             $img->save('img/sliders/banner-home-3-768.jpg');
+            $webpimg->save('img/sliders/banner-home-3-768.webp');
             $thumbnail->save('img/sliders/thumbs/banner-home-3-768.jpg');
           }
         }
@@ -181,14 +194,17 @@ class LandingController extends Controller
         {
           if($BannerName == 'banner1_576'){
             $img->save('img/sliders/banner-home-1-576.jpg');
+            $webpimg->save('img/sliders/banner-home-1-576.webp');
             $thumbnail->save('img/sliders/thumbs/banner-home-1-576.jpg');
           }
           elseif ($BannerName == 'banner2_576'){
             $img->save('img/sliders/banner-home-2-576.jpg');
+            $webpimg->save('img/sliders/banner-home-2-576.webp');
             $thumbnail->save('img/sliders/thumbs/banner-home-2-576.jpg');
           }
           elseif ($BannerName == 'banner3_576'){
             $img->save('img/sliders/banner-home-3-576.jpg');
+            $webpimg->save('img/sliders/banner-home-3-576.webp');
             $thumbnail->save('img/sliders/thumbs/banner-home-3-576.jpg');
           }
         }
@@ -254,21 +270,21 @@ class LandingController extends Controller
     //dd($area);
     switch ($position) {
       case 'smartbites':
-        if($area == 'imgizq'){$path = "img/home/productos/smart_bites_neuro_active_adulto.png"; $thumbpath ="img/home/productos/thumbs/smart_bites_neuro_active_adulto.png"; }
-        if($area == 'imgder'){$path = "img/home/productos/perro-smart-bites.png"; $thumbpath ="img/home/productos/thumbs/perro-smart-bites.png"; }
-        if($area == 'imgmobil'){$path = "img/home/productos/composite_smartbites.jpg"; $thumbpath ="img/home/productos/thumbs/composite_smartbites.jpg"; }
+        if($area == 'imgizq'){$path = "img/home/productos/smart_bites_neuro_active_adulto.png";$webppath = "img/home/productos/smart_bites_neuro_active_adulto.webp";  $thumbpath ="img/home/productos/thumbs/smart_bites_neuro_active_adulto.png"; }
+        if($area == 'imgder'){$path = "img/home/productos/perro-smart-bites.png";$webppath = "img/home/productos/perro-smart-bites.webp";  $thumbpath ="img/home/productos/thumbs/perro-smart-bites.png"; }
+        if($area == 'imgmobil'){$path = "img/home/productos/composite_smartbites.jpg";$webppath = "img/home/productos/composite_smartbites.webp";  $thumbpath ="img/home/productos/thumbs/composite_smartbites.jpg"; }
         break;
       case 'titan':
-        if($area == 'imgtitanperroizq'){$path = "img/home/productos/titan-perro.png"; $thumbpath ="img/home/productos/thumbs/titan-perro.png"; }
-        if($area == 'imgtitanperroder'){$path = "img/home/productos/perro-titan.png"; $thumbpath ="img/home/productos/thumbs/perro-titan.png"; }
-        if($area == 'imgtitangatoizq'){$path = "img/home/productos/gato-titan.png"; $thumbpath ="img/home/productos/thumbs/gato-titan.png"; }
-        if($area == 'imgtitangatoder'){$path = "img/home/productos/titan-gato.png"; $thumbpath ="img/home/productos/thumbs/titan-gato.png"; }
+        if($area == 'imgtitanperroizq'){$path = "img/home/productos/titan-perro.png";$webppath = "img/home/productos/titan-perro.webp";  $thumbpath ="img/home/productos/thumbs/titan-perro.png"; }
+        if($area == 'imgtitanperroder'){$path = "img/home/productos/perro-titan.png";$webppath = "img/home/productos/perro-titan.webp";  $thumbpath ="img/home/productos/thumbs/perro-titan.png"; }
+        if($area == 'imgtitangatoizq'){$path = "img/home/productos/gato-titan.png";$webppath = "img/home/productos/gato-titan.webp";  $thumbpath ="img/home/productos/thumbs/gato-titan.png"; }
+        if($area == 'imgtitangatoder'){$path = "img/home/productos/titan-gato.png";$webppath = "img/home/productos/titan-gato.webp";  $thumbpath ="img/home/productos/thumbs/titan-gato.png"; }
         break;
       case 'rocko':
-        if($area == 'imgrockoIzqExt'){$path = "img/home/productos/perro-rocko.png"; $thumbpath ="img/home/productos/thumbs/perro-rocko.png"; }
-        if($area == 'imgrockoIzqInt'){$path = "img/home/productos/rocko-plus-complete.png"; $thumbpath ="img/home/productos/thumbs/rocko-plus-complete.png"; }
-        if($area == 'imgrockoDerInt'){$path = "img/home/productos/rocko-perro.png"; $thumbpath ="img/home/productos/thumbs/rocko-perro.png"; }
-        if($area == 'imgrockoDerExt'){$path = "img/home/productos/perro-rocko-cafe.png"; $thumbpath ="img/home/productos/thumbs/perro-rocko-cafe.png"; }
+        if($area == 'imgrockoIzqExt'){$path = "img/home/productos/perro-rocko.png";$webppath = "img/home/productos/perro-rocko.webp";  $thumbpath ="img/home/productos/thumbs/perro-rocko.png"; }
+        if($area == 'imgrockoIzqInt'){$path = "img/home/productos/rocko-plus-complete.png";$webppath = "img/home/productos/rocko-plus-complete.webp";  $thumbpath ="img/home/productos/thumbs/rocko-plus-complete.png"; }
+        if($area == 'imgrockoDerInt'){$path = "img/home/productos/rocko-perro.png";$webppath = "img/home/productos/rocko-perro.webp";  $thumbpath ="img/home/productos/thumbs/rocko-perro.png"; }
+        if($area == 'imgrockoDerExt'){$path = "img/home/productos/perro-rocko-cafe.png";$webppath = "img/home/productos/perro-rocko-cafe.webp";  $thumbpath ="img/home/productos/thumbs/perro-rocko-cafe.png"; }
         break;
 
       default:
@@ -278,9 +294,11 @@ class LandingController extends Controller
     //dd($path);
     $intervention = new ImageManager(array('driver' => 'gd'));
     $img = $intervention->make($ImageCont['tmp_name']);
+    $imgwebp = $intervention->make($ImageCont['tmp_name'])->encode('webp', 90);
     $thumbnail = $intervention->make($ImageCont['tmp_name']);
     $thumbnail->fit(300, 300);
     $img->save($path);
+    $imgwebp->save($path);
     $thumbnail->save($thumbpath);
   }
 
