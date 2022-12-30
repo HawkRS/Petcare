@@ -467,15 +467,15 @@
           </div>
           <div class="mb-3">
             <label for="formFile" class="form-label">Imagen para escritorio Izq</label>
-            <input class="form-control" name="imgtitanperroizq" type="file" id="formFile">
+            <input class="form-control" name="imgizq" type="file" id="formFile">
           </div>
           <div class="mb-3">
             <label for="formFile" class="form-label">Imagen para escritorio Der</label>
-            <input class="form-control" name="imgtitanperroder" type="file" id="formFile">
+            <input class="form-control" name="imgder" type="file" id="formFile">
           </div>
           <div class="mb-3">
             <label for="formFile" class="form-label">Imagen para dispositivos mobiles</label>
-            <input class="form-control" name="imgtitangatoizq" type="file" id="formFile">
+            <input class="form-control" name="imgmobil" type="file" id="formFile">
           </div>
         </div>
         <div class="modal-footer">
@@ -515,15 +515,15 @@
           </div>
           <div class="mb-3">
             <label for="formFile" class="form-label">Imagen titan perro Izq</label>
-            <input class="form-control" name="imgizq" type="file" id="formFile">
+            <input class="form-control" name="imgtitanperroizq" type="file" id="formFile">
           </div>
           <div class="mb-3">
             <label for="formFile" class="form-label">Imagen titan perro Der</label>
-            <input class="form-control" name="imgder" type="file" id="formFile">
+            <input class="form-control" name="imgtitanperroder" type="file" id="formFile">
           </div>
           <div class="mb-3">
             <label for="formFile" class="form-label">Imagen titan gato Izq </label>
-            <input class="form-control" name="imgmobil" type="file" id="formFile">
+            <input class="form-control" name="imgtitangatoizq" type="file" id="formFile">
           </div>
           <div class="mb-3">
             <label for="formFile" class="form-label">Imagen titan gato Der </label>

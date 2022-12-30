@@ -23,17 +23,18 @@ class LandingController extends Controller
   private $f = 'landing.';
 
   /**
-   * Show the application landing page settings.
+   * Show the application sliders page settings.
    *
    * @return \Illuminate\Contracts\Support\Renderable
    */
   public function index()
   {
-      //$ContentList = Content::where('page', 'landing')->get();
-      $ContentList = DB::table('content')
-                ->whereDate('page', 'landing')
-                ->get();
+      $ContentList = Content::where('page', 'landing')->get();
+      //$ContentList = DB::table('content')
+      //          ->whereDate('page', 'sliders')
+      //          ->get();
       //dd($ContentList[0]);
+      //dd(public_path('something'));
       return view($this->f.'index', [
         'Contenidos' => $ContentList,
       ]);
@@ -115,80 +116,80 @@ class LandingController extends Controller
       case 'banner1_desk':  case 'banner2_desk':  case 'banner3_desk':
         {
           if($BannerName == 'banner1_desk'){
-            $img->save('img/landing/banner-home-1-desktop.jpg');
-            $thumbnail->save('img/landing/thumbs/banner-home-1-desktop.jpg');
+            $img->save('img/sliders/banner-home-1-desktop.jpg');
+            $thumbnail->save('img/sliders/thumbs/banner-home-1-desktop.jpg');
           }
           elseif ($BannerName == 'banner2_desk'){
-            $img->save('img/landing/banner-home-2-desktop.jpg');
-            $thumbnail->save('img/landing/thumbs/banner-home-2-desktop.jpg');
+            $img->save('img/sliders/banner-home-2-desktop.jpg');
+            $thumbnail->save('img/sliders/thumbs/banner-home-2-desktop.jpg');
           }
           elseif ($BannerName == 'banner3_desk'){
-            $img->save('img/landing/banner-home-3-desktop.jpg');
-            $thumbnail->save('img/landing/thumbs/banner-home-3-desktop.jpg');
+            $img->save('img/sliders/banner-home-3-desktop.jpg');
+            $thumbnail->save('img/sliders/thumbs/banner-home-3-desktop.jpg');
           }
         }
         break;
       case 'banner1_1200':  case 'banner2_1200':  case 'banner3_1200':
         {
           if($BannerName == 'banner1_1200'){
-            $img->save('img/landing/banner-home-1-1200.jpg');
-            $thumbnail->save('img/landing/thumbs/banner-home-1-1200.jpg');
+            $img->save('img/sliders/banner-home-1-1200.jpg');
+            $thumbnail->save('img/sliders/thumbs/banner-home-1-1200.jpg');
           }
           elseif ($BannerName == 'banner2_1200'){
-            $img->save('img/landing/banner-home-2-1200.jpg');
-            $thumbnail->save('img/landing/thumbs/banner-home-2-1200.jpg');
+            $img->save('img/sliders/banner-home-2-1200.jpg');
+            $thumbnail->save('img/sliders/thumbs/banner-home-2-1200.jpg');
           }
           elseif ($BannerName == 'banner3_1200'){
-            $img->save('img/landing/banner-home-3-1200.jpg');
-            $thumbnail->save('img/landing/thumbs/banner-home-3-1200.jpg');
+            $img->save('img/sliders/banner-home-3-1200.jpg');
+            $thumbnail->save('img/sliders/thumbs/banner-home-3-1200.jpg');
           }
         }
         break;
       case 'banner1_992':  case 'banner2_992':  case 'banner3_992':
         {
           if($BannerName == 'banner1_992'){
-            $img->save('img/landing/banner-home-1-992.jpg');
-            $thumbnail->save('img/landing/thumbs/banner-home-1-992.jpg');
+            $img->save('img/sliders/banner-home-1-992.jpg');
+            $thumbnail->save('img/sliders/thumbs/banner-home-1-992.jpg');
           }
           elseif ($BannerName == 'banner2_992'){
-            $img->save('img/landing/banner-home-2-992.jpg');
-            $thumbnail->save('img/landing/thumbs/banner-home-2-992.jpg');
+            $img->save('img/sliders/banner-home-2-992.jpg');
+            $thumbnail->save('img/sliders/thumbs/banner-home-2-992.jpg');
           }
           elseif ($BannerName == 'banner3_992'){
-            $img->save('img/landing/banner-home-3-992.jpg');
-            $thumbnail->save('img/landing/thumbs/banner-home-3-992.jpg');
+            $img->save('img/sliders/banner-home-3-992.jpg');
+            $thumbnail->save('img/sliders/thumbs/banner-home-3-992.jpg');
           }
         }
         break;
       case 'banner1_768':  case 'banner2_768':  case 'banner3_768':
         {
           if($BannerName == 'banner1_768'){
-            $img->save('img/landing/banner-home-1-768.jpg');
-            $thumbnail->save('img/landing/thumbs/banner-home-1-768.jpg');
+            $img->save('img/sliders/banner-home-1-768.jpg');
+            $thumbnail->save('img/sliders/thumbs/banner-home-1-768.jpg');
           }
           elseif ($BannerName == 'banner2_768'){
-            $img->save('img/landing/banner-home-2-768.jpg');
-            $thumbnail->save('img/landing/thumbs/banner-home-2-768.jpg');
+            $img->save('img/sliders/banner-home-2-768.jpg');
+            $thumbnail->save('img/sliders/thumbs/banner-home-2-768.jpg');
           }
           elseif ($BannerName == 'banner3_768'){
-            $img->save('img/landing/banner-home-3-768.jpg');
-            $thumbnail->save('img/landing/thumbs/banner-home-3-768.jpg');
+            $img->save('img/sliders/banner-home-3-768.jpg');
+            $thumbnail->save('img/sliders/thumbs/banner-home-3-768.jpg');
           }
         }
         break;
       case 'banner1_576':  case 'banner2_576':  case 'banner3_576':
         {
           if($BannerName == 'banner1_576'){
-            $img->save('img/landing/banner-home-1-576.jpg');
-            $thumbnail->save('img/landing/thumbs/banner-home-1-576.jpg');
+            $img->save('img/sliders/banner-home-1-576.jpg');
+            $thumbnail->save('img/sliders/thumbs/banner-home-1-576.jpg');
           }
           elseif ($BannerName == 'banner2_576'){
-            $img->save('img/landing/banner-home-2-576.jpg');
-            $thumbnail->save('img/landing/thumbs/banner-home-2-576.jpg');
+            $img->save('img/sliders/banner-home-2-576.jpg');
+            $thumbnail->save('img/sliders/thumbs/banner-home-2-576.jpg');
           }
           elseif ($BannerName == 'banner3_576'){
-            $img->save('img/landing/banner-home-3-576.jpg');
-            $thumbnail->save('img/landing/thumbs/banner-home-3-576.jpg');
+            $img->save('img/sliders/banner-home-3-576.jpg');
+            $thumbnail->save('img/sliders/thumbs/banner-home-3-576.jpg');
           }
         }
         break;
@@ -229,8 +230,8 @@ class LandingController extends Controller
      $EditedContent->value = $request->descripcion;
      $EditedContent->save();
      if(isset($_FILES['imgizq'])){if ($_FILES['imgizq']['size'] != 0 && $_FILES['imgizq']['error'] == 0){$ImgIzq = $_FILES['imgizq'];   $this->ImageContent($request->position, 'imgizq',$ImgIzq );}}
-     if(isset($_FILES['imgder'])){if ($_FILES['imgder']['size'] != 0 && $_FILES['imgder']['error'] == 0){$ImgDer = $_FILES['imgder'];   $this->ImageContent($request->position, 'imgizq',$ImgDer );}}
-     if(isset($_FILES['imgmobil'])){if ($_FILES['imgmobil']['size'] != 0 && $_FILES['imgmobil']['error'] == 0){$ImgMobil = $_FILES['imgmobil'];   $this->ImageContent($request->position, 'imgizq',$ImgMobil );}}
+     if(isset($_FILES['imgder'])){if ($_FILES['imgder']['size'] != 0 && $_FILES['imgder']['error'] == 0){$ImgDer = $_FILES['imgder'];   $this->ImageContent($request->position, 'imgder',$ImgDer );}}
+     if(isset($_FILES['imgmobil'])){if ($_FILES['imgmobil']['size'] != 0 && $_FILES['imgmobil']['error'] == 0){$ImgMobil = $_FILES['imgmobil'];   $this->ImageContent($request->position, 'imgmobil',$ImgMobil );}}
 
      if(isset($_FILES['imgtitanperroizq'])){if ($_FILES['imgtitanperroizq']['size'] != 0 && $_FILES['imgtitanperroizq']['error'] == 0){$ImgTitanPerroIzq = $_FILES['imgtitanperroizq'];   $this->ImageContent($request->position, 'imgtitanperroizq',$ImgTitanPerroIzq );}}
      if(isset($_FILES['imgtitanperroder'])){if ($_FILES['imgtitanperroder']['size'] != 0 && $_FILES['imgtitanperroder']['error'] == 0){$ImgTitanPerroDer = $_FILES['imgtitanperroder'];   $this->ImageContent($request->position, 'imgtitanperroder',$ImgTitanPerroDer );}}
@@ -250,7 +251,7 @@ class LandingController extends Controller
 
   public function ImageContent($position, $area, $ImageCont)
   {
-
+    //dd($area);
     switch ($position) {
       case 'smartbites':
         if($area == 'imgizq'){$path = "img/home/productos/smart_bites_neuro_active_adulto.png"; $thumbpath ="img/home/productos/thumbs/smart_bites_neuro_active_adulto.png"; }
@@ -274,7 +275,7 @@ class LandingController extends Controller
         // code...
         break;
     }
-
+    //dd($path);
     $intervention = new ImageManager(array('driver' => 'gd'));
     $img = $intervention->make($ImageCont['tmp_name']);
     $thumbnail = $intervention->make($ImageCont['tmp_name']);
