@@ -218,6 +218,12 @@
                                 </a>
                             </li>
                             @endif
+                            <li>
+                                <a href="#" class=" waves-effect">
+                                    <i class="fas fa-pen-alt"></i>
+                                    <span>Blog</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                     <!-- Sidebar -->

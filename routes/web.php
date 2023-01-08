@@ -83,3 +83,6 @@ Route::prefix('usuarios')->group(function () {
   Route::post('/editar/{id}/guardar', 'UsersController@update')->name( 'users.update' );
   Route::post('/eliminar/{id}', 'UsersController@delete')->name( 'users.delete' );
 });
+
+
+  Route::get('/blog/entrada-del-blog', 'PublicController@index')->name('blog.index' );
