@@ -12,12 +12,12 @@ import DataTables from 'datatables.net';
 window.onload = function() {MainFunction()};
 
 function MainFunction(){
-  console.log("prueba1");
+  //console.log("prueba1");
 
 
 
   var bodyId = document.body.id;
-  console.log(bodyId);
+  //console.log(bodyId);
 
   switch (bodyId) {
     case "Dashboard":{
@@ -26,9 +26,15 @@ function MainFunction(){
       break;
     }
     case "Encuentranos":{
-      console.log('marcadores');
+      //console.log('marcadores');
       var finduspage = require('./markers.js');
       finduspage();
+      break;
+    }
+    case "Blog":{
+      //console.log('marcadores');
+      var blogpage = require('./blog.js');
+      blogpage();
       break;
     }
     default:

@@ -29,7 +29,7 @@
             <div class="clearfix">
             </div>
 
-            <table id='MarkersTable'  class="table table-sm table-bordered table-striped dt-responsive nowrap dataTable no-footer dtr-inline" style="border-collapse: collapse; border-spacing: 0px; width: 100%;" role="grid" aria-describedby="datatable_info">
+            <table id='BlogTable'  class="table table-sm table-bordered table-striped dt-responsive nowrap dataTable no-footer dtr-inline" style="border-collapse: collapse; border-spacing: 0px; width: 100%;" role="grid" aria-describedby="datatable_info">
               <thead class="">
                 <tr class="fnt18 fnt_blue">
                   <th class="fntB">SLUG</th>
@@ -37,6 +37,7 @@
                   <th class="fntB">CUERPO</th>
                   <th class="fntB">AUTOR</th>
                   <th class="fntB">BANNER</th>
+                  <th class="fntB">ESTATUS</th>
                   <th class="fntB">ACCIONES</th>
                 </tr>
               </thead>
@@ -45,10 +46,16 @@
 
                 <td class="" >{{ $Post->slug }}</td>
                 <td class="" >{{ $Post->title }}</td>
-                <td class="" >{{ $Post->body }}</td>
+                <td class="" >{{ Str::limit($Post->body, 50) }}</td>
                 <td class="" >{{ $Post->Autor->name }}</td>
-
                 <td class="" >{{ $Post->banner }}</td>
+                <td>
+                  @if($Post->publicado == true)
+                    Publicado
+                  @else
+                    No publicado
+                  @endif
+                </td>
                 <td>
                   <a href="{{ route('blog.edit', ['id' => $Post->id]) }}" class="btn btn-sm btn-outline-warning fntB"><i class="fas fnt18 fa-pencil-alt"></i></a>
                   <button type="button" name="button"  data-bs-toggle="modal" data-bs-target="#Marcador{{$Post->id}}Modal" class="btn btn-sm btn-outline-danger fntB"><i class="fas fnt18 fa-trash-alt"></i></button>
