@@ -1,7 +1,8 @@
 <input type="text" name="autor" value="{{ Auth::user()->id }}" hidden>
 
 <div class="row">
-  <div class="col-12 col-md-6">
+
+  <div class="col-12 col-md-4">
     <div class="mb-3">
       <label class="form-label" for="title">Titulo</label>
       @if(isset($PostEdit))
@@ -16,14 +17,14 @@
         Por favor agrega un nombre válido
       </div>
       @error('title')
-        <div- class="invalid-feedback d-block">
-          {{ $errors->first('title') }}
-        </div>
+      <div class="invalid-feedback d-block">
+        {{ $errors->first('title') }}
+      </div>
       @enderror
     </div>
   </div>
 
-  <div class="col-12 col-md-6">
+  <div class="col-12 col-md-4">
     <div class="mb-3">
       <label class="form-label" for="slug">Slug</label>
       @if(isset($PostEdit))
@@ -38,10 +39,40 @@
         Por favor agrega un nombre válido
       </div>
       @error('slug')
-        <div- class="invalid-feedback d-block">
-          {{ $errors->first('slug') }}
-        </div>
+      <div class="invalid-feedback d-block">
+        {{ $errors->first('slug') }}
+      </div>
       @enderror
+    </div>
+  </div>
+
+  <div class="col-12 col-md-4">
+    <div class="mb-3">
+      <label class="form-label" for="published">Estatus de publicación</label>
+      <select class="form-select" name="published" id="published">
+        @if (isset($PostEdit) )
+        @if($PostEdit->published == 0)
+        <option value=-1 >Elige una de las opciones de publicación...</option>
+        <option value=0 selected >No publicado</option>
+        <option value=1 >Publicado</option>
+
+        @else
+        <option value=-1 >Elige una de las opciones de publicación...</option>
+        <option value=0 >No publicado</option>
+        <option value=1 selected>Publicado</option>
+        @endif
+        @else
+        <option value=-1 selected>Elige una de las opciones de publicación...</option>
+        <option value=0 >No publicado</option>
+        <option value=1 >Publicado</option>
+        @endif
+      </select>
+      <div class="valid-feedback">
+        ¡Todo parece en orden!
+      </div>
+      <div class="invalid-feedback">
+        Por favor agrega una Horarios 3 valida
+      </div>
     </div>
   </div>
 
@@ -63,7 +94,7 @@
         Por favor agrega una descripción
       </div>
       @error('body')
-        <div- class="invalid-feedback d-block">
+        <div class="invalid-feedback d-block">
           {{ $errors->first('slug') }}
         </div>
       @enderror

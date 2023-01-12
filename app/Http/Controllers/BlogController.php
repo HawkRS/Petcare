@@ -59,6 +59,7 @@ class BlogController extends Controller
       $this->validate(request(), [
         'slug' => 'nullable|unique:post,slug',
         'title' => 'required',
+        'published' => 'required',
         'body' => 'required',
         'autor' => 'required|numeric|exists:users,id',
        ], $messages);
@@ -67,6 +68,7 @@ class BlogController extends Controller
        $NewPost->slug = $request->slug;
        $NewPost->title = $request->title;
        $NewPost->body = $request->body;
+       $NewPost->publicado = $request->published;
        $NewPost->users_id = $request->autor;
        $NewPost->save();
        return redirect()->route('blog.index');

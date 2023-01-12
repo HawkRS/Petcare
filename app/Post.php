@@ -17,6 +17,7 @@ class Post extends Model
     'slug',
     'title',
     'banner',
+    'publicado',
     'body',
     'users_id',
   ];
