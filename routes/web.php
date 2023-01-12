@@ -22,6 +22,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::prefix('blog')->group(function () {
+  Route::get('/', 'BlogController@index')->name( 'blog.page' );
+  //Route::post('/editar/{id}', 'BlogController@EditSlider')->name( 'blog.edit' );
+  //Route::post('/editar-contenido', 'BlogController@UpdateContent')->name( 'blog.updatecontent' );
+});
+
 Route::prefix('landing')->group(function () {
   Route::get('/', 'LandingController@index')->name( 'landing.page' );
   Route::post('/editar/{id}', 'LandingController@EditSlider')->name( 'landing.edit' );
