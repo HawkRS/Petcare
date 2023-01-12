@@ -20,4 +20,14 @@ class Post extends Model
     'body',
     'users_id',
   ];
+
+  /* RELACIONES */
+  public function Autor() {
+    //dd('hola');
+    return $this->hasOne('App\User', 'id');
+  }
+  public function ingresos() {
+    //dd('hola');
+    return $this->hasMany('App\Models\Ingresos')->get();
+  }
 }

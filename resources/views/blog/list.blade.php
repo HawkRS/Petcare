@@ -46,9 +46,9 @@
                 <td class="" >{{ $Post->slug }}</td>
                 <td class="" >{{ $Post->title }}</td>
                 <td class="" >{{ $Post->body }}</td>
-                <td class="" >{{ $Post->users_id }}</td>
-                <td class="" >{{ $Post->banner }}</td>
+                <td class="" >{{ $Post->Autor->name }}</td>
 
+                <td class="" >{{ $Post->banner }}</td>
                 <td>
                   <a href="{{ route('blog.edit', ['id' => $Post->id]) }}" class="btn btn-sm btn-outline-warning fntB"><i class="fas fnt18 fa-pencil-alt"></i></a>
                   <button type="button" name="button"  data-bs-toggle="modal" data-bs-target="#Marcador{{$Post->id}}Modal" class="btn btn-sm btn-outline-danger fntB"><i class="fas fnt18 fa-trash-alt"></i></button>

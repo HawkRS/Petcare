@@ -29,6 +29,8 @@ class BlogController extends Controller
   public function index()
   {
     $PostsList = Post::all();
+    //dd($PostsList[0]->Autor->name);
+
     return view($this->f.'list', [
         'Posts' => $PostsList,
       ]);
