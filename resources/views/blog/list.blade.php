@@ -57,6 +57,7 @@
                   @endif
                 </td>
                 <td>
+                  <a href="{{ route('blog.show', ['id' => $Post->id]) }}" class="btn btn-sm btn-outline-info fntB"><i class="fas fnt18 fa-eye"></i></a>
                   <a href="{{ route('blog.edit', ['id' => $Post->id]) }}" class="btn btn-sm btn-outline-warning fntB"><i class="fas fnt18 fa-pencil-alt"></i></a>
                   <button type="button" name="button"  data-bs-toggle="modal" data-bs-target="#Marcador{{$Post->id}}Modal" class="btn btn-sm btn-outline-danger fntB"><i class="fas fnt18 fa-trash-alt"></i></button>
 

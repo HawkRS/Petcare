@@ -83,7 +83,11 @@ class BlogController extends Controller
    */
   public function show($id)
   {
-      //
+    $Post = Post::findorfail($id);
+    //dd($Post);
+    return view($this->f.'show', [
+        'Post' => $Post,
+      ]);
   }
 
   /**
@@ -94,7 +98,8 @@ class BlogController extends Controller
    */
   public function edit($id)
   {
-      //
+      $PostEdit = Post::findorfail($id);
+      dd($PostEdit);
   }
 
   /**
