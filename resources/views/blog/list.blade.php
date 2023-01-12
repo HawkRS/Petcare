@@ -37,6 +37,7 @@
                   <th class="fntB">CUERPO</th>
                   <th class="fntB">AUTOR</th>
                   <th class="fntB">BANNER</th>
+                  <th class="fntB">FECHA</th>
                   <th class="fntB">ESTATUS</th>
                   <th class="fntB">ACCIONES</th>
                 </tr>
@@ -49,6 +50,7 @@
                 <td class="" >{{ Str::limit($Post->body, 50) }}</td>
                 <td class="" >{{ $Post->Autor->name }}</td>
                 <td class="" >{{ $Post->banner }}</td>
+                <td class="" >{{ date_format($Post->created_at,"d/m/Y") }}</td>
                 <td>
                   @if($Post->publicado == true)
                     Publicado
