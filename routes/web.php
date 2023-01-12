@@ -23,9 +23,13 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::prefix('blog')->group(function () {
-  Route::get('/', 'BlogController@index')->name( 'blog.page' );
-  //Route::post('/editar/{id}', 'BlogController@EditSlider')->name( 'blog.edit' );
-  //Route::post('/editar-contenido', 'BlogController@UpdateContent')->name( 'blog.updatecontent' );
+  Route::get('/', 'BlogController@index')->name( 'blog.index' );
+  Route::get('/crear', 'BlogController@create')->name( 'blog.create' );
+  Route::post('/crear/guardar', 'BlogController@store')->name( 'blog.store' );
+  Route::get('/{id}/mostrar', 'BlogController@show')->name( 'blog.show' );
+  Route::get('/{id}/editar', 'BlogController@edit')->name( 'blog.edit' );
+  Route::post('/{id}/actualizar', 'BlogController@update')->name( 'blog.update' );
+  Route::post('/{id}/eliminar', 'BlogController@delete')->name( 'blog.delete' );
 });
 
 Route::prefix('landing')->group(function () {
@@ -91,4 +95,4 @@ Route::prefix('usuarios')->group(function () {
 });
 
 
-  Route::get('/blog/entrada-del-blog', 'PublicController@index')->name('blog.index' );
+  Route::get('/blog/entrada-del-blog', 'PublicController@index');
