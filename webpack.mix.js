@@ -16,7 +16,7 @@ mix.js('resources/js/app.js', 'public/js/app.js')
    .sass('resources/sass/app.sass', 'public/css/app.css').options({
        processCssUrls: false
    });
-//mix.copy('resources/upzet/js/app.js', 'public/js/upzet.js');
+mix.copy('resources/css/blog.css', 'public/css/blog.css');
 
 mix.js([
   'resources/upzet/js/app.js',
