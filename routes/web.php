@@ -21,8 +21,12 @@ Auth::routes();
 
 
 Route::get('/home', 'HomeController@index')->name('home');
-
 Route::prefix('blog')->group(function () {
+  Route::get('/', 'PostController@index')->name( 'post.index' );
+  Route::get('/{slug}', 'PostController@show')->name( 'post.show' );
+});
+
+Route::prefix('post')->group(function () {
   Route::get('/', 'BlogController@index')->name( 'blog.index' );
   Route::get('/crear', 'BlogController@create')->name( 'blog.create' );
   Route::post('/crear/guardar', 'BlogController@store')->name( 'blog.store' );
