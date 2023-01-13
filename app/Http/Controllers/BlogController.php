@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Validation\Rule;
 use Illuminate\Http\Request;
-use App\Post;
+use Carbon\Carbon;
 use App\Helper;
+use App\Post;
 
 class BlogController extends Controller
 {
@@ -57,7 +59,7 @@ class BlogController extends Controller
       'required' => 'El campo :attribute es obligatorio.',
       ];
       $this->validate(request(), [
-        'slug' => 'nullable|unique:post,slug',
+        'slug' => 'nullable|alpha_dash|min:4|unique:post,slug',
         'title' => 'required',
         'published' => 'required',
         'body' => 'required',
@@ -99,7 +101,10 @@ class BlogController extends Controller
   public function edit($id)
   {
       $PostEdit = Post::findorfail($id);
-      dd($PostEdit);
+      //dd($PostEdit);
+      return view($this->f.'edit', [
+          'PostEdit' => $PostEdit,
+        ]);
   }
 
   /**
@@ -111,7 +116,25 @@ class BlogController extends Controller
    */
   public function update(Request $request, $id)
   {
-      //
+    $PostEdit = Post::findorfail($id);
+    $messages = [
+    'required' => 'El campo :attribute es obligatorio.',
+    ];
+    $this->validate(request(), [
+      'slug' => 'nullable|alpha_dash|min:4',Rule::unique('post')->ignore($request->folio, 'slug'),
+      'title' => 'required',
+      'published' => 'required',
+      'body' => 'required',
+      'autor' => 'required|numeric|exists:users,id',
+     ], $messages);
+     $PostEdit->slug = $request->slug;
+     $PostEdit->title = $request->title;
+     $PostEdit->body = $request->body;
+     $PostEdit->publicado = $request->published;
+     $PostEdit->users_id = $request->autor;
+     $PostEdit->save();
+     //dd($PostEdit);
+     return redirect()->route('blog.index');
   }
 
   /**
@@ -120,8 +143,11 @@ class BlogController extends Controller
    * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-  public function destroy($id)
+  public function delete($id)
   {
-      //
+    $PostDeleted = Post::findorfail($id);
+    //dd($PostDeleted);
+    $PostDeleted->delete();
+    return redirect()->route('blog.index');
   }
 }
