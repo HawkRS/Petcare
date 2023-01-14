@@ -47,11 +47,10 @@
           </div>
           <div class="col-md-8">
               <div class="card-body h-100 d-flex justify-content-center align-items-start flex-column">
-                <h4 class="card-date c-azul-2 f-medium">Publicado por: {{ $Post->Autor->name }}, {{ date_format($Post->created_at,"d/m/Y") }}</h4>
+                <h4 class="card-date c-azul-2 f-medium">Publicado en {{ date_format($Post->created_at,"M d, o") }}</h4>
                 <a href="{{ route('post.show', ['slug' => $Post->slug]) }}" class="card-title c-azul-2 h-c-rojo-1 f-medium text-decoration-none d-block mb-1" rel="noopener">{{$Post->title}}</a>
                 <p class="card-text c-gris-3 f-medium fs-6 mb-1">Una de las partes más curiosas de los gatos son los ojos, no solo por lo llamativo de sus colores y formas, sino porque también suelen usarlos para comunicarse. Veamos las características más destacadas de este curioso órgano felino.</p>
                 <a href="{{ route('post.show', ['slug' => $Post->slug]) }}" class="card-link c-rojo-1 h-c-azul-2 f-medium fs-6 text-decoration-none text-uppercase d-block mb-1" rel="noopener">LEER MAS...</a>
-                <span class="card-tags c-azul-2 f-medium d-block">(https://www.santevet.es/)</span>
               </div>
           </div>
       </div>
