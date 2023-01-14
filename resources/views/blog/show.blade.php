@@ -28,7 +28,7 @@
             <div class="float-md-start">
 
               <h4 class="card-title float-left"> <strong>Titulo:</strong> {{ $Post->title }}</h4>
-              <h4 class="card-title float-left"> <strong>Slug:</strong> {{ $Post->slug }}</h4>
+              <h4 class="card-title float-left"> <strong>Link del artículo:</strong> {{ $Post->slug }}</h4>
 
               {{--<p class="card-title-desc">Agregar o editar entradas al blog publico de Vimifos Petcare.</p>--}}
             </div>

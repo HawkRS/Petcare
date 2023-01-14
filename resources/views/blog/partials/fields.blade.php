@@ -26,7 +26,7 @@
 
   <div class="col-12 col-md-4">
     <div class="mb-3">
-      <label class="form-label" for="slug">Slug</label>
+      <label class="form-label" for="slug">Link del artículo</label>
       @if(isset($PostEdit))
       <input type="text" name="slug" class="form-control {{ $errors->has('slug') ? ' is-invalid' : '' }}" id="slug" placeholder="Link de la entrada (usar '-' en vez de espacios)" value="{{$PostEdit->slug}}" required>
       @else

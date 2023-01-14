@@ -32,7 +32,7 @@
             <table id='BlogTable'  class="table table-sm table-bordered table-striped dt-responsive nowrap dataTable no-footer dtr-inline" style="border-collapse: collapse; border-spacing: 0px; width: 100%;" role="grid" aria-describedby="datatable_info">
               <thead class="">
                 <tr class="fnt18 fnt_blue">
-                  <th class="fntB">SLUG</th>
+                  <th class="fntB">LINK DEL ARTÍCULO</th>
                   <th class="fntB">TITULO</th>
                   <th class="fntB">CUERPO</th>
                   <th class="fntB">AUTOR</th>
