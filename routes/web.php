@@ -34,6 +34,7 @@ Route::prefix('post')->group(function () {
   Route::get('/{id}/editar', 'BlogController@edit')->name( 'blog.edit' );
   Route::post('/{id}/actualizar', 'BlogController@update')->name( 'blog.update' );
   Route::post('/{id}/eliminar', 'BlogController@delete')->name( 'blog.delete' );
+  Route::get('/publicar/{id}', 'BlogController@PublishToggle')->name( 'blog.togglepublish' );
 });
 
 Route::prefix('landing')->group(function () {
