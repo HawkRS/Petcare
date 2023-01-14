@@ -150,4 +150,25 @@ class BlogController extends Controller
     $PostDeleted->delete();
     return redirect()->route('blog.index');
   }
+
+  /**
+   * Update the specified resource in storage.
+   *
+   * @param  \Illuminate\Http\Request  $request
+   * @param  int  $id
+   * @return \Illuminate\Http\Response
+   */
+   public function PublishToggle($id)
+   {
+     $PostEdit = Post::findorfail($id);
+     if($PostEdit->publicado == true){
+       $PostEdit->publicado = false;
+     }
+     else {
+       $PostEdit->publicado = true;
+     }
+      $PostEdit->save();
+      //dd($PostEdit);
+      return redirect()->route('blog.index');
+   }
 }
