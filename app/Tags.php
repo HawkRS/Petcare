@@ -18,5 +18,4 @@ class Tags extends Model
     'post_id',
   ];
 
-  
 }

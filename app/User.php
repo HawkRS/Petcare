@@ -39,8 +39,8 @@ class User extends Authenticatable
 
     /* RELACIONES */
     public function TieneEntradas() {
-      //dd('hola');
-      return $this->hasMany('App\Post')->get();
+      //dd('hola');'id', 'users_id'
+      return $this->hasMany('App\Post','id', 'users_id')->get();
     }
 
 }

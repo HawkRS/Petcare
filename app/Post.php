@@ -25,14 +25,14 @@ class Post extends Model
   /* RELACIONES */
   public function Autor() {
     //dd('hola');
-    return $this->hasOne('App\User', 'id', 'users_id')->get();
+    return $this->belongsTo('App\User','users_id', 'id');
   }
   public function HasTags() {
     //dd('hola');
-    return $this->hasMany('App\Tags', 'post_id', 'id')->get();
+    return $this->hasMany('App\Tags', 'post_id', 'id');
   }
   public function HasSources() {
     //dd('hola');
-    return $this->hasMany('App\Fuentes', 'post_id', 'id')->get();
+    return $this->hasMany('App\Fuentes', 'post_id', 'id');
   }
 }

@@ -20,7 +20,7 @@ class CreatePostTable extends Migration
           $table->text('body');
           $table->text('banner');
           $table->unsignedBigInteger('users_id');
-          $table->foreign('users_id')->references('id')->on('users');
+          $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade');
           $table->timestamps();
         });
     }
