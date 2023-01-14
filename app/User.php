@@ -42,4 +42,5 @@ class User extends Authenticatable
       //dd('hola');
       return $this->hasMany('App\Post')->get();
     }
+
 }
