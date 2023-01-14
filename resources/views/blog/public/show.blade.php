@@ -22,11 +22,26 @@
         </p>
         <hr>
         <p class="c-gris-3 f-regular text-justify mb-0">
-          Publicado por:{{ $Post->Autor->name }}, {{ date_format($Post->created_at,"d/m/Y") }}
+          Publicado en {{ date_format($Post->created_at,"M d, o") }}.
+          Fuentes:
+          @foreach($Post->HasSources as $Fuente)
+          @if($loop->index > 0)
+          |
+          @endif
+          <a href="{{ $Fuente->link }}">{{ $Fuente->link }}</a>
+          @endforeach
+
         </p>
         <hr>
         <p class="c-gris-3 f-regular text-justify mb-0">
-          TAGS: <span class="c-azul-2">(https://www.santevet.es/)</span>
+          TAGS: <span class="c-azul-2">
+            @foreach($Post->HasTags as $Tags)
+            @if($loop->index > 0)
+            |
+            @endif
+            {{ $Tags->tag }}
+            @endforeach
+          </span>
         </p>
       </div>
     </div>
