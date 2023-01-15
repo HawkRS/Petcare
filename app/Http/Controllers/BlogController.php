@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Helper;
 use App\Post;
+use App\Fuentes;
+use App\Tags;
 
 class BlogController extends Controller
 {
@@ -174,7 +176,20 @@ class BlogController extends Controller
 
    public function addFuente(Request $request, $id)
    {
-      dd($request->all());
+      $messages = [
+      'required' => 'El campo :attribute es obligatorio.',
+      'url' => 'El formato :attribute es invalido, debe ser una url valida.',
+      ];
+      $this->validate(request(), [
+        'fuente' => 'required|url'
+       ], $messages);
+       //dd($request->all());
+       $NewSource = new Fuentes();
+       $NewSource->post_id = $id;
+       $NewSource->link = $request->fuente;
+       $NewSource->save();
+      return redirect()->route('blog.show',['id'=>$id]);
+      dd($NewSource);
    }
 
    public function deleteFuente(Request $request, $id)
@@ -184,11 +199,26 @@ class BlogController extends Controller
 
    public function addTag(Request $request, $id)
    {
-      dd($request->all());
+      //dd($request->all());
+      $messages = [
+      'required' => 'El campo :attribute es obligatorio.',
+      ];
+      $this->validate(request(), [
+        'etiqueta' => 'required'
+       ], $messages);
+       $NewTag = new Tags();
+       $NewTag->post_id = $id;
+       $NewTag->tag = $request->etiqueta;
+       $NewTag->save();
+      return redirect()->route('blog.show',['id'=>$id]);
+      dd($NewTag);
    }
 
    public function deleteTag(Request $request, $id)
    {
       dd($request->all());
+      $TagDeleted = Tag::findorfail($id);
+      //dd($TagDeleted);
+      $TagDeleted->delete();
    }
 }

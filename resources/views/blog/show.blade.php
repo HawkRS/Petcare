@@ -65,6 +65,13 @@
                 <div class="col-12">
                   <button type="button" name="button"  data-bs-toggle="modal" data-bs-target="#FuenteModal" class="btn btn-sm btn-primary fntB"><i class="fas fnt14 fa-quote-left"></i> Agregar Fuente</button>
                 </div>
+                @error('fuente')
+                  <div class="invalid-feedback d-block">
+                    <div class="alert alert-danger">
+                      {{ $errors->first('fuente') }}
+                    </div>
+                  </div>
+                @enderror
               </div>
               <div class="col-12">
                 <strong>Tags:</strong>
@@ -77,6 +84,13 @@
                 <div class="col-12">
                   <button type="button" name="button"  data-bs-toggle="modal" data-bs-target="#TagModal" class="btn btn-sm btn-primary fntB"><i class="fas fnt14 fa-tag"></i> Agregar Tag</button>
                 </div>
+                @error('etiqueta')
+                  <div class="invalid-feedback d-block">
+                    <div class="alert alert-danger">
+                      {{ $errors->first('etiqueta') }}
+                    </div>
+                  </div>
+                @enderror
               </div>
             </div>
 
@@ -129,6 +143,11 @@
             <label for="fuente" class="form-label">Fuente</label>
             <input name="fuente" class="form-control" type="text" id="fuente" placeholder="Escribe el link de la fuente">
           </div>
+          @error('fuente')
+            <div class="invalid-feedback d-block">
+              {{ $errors->first('fuente') }}
+            </div>
+          @enderror
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -151,9 +170,14 @@
         @csrf
         <div class="modal-body">
           <div class="mb-3">
-            <label for="fuente" class="form-label">Etiqueta</label>
-            <input name="fuente" class="form-control" type="text" id="fuente" placeholder="Escribe el link de la etiqueta">
+            <label for="etiqueta" class="form-label">Etiqueta</label>
+            <input name="etiqueta" class="form-control" type="text" id="etiqueta" placeholder="Escribe el link de la etiqueta">
           </div>
+          @error('etiqueta')
+            <div class="invalid-feedback d-block">
+              {{ $errors->first('etiqueta') }}
+            </div>
+          @enderror
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
