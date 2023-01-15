@@ -33,7 +33,7 @@
               <thead class="">
                 <tr class="fnt18 fnt_blue">
                   <th class="fntB">LINK DEL ARTÍCULO</th>
-                  <th class="fntB">TITULO</th>
+                  <th class="fntB">TÍTULO</th>
                   <th class="fntB">CUERPO</th>
                   <th class="fntB">AUTOR</th>
                   <th class="fntB">BANNER</th>

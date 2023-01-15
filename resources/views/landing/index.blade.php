@@ -28,7 +28,7 @@
                     <h6 class="card-title mb-4">Imagen</h6>
                     <img src="{{ asset('img/sliders/thumbs/banner-home-1-desktop.jpg') }}" class="img-thumbnail mx-auto d-block" alt="">
                     <hr>
-                    <h4>Titulo</h4>
+                    <h4>Título</h4>
                     <h6>{{ $Contenidos[0]->value }}</h6>
                     <hr>
                     <h4>Descripción</h4>
@@ -50,7 +50,7 @@
                     <h6 class="card-title mb-4">Imagen</h6>
                     <img src="{{ asset('img/sliders/thumbs/banner-home-2-desktop.jpg') }}" class="img-thumbnail mx-auto d-block" alt="">
                     <hr>
-                    <h4>Titulo</h4>
+                    <h4>Título</h4>
                     <h6>{{ $Contenidos[2]->value }}</h6>
                     <hr>
                     <h4>Descripción</h4>
@@ -72,7 +72,7 @@
                     <h6 class="card-title mb-4">Imagen</h6>
                     <img src="{{ asset('img/sliders/thumbs/banner-home-3-desktop.jpg') }}" class="img-thumbnail mx-auto d-block" alt="">
                     <hr>
-                    <h4>Titulo</h4>
+                    <h4>Título</h4>
                     <h6>{{ $Contenidos[4]->value }}</h6>
                     <hr>
                     <h4>Descripción</h4>
@@ -240,11 +240,11 @@
         <input type="hidden" name="position" value="slider1">
         <div class="modal-body">
           <div class="mb-3">
-              <label class="form-label" for="validationCustom01">Titulo</label>
+              <label class="form-label" for="validationCustom01">Título</label>
               @if(isset($Contenidos[0]->value))
-              <input type="text" name="titulo" class="form-control {{ $errors->has('titulo') ? ' is-invalid' : '' }}" id="titulo" placeholder="Titulo" value="{{$Contenidos[0]->value}}" required>
+              <input type="text" name="titulo" class="form-control {{ $errors->has('titulo') ? ' is-invalid' : '' }}" id="titulo" placeholder="Título" value="{{$Contenidos[0]->value}}" required>
               @else
-              <input type="text" name="titulo" class="form-control {{ $errors->has('titulo') ? ' is-invalid' : '' }}" id="titulo" placeholder="Titulo" required>
+              <input type="text" name="titulo" class="form-control {{ $errors->has('titulo') ? ' is-invalid' : '' }}" id="titulo" placeholder="Título" required>
               @endif
               <div class="valid-feedback">
                   ¡Todo parece en orden!
@@ -310,11 +310,11 @@
         <input type="hidden" name="position" value="slider2">
         <div class="modal-body">
           <div class="mb-3">
-              <label class="form-label" for="validationCustom01">Titulo</label>
+              <label class="form-label" for="validationCustom01">Título</label>
               @if(isset($Contenidos[2]->value))
-              <input type="text" name="titulo" class="form-control {{ $errors->has('titulo') ? ' is-invalid' : '' }}" id="titulo" placeholder="Titulo" value="{{$Contenidos[2]->value}}" required>
+              <input type="text" name="titulo" class="form-control {{ $errors->has('titulo') ? ' is-invalid' : '' }}" id="titulo" placeholder="Título" value="{{$Contenidos[2]->value}}" required>
               @else
-              <input type="text" name="titulo" class="form-control {{ $errors->has('titulo') ? ' is-invalid' : '' }}" id="titulo" placeholder="Titulo" required>
+              <input type="text" name="titulo" class="form-control {{ $errors->has('titulo') ? ' is-invalid' : '' }}" id="titulo" placeholder="Título" required>
               @endif
               <div class="valid-feedback">
                   ¡Todo parece en orden!
@@ -380,11 +380,11 @@
         <input type="hidden" name="position" value="slider3">
         <div class="modal-body">
           <div class="mb-3">
-              <label class="form-label" for="validationCustom01">Titulo</label>
+              <label class="form-label" for="validationCustom01">Título</label>
               @if(isset($Contenidos[4]->value))
-              <input type="text" name="titulo" class="form-control {{ $errors->has('titulo') ? ' is-invalid' : '' }}" id="titulo" placeholder="Titulo" value="{{$Contenidos[4]->value}}" required>
+              <input type="text" name="titulo" class="form-control {{ $errors->has('titulo') ? ' is-invalid' : '' }}" id="titulo" placeholder="Título" value="{{$Contenidos[4]->value}}" required>
               @else
-              <input type="text" name="titulo" class="form-control {{ $errors->has('titulo') ? ' is-invalid' : '' }}" id="titulo" placeholder="Titulo" required>
+              <input type="text" name="titulo" class="form-control {{ $errors->has('titulo') ? ' is-invalid' : '' }}" id="titulo" placeholder="Título" required>
               @endif
               <div class="valid-feedback">
                   ¡Todo parece en orden!
@@ -470,7 +470,7 @@
             <input class="form-control" name="imgizq" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="formFile" class="form-label">Imagen para escritorio De (460px x 460px)r</label>
+            <label for="formFile" class="form-label">Imagen para escritorio Der (460px x 460px)</label>
             <input class="form-control" name="imgder" type="file" id="formFile">
           </div>
           <div class="mb-3">

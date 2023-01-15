@@ -92,7 +92,7 @@
         <input type="hidden" name="descripcion" value="image">
         <div class="modal-body">
           <div class="mb-3">
-            <label for="formFile" class="form-label">Carga tu imagen (archivos tipo png con transparencia)</label>
+            <label for="formFile" class="form-label">Carga tu imagen (archivos tipo png con transparencia)(400px X 500px)</label>
             <input name="imagefile" class="form-control" type="file" id="formFile">
           </div>
         </div>
@@ -122,7 +122,7 @@
         <input type="hidden" name="descripcion" value="image">
         <div class="modal-body">
           <div class="mb-3">
-            <label for="formFile" class="form-label">Carga tu imagen (archivos tipo png con transparencia)</label>
+            <label for="formFile" class="form-label">Carga tu imagen (archivos tipo png con transparencia)(400px X 500px)</label>
             <input name="imagefile" class="form-control" type="file" id="formFile">
           </div>
         </div>

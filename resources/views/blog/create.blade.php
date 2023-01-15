@@ -35,7 +35,6 @@
             <form class="needs-validation" action="{{ route('blog.store') }}" method="post" novalidate>
               @csrf
                 @include('blog.partials.fields')
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 <button type="submit" class="btn btn-primary">Guardar</button>
             </form>
 

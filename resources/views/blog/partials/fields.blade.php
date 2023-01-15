@@ -4,11 +4,11 @@
 
   <div class="col-12 col-md-4">
     <div class="mb-3">
-      <label class="form-label" for="title">Titulo</label>
+      <label class="form-label" for="title">Título</label>
       @if(isset($PostEdit))
-      <input type="text" name="title" class="form-control {{ $errors->has('title') ? ' is-invalid' : '' }}" id="title" placeholder="Titulo de la entrada" value="{{$PostEdit->title}}" required>
+      <input type="text" name="title" class="form-control {{ $errors->has('title') ? ' is-invalid' : '' }}" id="title" placeholder="Título de la entrada" value="{{$PostEdit->title}}" required>
       @else
-      <input type="text" name="title" class="form-control {{ $errors->has('title') ? ' is-invalid' : '' }}" id="title" placeholder="Titulo de la entrada" required>
+      <input type="text" name="title" class="form-control {{ $errors->has('title') ? ' is-invalid' : '' }}" id="title" placeholder="Título de la entrada" required>
       @endif
       <div class="valid-feedback">
         ¡Todo parece en orden!

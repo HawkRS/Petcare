@@ -381,11 +381,11 @@
             <input name="imagefile" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="beneficiostitulo" class="form-label">Beneficio 1 titulo</label>
+            <label for="beneficiostitulo" class="form-label">Beneficio 1 título</label>
             @if(isset($Contenidos[0]->value))
-            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Titulo" value="{{$Contenidos[0]->value}}" required>
+            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Título" value="{{$Contenidos[0]->value}}" required>
             @else
-            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Titulo" required>
+            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Título" required>
             @endif
             <div class="valid-feedback">
                 ¡Todo parece en orden!
@@ -437,11 +437,11 @@
             <input name="imagefile" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="beneficiostitulo" class="form-label">Beneficio 2 titulo</label>
+            <label for="beneficiostitulo" class="form-label">Beneficio 2 título</label>
             @if(isset($Contenidos[2]->value))
-            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Titulo" value="{{$Contenidos[2]->value}}" required>
+            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Título" value="{{$Contenidos[2]->value}}" required>
             @else
-            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Titulo" required>
+            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Título" required>
             @endif
             <div class="valid-feedback">
                 ¡Todo parece en orden!
@@ -493,11 +493,11 @@
             <input name="imagefile" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="beneficiostitulo" class="form-label">Beneficio 2 titulo</label>
+            <label for="beneficiostitulo" class="form-label">Beneficio 2 título</label>
             @if(isset($Contenidos[4]->value))
-            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Titulo" value="{{$Contenidos[4]->value}}" required>
+            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Título" value="{{$Contenidos[4]->value}}" required>
             @else
-            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Titulo" required>
+            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Título" required>
             @endif
             <div class="valid-feedback">
                 ¡Todo parece en orden!
@@ -549,11 +549,11 @@
             <input name="imagefile" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="beneficiostitulo" class="form-label">Beneficio 2 titulo</label>
+            <label for="beneficiostitulo" class="form-label">Beneficio 2 título</label>
             @if(isset($Contenidos[6]->value))
-            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Titulo" value="{{$Contenidos[6]->value}}" required>
+            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Título" value="{{$Contenidos[6]->value}}" required>
             @else
-            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Titulo" required>
+            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Título" required>
             @endif
             <div class="valid-feedback">
                 ¡Todo parece en orden!
@@ -606,11 +606,11 @@
             <input name="imagefile" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="beneficiostitulo" class="form-label">Beneficio 1 titulo</label>
+            <label for="beneficiostitulo" class="form-label">Beneficio 1 título</label>
             @if(isset($Contenidos[8]->value))
-            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Titulo" value="{{$Contenidos[8]->value}}" required>
+            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Título" value="{{$Contenidos[8]->value}}" required>
             @else
-            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Titulo" required>
+            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Título" required>
             @endif
             <div class="valid-feedback">
                 ¡Todo parece en orden!
@@ -662,11 +662,11 @@
             <input name="imagefile" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="beneficiostitulo" class="form-label">Beneficio 2 titulo</label>
+            <label for="beneficiostitulo" class="form-label">Beneficio 2 título</label>
             @if(isset($Contenidos[10]->value))
-            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Titulo" value="{{$Contenidos[10]->value}}" required>
+            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Título" value="{{$Contenidos[10]->value}}" required>
             @else
-            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Titulo" required>
+            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Título" required>
             @endif
             <div class="valid-feedback">
                 ¡Todo parece en orden!
@@ -718,11 +718,11 @@
             <input name="imagefile" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="beneficiostitulo" class="form-label">Beneficio 2 titulo</label>
+            <label for="beneficiostitulo" class="form-label">Beneficio 2 título</label>
             @if(isset($Contenidos[12]->value))
-            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Titulo" value="{{$Contenidos[12]->value}}" required>
+            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Título" value="{{$Contenidos[12]->value}}" required>
             @else
-            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Titulo" required>
+            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Título" required>
             @endif
             <div class="valid-feedback">
                 ¡Todo parece en orden!
@@ -774,11 +774,11 @@
             <input name="imagefile" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="beneficiostitulo" class="form-label">Beneficio 2 titulo</label>
+            <label for="beneficiostitulo" class="form-label">Beneficio 2 título</label>
             @if(isset($Contenidos[14]->value))
-            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Titulo" value="{{$Contenidos[14]->value}}" required>
+            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Título" value="{{$Contenidos[14]->value}}" required>
             @else
-            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Titulo" required>
+            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Título" required>
             @endif
             <div class="valid-feedback">
                 ¡Todo parece en orden!
@@ -831,11 +831,11 @@
             <input name="imagefile" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="beneficiostitulo" class="form-label">Beneficio 1 titulo</label>
+            <label for="beneficiostitulo" class="form-label">Beneficio 1 título</label>
             @if(isset($Contenidos[16]->value))
-            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Titulo" value="{{$Contenidos[16]->value}}" required>
+            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Título" value="{{$Contenidos[16]->value}}" required>
             @else
-            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Titulo" required>
+            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Título" required>
             @endif
             <div class="valid-feedback">
                 ¡Todo parece en orden!
@@ -887,11 +887,11 @@
             <input name="imagefile" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="beneficiostitulo" class="form-label">Beneficio 2 titulo</label>
+            <label for="beneficiostitulo" class="form-label">Beneficio 2 título</label>
             @if(isset($Contenidos[18]->value))
-            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Titulo" value="{{$Contenidos[18]->value}}" required>
+            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Título" value="{{$Contenidos[18]->value}}" required>
             @else
-            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Titulo" required>
+            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Título" required>
             @endif
             <div class="valid-feedback">
                 ¡Todo parece en orden!
@@ -943,11 +943,11 @@
             <input name="imagefile" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="beneficiostitulo" class="form-label">Beneficio 2 titulo</label>
+            <label for="beneficiostitulo" class="form-label">Beneficio 2 título</label>
             @if(isset($Contenidos[20]->value))
-            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Titulo" value="{{$Contenidos[20]->value}}" required>
+            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Título" value="{{$Contenidos[20]->value}}" required>
             @else
-            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Titulo" required>
+            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Título" required>
             @endif
             <div class="valid-feedback">
                 ¡Todo parece en orden!
@@ -999,11 +999,11 @@
             <input name="imagefile" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="beneficiostitulo" class="form-label">Beneficio 2 titulo</label>
+            <label for="beneficiostitulo" class="form-label">Beneficio 2 título</label>
             @if(isset($Contenidos[22]->value))
-            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Titulo" value="{{$Contenidos[22]->value}}" required>
+            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Título" value="{{$Contenidos[22]->value}}" required>
             @else
-            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Titulo" required>
+            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Título" required>
             @endif
             <div class="valid-feedback">
                 ¡Todo parece en orden!
@@ -1056,11 +1056,11 @@
             <input name="imagefile" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="beneficiostitulo" class="form-label">Beneficio 1 titulo</label>
+            <label for="beneficiostitulo" class="form-label">Beneficio 1 título</label>
             @if(isset($Contenidos[24]->value))
-            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Titulo" value="{{$Contenidos[24]->value}}" required>
+            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Título" value="{{$Contenidos[24]->value}}" required>
             @else
-            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Titulo" required>
+            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Título" required>
             @endif
             <div class="valid-feedback">
                 ¡Todo parece en orden!
@@ -1112,11 +1112,11 @@
             <input name="imagefile" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="beneficiostitulo" class="form-label">Beneficio 2 titulo</label>
+            <label for="beneficiostitulo" class="form-label">Beneficio 2 título</label>
             @if(isset($Contenidos[26]->value))
-            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Titulo" value="{{$Contenidos[26]->value}}" required>
+            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Título" value="{{$Contenidos[26]->value}}" required>
             @else
-            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Titulo" required>
+            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Título" required>
             @endif
             <div class="valid-feedback">
                 ¡Todo parece en orden!
@@ -1168,11 +1168,11 @@
             <input name="imagefile" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="beneficiostitulo" class="form-label">Beneficio 2 titulo</label>
+            <label for="beneficiostitulo" class="form-label">Beneficio 2 título</label>
             @if(isset($Contenidos[28]->value))
-            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Titulo" value="{{$Contenidos[28]->value}}" required>
+            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Título" value="{{$Contenidos[28]->value}}" required>
             @else
-            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Titulo" required>
+            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Título" required>
             @endif
             <div class="valid-feedback">
                 ¡Todo parece en orden!
@@ -1224,11 +1224,11 @@
             <input name="imagefile" class="form-control" type="file" id="formFile">
           </div>
           <div class="mb-3">
-            <label for="beneficiostitulo" class="form-label">Beneficio 2 titulo</label>
+            <label for="beneficiostitulo" class="form-label">Beneficio 2 título</label>
             @if(isset($Contenidos[30]->value))
-            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Titulo" value="{{$Contenidos[30]->value}}" required>
+            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Título" value="{{$Contenidos[30]->value}}" required>
             @else
-            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Titulo" required>
+            <input type="text" name="beneficiostitulo" class="form-control {{ $errors->has('beneficiostitulo') ? ' is-invalid' : '' }}" id="beneficiostitulo" placeholder="Título" required>
             @endif
             <div class="valid-feedback">
                 ¡Todo parece en orden!

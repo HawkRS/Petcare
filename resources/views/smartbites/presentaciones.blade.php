@@ -125,7 +125,7 @@
           <input type="hidden" name="area2" value="presentaciones">
           <div class="modal-body">
             <div class="mb-3">
-              <label for="formFile" class="form-label">Carga tu imagen (archivos tipo png con transparencia)</label>
+              <label for="formFile" class="form-label">Carga tu imagen (archivos tipo png con transparencia) (340px X 400px)</label>
               <input name="imagefile" class="form-control" type="file" id="formFile">
             </div>
             <div class="mb-3">
@@ -184,7 +184,7 @@
           <input type="hidden" name="area2" value="presentaciones">
           <div class="modal-body">
             <div class="mb-3">
-              <label for="formFile" class="form-label">Carga tu imagen (archivos tipo png con transparencia)</label>
+              <label for="formFile" class="form-label">Carga tu imagen (archivos tipo png con transparencia) (340px X 400px)</label>
               <input name="imagefile" class="form-control" type="file" id="formFile">
             </div>
             <div class="mb-3">
@@ -243,7 +243,7 @@
           <input type="hidden" name="area2" value="presentaciones">
           <div class="modal-body">
             <div class="mb-3">
-              <label for="formFile" class="form-label">Carga tu imagen (archivos tipo png con transparencia)</label>
+              <label for="formFile" class="form-label">Carga tu imagen (archivos tipo png con transparencia) (340px X 400px)</label>
               <input name="imagefile" class="form-control" type="file" id="formFile">
             </div>
             <div class="mb-3">
@@ -302,7 +302,7 @@
           <input type="hidden" name="area2" value="presentaciones">
           <div class="modal-body">
             <div class="mb-3">
-              <label for="formFile" class="form-label">Carga tu imagen (archivos tipo png con transparencia)</label>
+              <label for="formFile" class="form-label">Carga tu imagen (archivos tipo png con transparencia) (340px X 400px)</label>
               <input name="imagefile" class="form-control" type="file" id="formFile">
             </div>
             <div class="mb-3">
