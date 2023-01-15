@@ -210,6 +210,12 @@
                                     </li>
                                 </ul>
                             </li>
+                            <li>
+                              <a href="{{ route('blog.index') }}" class=" waves-effect">
+                                <i class="fas fa-pen-alt"></i>
+                                <span>Blog</span>
+                              </a>
+                            </li>
                             @if( Auth::user()->type == 0 || Auth::user()->type == 1)
                             <li>
                                 <a href="{{ route('users.index') }}" class=" waves-effect">
@@ -218,12 +224,6 @@
                                 </a>
                             </li>
                             @endif
-                            <li>
-                              <a href="{{ route('blog.index') }}" class=" waves-effect">
-                                <i class="fas fa-pen-alt"></i>
-                                <span>Blog</span>
-                              </a>
-                            </li>
                         </ul>
                     </div>
                     <!-- Sidebar -->
