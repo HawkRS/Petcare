@@ -36,9 +36,9 @@ Route::prefix('post')->group(function () {
   Route::post('/{id}/eliminar', 'BlogController@delete')->name( 'blog.delete' );
   Route::get('/publicar/{id}', 'BlogController@PublishToggle')->name( 'blog.togglepublish' );
   Route::post('/{id}/agregar-fuente', 'BlogController@addFuente')->name( 'blog.addsource' );
-  Route::post('/{id}/eliminar-fuente', 'BlogController@deleteFuente')->name( 'blog.deletesource' );
+  Route::get('/{postid}/eliminar-fuente/{id}', 'BlogController@deleteFuente')->name( 'blog.deletesource' );
   Route::post('/{id}/agregar-tag', 'BlogController@addTag')->name( 'blog.addtag' );
-  Route::post('/{id}/eliminar-tag', 'BlogController@deleteTag')->name( 'blog.deletetag' );
+  Route::get('/{postid}/eliminar-tag/{id}', 'BlogController@deleteTag')->name( 'blog.deletetag' );
 });
 
 Route::prefix('landing')->group(function () {

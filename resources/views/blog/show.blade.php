@@ -60,7 +60,7 @@
                 @if($loop->index > 0)
                 |
                 @endif
-                {{ $Fuente->link }}
+                {{ $Fuente->link }} <a class="btn btn-sm btn-outline-danger pn-1" href="{{ route('blog.deletesource' , ['id' => $Fuente->id, 'postid' => $Post->id]) }}"><i class="fas fnt8 fa-trash"></i> </a>
                 @endforeach
                 <div class="col-12">
                   <button type="button" name="button"  data-bs-toggle="modal" data-bs-target="#FuenteModal" class="btn btn-sm btn-primary fntB"><i class="fas fnt14 fa-quote-left"></i> Agregar Fuente</button>
@@ -79,7 +79,7 @@
                 @if($loop->index > 0)
                 |
                 @endif
-                {{ $Tags->tag }}
+                {{ $Tags->tag }} <a class="btn btn-sm btn-outline-danger pn-1" href="{{ route('blog.deletetag' , ['id' => $Tags->id, 'postid' => $Post->id]) }}"><i class="fas fnt8 fa-trash"></i> </a>
                 @endforeach
                 <div class="col-12">
                   <button type="button" name="button"  data-bs-toggle="modal" data-bs-target="#TagModal" class="btn btn-sm btn-primary fntB"><i class="fas fnt14 fa-tag"></i> Agregar Tag</button>

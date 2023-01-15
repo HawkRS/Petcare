@@ -192,9 +192,14 @@ class BlogController extends Controller
       dd($NewSource);
    }
 
-   public function deleteFuente(Request $request, $id)
+   public function deleteFuente(Request $request, $postid,$id)
    {
-      dd($request->all());
+      $SourceDeleted = Fuentes::findorfail($id);
+      //dd($SourceDeleted);
+      $PostID = $SourceDeleted->post_id;
+      //dd($SourceDeleted);
+      $SourceDeleted->delete();
+      return redirect()->route('blog.show',['id'=>$PostID]);
    }
 
    public function addTag(Request $request, $id)
@@ -214,11 +219,14 @@ class BlogController extends Controller
       dd($NewTag);
    }
 
-   public function deleteTag(Request $request, $id)
+   public function deleteTag(Request $request, $postid,$id)
    {
-      dd($request->all());
-      $TagDeleted = Tag::findorfail($id);
+      $TagDeleted = Tags::findorfail($id);
+      //dd($TagDeleted);
+      $PostID = $TagDeleted->post_id;
       //dd($TagDeleted);
       $TagDeleted->delete();
+      return redirect()->route('blog.show',['id'=>$PostID]);
+
    }
 }
