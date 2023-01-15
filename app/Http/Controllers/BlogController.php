@@ -171,4 +171,24 @@ class BlogController extends Controller
       //dd($PostEdit);
       return redirect()->route('blog.index');
    }
+
+   public function addFuente(Request $request, $id)
+   {
+      dd($request->all());
+   }
+
+   public function deleteFuente(Request $request, $id)
+   {
+      dd($request->all());
+   }
+
+   public function addTag(Request $request, $id)
+   {
+      dd($request->all());
+   }
+
+   public function deleteTag(Request $request, $id)
+   {
+      dd($request->all());
+   }
 }
