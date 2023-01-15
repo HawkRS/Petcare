@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('pagina', 'Blog')
+@section('pagina', 'Ver')
 
 @section('content')
 
@@ -33,13 +33,14 @@
               {{--<p class="card-title-desc">Agregar o editar entradas al blog publico de Vimifos Petcare.</p>--}}
             </div>
             <div class="float-md-end">
-              <a href="{{ route('blog.edit', ['id' => $Post->id]) }} " class="btn btn-sm btn-outline-warning"><i class="fas fnt18 fa-pencil-alt"></i> Editar</a>
-              <button type="button" name="button"  data-bs-toggle="modal" data-bs-target="PostModal" class="btn btn-sm btn-outline-danger fntB"><i class="fas fnt18 fa-trash-alt"></i> Eliminar</button>
+              <a href="{{ route('blog.edit', ['id' => $Post->id]) }} " class="btn btn-sm btn-outline-warning"><i class="fas fnt14 fa-pencil-alt"></i> Editar</a>
+              <button type="button" name="button"  data-bs-toggle="modal" data-bs-target="#PostModal" class="btn btn-sm btn-outline-danger fntB"><i class="fas fnt14 fa-trash-alt"></i> Eliminar</button>
+
               <a href="{{ route('blog.togglepublish', ['id' => $Post->id]) }}" class="btn btn-sm btn-outline-info">
               @if($Post->publicado == true)
-                <i class="fas fa-eye-slash"></i> Despublicar
+                <i class="fas fnt14 fa-eye-slash"></i> Despublicar
               @else
-                <i class="fas fa-eye"></i> Publicar
+                <i class="fas fnt14 fa-eye"></i> Publicar
               @endif
             </a>
             </div>
@@ -50,10 +51,10 @@
                 <p> <strong>Cuerpo:</strong> </p>
                 <p>{{ $Post->body }}</p>
               </div>
-              <div class="col-12 col-md-4">
+              <div class="col-12">
                 <strong>Autor:</strong> {{ $Post->Autor->name }}
               </div>
-              <div class="col-12 col-md-4">
+              <div class="col-12">
                 <strong>Fuentes:</strong>
                 @foreach($Post->HasSources as $Fuente)
                 @if($loop->index > 0)
@@ -61,8 +62,11 @@
                 @endif
                 {{ $Fuente->link }}
                 @endforeach
+                <div class="col-12">
+                  <button type="button" name="button"  data-bs-toggle="modal" data-bs-target="#FuenteModal" class="btn btn-sm btn-primary fntB"><i class="fas fnt14 fa-quote-left"></i> Agregar Fuente</button>
+                </div>
               </div>
-              <div class="col-12 col-md-4">
+              <div class="col-12">
                 <strong>Tags:</strong>
                 @foreach($Post->HasTags as $Tags)
                 @if($loop->index > 0)
@@ -70,6 +74,9 @@
                 @endif
                 {{ $Tags->tag }}
                 @endforeach
+                <div class="col-12">
+                  <button type="button" name="button"  data-bs-toggle="modal" data-bs-target="#TagModal" class="btn btn-sm btn-primary fntB"><i class="fas fnt14 fa-tag"></i> Agregar Tag</button>
+                </div>
               </div>
             </div>
 
@@ -83,21 +90,19 @@
   </div>
 </div>
 {{-- DELETE POST --}}
-<div class="modal fade" id="PostModal" tabindex="-1" role="dialog" aria-labelledby="PostModalLabel" aria-hidden="true">
+<div class="modal fade" id="PostModal" tabindex="-1"  tabindex="-1" aria-labelledby="PostModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="PostModalLabel">¿Seguro que deseas eliminar este Post?</h5>
-        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">×</span>
-        </button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <p>{{$Post->name}}</p>
         <p>Una vez eliminado no hay forma de recuperarlo.</p>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
         <form class="" method="POST" action="{{ route('blog.delete', ['id' => $Post->id]) }}">
           @csrf
           <button type="submit" class="btn btn-danger">
@@ -109,6 +114,56 @@
   </div>
 </div>
 {{-- END MODAL --}}
+{{-- FUENTE POST --}}
+<div class="modal fade" id="FuenteModal" tabindex="-1" aria-labelledby="FuenteModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="FuenteModalLabel">Escribe la fuente que deseas añadir</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form class="needs-validation" action="{{ route('blog.addsource', ['id' => $Post->id]) }}" method="post" enctype="multipart/form-data"  novalidate>
+        @csrf
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="fuente" class="form-label">Fuente</label>
+            <input name="fuente" class="form-control" type="text" id="fuente" placeholder="Escribe el link de la fuente">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{{-- END FUENTE MODAL --}}
+{{-- TAG POST --}}
+<div class="modal fade" id="TagModal" tabindex="-1" aria-labelledby="TagModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="TagModalLabel">Escribe la etiqueta que deseas añadir</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form class="needs-validation" action="{{ route('blog.addtag', ['id' => $Post->id]) }}" method="post" enctype="multipart/form-data"  novalidate>
+        @csrf
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="fuente" class="form-label">Etiqueta</label>
+            <input name="fuente" class="form-control" type="text" id="fuente" placeholder="Escribe el link de la etiqueta">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{{-- END TAG MODAL --}}
 
 
 @endsection

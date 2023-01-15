@@ -275,17 +275,6 @@
         <script src="{{ asset('libs/simplebar/simplebar.min.js') }}"></script>
         <script src="{{ asset('libs/node-waves/waves.min.js') }}"></script>
         <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
-
-        <!-- apexcharts js -->
-        <!--script src="{{ asset('libs/apexcharts/apexcharts.min.js') }}"></script-->
-
-        <!-- jquery.vectormap map -->
-        <!--script src="{{ asset('libs/jqvmap/jquery.vmap.min.js') }}"></script-->
-        <!--script src="{{ asset('libs/jqvmap/maps/jquery.vmap.usa.js') }}"></script-->
-
-        <!--script src="{{ asset('js/pages/dashboard.init.js') }}"></script-->
-
-
         <script src="{{ asset('js/app.js') }}"></script>
         <script src="{{ asset('js/upzet.js') }}"></script>
 
