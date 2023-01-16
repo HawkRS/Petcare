@@ -83,9 +83,9 @@
     <div class="mb-3">
       <label for="body" class="form-label">Cuerpo</label>
       @if(isset($PostEdit->body))
-      <textarea class="form-control  {{ $errors->has('body') ? ' is-invalid' : '' }}" name="body" id="body" rows="10" required>{{$PostEdit->body}}</textarea>
+      <textarea class="form-control  {{ $errors->has('body') ? ' is-invalid' : '' }}" name="body" id="body">{{$PostEdit->body}}</textarea>
       @else
-      <textarea class="form-control  {{ $errors->has('body') ? ' is-invalid' : '' }}" name="body" id="body" rows="10" required></textarea>
+      <textarea class="form-control  {{ $errors->has('body') ? ' is-invalid' : '' }}" name="body" id="body"></textarea>
       @endif
       <div class="valid-feedback">
         ¡Todo parece en orden!

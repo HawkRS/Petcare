@@ -1,6 +1,9 @@
 @extends('layouts.app')
-@section('pagina', 'Blog')
-
+@section('pagina', 'Blogedit')
+@section('section', 'Blogedit')
+@section('tinymce')
+  <script src="https://cdn.tiny.cloud/1/jd9diezu5sooas44kostlfthofj7mv2qpng0adjvqef3lbhm/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+@endsection
 @section('content')
 
 <div class="page-content">

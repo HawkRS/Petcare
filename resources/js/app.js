@@ -37,6 +37,12 @@ function MainFunction(){
       blogpage();
       break;
     }
+    case "Blogedit":{
+      console.log('tinymce');
+      var blogeditpage = require('./blogedit.js');
+      blogeditpage();
+      break;
+    }
     default:
   }
   //*/

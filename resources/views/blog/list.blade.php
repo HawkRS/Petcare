@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('pagina', 'Blog')
-
+@section('section', 'Blog')
 @section('content')
 
 <div class="page-content">
