@@ -1,5 +1,6 @@
 @extends('layouts.app')
-@section('pagina', 'Ver')
+@section('pagina', 'ver')
+
 
 @section('content')
 
@@ -22,81 +23,92 @@
     </div>
 
     <div class="row">
-      <div class="col-12">
-        <div class="card table-responsive p-3">
+      <div class="col-12 col-md-9">
+        <div class="card p-3">
           <div class="card-body">
-            <div class="float-md-start">
+            <h6>Entrada</h6>
+            <hr>
+            <p class="card-title float-left"> <strong>Titulo:</strong> {{ $Post->title }}</p>
+            <p class="card-title float-left"> {!! $Post->body !!}</p>
 
-              <h4 class="card-title float-left"> <strong>Titulo:</strong> {{ $Post->title }}</h4>
-              <h4 class="card-title float-left"> <strong>Link del artículo:</strong> {{ $Post->slug }}</h4>
-
-              {{--<p class="card-title-desc">Agregar o editar entradas al blog publico de Vimifos Petcare.</p>--}}
-            </div>
-            <div class="float-md-end">
-              <a href="{{ route('blog.edit', ['id' => $Post->id]) }} " class="btn btn-sm btn-outline-warning"><i class="fas fnt14 fa-pencil-alt"></i> Editar</a>
-              <button type="button" name="button"  data-bs-toggle="modal" data-bs-target="#PostModal" class="btn btn-sm btn-outline-danger fntB"><i class="fas fnt14 fa-trash-alt"></i> Eliminar</button>
-
-              <a href="{{ route('blog.togglepublish', ['id' => $Post->id]) }}" class="btn btn-sm btn-outline-info">
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-3">
+        <div class="card border-secondary p-3">
+          <div class="card-body">
+            <h6>Informacíon de la entrada</h6>
+            <hr>
+            <p><strong>Link del artículo:</strong> <a href="https://vimifospetcare.com/blog/{{ $Post->slug }}" target="_blank">https://vimifospetcare.com/blog/{{ $Post->slug }}</a></p>
+            <p><strong>Autor:</strong> {{ $Post->Autor->name }}</p>
+            <p><strong>Creado el:</strong>  {{ date_format($Post->created_at,"M d, o") }}.</p>
+            <p><strong>Ultima edición:</strong>  {{ date_format($Post->updated_at,"M d, o") }}.</p>
+            <p><strong>Estatus:</strong>
               @if($Post->publicado == true)
-                <i class="fas fnt14 fa-eye-slash"></i> Despublicar
+              <span>Publicado</span>
               @else
-                <i class="fas fnt14 fa-eye"></i> Publicar
+              <span class="text-danger">No publicado</span>
               @endif
-            </a>
-            </div>
-            <div class="clearfix">
-            </div>
-            <div class="row mt-2">
+            </p>
+            <p>
+              <strong>Fuentes:</strong>
+              @foreach($Post->HasSources as $Fuente)
+              @if($loop->index > 0)
+              |
+              @endif
+              {{ $Fuente->link }} <a class="btn btn-sm btn-outline-danger pn-1" href="{{ route('blog.deletesource' , ['id' => $Fuente->id, 'postid' => $Post->id]) }}"><i class="fas fnt8 fa-trash"></i> </a>
+              @endforeach
               <div class="col-12">
-                <p> <strong>Cuerpo:</strong> </p>
-                <p>{{ $Post->body }}</p>
+                <button type="button" name="button"  data-bs-toggle="modal" data-bs-target="#FuenteModal" class="btn btn-sm btn-primary fntB"><i class="fas fnt14 fa-quote-left"></i> Agregar Fuente</button>
               </div>
-              <div class="col-12">
-                <strong>Autor:</strong> {{ $Post->Autor->name }}
-              </div>
-              <div class="col-12">
-                <strong>Fuentes:</strong>
-                @foreach($Post->HasSources as $Fuente)
-                @if($loop->index > 0)
-                |
-                @endif
-                {{ $Fuente->link }} <a class="btn btn-sm btn-outline-danger pn-1" href="{{ route('blog.deletesource' , ['id' => $Fuente->id, 'postid' => $Post->id]) }}"><i class="fas fnt8 fa-trash"></i> </a>
-                @endforeach
-                <div class="col-12">
-                  <button type="button" name="button"  data-bs-toggle="modal" data-bs-target="#FuenteModal" class="btn btn-sm btn-primary fntB"><i class="fas fnt14 fa-quote-left"></i> Agregar Fuente</button>
+              @error('fuente')
+              <div class="invalid-feedback d-block">
+                <div class="alert alert-danger">
+                  {{ $errors->first('fuente') }}
                 </div>
-                @error('fuente')
-                  <div class="invalid-feedback d-block">
-                    <div class="alert alert-danger">
-                      {{ $errors->first('fuente') }}
-                    </div>
-                  </div>
-                @enderror
               </div>
+              @enderror
+            </p>
+            <p>
+              <strong>Tags:</strong>
+              @foreach($Post->HasTags as $Tags)
+              @if($loop->index > 0)
+              |
+              @endif
+              {{ $Tags->tag }} <a class="btn btn-sm btn-outline-danger pn-1" href="{{ route('blog.deletetag' , ['id' => $Tags->id, 'postid' => $Post->id]) }}"><i class="fas fnt8 fa-trash"></i> </a>
+              @endforeach
               <div class="col-12">
-                <strong>Tags:</strong>
-                @foreach($Post->HasTags as $Tags)
-                @if($loop->index > 0)
-                |
-                @endif
-                {{ $Tags->tag }} <a class="btn btn-sm btn-outline-danger pn-1" href="{{ route('blog.deletetag' , ['id' => $Tags->id, 'postid' => $Post->id]) }}"><i class="fas fnt8 fa-trash"></i> </a>
-                @endforeach
-                <div class="col-12">
-                  <button type="button" name="button"  data-bs-toggle="modal" data-bs-target="#TagModal" class="btn btn-sm btn-primary fntB"><i class="fas fnt14 fa-tag"></i> Agregar Tag</button>
+                <button type="button" name="button"  data-bs-toggle="modal" data-bs-target="#TagModal" class="btn btn-sm btn-primary fntB"><i class="fas fnt14 fa-tag"></i> Agregar Tag</button>
+              </div>
+              @error('etiqueta')
+              <div class="invalid-feedback d-block">
+                <div class="alert alert-danger">
+                  {{ $errors->first('etiqueta') }}
                 </div>
-                @error('etiqueta')
-                  <div class="invalid-feedback d-block">
-                    <div class="alert alert-danger">
-                      {{ $errors->first('etiqueta') }}
-                    </div>
-                  </div>
-                @enderror
+              </div>
+              @enderror
+            </p>
+            <div class="row">
+              <h6>Acciones</h6>
+              <div class="col-12 col-md-4">
+                <a href="{{ route('blog.edit', ['id' => $Post->id]) }} " class="btn btn-sm btn-outline-warning"><i class="fas fnt10 fa-pencil-alt"></i> Editar</a>
+              </div>
+              <div class="col-12 col-md-4">
+                <button type="button" name="button"  data-bs-toggle="modal" data-bs-target="#PostModal" class="btn btn-sm btn-outline-danger fntB"><i class="fas fnt14 fa-trash-alt"></i> Eliminar</button>
+              </div>
+              <div class="col-12 col-md-4">
+                <a href="{{ route('blog.togglepublish', ['id' => $Post->id]) }}" class="btn btn-sm btn-outline-info">
+                  @if($Post->publicado == true)
+                  <i class="fas fnt10 fa-eye-slash"></i> Despublicar
+                  @else
+                  <i class="fas fnt10 fa-eye"></i> Publicar
+                  @endif
+                </a>
               </div>
             </div>
-
-
           </div>
-          </div>
+        </div>
+
       </div>
     </div>
 
