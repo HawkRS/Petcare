@@ -39,6 +39,8 @@
           <div class="card-body">
             <h6>Informacíon de la entrada</h6>
             <hr>
+            <p>Portada</p>
+            <img src="{{ asset($Post->banner) }}" alt="Portada" class="img-fluid">
             <p><strong>Link del artículo:</strong> <a href="https://vimifospetcare.com/blog/{{ $Post->slug }}" target="_blank">https://vimifospetcare.com/blog/{{ $Post->slug }}</a></p>
             <p><strong>Autor:</strong> {{ $Post->Autor->name }}</p>
             <p><strong>Creado el:</strong>  {{ date_format($Post->created_at,"M d, o") }}.</p>

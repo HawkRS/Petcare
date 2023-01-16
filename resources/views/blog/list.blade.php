@@ -32,11 +32,11 @@
             <table id='BlogTable'  class="table table-sm table-bordered table-striped dt-responsive nowrap dataTable no-footer dtr-inline" style="border-collapse: collapse; border-spacing: 0px; width: 100%;" role="grid" aria-describedby="datatable_info">
               <thead class="">
                 <tr class="fnt18 fnt_blue">
-                  <th class="fntB">LINK DEL ARTÍCULO</th>
+                  {{--<th class="fntB">LINK DEL ARTÍCULO</th>--}}
                   <th class="fntB">TÍTULO</th>
                   <th class="fntB">CUERPO</th>
                   <th class="fntB">AUTOR</th>
-                  <th class="fntB">BANNER</th>
+                  {{--<th class="fntB">BANNER</th>--}}
                   <th class="fntB">FECHA</th>
                   <th class="fntB">ESTATUS</th>
                   <th class="fntB">ACCIONES</th>
@@ -45,11 +45,11 @@
               <tbody>
                 @foreach($Posts as $Post)
 
-                <td class="" >{{ $Post->slug }}</td>
+                {{--<td class="" >{{ $Post->slug }}</td>--}}
                 <td class="" >{{ $Post->title }}</td>
-                <td class="" >{{ Str::limit(strip_tags(utf8_decode($Post->body)), 50) }}</td> 
+                <td class="" >{!! Str::limit(strip_tags(utf8_decode($Post->body)), 50) !!}</td>
                 <td class="" >{{ $Post->Autor->name }}</td>
-                <td class="" >{{ $Post->banner }}</td>
+                {{--<td class="" >{{ $Post->banner }}</td>--}}
                 <td class="" >{{ date_format($Post->created_at,"d/m/Y") }}</td>
                 <td>
                   @if($Post->publicado == true)

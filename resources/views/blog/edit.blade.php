@@ -34,7 +34,7 @@
             <div class="clearfix">
             </div>
 
-            <form class="needs-validation" action="{{ route('blog.update', ['id'=>$PostEdit->id]) }}" method="post" novalidate>
+            <form class="needs-validation" action="{{ route('blog.update', ['id'=>$PostEdit->id]) }}" method="post" enctype="multipart/form-data"  novalidate>
               @csrf
                 @include('blog.partials.fields')
                 <button type="submit" class="btn btn-primary">Guardar</button>

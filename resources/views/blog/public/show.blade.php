@@ -6,7 +6,7 @@
 
 <div id="carouselBlog" class="carousel slider-general slider-general-v2 slide ov-h position-relative zi-1" data-bs-ride="carousel">
     <div class="carousel-inner">
-      <div class="carousel-item jumbotron active" data-paroller-factor="0.3" data-paroller-factor-xs="0.4" style='background: url("https://vimifospetcare.com/img/blog/banner_blog.jpg") no-repeat center center/cover'>
+      <div class="carousel-item jumbotron active" data-paroller-factor="0.3" data-paroller-factor-xs="0.4" style='background: url("{{ asset($Post->banner) }}") no-repeat center center/cover'>
       </div>
   </div>
 </div>
@@ -15,7 +15,7 @@
   <div class="container pe-5 pe-sm-3 ps-5 ps-sm-3">
     <div class="box">
       <div class="box-content">
-        <h1 class="c-azul-2 f-bold mb-4">{{ $Post->title }}</h1>
+        <h1 class="c-azul-2 f-bold mb-2">{{ $Post->title }}</h1>
 
         <p class="c-gris-3 f-regular text-justify mb-3">
           {!! $Post->body !!}

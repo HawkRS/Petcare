@@ -2,7 +2,7 @@
 
 <div class="row">
 
-  <div class="col-12 col-md-4">
+  <div class="col-12 col-md-6 col-lg-3">
     <div class="mb-3">
       <label class="form-label" for="title">Título</label>
       @if(isset($PostEdit))
@@ -24,7 +24,7 @@
     </div>
   </div>
 
-  <div class="col-12 col-md-4">
+  <div class="col-12 col-md-6 col-lg-3">
     <div class="mb-3">
       <label class="form-label" for="slug">Link del artículo</label>
       @if(isset($PostEdit))
@@ -46,7 +46,7 @@
     </div>
   </div>
 
-  <div class="col-12 col-md-4">
+  <div class="col-12 col-md-6 col-lg-3">
     <div class="mb-3">
       <label class="form-label" for="published">Estatus de publicación</label>
       <select class="form-select" name="published" id="published">
@@ -76,6 +76,18 @@
     </div>
   </div>
 
+  <div class="col-12 col-md-6 col-lg-3">
+    <div class="mb-3">
+      <label for="formFile" class="form-label">Imagen de portada <small>(Max 1920px X 1200px)</small></label>
+      <input name="portada" class="form-control" type="file" id="formFile">
+    </div>
+    @error('portada')
+      <div class="invalid-feedback d-block">
+        {{ $errors->first('portada') }}
+      </div>
+    @enderror
+  </div>
+
 </div>
 
 <div class="row">
@@ -95,7 +107,7 @@
       </div>
       @error('body')
         <div class="invalid-feedback d-block">
-          {{ $errors->first('slug') }}
+          {{ $errors->first('body') }}
         </div>
       @enderror
     </div>
