@@ -17,7 +17,7 @@ class CreatePostTable extends Migration
           $table->id();
           $table->string('slug')->unique();
           $table->string('title');
-          $table->text('body');
+          $table->longText('body');
           $table->text('banner');
           $table->unsignedBigInteger('users_id');
           $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade');
