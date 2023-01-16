@@ -47,7 +47,7 @@
 
                 <td class="" >{{ $Post->slug }}</td>
                 <td class="" >{{ $Post->title }}</td>
-                <td class="" >{{ Str::limit($Post->body, 50) }}</td>
+                <td class="" >{{ Str::limit(strip_tags(utf8_decode($Post->body)), 50) }}</td> 
                 <td class="" >{{ $Post->Autor->name }}</td>
                 <td class="" >{{ $Post->banner }}</td>
                 <td class="" >{{ date_format($Post->created_at,"d/m/Y") }}</td>
