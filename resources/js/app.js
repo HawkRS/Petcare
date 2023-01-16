@@ -38,7 +38,7 @@ function MainFunction(){
       break;
     }
     case "Blogedit":{
-      console.log('tinymce');
+      //console.log('tinymce');
       var blogeditpage = require('./blogedit.js');
       blogeditpage();
       break;

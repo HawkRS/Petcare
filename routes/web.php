@@ -39,6 +39,7 @@ Route::prefix('post')->group(function () {
   Route::get('/{postid}/eliminar-fuente/{id}', 'BlogController@deleteFuente')->name( 'blog.deletesource' );
   Route::post('/{id}/agregar-tag', 'BlogController@addTag')->name( 'blog.addtag' );
   Route::get('/{postid}/eliminar-tag/{id}', 'BlogController@deleteTag')->name( 'blog.deletetag' );
+  Route::post('/agregar-imagen', 'BlogController@uploadBodyImg')->name( 'blog.addbodyimg' );
 });
 
 Route::prefix('landing')->group(function () {

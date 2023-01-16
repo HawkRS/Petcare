@@ -265,4 +265,31 @@ class BlogController extends Controller
       return redirect()->route('blog.show',['id'=>$PostID]);
 
    }
+
+   public function uploadBodyImg(Request $request)
+   {
+      $ImageCont = $_FILES['file'];
+      $filename =  date_format($now, 'dmY').'_'.$ImageCont['name'];
+      if ($now->month <10) {$currentmonth = "0". $now->month;}
+      else {$currentmonth =  $now->month;}
+      $path = "img/blog/".$now->year."/".$currentmonth."/".$filename;
+      if (!file_exists(dirname($path))) {
+        mkdir(dirname($path), 0777, true);
+      }
+      //dd($path);
+      $intervention = new ImageManager(array('driver' => 'gd'));
+      $img = $intervention->make($ImageCont['tmp_name']);
+      $img->resize(1200, null, function ($constraint) {
+          $constraint->aspectRatio();
+      });
+      $img->save($path);
+      //$PostEdit->banner = $path;
+      $linkpath= url('/').$path;
+      $arrayName = array('location' => $filename);
+      //return json($arrayName);
+      //return response()->json($arrayName);
+      return response()->json(['location' => $path], 200);
+
+   }
+
 }

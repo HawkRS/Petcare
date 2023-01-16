@@ -113,3 +113,7 @@
     </div>
   </div>
 </div>
+<?php $url = url('/') ?>
+<script>
+  var CurrentUrl = JSON.parse('<?php echo json_encode($url); ?>');
+</script>
