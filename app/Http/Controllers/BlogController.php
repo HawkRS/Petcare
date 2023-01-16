@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Intervention\Image\ImageManager;
 use Illuminate\Validation\Rule;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
@@ -61,14 +62,30 @@ class BlogController extends Controller
       'required' => 'El campo :attribute es obligatorio.',
       ];
       $this->validate(request(), [
+        'body' => 'required',
         'slug' => 'nullable|alpha_dash|min:4|unique:post,slug',
         'title' => 'required',
-        'published' => 'required',
-        'body' => 'required',
         'autor' => 'required|numeric|exists:users,id',
+        'portada' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+        'published' => 'required',
        ], $messages);
-       //dd($request->all());
+      //dd($request->all());
+       $ImageCont = $_FILES['portada'];
+       $now = Carbon::now('America/Mexico_City');
+       $filename =  date_format($now, 'dmY').'_'.$ImageCont['name'];
+       if ($now->month <10) {$currentmonth = "0". $now->month;}
+       else {$currentmonth =  $now->month;}
+       $path = "img/blog/".$now->year."/".$currentmonth."/".$filename;
+       if (!file_exists(dirname($path))) {
+         mkdir(dirname($path), 0777, true);
+       }
+       //dd($path);
+       $intervention = new ImageManager(array('driver' => 'gd'));
+       $img = $intervention->make($ImageCont['tmp_name']);
+       $img->save($path);
+
        $NewPost = new Post;
+       $NewPost->banner = $path;
        $NewPost->slug = $request->slug;
        $NewPost->title = $request->title;
        $NewPost->body = $request->body;
@@ -127,8 +144,27 @@ class BlogController extends Controller
       'title' => 'required',
       'published' => 'required',
       'body' => 'required',
+      'portada' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
       'autor' => 'required|numeric|exists:users,id',
      ], $messages);
+     //dd($request->all());
+     if(isset($request->portada)){
+       $ImageCont = $_FILES['portada'];
+       $now = Carbon::now('America/Mexico_City');
+       $filename =  date_format($now, 'dmY').'_'.$ImageCont['name'];
+       if ($now->month <10) {$currentmonth = "0". $now->month;}
+       else {$currentmonth =  $now->month;}
+       $path = "img/blog/".$now->year."/".$currentmonth."/".$filename;
+       if (!file_exists(dirname($path))) {
+         mkdir(dirname($path), 0777, true);
+       }
+       //dd($path);
+       $intervention = new ImageManager(array('driver' => 'gd'));
+       $img = $intervention->make($ImageCont['tmp_name']);
+       $img->save($path);
+       $PostEdit->banner = $path;
+     }
+
      $PostEdit->slug = $request->slug;
      $PostEdit->title = $request->title;
      $PostEdit->body = $request->body;
