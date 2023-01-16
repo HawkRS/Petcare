@@ -33,11 +33,10 @@
           <div class="col-md-4">
             <div class="card-image" onClick="document.location='{{ route('post.show', ['slug' => $Post->slug]) }}'">
                 <picture>
-                <source srcset="https://vimifospetcare.com/img/blog/2-los-ojos-del-gato-curiosidades.webp" type="image/webp">
-                <source srcset="https://vimifospetcare.com/img/blog/2-los-ojos-del-gato-curiosidades.jpg" type="image/jpeg">
+                <source srcset="{{ asset($Post->banner) }}" type="image/jpeg">
                 <img
-                  src="https://vimifospetcare.com/img/blog/2-los-ojos-del-gato-curiosidades.jpg"
-                  data-src="https://vimifospetcare.com/img/blog/2-los-ojos-del-gato-curiosidades.jpg"
+                  src="{{ asset($Post->banner) }}"
+                  data-src="{{ asset($Post->banner) }}"
                   class="lazyload img-fluid"
                   width=""
                   height=""
