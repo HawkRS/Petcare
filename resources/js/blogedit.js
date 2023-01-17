@@ -1,5 +1,7 @@
   module.exports = function(){
-    function example_image_upload_handler (blobInfo, success, failure, progress) {
+
+
+    function image_upload_handler_callback (blobInfo, success, failure, progress) {
   var xhr, formData;
 
   xhr = new XMLHttpRequest();
@@ -58,35 +60,16 @@
           language: 'es',
           allow_local_file_access: true,
           image_title: true,
-          //automatic_uploads: true,
-          //images_file_types: 'jpg,svg,webp',
-          //images_upload_url: CurrentUrl+'/post/agregar-imagen',
-          //images_upload_credentials: false,
+          images_file_types: 'jpg,svg,webp',
+          images_upload_url: CurrentUrl+'/post/agregar-imagen',
+          image_upload_handler: image_upload_handler_callback,
+          automatic_uploads: true,
+          images_upload_credentials: false,
+          relative_urls: false,
+          remove_script_host: false,
+          //images_upload_base_path: CurrentUrl+'/admin/',
           //file_picker_types: 'image',
-          file_picker_callback: function(cb, value, meta) {
-              var input = document.createElement('input');
-              input.setAttribute('type', 'file');
-              input.setAttribute('accept', 'image/*');
-              input.onchange = function() {
-                  var file = this.files[0];
 
-                  var reader = new FileReader();
-                  reader.readAsDataURL(file);
-                  reader.onload = function () {
-                      var id = 'blobid' + (new Date()).getTime();
-                      var blobCache =  tinymce.activeEditor.editorUpload.blobCache;
-                      var base64 = reader.result.split(',')[1];
-                      var blobInfo = blobCache.create(id, file, base64);
-                      blobCache.add(blobInfo);
-                      var rest = cb(blobInfo.blobUri(), { title: file.name });
-                      console.log(base64);
-                      console.log(blobCache);
-                      console.log(blobInfo);
-                      console.log(rest);
-                  };
-              };
-              input.click();
-          }
         });
   }
 
