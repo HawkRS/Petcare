@@ -1,5 +1,4 @@
 <?php
-require_once('c:/xampp7/htdocs/Vimifos/core/controllers/AdminController.php');
 $temp 		= $_SERVER["REQUEST_URI"];
 /*CAPTCHA*/
 

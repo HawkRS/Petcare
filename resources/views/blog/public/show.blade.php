@@ -6,7 +6,7 @@
 
 <div id="carouselBlog" class="carousel slider-general slider-general-v2 slide ov-h position-relative zi-1" data-bs-ride="carousel">
     <div class="carousel-inner">
-      <div class="carousel-item jumbotron active" data-paroller-factor="0.3" data-paroller-factor-xs="0.4" style='background: url("{{ asset($Post->banner) }}") no-repeat center center/cover'>
+      <div class="carousel-item jumbotron active" data-paroller-factor="0.3" data-paroller-factor-xs="0.4" style='background: url("{{ asset('admin/'.$Post->banner) }}") no-repeat center center/cover'>
       </div>
   </div>
 </div>

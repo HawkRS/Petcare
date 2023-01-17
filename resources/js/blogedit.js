@@ -58,11 +58,11 @@
           language: 'es',
           allow_local_file_access: true,
           image_title: true,
-          automatic_uploads: true,
-          images_file_types: 'jpg,svg,webp',
-          images_upload_url: CurrentUrl+'/post/agregar-imagen',
-          images_upload_credentials: false,
-          file_picker_types: 'image',
+          //automatic_uploads: true,
+          //images_file_types: 'jpg,svg,webp',
+          //images_upload_url: CurrentUrl+'/post/agregar-imagen',
+          //images_upload_credentials: false,
+          //file_picker_types: 'image',
           file_picker_callback: function(cb, value, meta) {
               var input = document.createElement('input');
               input.setAttribute('type', 'file');

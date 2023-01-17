@@ -33,10 +33,10 @@
           <div class="col-md-4">
             <div class="card-image" onClick="document.location='{{ route('post.show', ['slug' => $Post->slug]) }}'">
                 <picture>
-                <source srcset="{{ asset($Post->banner) }}" type="image/jpeg">
+                <source srcset="{{ asset('admin/'.$Post->banner) }}" type="image/jpeg">
                 <img
-                  src="{{ asset($Post->banner) }}"
-                  data-src="{{ asset($Post->banner) }}"
+                  src="{{ asset('admin/'.$Post->banner) }}"
+                  data-src="{{ asset('admin/'.$Post->banner) }}"
                   class="lazyload img-fluid"
                   width=""
                   height=""
