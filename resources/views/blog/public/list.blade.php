@@ -46,7 +46,48 @@
           </div>
           <div class="col-md-8">
               <div class="card-body h-100 d-flex justify-content-center align-items-start flex-column">
-                <h4 class="card-date c-azul-2 f-medium">Publicado en {{ date_format($Post->created_at,"M d, o") }}</h4>
+                <h4 class="card-date c-azul-2 f-medium">        Publicado en
+        @switch($Post->created_at->month)
+            @case(1)
+                 Ene
+            @break
+            @case(2)
+                Feb
+                @break
+            @case(3)
+                Mar
+                @break
+            @case(4)
+                Abr
+                @break
+            @case(5)
+                May
+                @break
+            @case(6)
+                Jun
+                @break
+            @case(7)
+                Jul
+                @break
+            @case(8)
+                Ago
+                @break
+            @case(9)
+                Sep
+                @break
+            @case(10)
+                Oct
+                @break
+            @case(11)
+                Nov
+                @break
+            @case(12)
+                Dic
+                @break
+            @default
+                --
+        @endswitch
+        {{$Post->created_at->day}}, {{$Post->created_at->year}}</h4>
                 <a href="{{ route('post.show', ['slug' => $Post->slug]) }}" class="card-title c-azul-2 h-c-rojo-1 f-medium text-decoration-none d-block mb-1" rel="noopener">{{$Post->title}}</a>
                 <?php $body = strip_tags($Post->body); ?>
                 <p class="card-text c-gris-3 f-medium fs-6 mb-1">{!! substr(strip_tags($Post->body), 0, 300) !!}
@@ -60,6 +101,11 @@
       </div>
     </div>
     @endforeach
+
+    <div>
+    {{ $Posts->links() }}  
+    </div>
+
 
   </div>
 </section>

@@ -20,6 +20,7 @@ class PostController extends Controller
     public function index()
     {
       $PostsList = Post::all();
+      $PostsList = Post::where('publicado', true)->simplePaginate(5);
       //dd($PostsList[0]->Autor->name);
 
       return view($this->f.'list', [
@@ -35,10 +36,16 @@ class PostController extends Controller
     public function show($slug)
     {
       $Post = Post::where('slug', $slug)->first();
-      //dd($Post);
-      return view($this->f.'show', [
-          'Post' => $Post,
-        ]);
+      if($Post->publicado == true){
+          //dd($Post);
+          return view($this->f.'show', [
+              'Post' => $Post,
+            ]);
+
+      }
+      else{
+        return redirect()->route('post.index');
+      }
     }
 
 

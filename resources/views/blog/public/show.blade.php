@@ -61,7 +61,7 @@
                 Dic
                 @break
             @default
-                <p>The value is something else</p>
+                --
         @endswitch
         {{$Post->created_at->day}}, {{$Post->created_at->year}}
           @if(count($Post->HasSources) > 0)
