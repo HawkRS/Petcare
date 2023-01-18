@@ -36,6 +36,9 @@ class PostController extends Controller
     public function show($slug)
     {
       $Post = Post::where('slug', $slug)->first();
+      if ($Post == null) {
+        return redirect()->route('post.index');
+      }
       if($Post->publicado == true){
           //dd($Post);
           return view($this->f.'show', [
