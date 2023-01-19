@@ -17,7 +17,27 @@
 
         <div class="row">
           <div class="col-12">
-
+              @error('name')
+              <div class="alert alert-danger">
+                <div class="invalid-feedback d-block">
+              </div>
+                  {{ $message }}
+                </div>
+              @enderror
+              @error('email')
+              <div class="alert alert-danger">
+                <div class="invalid-feedback d-block">
+              </div>
+                  {{ $message }}
+                </div>
+              @enderror
+              @error('password')
+              <div class="alert alert-danger">
+                <div class="invalid-feedback d-block">
+              </div>
+                  {{ $message }}
+                </div>
+              @enderror
             <div class="card table-responsive p-3">
               <div class="card-body">
                 <div class="float-md-start">
