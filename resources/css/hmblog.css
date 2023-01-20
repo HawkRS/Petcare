@@ -1,0 +1,15 @@
+ .pag-item{
+  all: initial;
+  list-style-type: inherit !important;
+  color: #003392 !important;
+  font-family: var(--bs-body-font-family);
+  font-weight: 900;
+}
+
+ .disabled{
+  color: #717171 !important;
+}
+
+.pagina-link{
+  text-decoration: none;
+}

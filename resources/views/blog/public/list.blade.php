@@ -102,7 +102,7 @@
     </div>
     @endforeach
 
-    <div>
+    <div class="container">
     {{ $Posts->links('vendor.pagination.simple-bootstrap-4', ['elements' => $Posts]) }}
     </div>
 

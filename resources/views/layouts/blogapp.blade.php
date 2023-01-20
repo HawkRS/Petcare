@@ -191,6 +191,7 @@ define('DOMINIO','vimifospetcare.com');
 
 
   <link rel="preload stylesheet" href="{{ asset('css/blog.css')}}" as="style" type="text/css" crossorigin="anonymous">
+  <link rel="preload stylesheet" href="{{ asset('css/hmblog.css')}}" as="style" type="text/css" crossorigin="anonymous">
 
 
   <script>

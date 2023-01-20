@@ -1,6 +1,20 @@
 module.exports = function(){
 
-      $('#BlogTable').DataTable();
+      $('#BlogTable').DataTable({      
+      "language": {
+                  "lengthMenu": "Mostrar _MENU_ entradas por pagina",
+                  "zeroRecords": "No hay entrdas existentes",
+                  "info": "Mostrando entradas del _PAGE_ al _PAGES_",
+                  "infoEmpty": "No records available",
+                  "infoFiltered": "(filtered from _MAX_ total records)",
+                  "search": "Buscar",
+                  'paginate': {
+      'previous': 'anterior',
+      'next': 'siguiente'
+    }
+              }
+      }
+            );
       $('#BlogTable_paginate').addClass('pagination justify-content-center');
       $('#BlogTable_previous').addClass('paginate-previous');
       $('#BlogTable_next').addClass('paginate-next');
