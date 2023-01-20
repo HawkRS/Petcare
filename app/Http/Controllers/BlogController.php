@@ -33,7 +33,7 @@ class BlogController extends Controller
    */
   public function index()
   {
-    $PostsList = Post::all();
+    $PostsList = Post::all()->sortByDesc('id');
     //dd($PostsList[0]->Autor->name);
 
     return view($this->f.'list', [

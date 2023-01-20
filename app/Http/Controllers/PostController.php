@@ -19,8 +19,7 @@ class PostController extends Controller
      */
     public function index()
     {
-      $PostsList = Post::all();
-      $PostsList = Post::where('publicado', true)->simplePaginate(5);
+      $PostsList = Post::where('publicado', true)->orderBy('id', 'desc')->simplePaginate(5);
       //dd($PostsList[0]->Autor->name);
 
       return view($this->f.'list', [

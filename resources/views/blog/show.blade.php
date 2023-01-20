@@ -92,20 +92,26 @@
             </p>
             <div class="row">
               <h6>Acciones</h6>
-              <div class="col-12 col-md-4">
-                <a href="{{ route('blog.edit', ['id' => $Post->id]) }} " class="btn btn-sm btn-outline-warning"><i class="fas fnt10 fa-pencil-alt"></i> Editar</a>
+              <div class="col-12">
+                <div class="d-grid gap-2 mt-2">
+                  <a href="{{ route('blog.edit', ['id' => $Post->id]) }} " class="btn btn-sm btn-outline-warning"><i class="fas fnt10 fa-pencil-alt"></i> Editar</a>
+                </div>
               </div>
-              <div class="col-12 col-md-4">
-                <button type="button" name="button"  data-bs-toggle="modal" data-bs-target="#PostModal" class="btn btn-sm btn-outline-danger fntB"><i class="fas fnt14 fa-trash-alt"></i> Eliminar</button>
+              <div class="col-12">
+                <div class="d-grid gap-2 mt-2">
+                  <button type="button" name="button"  data-bs-toggle="modal" data-bs-target="#PostModal" class="btn btn-sm btn-outline-danger fntB"><i class="fas fnt14 fa-trash-alt"></i> Eliminar</button>
+                </div>
               </div>
-              <div class="col-12 col-md-4">
-                <a href="{{ route('blog.togglepublish', ['id' => $Post->id]) }}" class="btn btn-sm btn-outline-info">
-                  @if($Post->publicado == true)
-                  <i class="fas fnt10 fa-eye-slash"></i> Despublicar
-                  @else
-                  <i class="fas fnt10 fa-eye"></i> Publicar
-                  @endif
-                </a>
+              <div class="col-12">
+                <div class="d-grid gap-2 mt-2">
+                  <a href="{{ route('blog.togglepublish', ['id' => $Post->id]) }}" class="btn btn-sm btn-outline-info">
+                    @if($Post->publicado == true)
+                    <i class="fas fnt10 fa-eye-slash"></i> Despublicar
+                    @else
+                    <i class="fas fnt10 fa-eye"></i> Publicar
+                    @endif
+                  </a>
+                </div>
               </div>
             </div>
           </div>
